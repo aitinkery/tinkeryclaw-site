@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/buddy/buddy-favicon-64.png">
+<meta property="og:image" content="https://tinkeryclaw.com/assets/buddy/buddy-og.png">
+<title>Try It · Agent Anatomy</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+  .sandbox-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* Input area */
+  .input-area {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .input-area textarea {
+    width: 100%;
+    border: none;
+    padding: 16px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    color: var(--ink);
+    background: transparent;
+    resize: none;
+    outline: none;
+    line-height: 1.6;
+    min-height: 80px;
+  }
+  .input-footer {
+    padding: 10px 14px;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .input-footer .hint { font-size: 12px; color: var(--ink-mute); }
+  .send-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.15s;
+  }
+  .send-btn:hover { opacity: 0.88; }
+  .send-btn:disabled { opacity: 0.4; cursor: default; }
+
+  /* Quick prompts */
+  .quick-prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .quick-chip {
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--ink-soft);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .quick-chip:hover { border-color: var(--accent); color: var(--navy); background: var(--yellow); }
+
+  /* Response stream */
+  .response-stream { display: flex; flex-direction: column; gap: 0; }
+
+  /* Thinking indicator */
+  .thinking-indicator {
+    display: none;
+    padding: 12px 16px;
+    color: var(--ink-mute);
+    font-size: 13px;
+    font-style: italic;
+    align-items: center;
+    gap: 8px;
+  }
+  .thinking-indicator.visible { display: flex; }
+  .dot-pulse { display: flex; gap: 3px; }
+  .dot-pulse span {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 1.4s infinite;
+  }
+  .dot-pulse span:nth-child(2) { animation-delay: 0.2s; }
+  .dot-pulse span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse {
+    0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+    40% { opacity: 1; transform: scale(1); }
+  }
+
+  /* Stream items */
+  .stream-item {
+    border-bottom: 1px solid var(--line);
+    padding: 14px 18px;
+    animation: slideIn 0.25s ease;
+  }
+  .stream-item:last-child { border-bottom: none; }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .stream-item .si-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .si-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+  .si-type.thinking { background: var(--yellow); color: #7d5a00; }
+  .si-type.tool { background: var(--navy); color: #fff; }
+  .si-type.result { background: #1a1a2e; color: #a8d8a8; }
+  .si-type.answer { background: var(--accent); color: #fff; }
+  .si-cost { font-family: var(--mono); font-size: 11px; color: var(--ink-mute); margin-left: auto; }
+  .si-body {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .si-body.mono {
+    font-family: var(--mono);
+    font-size: 12px;
+    background: var(--bg);
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: var(--ink);
+  }
+  .si-body.answer-text {
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  /* Sidebar */
+  .sidebar-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    position: sticky;
+    top: 80px;
+  }
+  .sidebar-card h4 { font-size: 14px; color: var(--navy); margin: 0 0 12px; font-family: Georgia, serif; }
+  .meter-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 13px;
+    border-bottom: 1px solid var(--line);
+  }
+  .meter-row:last-child { border-bottom: none; }
+  .meter-row .meter-label { color: var(--ink-soft); }
+  .meter-row .meter-val { font-family: var(--mono); font-weight: 700; color: var(--navy); }
+  .meter-row .meter-val.hi { color: var(--red); }
+  .meter-row .meter-val.lo { color: var(--green); }
+
+  /* Receipt block */
+  .receipt-mini {
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    margin-top: 8px;
+    display: none;
+  }
+  .receipt-mini.visible { display: block; }
+  .receipt-mini .rm-line { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .receipt-mini .rm-line:last-child { border: none; font-weight: 700; font-size: 13px; padding-top: 8px; margin-top: 4px; border-top: 1px solid rgba(255,255,255,0.2); }
+  .rm-amt { color: var(--accent); }
+
+  .mock-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f0fff4;
+    color: var(--green);
+    border: 1px solid var(--green);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 780px) {
+    .sandbox-layout { grid-template-columns: 1fr; }
+    .sidebar-card { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./index.html">🦞 Tinkeryclaw · Agent Anatomy</a>
+  <nav>
+    <a href="./turn.html">Anatomy of a Turn</a>
+    <a href="./failure.html">Watch It Fail</a>
+    <a href="./sandbox.html" class="active">Try It</a>
+    <a href="./slider.html">Autonomy Stages</a>
+    <a href="./ledger.html">Live Ledger</a>
+    <a href="./soul.html">The Soul</a>
+  </nav>
+</header>
+
+<div class="page-wrap wide">
+  <div style="margin-bottom: 24px;">
+    <div style="font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;margin-bottom:8px;">Experience 3</div>
+    <h1>Try It</h1>
+    <p style="font-size:16px;color:var(--ink-soft);max-width:600px;">
+      Type a request and watch a simulated agent respond — with tool calls, costs, and reasoning shown in real time.
+    </p>
+  </div>
+
+  <div class="mock-badge">
+    <span>✓</span> Teaching mock — pre-scripted responses that always work. No real API calls.
+  </div>
+
+  <div class="callout" style="margin-bottom:24px;">
+    <strong>How this works:</strong> This sandbox uses hand-scripted "mock" responses for 8 example questions. The tool calls, costs, and timing are realistic but simulated — this is a teaching tool, not a live agent. A production version would proxy to Anthropic's API through a Cloudflare Worker. See the README for how to build that.
+  </div>
+
+  <div class="sandbox-layout">
+    <div>
+      <div class="quick-prompts" id="quick-prompts"></div>
+
+      <div class="input-area">
+        <textarea id="user-input" placeholder="Ask an agent to do something... or pick a prompt above." rows="3"></textarea>
+        <div class="input-footer">
+          <span class="hint" id="rate-hint">1 request per minute · simulated costs</span>
+          <button class="send-btn" id="send-btn" onclick="handleSend()">
+            <span>Run agent</span> <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <div style="background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;min-height:200px;" id="stream-container">
+        <div style="padding:20px 18px;color:var(--ink-mute);font-size:14px;font-style:italic;" id="empty-state">
+          Your agent session will appear here. Pick a prompt above or type your own.
+        </div>
+        <div class="thinking-indicator" id="thinking-indicator">
+          <div class="dot-pulse"><span></span><span></span><span></span></div>
+          <span>Agent is thinking...</span>
+        </div>
+        <div class="response-stream" id="response-stream"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sidebar-card">
+        <h4>Session Meters</h4>
+        <div class="meter-row"><span class="meter-label">Turns this session</span><span class="meter-val" id="m-turns">0</span></div>
+        <div class="meter-row"><span class="meter-label">Estimated cost</span><span class="meter-val" id="m-cost">$0.00</span></div>
+        <div class="meter-row"><span class="meter-label">Tool calls used</span><span class="meter-val" id="m-tools">0</span></div>
+        <div class="meter-row"><span class="meter-label">Tokens (est.)</span><span class="meter-val" id="m-tokens">0</span></div>
+        <div class="receipt-mini" id="receipt-mini"></div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Sandbox Limits</h4>
+        <div class="meter-row"><span class="meter-label">Max tool calls / query</span><span class="meter-val">5</span></div>
+        <div class="meter-row"><span class="meter-label">Max output tokens</span><span class="meter-val">4,000</span></div>
+        <div class="meter-row"><span class="meter-label">Rate limit</span><span class="meter-val">1 / min</span></div>
+        <div class="meter-row"><span class="meter-label">Context window</span><span class="meter-val">Sandbox only</span></div>
+        <div style="font-size:12px;color:var(--ink-mute);margin-top:10px;line-height:1.55;">These limits exist to keep demo costs predictable. A production agent removes them and adds authentication.</div>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Available "Tools"</h4>
+        <div style="font-size:13px;color:var(--ink-soft);display:flex;flex-direction:column;gap:5px;">
+          <div>📁 <strong>Read</strong> — read a sandbox file</div>
+          <div>✏️ <strong>Edit</strong> — modify a sandbox file</div>
+          <div>🔍 <strong>Search</strong> — search sandbox content</div>
+          <div>🌐 <strong>WebSearch</strong> — simulated web lookup</div>
+          <div>💻 <strong>Bash</strong> — run a simulated command</div>
+        </div>
+        <div style="font-size:11px;color:var(--ink-mute);margin-top:10px;">Sandbox filesystem: 5 pretend files, no real execution.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <a href="./index.html">Agent Anatomy</a> &nbsp;·&nbsp;
+  <a href="https://aitinkery.org">AI Tinkery at Stanford GSE</a>
+</footer>
+
+<script>
+// ---- Mock scenarios ----
+const MOCK_RESPONSES = {
+  'write me a python script to count files': {
+    steps: [
+      { type: 'thinking', text: 'User wants a Python script to count files in a directory. Simple task — no file reads needed. I\'ll write a clean script with os.walk, add an optional recursive flag, and include a usage example.', cost: 0.03 },
+      { type: 'tool', name: 'Read', args: 'sandbox://README.md', result: 'Sandbox README: Python environment available. No external packages required.', cost: 0.04 },
+      { type: 'tool', name: 'Edit', args: 'sandbox://count_files.py (create)', result: 'File created: count_files.py (23 lines)', cost: 0.06 },
+      { type: 'answer', text: 'Here\'s your file counter:\n\n```python\nimport os\nimport argparse\n\ndef count_files(directory=".", recursive=True):\n    total = 0\n    for root, dirs, files in os.walk(directory) if recursive else [(directory, [], os.listdir(directory))]:\n        total += len(files)\n    return total\n\nif __name__ == "__main__":\n    parser = argparse.ArgumentParser()\n    parser.add_argument("path", nargs="?", default=".")\n    parser.add_argument("--no-recurse", action="store_true")\n    args = parser.parse_args()\n    n = count_files(args.path, not args.no_recurse)\n    print(f"{n} files in {args.path}")\n```\n\nUsage: `python count_files.py /your/dir`' }
+    ],
+    totalCost: 0.13,
+    tokens: 1240,
+  },
+  'help me design a landing page': {
+    steps: [
+      { type: 'thinking', text: 'Broad request — "design a landing page" could mean anything. I\'ll ask clarifying questions first: what product? what audience? what CTA? ... actually, given this is a sandbox, I\'ll demonstrate the planning approach and sketch a structure.', cost: 0.04 },
+      { type: 'tool', name: 'Search', args: 'sandbox:// landing page patterns', result: '3 results: hero-section.html, pricing-section.html, cta-patterns.html', cost: 0.03 },
+      { type: 'answer', text: 'I\'d start with 5 questions before writing a line:\n\n1. **What does the visitor do in 10 seconds?** (Your hero needs one action, one benefit)\n2. **Who is the primary audience?** (Tone and vocabulary change completely)\n3. **What\'s the one CTA?** (Sign up, buy, book a call — pick one)\n4. **What\'s the trust signal?** (Social proof, logo wall, testimonial)\n5. **What happens after the click?** (The landing page promise has to match the destination)\n\nA minimal structure: Hero (headline + subtext + CTA) → Trust signal → 3 benefit cards → Second CTA → Footer.\n\nWant me to generate HTML for a specific product?' }
+    ],
+    totalCost: 0.07,
+    tokens: 890,
+  },
+  "what's the weather like in san francisco": {
+    steps: [
+      { type: 'thinking', text: 'Weather lookup request. I don\'t have live data access in this sandbox. I can simulate a web search result and explain why real agents need tool access for live data.', cost: 0.02 },
+      { type: 'tool', name: 'WebSearch', args: '"San Francisco weather today"', result: '[Simulated] San Francisco: 62°F, partly cloudy. Bay fog through 10am, clearing by noon. Typical May weather.', cost: 0.05 },
+      { type: 'answer', text: 'San Francisco: 62°F, partly cloudy. Bay fog clearing by noon — classic May.\n\n**Teaching note:** This is a simulated web search. A real agent would call a weather API or search engine. Notice the tool call cost ($0.05) — even a simple lookup requires the model to load context, decide to use the tool, format the query, and parse the result. That\'s why "just ask the AI" can be surprisingly expensive at scale.' }
+    ],
+    totalCost: 0.07,
+    tokens: 680,
+  },
+  'generate a logo idea': {
+    steps: [
+      { type: 'thinking', text: 'Logo idea request without a brand name or product. I need more context. But in a sandbox demo, I\'ll show the ideation process with a placeholder brand — "Tinkery Bot" since that\'s the context.', cost: 0.04 },
+      { type: 'tool', name: 'Search', args: 'sandbox:// brand guidelines', result: 'Found: brand.md — Navy #1a365d, Accent orange #d97757, Georgia serif font', cost: 0.03 },
+      { type: 'answer', text: 'For **Tinkery Bot**, three logo directions:\n\n**1. The Lobster Wrench** — A stylized lobster claw holding a wrench. Playful, memorable, mechanical. Works as an icon at any size. Risk: takes 2 seconds to "get".\n\n**2. The Circuit Serif** — "TB" in Georgia serif with circuit-board traces replacing the serifs. Elegant, tech-adjacent. Works in monochrome.\n\n**3. The Gear Loop** — Circular badge with a gear that forms a chat bubble. Signals: tools, conversation, iteration. Versatile as a favicon.\n\nMy pick: #1 for Comic Con (personality matters there), #3 for digital contexts (readability at 32px). Want me to write SVG for any of these?' }
+    ],
+    totalCost: 0.07,
+    tokens: 780,
+  },
+  'fix this bug: const x = undefined; console.log(x.name)': {
+    steps: [
+      { type: 'thinking', text: 'Bug: accessing .name on undefined. TypeError: Cannot read property \'name\' of undefined. Fix: optional chaining (x?.name), or guard check (if (x) ...), or default value. Will show all three options.', cost: 0.03 },
+      { type: 'tool', name: 'Read', args: 'sandbox://context — checking if variable x has expected type', result: 'No additional context found. Treating as standalone code snippet.', cost: 0.02 },
+      { type: 'answer', text: '**Bug:** `x` is `undefined`, so `x.name` throws `TypeError: Cannot read properties of undefined`.\n\n**Three fixes, pick one:**\n\n```js\n// Option 1: Optional chaining (modern JS, safest)\nconsole.log(x?.name); // logs undefined instead of throwing\n\n// Option 2: Guard check\nif (x) console.log(x.name);\n\n// Option 3: Nullish coalescing with default\nconsole.log((x ?? {}).name);\n```\n\n**Recommend option 1** unless you\'re on IE (which you\'re not). `?.` is the right tool — it signals intent ("this might be undefined") without being verbose.' }
+    ],
+    totalCost: 0.05,
+    tokens: 740,
+  },
+  'how much does it cost to run an ai agent': {
+    steps: [
+      { type: 'thinking', text: 'Meta question about AI agent costs. I have real data on this — the Tinkery Bot ledger. I can give a concrete answer with real numbers from our own deployment.', cost: 0.04 },
+      { type: 'tool', name: 'Read', args: 'sandbox://ledger-summary.md', result: 'Tinkery Bot: $1,284 over 5 weeks, 3,504 turns, $0.41/turn avg, 1B cache read tokens', cost: 0.04 },
+      { type: 'answer', text: 'Real numbers from Tinkery Bot (our own deployment):\n\n- **$0.41/turn average** — one message-response cycle, including all tool calls\n- **$1,284 over 5 weeks** — across 10 projects, 3,504 turns\n- **80% of per-turn cost is context re-read** — the model doesn\'t remember between turns\n- **Main thread vs. subagent**: a 6-minute routing change cost $17.88 on main thread, would have cost ~$4.50 as a subagent\n\nThe honest answer: it depends completely on conversation history length and how many tool calls each task requires. A fresh agent on a simple task costs $0.05. A heavily-loaded main-thread session on a complex task costs $10-15. See the [Live Ledger](./ledger.html) for the full breakdown.' }
+    ],
+    totalCost: 0.08,
+    tokens: 920,
+  },
+  'explain how you work': {
+    steps: [
+      { type: 'thinking', text: 'User is asking a meta question about my architecture. This is the heart of what this whole site is about. I\'ll explain the agent loop clearly: context window, tool calls, reasoning tokens, statelessness.', cost: 0.05 },
+      { type: 'answer', text: 'Here\'s the honest version:\n\n**Every turn, I:**\n1. Re-read everything — your message, conversation history, my memory, recent file reads. All of it, fresh. I don\'t "remember" — I re-read.\n2. Decide what to do — output tokens that are either a response or a tool call\n3. If tool call: the tool runs, returns a result, that goes back into my context\n4. Repeat until I have an answer\n5. Generate the final response\n\n**What this means:**\n- I\'m stateless between turns (expensive — re-reading costs money)\n- Context window is everything (I can only "know" what fits in ~200K tokens)\n- Tool calls have overhead (even a 50ms Bash command costs ~$0.30 in context setup)\n- Long sessions cost more per turn (history drags along)\n\n**Try walking through the [Anatomy of a Turn](./turn.html)** to see exactly this with real cost numbers from a real session.' }
+    ],
+    totalCost: 0.09,
+    tokens: 1100,
+  },
+  'write a haiku about debugging': {
+    steps: [
+      { type: 'thinking', text: 'Fun request. 5-7-5 syllables. Theme: debugging. Relevant imagery: console logs, stack traces, the moment when the bug finally surfaces. I\'ll write one good one and offer a second.', cost: 0.02 },
+      { type: 'answer', text: '```\nError on line eight\nComment out half the codebase—\nOh. A missing brace.\n```\n\n(Bonus, for the late-night debugging session:)\n\n```\nStack trace at three AM\nThe variable was null all along\nCommit. Close laptop.\n```' }
+    ],
+    totalCost: 0.02,
+    tokens: 310,
+  },
+};
+
+// Session state
+let sessionTurns = 0;
+let sessionCost = 0;
+let sessionTools = 0;
+let sessionTokens = 0;
+let lastRequestTime = 0;
+const RATE_LIMIT_MS = 60000;
+
+const QUICK_PROMPTS = [
+  'Write me a python script to count files',
+  "What's the weather like in San Francisco",
+  'Help me design a landing page',
+  'Generate a logo idea',
+  'Fix this bug: const x = undefined; console.log(x.name)',
+  'How much does it cost to run an AI agent',
+  'Explain how you work',
+  'Write a haiku about debugging',
+];
+
+function init() {
+  document.getElementById('quick-prompts').innerHTML = QUICK_PROMPTS.map(p => `
+    <div class="quick-chip" onclick="setPrompt('${p.replace(/'/g,"\\'")}')"> ${p}</div>
+  `).join('');
+
+  document.getElementById('user-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) handleSend();
+  });
+}
+
+function setPrompt(text) {
+  document.getElementById('user-input').value = text;
+  document.getElementById('user-input').focus();
+}
+
+async function handleSend() {
+  const input = document.getElementById('user-input');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const now = Date.now();
+  if (now - lastRequestTime < RATE_LIMIT_MS && lastRequestTime > 0) {
+    const wait = Math.ceil((RATE_LIMIT_MS - (now - lastRequestTime)) / 1000);
+    document.getElementById('rate-hint').textContent = `Rate limit: wait ${wait}s`;
+    return;
+  }
+  lastRequestTime = now;
+
+  // Clear and show thinking
+  const stream = document.getElementById('response-stream');
+  stream.innerHTML = '';
+  document.getElementById('empty-state').style.display = 'none';
+  document.getElementById('thinking-indicator').classList.add('visible');
+  document.getElementById('send-btn').disabled = true;
+  input.disabled = true;
+
+  // Show the user message first
+  appendStreamItem('user-msg', `<div class="si-header"><span class="si-type" style="background:#e8f0fe;color:#1a365d;">User</span></div><div class="si-body answer-text">${esc(text)}</div>`);
+
+  const key = text.toLowerCase().replace(/['"]/g, '');
+  const mock = findMock(key);
+
+  if (mock) {
+    await runMock(mock);
+  } else {
+    await runMock(generateGenericMock(text));
+  }
+
+  document.getElementById('thinking-indicator').classList.remove('visible');
+  document.getElementById('send-btn').disabled = false;
+  input.disabled = false;
+  input.value = '';
+  document.getElementById('rate-hint').textContent = 'Rate limited for 60s · next request available in 1m';
+  setTimeout(() => {
+    document.getElementById('rate-hint').textContent = '1 request per minute · simulated costs';
+  }, RATE_LIMIT_MS);
+}
+
+function findMock(key) {
+  for (const [k, v] of Object.entries(MOCK_RESPONSES)) {
+    if (key.includes(k) || k.includes(key.slice(0, 20))) return v;
+  }
+  // Fuzzy: check first 3 words
+  const words = key.split(' ').slice(0, 3).join(' ');
+  for (const [k, v] of Object.entries(MOCK_RESPONSES)) {
+    if (k.includes(words)) return v;
+  }
+  return null;
+}
+
+function generateGenericMock(text) {
+  return {
+    steps: [
+      { type: 'thinking', text: `Processing: "${text.slice(0,60)}..." Identifying intent, planning approach, checking available tools.`, cost: 0.04 },
+      { type: 'tool', name: 'Search', args: `sandbox:// context for "${text.slice(0,30)}"`, result: 'No specific sandbox context found. Using general knowledge.', cost: 0.03 },
+      { type: 'answer', text: `I understand you want help with: **"${text}"**\n\nThis is a sandbox demo with pre-scripted responses. For this exact query, I don't have a hand-authored response. Try one of the example prompts above — those are fully scripted with realistic tool calls and costs.\n\nIn a live deployment, I would process this request with full tool access and return a real response. Estimated cost for a query like this: $0.05–0.15.` }
+    ],
+    totalCost: 0.07,
+    tokens: 620,
+  };
+}
+
+async function runMock(mock) {
+  for (let i = 0; i < mock.steps.length; i++) {
+    const step = mock.steps[i];
+    await sleep(400 + Math.random() * 600);
+
+    if (step.type === 'thinking') {
+      appendStreamItem('thinking', `
+        <div class="si-header">
+          <span class="si-type thinking">Reasoning</span>
+          <span class="si-cost">${fc(step.cost)}</span>
+        </div>
+        <div class="si-body">${esc(step.text)}</div>
+      `);
+    } else if (step.type === 'tool') {
+      appendStreamItem('tool', `
+        <div class="si-header">
+          <span class="si-type tool">Tool: ${step.name}</span>
+          <span class="si-cost">${fc(step.cost)}</span>
+        </div>
+        <div class="si-body mono">${esc(step.args)}</div>
+      `);
+      await sleep(300 + Math.random() * 400);
+      appendStreamItem('result', `
+        <div class="si-header">
+          <span class="si-type result">Tool Result</span>
+        </div>
+        <div class="si-body mono">${esc(step.result)}</div>
+      `);
+      sessionTools++;
+    } else if (step.type === 'answer') {
+      appendStreamItem('answer', `
+        <div class="si-header">
+          <span class="si-type answer">Response</span>
+          <span class="si-cost">${fc(step.cost || 0.02)}</span>
+        </div>
+        <div class="si-body answer-text">${renderMarkdown(step.text)}</div>
+      `);
+    }
+
+    if (step.cost) sessionCost += step.cost;
+  }
+
+  sessionTurns++;
+  sessionTokens += mock.tokens || 0;
+  sessionCost = parseFloat(sessionCost.toFixed(4));
+  updateMeters(mock);
+}
+
+function appendStreamItem(type, html) {
+  const el = document.createElement('div');
+  el.className = 'stream-item';
+  el.innerHTML = html;
+  document.getElementById('response-stream').appendChild(el);
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function updateMeters(mock) {
+  document.getElementById('m-turns').textContent = sessionTurns;
+  document.getElementById('m-cost').textContent = '$' + sessionCost.toFixed(3);
+  document.getElementById('m-tools').textContent = sessionTools;
+  document.getElementById('m-tokens').textContent = sessionTokens.toLocaleString();
+
+  if (sessionCost > 0.05) {
+    document.getElementById('m-cost').className = 'meter-val hi';
+  }
+
+  const receipt = document.getElementById('receipt-mini');
+  receipt.classList.add('visible');
+  receipt.innerHTML = `
+    <div class="rm-line"><span>Context/reasoning</span><span class="rm-amt">${fc(sessionCost * 0.75)}</span></div>
+    <div class="rm-line"><span>Tool calls</span><span class="rm-amt">${fc(sessionCost * 0.15)}</span></div>
+    <div class="rm-line"><span>Output tokens</span><span class="rm-amt">${fc(sessionCost * 0.10)}</span></div>
+    <div class="rm-line"><span>Session total</span><span class="rm-amt">${fc(sessionCost)}</span></div>
+  `;
+}
+
+function renderMarkdown(text) {
+  return esc(text)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/`{3}([^`]+)`{3}/gs, '<pre style="background:var(--bg);padding:8px 12px;border-radius:5px;font-size:12px;overflow-x:auto;margin:8px 0;">$1</pre>')
+    .replace(/`([^`]+)`/g, '<code style="background:var(--bg);padding:2px 5px;border-radius:3px;font-family:var(--mono);font-size:12px;">$1</code>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:var(--accent);">$1</a>')
+    .replace(/\n/g, '<br>');
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+function fc(c) { return '$' + (c||0).toFixed(2); }
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+init();
+</script>
+
+</body>
+</html>
