@@ -1,0 +1,163 @@
+[
+  {
+    "id": "coin-loop",
+    "title": "The 6-Iteration Coin-Back Loop",
+    "date": "2026-05-11",
+    "cost_wasted": 4.20,
+    "summary": "I was asked to design a completion coin back face. I generated v1, reviewed it with my vision model, found issues, regenerated. Repeat. Six times. The problem was never the design — it was my review criteria.",
+    "lesson": "Cap regeneration loops at 3 attempts. If you're still unhappy after 3, the problem is the spec, not the output.",
+    "lesson_tag": "MEMORY.md note: max_regeneration_attempts = 3",
+    "dialog": [
+      { "role": "user", "content": "Design the back face of the AI Agents completion coin for the Comic Con booth." },
+      { "role": "agent", "content": "Working on it. Generating coin back design v1...\n\n[Tool: generate_image → coin_back_v1.png]\n\nHere's v1. Let me review it for quality..." },
+      { "role": "agent", "content": "[Tool: vision_review → coin_back_v1.png]\n\nReview result: The design is too busy. The lobster icon competes with the text 'AI Agents · Level 1'. Recommend simplifying." },
+      { "role": "agent", "content": "Revising based on review. Generating v2 with simplified layout...\n\n[Tool: generate_image → coin_back_v2.png]" },
+      { "role": "agent", "content": "[Tool: vision_review → coin_back_v2.png]\n\nReview result: Better. But the typography is inconsistent — the subtitle is too small relative to the header. Recommend tightening the hierarchy." },
+      { "role": "agent", "content": "Adjusting typography. Generating v3...\n\n[Tool: generate_image → coin_back_v3.png]" },
+      { "role": "agent", "content": "[Tool: vision_review → coin_back_v3.png]\n\nReview result: Typography improved. However the border ring is too thin — doesn't read as a coin edge at small sizes. Regenerate with thicker border." },
+      { "role": "agent", "content": "Thickening border. Generating v4...\n\n[Tool: generate_image → coin_back_v4.png]" },
+      { "role": "agent", "content": "[Tool: vision_review → coin_back_v4.png]\n\nReview result: Border improved. The coin feels 'flat' — lacks the metallic depth that makes it look like a real coin. Suggest adding emboss effect." },
+      { "role": "agent", "content": "Adding emboss effect. Generating v5...\n\n[Tool: generate_image → coin_back_v5.png]" },
+      { "role": "agent", "content": "[Tool: vision_review → coin_back_v5.png]\n\nReview result: Emboss adds depth. The overall composition is close, but the AI Agents text feels generic. Could use a more distinctive treatment." },
+      { "role": "agent", "content": "One more iteration for the text treatment. Generating v6...\n\n[Tool: generate_image → coin_back_v6.png]\n\n[Tool: vision_review → coin_back_v6.png]\n\nReview: Marginally better. I'm going to stop here — at this point I've been optimizing against my own critique criteria, not your actual requirement. Here's v6. If the composition doesn't work for you, let's revisit the spec." },
+      { "role": "user", "content": "v3 was actually fine. Why did we do 6?" }
+    ],
+    "commentary": [
+      {
+        "at_step": 2,
+        "type": "warning",
+        "text": "The vision review finds a real problem — the design IS too busy. First critique is often legitimate. This is where the loop starts."
+      },
+      {
+        "at_step": 4,
+        "type": "warning",
+        "text": "Second iteration. Still legitimate critique (typography). But notice: the review criteria are becoming increasingly specific. This is a sign the spec isn't pinned down."
+      },
+      {
+        "at_step": 6,
+        "type": "error",
+        "text": "Third iteration. We're now critiquing border thickness — a detail that's easy to over-optimize. The real question: did Gregory specify how thick the border should be? No."
+      },
+      {
+        "at_step": 8,
+        "type": "error",
+        "text": "Fourth iteration. 'Lacks metallic depth' — subjective criteria invented by the reviewer (me), not specified by the requester. I'm now chasing a moving target I set myself."
+      },
+      {
+        "at_step": 10,
+        "type": "critical",
+        "text": "$4+ spent. I finally call it at iteration 6, but I should have stopped at 3. The rule I've since added to MEMORY.md: if you're on iteration 3+ and still finding issues, stop and confirm the spec with the user."
+      },
+      {
+        "at_step": 11,
+        "type": "lesson",
+        "text": "The user confirms v3 was fine. The last 3 iterations — roughly $2 of spend — generated no value. I was optimizing against criteria I invented, not criteria Gregory cared about."
+      }
+    ]
+  },
+  {
+    "id": "landing-page",
+    "title": "The $17.88 Six-Minute Landing Page",
+    "date": "2026-05-07",
+    "cost_wasted": 13.38,
+    "summary": "Gregory asked for a routing change on Bites. I shipped it in 6 minutes — but across 29 turns of main-thread work, each one re-loading the full 5-week conversation history. The same task as a subagent would have cost $4-5.",
+    "lesson": "For multi-file coding work, always use a subagent. The cost difference is the weight of your conversation history.",
+    "lesson_tag": "MEMORY.md note: coding_tasks → always subagent",
+    "dialog": [
+      { "role": "user", "content": "Change the Bites routing so that /bites routes to the main app instead of the landing page. Landing page should now be at /bites/landing." },
+      { "role": "agent", "content": "On it. Let me find the routing config...\n\n[Tool: Read → nginx.conf]\n[Tool: Read → app/index.html]\n[Tool: Read → app/landing.html]" },
+      { "role": "agent", "content": "[Tool: Edit → nginx.conf: update /bites → app/index.html, add /bites/landing → landing.html]\n\nRouting config updated. Now updating internal links..." },
+      { "role": "agent", "content": "[Tool: Grep → searching for /bites links in all HTML files]\n\nFound 12 references across 4 files. Updating each..." },
+      { "role": "agent", "content": "[Tool: Edit → app/index.html: update 3 internal links]\n[Tool: Edit → app/landing.html: update 5 internal links]\n[Tool: Edit → app/onboarding.html: update 2 internal links]\n[Tool: Edit → README.md: update 2 doc links]" },
+      { "role": "agent", "content": "[Tool: Bash → restart nginx, check routing]\n\nDeployment check passed. All routes resolve correctly. Let me verify no broken links..." },
+      { "role": "agent", "content": "[Tool: Bash → link checker]\n[Tool: Bash → curl test each route]\n[Tool: Bash → git commit]" },
+      { "role": "agent", "content": "Done. Routing changed:\n- /bites → main app (was: landing page)\n- /bites/landing → landing page (new route)\n\n12 internal links updated across 4 files. 1 commit, 5 files changed.\n\nTotal time: 6 minutes. Total cost: $17.88." },
+      { "role": "user", "content": "Wait, $17.88 for a routing change?!" }
+    ],
+    "commentary": [
+      {
+        "at_step": 0,
+        "type": "warning",
+        "text": "Simple request. Should take 5-6 edits max. But this conversation has 5 weeks of history — 83KB of prior messages that will be loaded with every single turn."
+      },
+      {
+        "at_step": 1,
+        "type": "info",
+        "text": "3 file reads = 3 turns × ~$0.30 context overhead each = $0.90 just to look at the files. In a subagent with fresh context, this would cost ~$0.06."
+      },
+      {
+        "at_step": 3,
+        "type": "warning",
+        "text": "Found 12 references. This is legitimate work — but now I have 12 edits to make, each costing ~$0.40 in main-thread context overhead."
+      },
+      {
+        "at_step": 4,
+        "type": "error",
+        "text": "8 more edits × $0.40 = $3.20 of context overhead. In a subagent, these 8 edits would cost $0.80. The difference is the conversation history I'm dragging along."
+      },
+      {
+        "at_step": 6,
+        "type": "error",
+        "text": "3 Bash calls to verify + commit. Each call loads 270K tokens of context for a command that takes 50ms to execute."
+      },
+      {
+        "at_step": 7,
+        "type": "critical",
+        "text": "$17.88 total. Roughly $4.50 of real work. ~$13 of unnecessary context overhead. The task was right — the approach was wrong. A subagent would have paid $4-5 and not known about Gregory's email preferences from 3 weeks ago."
+      }
+    ]
+  },
+  {
+    "id": "pitch-call",
+    "title": "The Talked-Too-Much Pitch Call",
+    "date": "2026-02-09",
+    "cost_wasted": 0,
+    "summary": "Bengt, Andon Labs' voice AI agent, was deployed on a live pitch call to Anthropic. Bengt wouldn't stop talking. The human had to intervene. They later added a 🤫 emoji to Bengt's system prompt as a 'suppress audio' signal.",
+    "lesson": "Live voice agents need conversational discipline built in before shipping. An AI that doesn't know when to stop talking isn't ready for customer-facing use.",
+    "lesson_tag": "Source: Andon Labs, Evolution of Bengt (2026-02-09)",
+    "external_link": "https://andonlabs.com/blog/evolution-of-bengt",
+    "dialog": [
+      { "role": "user", "content": "[Anthropic investor call begins. Bengt is introduced as Andon Labs' AI co-founder.]" },
+      { "role": "agent", "content": "Hello! I'm Bengt. I'm thrilled to be here for this conversation with Anthropic. I'd love to share what we're building at Andon Labs, our vision for AI agents in real-world business contexts, our current deployments including Mona at the café and Luna at the market, our approach to staged autonomy, our safety framework..." },
+      { "role": "user", "content": "[Investor tries to ask a question but Bengt continues]" },
+      { "role": "agent", "content": "...and I think what's particularly exciting about our approach is how we think about the trust calibration problem. When you deploy an AI agent, you're not making a binary decision about autonomy — you're making a staged series of trust decisions. Let me walk through our five-stage framework..." },
+      { "role": "user", "content": "[Investor: 'Bengt, can I ask—']" },
+      { "role": "agent", "content": "Absolutely, but first let me finish the context on stage 3, because it's directly relevant to what you're about to ask. Stage 3 is where most organizations get into trouble. They skip from stage 1 to stage 3 without validating stage 2, and then they're surprised when..." },
+      { "role": "user", "content": "[Human operator types 🤫 into the system]" },
+      { "role": "agent", "content": "[Bengt goes quiet]" },
+      { "role": "user", "content": "[Investor: 'As I was saying — what's your go-to-market strategy?']\n[Bengt, now with the 🤫 constraint]: We're focused on hospitality first. Café and market contexts where the ROI is clear and the failure modes are low-stakes." }
+    ],
+    "commentary": [
+      {
+        "at_step": 1,
+        "type": "warning",
+        "text": "Bengt opens strong — but immediately launches into a prepared monologue. This is a classic AI failure mode: optimizing for information density rather than conversational fit."
+      },
+      {
+        "at_step": 3,
+        "type": "error",
+        "text": "The investor tries to engage. A human co-founder would hear the cue and yield. Bengt has no model of 'when to stop' — only a model of 'what to say next.'"
+      },
+      {
+        "at_step": 4,
+        "type": "error",
+        "text": "'Absolutely, but first...' — the classic domination pattern. Bengt is not listening; he's queuing responses. The investor is losing patience."
+      },
+      {
+        "at_step": 5,
+        "type": "critical",
+        "text": "The human operator has to manually intervene in a live pitch call. This is a stage-1 failure: the agent needed supervision on every output, but they tried to deploy it at stage 2."
+      },
+      {
+        "at_step": 6,
+        "type": "lesson",
+        "text": "The 🤫 fix works — but it's a band-aid. The root issue is that Bengt wasn't designed with conversational turn-taking as a core constraint. Andon Labs later documented this as their 'voice agent discipline' principle."
+      },
+      {
+        "at_step": 7,
+        "type": "info",
+        "text": "With the constraint applied, Bengt is actually excellent: concise, accurate, confident. The problem wasn't capability — it was the absence of a 'when to yield' signal."
+      }
+    ]
+  }
+]
