@@ -1,0 +1,4461 @@
+{
+  "generated_at": "2026-05-12T08:34:52.101892-07:00",
+  "totals": {
+    "cost": 1284.01,
+    "turns": 3504,
+    "commits": 231,
+    "first_day": "2026-04-07",
+    "last_day": "2026-05-12",
+    "days_active": 20,
+    "input_tokens": 9237,
+    "output_tokens": 2353218,
+    "cache_read": 1008361038,
+    "cost_by_project": {
+      "bites": 706.76,
+      "ai-tinkery-chatbot": 165.87,
+      "tinkerybot": 91.52,
+      "tinkery-comic-con": 78.86,
+      "ai-tinkery-library": 59.4,
+      "workspace-knowledge": 53.1,
+      "masterclass": 49.16,
+      "workspace-infra": 44.83,
+      "bites-paper": 28.67,
+      "unattributed": 5.65,
+      "healthlog": 0.2
+    },
+    "turns_by_project": {
+      "unattributed": 64,
+      "ai-tinkery-chatbot": 832,
+      "workspace-infra": 124,
+      "ai-tinkery-library": 239,
+      "tinkerybot": 178,
+      "workspace-knowledge": 124,
+      "bites": 1777,
+      "masterclass": 135,
+      "bites-paper": 175,
+      "tinkery-comic-con": 165,
+      "healthlog": 4
+    }
+  },
+  "weeks": [
+    {
+      "week": "2026-W15",
+      "cost": 144.49,
+      "turns": 589,
+      "commits": 99,
+      "cost_per_turn": 0.2453,
+      "days_active": 4,
+      "first_day": "2026-04-07",
+      "last_day": "2026-04-10",
+      "input_tokens": 3147,
+      "output_tokens": 227208,
+      "cache_read": 38472878
+    },
+    {
+      "week": "2026-W16",
+      "cost": 22.16,
+      "turns": 159,
+      "commits": 50,
+      "cost_per_turn": 0.1393,
+      "days_active": 4,
+      "first_day": "2026-04-13",
+      "last_day": "2026-04-18",
+      "input_tokens": 913,
+      "output_tokens": 66272,
+      "cache_read": 13763533
+    },
+    {
+      "week": "2026-W17",
+      "cost": 27.38,
+      "turns": 233,
+      "commits": 9,
+      "cost_per_turn": 0.1175,
+      "days_active": 2,
+      "first_day": "2026-04-21",
+      "last_day": "2026-04-26",
+      "input_tokens": 407,
+      "output_tokens": 134166,
+      "cache_read": 17439430
+    },
+    {
+      "week": "2026-W18",
+      "cost": 15.05,
+      "turns": 61,
+      "commits": 0,
+      "cost_per_turn": 0.2467,
+      "days_active": 2,
+      "first_day": "2026-04-27",
+      "last_day": "2026-04-30",
+      "input_tokens": 101,
+      "output_tokens": 49124,
+      "cache_read": 10333826
+    },
+    {
+      "week": "2026-W19",
+      "cost": 894.34,
+      "turns": 2058,
+      "commits": 59,
+      "cost_per_turn": 0.4346,
+      "days_active": 6,
+      "first_day": "2026-05-04",
+      "last_day": "2026-05-10",
+      "input_tokens": 3970,
+      "output_tokens": 1539217,
+      "cache_read": 773493943
+    },
+    {
+      "week": "2026-W20",
+      "cost": 180.61,
+      "turns": 404,
+      "commits": 14,
+      "cost_per_turn": 0.447,
+      "days_active": 2,
+      "first_day": "2026-05-11",
+      "last_day": "2026-05-12",
+      "input_tokens": 699,
+      "output_tokens": 337231,
+      "cache_read": 154857428
+    }
+  ],
+  "days": [
+    {
+      "day": "2026-04-07",
+      "week": "2026-W15",
+      "cost": 14.0222,
+      "turns": 121,
+      "cost_per_turn": 0.1159,
+      "cache_read": 8946374,
+      "cache_write": 2743905,
+      "input_tokens": 459,
+      "output_tokens": 69816,
+      "session_count": 2,
+      "sessions": [
+        "39459bcd-fbd4-41ee-99f9-4a278000bdb0",
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.1552,
+        4.4553,
+        1.3961,
+        2.2663,
+        4.1434,
+        1.6059,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "c257bdefb6b7",
+          "time": "2026-04-07T19:03:37-07:00",
+          "subject": "Fix onboarding flow to properly handle affiliation and add Start Tinkery to all quick replies",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "62c64dc6e0f4",
+          "time": "2026-04-07T18:24:06-07:00",
+          "subject": "Add Start a Tinkery to help/what can you do quick replies",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "55b36d3ef44b",
+          "time": "2026-04-07T18:14:24-07:00",
+          "subject": "Add Google Apps Script for email notifications",
+          "files_changed": 1,
+          "files": [
+            "chatbot-email-backend.gs"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "fe95d35c0991",
+          "time": "2026-04-07T18:14:23-07:00",
+          "subject": "Add email notification when users sign up",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "cb4caed197d0",
+          "time": "2026-04-07T18:11:19-07:00",
+          "subject": "Clean up flow: remove New User from quick replies, ensure consistent path options",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "4e488e143476",
+          "time": "2026-04-07T18:01:20-07:00",
+          "subject": "Reduce header logo size to 35px",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "25f298ba387f",
+          "time": "2026-04-07T17:12:28-07:00",
+          "subject": "Replace SVG with real robot logo and fix onboarding flow",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "27c38d9d0350",
+          "time": "2026-04-07T16:04:16-07:00",
+          "subject": "Replace wrench emoji with custom robot SVG logo",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "7a3832235116",
+          "time": "2026-04-07T15:56:37-07:00",
+          "subject": "Add New User reset button and confirmation flow",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "5b27dc49131a",
+          "time": "2026-04-07T15:52:54-07:00",
+          "subject": "Add interest discovery flow and Tinkery launch path",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "473d3349b330",
+          "time": "2026-04-07T15:43:23-07:00",
+          "subject": "Add README",
+          "files_changed": 1,
+          "files": [
+            "README.md"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8fd489f7f0e6",
+          "time": "2026-04-07T15:43:22-07:00",
+          "subject": "Add AI Tinkery chatbot",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "c257bdefb6b7",
+            "time": "2026-04-07T19:03:37-07:00",
+            "subject": "Fix onboarding flow to properly handle affiliation and add Start Tinkery to all quick replies",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "62c64dc6e0f4",
+            "time": "2026-04-07T18:24:06-07:00",
+            "subject": "Add Start a Tinkery to help/what can you do quick replies",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "55b36d3ef44b",
+            "time": "2026-04-07T18:14:24-07:00",
+            "subject": "Add Google Apps Script for email notifications",
+            "files_changed": 1,
+            "files": [
+              "chatbot-email-backend.gs"
+            ]
+          }
+        ]
+      },
+      "commit_count": 12,
+      "cost_by_project": {
+        "unattributed": 0.0611,
+        "ai-tinkery-chatbot": 13.7512,
+        "workspace-infra": 0.0802,
+        "ai-tinkery-library": 0.1296
+      },
+      "turns_by_project": {
+        "unattributed": 2,
+        "ai-tinkery-chatbot": 111,
+        "workspace-infra": 6,
+        "ai-tinkery-library": 2
+      }
+    },
+    {
+      "day": "2026-04-08",
+      "week": "2026-W15",
+      "cost": 90.9937,
+      "turns": 152,
+      "cost_per_turn": 0.5986,
+      "cache_read": 1504418,
+      "cache_write": 23945703,
+      "input_tokens": 1123,
+      "output_tokens": 49510,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6186,
+        0,
+        0,
+        0,
+        19.2381,
+        18.0031,
+        23.1293,
+        6.6435,
+        6.6781,
+        9.8329,
+        6.8501,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "7922df0ecd04",
+          "time": "2026-04-08T20:14:38-07:00",
+          "subject": "Fix onboarding flow bug - continue through affiliation and path discovery",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8e4ea8912a19",
+          "time": "2026-04-08T18:30:08-07:00",
+          "subject": "Update to 32 activities from Airtable (added 6 new activities)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "fa12652afeec",
+          "time": "2026-04-08T18:22:20-07:00",
+          "subject": "Add robot logo, email notification, and 3 visual images - COMPLETE",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "128e75386445",
+          "time": "2026-04-08T18:07:55-07:00",
+          "subject": "Restore full version with path/interest discovery + add Resnick research citations",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "2cbad6b5c7d9",
+          "time": "2026-04-08T16:56:03-07:00",
+          "subject": "Add 3 visuals: Guiding Principles, Tinkery Formats, and Interest Discovery Map",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "4c339e0ed1de",
+          "time": "2026-04-08T16:54:31-07:00",
+          "subject": "Add interest-map.jpg visual",
+          "files_changed": 1,
+          "files": [
+            "images/interest-map.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "66247afb1985",
+          "time": "2026-04-08T16:54:30-07:00",
+          "subject": "Add tinkery-formats.jpg visual",
+          "files_changed": 1,
+          "files": [
+            "images/tinkery-formats.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9ca1a6e58462",
+          "time": "2026-04-08T16:54:28-07:00",
+          "subject": "Add guiding-principles.jpg visual",
+          "files_changed": 1,
+          "files": [
+            "images/guiding-principles.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "00424f2a8b8b",
+          "time": "2026-04-08T16:14:13-07:00",
+          "subject": "Add Resnick et al. Designing for Tinkerability research citations to theory sections",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "7922df0ecd04",
+            "time": "2026-04-08T20:14:38-07:00",
+            "subject": "Fix onboarding flow bug - continue through affiliation and path discovery",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "8e4ea8912a19",
+            "time": "2026-04-08T18:30:08-07:00",
+            "subject": "Update to 32 activities from Airtable (added 6 new activities)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "fa12652afeec",
+            "time": "2026-04-08T18:22:20-07:00",
+            "subject": "Add robot logo, email notification, and 3 visual images - COMPLETE",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 9,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 81.042,
+        "tinkerybot": 0.6089,
+        "workspace-infra": 4.9555,
+        "workspace-knowledge": 4.3873
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 136,
+        "tinkerybot": 1,
+        "workspace-infra": 8,
+        "workspace-knowledge": 7
+      }
+    },
+    {
+      "day": "2026-04-09",
+      "week": "2026-W15",
+      "cost": 25.9386,
+      "turns": 207,
+      "cost_per_turn": 0.1253,
+      "cache_read": 20654699,
+      "cache_write": 4992059,
+      "input_tokens": 1070,
+      "output_tokens": 67918,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.2916,
+        1.3715,
+        0,
+        3.5851,
+        5.3869,
+        4.6574,
+        1.8369,
+        6.3118,
+        1.4976,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "a8d0d10fe711",
+          "time": "2026-04-09T22:35:20-07:00",
+          "subject": "Add category-coloured placeholder for expired Airtable images",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "f4b10e3185cd",
+          "time": "2026-04-09T22:31:32-07:00",
+          "subject": "Remove all keyword checks; add activity card auto-detection from Claude responses",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "6f2af9d5f835",
+          "time": "2026-04-09T22:24:28-07:00",
+          "subject": "Fix: move Claude call before all keyword checks; demote keyword responses to fallbacks only",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "aa73f4d5aa39",
+          "time": "2026-04-09T22:12:51-07:00",
+          "subject": "Add Python proxy server for Claude API (bypasses browser CORS)",
+          "files_changed": 1,
+          "files": [
+            "server.py"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e2cc33e24065",
+          "time": "2026-04-09T22:12:50-07:00",
+          "subject": "Fix: move Claude call before catch-all block; add /api/claude proxy URL",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "498bef21089b",
+          "time": "2026-04-09T20:09:33-07:00",
+          "subject": "\ud83d\udd04 Prioritize Claude over NLU for smarter responses",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "af15647767c3",
+          "time": "2026-04-09T19:39:40-07:00",
+          "subject": "\ud83d\udd0d Add debugging logs for Claude responses",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8a5bdf2f09f4",
+          "time": "2026-04-09T19:30:26-07:00",
+          "subject": "\ud83d\udd27 Fix Claude model name to valid version",
+          "files_changed": 1,
+          "files": [
+            "claude-backend-full.gs"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "00d2d2e9809a",
+          "time": "2026-04-09T19:25:24-07:00",
+          "subject": "\ud83d\udd27 Fix Google Apps Script CORS issue",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "eb3babe9e8c5",
+          "time": "2026-04-09T19:05:47-07:00",
+          "subject": "\ud83d\udd27 Add doGet function for browser testing",
+          "files_changed": 1,
+          "files": [
+            "claude-backend-full.gs"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "27340dd40be9",
+          "time": "2026-04-09T18:27:58-07:00",
+          "subject": "\ud83d\udcac Add context-aware smart quick replies",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "85d6ec474f83",
+          "time": "2026-04-09T17:39:42-07:00",
+          "subject": "\ud83d\udd17 Connect Claude backend to chatbot",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e1f180e99615",
+          "time": "2026-04-09T17:15:42-07:00",
+          "subject": "\ud83d\udcd6 Update setup docs for comprehensive backend",
+          "files_changed": 1,
+          "files": [
+            "CLAUDE_SETUP.md"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e9aef1f8b4b9",
+          "time": "2026-04-09T17:15:40-07:00",
+          "subject": "\ud83d\udcda Add comprehensive Claude backend trained on full Tinkery knowledge",
+          "files_changed": 1,
+          "files": [
+            "claude-backend-full.gs"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "dddc1dda0b1e",
+          "time": "2026-04-09T17:15:38-07:00",
+          "subject": "\ud83e\udde0 Add activity context passing to Claude",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "18ea089015eb",
+          "time": "2026-04-09T17:06:05-07:00",
+          "subject": "\ud83d\udcd6 Add Claude setup documentation",
+          "files_changed": 1,
+          "files": [
+            "CLAUDE_SETUP.md"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "45ef5f7127ce",
+          "time": "2026-04-09T17:06:04-07:00",
+          "subject": "\ud83d\udcc4 Add Google Apps Script backend for Claude",
+          "files_changed": 1,
+          "files": [
+            "claude-backend.gs"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "a01a8052f37b",
+          "time": "2026-04-09T17:06:03-07:00",
+          "subject": "\ud83e\udd16 Add Claude AI integration with async support",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "7f35688228b6",
+          "time": "2026-04-09T16:50:33-07:00",
+          "subject": "\ud83d\udccf Make activity cards more compact",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9f428126c908",
+          "time": "2026-04-09T16:45:07-07:00",
+          "subject": "Fix JavaScript syntax error: move misplaced image into messages array",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "130ea0f76f6a",
+          "time": "2026-04-09T16:28:17-07:00",
+          "subject": "\ud83d\uddbc\ufe0f Update interest-map.jpg to AI Learning Pathways",
+          "files_changed": 1,
+          "files": [
+            "images/interest-map.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3a74a3494b10",
+          "time": "2026-04-09T16:28:14-07:00",
+          "subject": "\u270f\ufe0f Replace interest-map & change Critique AI \u2192 Thoughtful AI",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "fb68a22caa89",
+          "time": "2026-04-09T16:16:34-07:00",
+          "subject": "\ud83d\uddd1\ufe0f Remove Interest Discovery Map image from chatbot",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "843f670440c4",
+          "time": "2026-04-09T16:06:14-07:00",
+          "subject": "\u2728 Update chatbot with 37 new activities from Airtable + image support",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "a8d0d10fe711",
+            "time": "2026-04-09T22:35:20-07:00",
+            "subject": "Add category-coloured placeholder for expired Airtable images",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "f4b10e3185cd",
+            "time": "2026-04-09T22:31:32-07:00",
+            "subject": "Remove all keyword checks; add activity card auto-detection from Claude responses",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "6f2af9d5f835",
+            "time": "2026-04-09T22:24:28-07:00",
+            "subject": "Fix: move Claude call before all keyword checks; demote keyword responses to fallbacks only",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 24,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 25.5954,
+        "workspace-infra": 0.3217,
+        "workspace-knowledge": 0.0216
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 206,
+        "workspace-infra": 1,
+        "workspace-knowledge": 1
+      }
+    },
+    {
+      "day": "2026-04-10",
+      "week": "2026-W15",
+      "cost": 13.5374,
+      "turns": 109,
+      "cost_per_turn": 0.1242,
+      "cache_read": 7367387,
+      "cache_write": 2860337,
+      "input_tokens": 495,
+      "output_tokens": 39964,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.2395,
+        4.2716,
+        0,
+        0,
+        0,
+        2.042,
+        4.2469,
+        1.7375,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "612d0e743d87",
+          "time": "2026-04-10T19:33:07-07:00",
+          "subject": "Fix syntax error: remove stray }); in handleUserMessage",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "62cfcbfac606",
+          "time": "2026-04-10T19:25:16-07:00",
+          "subject": "\ud83d\uddbc\ufe0f All 38 activity images now using resized GitHub versions",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "94a82b205101",
+          "time": "2026-04-10T19:24:55-07:00",
+          "subject": "Upload resized activity image 29",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-29.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "973c210d22fd",
+          "time": "2026-04-10T19:24:52-07:00",
+          "subject": "Upload resized activity image 24",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-24.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "1d2108a4e515",
+          "time": "2026-04-10T19:24:48-07:00",
+          "subject": "Upload resized activity image 22",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-22.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "4c737b9d7786",
+          "time": "2026-04-10T19:24:45-07:00",
+          "subject": "Upload resized activity image 18",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-18.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "a641f441c056",
+          "time": "2026-04-10T19:24:42-07:00",
+          "subject": "Upload resized activity image 15",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-15.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9421bef666c6",
+          "time": "2026-04-10T19:24:38-07:00",
+          "subject": "Upload resized activity image 07",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-07.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "4689e02b8798",
+          "time": "2026-04-10T19:19:31-07:00",
+          "subject": "\ud83d\uddbc\ufe0f Use actual activity images from GitHub (32/38 uploaded)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "c90a0d8f3044",
+          "time": "2026-04-10T19:19:04-07:00",
+          "subject": "Upload activity image 38",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-38.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "bc35d9c647ee",
+          "time": "2026-04-10T19:19:02-07:00",
+          "subject": "Upload activity image 37",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-37.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "cb3fdf826e9e",
+          "time": "2026-04-10T19:18:59-07:00",
+          "subject": "Upload activity image 36",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-36.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "ad3d242312f6",
+          "time": "2026-04-10T19:18:57-07:00",
+          "subject": "Upload activity image 35",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-35.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9515ff7a9bf8",
+          "time": "2026-04-10T19:18:54-07:00",
+          "subject": "Upload activity image 34",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-34.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8c038d7e6441",
+          "time": "2026-04-10T19:18:52-07:00",
+          "subject": "Upload activity image 33",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-33.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "edce62bbc369",
+          "time": "2026-04-10T19:18:49-07:00",
+          "subject": "Upload activity image 32",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-32.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3da0a407db3f",
+          "time": "2026-04-10T19:18:47-07:00",
+          "subject": "Upload activity image 31",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-31.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "803ea44203d1",
+          "time": "2026-04-10T19:18:44-07:00",
+          "subject": "Upload activity image 30",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-30.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "6372584485dd",
+          "time": "2026-04-10T19:18:42-07:00",
+          "subject": "Upload activity image 28",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-28.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "bc5477dd708a",
+          "time": "2026-04-10T19:18:39-07:00",
+          "subject": "Upload activity image 27",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-27.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "237cdeb3a4a2",
+          "time": "2026-04-10T19:18:37-07:00",
+          "subject": "Upload activity image 26",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-26.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "b2c69fed8400",
+          "time": "2026-04-10T19:18:34-07:00",
+          "subject": "Upload activity image 25",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-25.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "75a163e4c2d9",
+          "time": "2026-04-10T19:18:32-07:00",
+          "subject": "Upload activity image 23",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-23.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "a1618e2a25d8",
+          "time": "2026-04-10T19:18:29-07:00",
+          "subject": "Upload activity image 21",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-21.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3e3322fd85d1",
+          "time": "2026-04-10T19:18:21-07:00",
+          "subject": "Upload activity image 20",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-20.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "bb4f405adec6",
+          "time": "2026-04-10T19:18:19-07:00",
+          "subject": "Upload activity image 19",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-19.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "cec25f0aebbf",
+          "time": "2026-04-10T19:18:18-07:00",
+          "subject": "Upload activity image 17",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-17.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "41129c9bd341",
+          "time": "2026-04-10T19:18:16-07:00",
+          "subject": "Upload activity image 16",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-16.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "14a2bec4a635",
+          "time": "2026-04-10T19:18:15-07:00",
+          "subject": "Upload activity image 14",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-14.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "0561eee0bc82",
+          "time": "2026-04-10T19:18:14-07:00",
+          "subject": "Upload activity image 13",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-13.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "87d3bf9fcdff",
+          "time": "2026-04-10T19:18:13-07:00",
+          "subject": "Upload activity image 12",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-12.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "42301d4aefb0",
+          "time": "2026-04-10T19:18:11-07:00",
+          "subject": "Upload activity image 11",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-11.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9fe8abb7bd62",
+          "time": "2026-04-10T19:18:02-07:00",
+          "subject": "Upload activity image 10",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-10.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8cf8201c9a1e",
+          "time": "2026-04-10T19:18:01-07:00",
+          "subject": "Upload activity image 09",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-09.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "323bf13c7774",
+          "time": "2026-04-10T19:18:00-07:00",
+          "subject": "Upload activity image 08",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-08.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "983e692d12bc",
+          "time": "2026-04-10T19:17:57-07:00",
+          "subject": "Upload activity image 06",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-06.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e112b3a51860",
+          "time": "2026-04-10T19:17:56-07:00",
+          "subject": "Upload activity image 05",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-05.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "5ab7080f4ee3",
+          "time": "2026-04-10T19:17:55-07:00",
+          "subject": "Upload activity image 04",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-04.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "f208c2cc8526",
+          "time": "2026-04-10T19:17:54-07:00",
+          "subject": "Upload activity image 03",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-03.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "2e9fa501bcb1",
+          "time": "2026-04-10T19:17:52-07:00",
+          "subject": "Upload activity image 02",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-02.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "6213861e24d2",
+          "time": "2026-04-10T19:17:51-07:00",
+          "subject": "Upload activity image 01",
+          "files_changed": 1,
+          "files": [
+            "activity-images/activity-01.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9e50e8b086ce",
+          "time": "2026-04-10T19:16:26-07:00",
+          "subject": "\ud83d\uddbc\ufe0f Replace expired Airtable images with category-colored placeholders",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "486912bcb146",
+          "time": "2026-04-10T19:14:31-07:00",
+          "subject": "\u26a1 3s delays + max 2 activities + interleave cards with text",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "fb25b88b2c95",
+          "time": "2026-04-10T19:03:24-07:00",
+          "subject": "Fix runtime crash: remove extra stray }); in handleUserMessage",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "ecb74688882f",
+          "time": "2026-04-10T18:55:11-07:00",
+          "subject": "\ud83d\udd27 Fix chunking implementation - text now breaks into digestible pieces",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "b6bc44c4ca53",
+          "time": "2026-04-10T18:47:44-07:00",
+          "subject": "\ud83c\udfa8 Change to white header for better logo visibility",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3ce3e7f34fdd",
+          "time": "2026-04-10T18:40:13-07:00",
+          "subject": "\ud83c\udfa8 Update header to Light Cardinal gradient for better logo visibility",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "5473ef62929f",
+          "time": "2026-04-10T18:17:11-07:00",
+          "subject": "\u23f1\ufe0f Fix chunking with 5-second minimum delays between messages",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "48b5224c0cf0",
+          "time": "2026-04-10T17:52:39-07:00",
+          "subject": "\ud83c\udfa8 Add Stanford branding: enlarge robot logo, add Stanford logo, update color scheme",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "23d3c0657bab",
+          "time": "2026-04-10T17:47:15-07:00",
+          "subject": "\ud83c\udfa8 Add Stanford logo, update colors, and enlarge robot logo",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "64d3b1de17cc",
+          "time": "2026-04-10T17:20:55-07:00",
+          "subject": "\ud83c\udfaf Break Claude responses into digestible chunks with reading delays",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "c2887ac8f5c7",
+          "time": "2026-04-10T13:48:05-07:00",
+          "subject": "\u2728 Add markdown formatting for Claude responses",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "592f614a648b",
+          "time": "2026-04-10T11:17:20-07:00",
+          "subject": "Add auto-refresh of Airtable image URLs on server startup",
+          "files_changed": 1,
+          "files": [
+            "server.py"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "b8c263a66928",
+          "time": "2026-04-10T11:17:20-07:00",
+          "subject": "Refresh all 37 activity image URLs from Airtable",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "612d0e743d87",
+            "time": "2026-04-10T19:33:07-07:00",
+            "subject": "Fix syntax error: remove stray }); in handleUserMessage",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "62cfcbfac606",
+            "time": "2026-04-10T19:25:16-07:00",
+            "subject": "\ud83d\uddbc\ufe0f All 38 activity images now using resized GitHub versions",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "94a82b205101",
+            "time": "2026-04-10T19:24:55-07:00",
+            "subject": "Upload resized activity image 29",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-29.jpg"
+            ]
+          }
+        ]
+      },
+      "commit_count": 54,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 13.5374
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 109
+      }
+    },
+    {
+      "day": "2026-04-13",
+      "week": "2026-W16",
+      "cost": 0.3719,
+      "turns": 2,
+      "cost_per_turn": 0.1859,
+      "cache_read": 89057,
+      "cache_write": 89396,
+      "input_tokens": 20,
+      "output_tokens": 659,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.3719,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 0.3719
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 2
+      }
+    },
+    {
+      "day": "2026-04-15",
+      "week": "2026-W16",
+      "cost": 9.6179,
+      "turns": 64,
+      "cost_per_turn": 0.1503,
+      "cache_read": 4944237,
+      "cache_write": 2090362,
+      "input_tokens": 385,
+      "output_tokens": 19638,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.7717,
+        5.8173,
+        0.7455,
+        0,
+        0.2833,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "14fe19b2a01b",
+          "time": "2026-04-15T19:36:28-07:00",
+          "subject": "Fix keyboard/input position on mobile PWA: use position fixed + interactive-widget",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "060823b90941",
+          "time": "2026-04-15T17:28:12-07:00",
+          "subject": "Fix mobile layout: header scaling, safe-area insets, dvh viewport",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "96a81baddb17",
+          "time": "2026-04-15T17:23:03-07:00",
+          "subject": "Switch server to Flask + Gunicorn for autoscale deployment",
+          "files_changed": 1,
+          "files": [
+            "server.py"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "1532b729fcf4",
+          "time": "2026-04-15T17:19:52-07:00",
+          "subject": "Add Apple touch icon 180x180",
+          "files_changed": 1,
+          "files": [
+            "images/apple-touch-icon.png"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "1c921451692d",
+          "time": "2026-04-15T17:19:51-07:00",
+          "subject": "Add PWA icon 512x512",
+          "files_changed": 1,
+          "files": [
+            "images/icon-512.png"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "62798a15abf9",
+          "time": "2026-04-15T17:19:50-07:00",
+          "subject": "Add PWA icon 192x192",
+          "files_changed": 1,
+          "files": [
+            "images/icon-192.png"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "b1f71fda2ea4",
+          "time": "2026-04-15T17:19:50-07:00",
+          "subject": "Add service worker for PWA",
+          "files_changed": 1,
+          "files": [
+            "sw.js"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "83f623d51f1a",
+          "time": "2026-04-15T17:19:35-07:00",
+          "subject": "Add PWA support: manifest, service worker, meta tags",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9ed05f351fdc",
+          "time": "2026-04-15T17:19:35-07:00",
+          "subject": "Add PWA manifest",
+          "files_changed": 1,
+          "files": [
+            "manifest.json"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "5c175e5f4ddf",
+          "time": "2026-04-15T17:07:04-07:00",
+          "subject": "\ud83d\udc1b Fix JavaScript syntax error - remove duplicate closing bracket",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3903ad4b2947",
+          "time": "2026-04-15T17:05:45-07:00",
+          "subject": "\ud83d\udccf Increase robot logo to 119px (40% bigger)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "608eeefa6454",
+          "time": "2026-04-15T17:03:14-07:00",
+          "subject": "\ud83c\udfa8 Fix AI Tinkery title styling - 36px orange #c7520a",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "4c115399261c",
+          "time": "2026-04-15T16:57:41-07:00",
+          "subject": "\ud83c\udfa8 Update AI Tinkery title to 36px and orange color #c7520a",
+          "files_changed": 0,
+          "files": [],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "857820a41c04",
+          "time": "2026-04-15T16:54:30-07:00",
+          "subject": "\ud83d\udccf Increase robot logo to 85px (30% bigger)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "ea5d9c75e4e1",
+          "time": "2026-04-15T16:50:14-07:00",
+          "subject": "\ud83e\udd16 Fix robot logo to use new pixel art from GitHub",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "2f14f5d9eed1",
+          "time": "2026-04-15T16:38:20-07:00",
+          "subject": "\ud83d\udd0d Enlarge robot logo to 65px and remove black background",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "2ca923f9c511",
+          "time": "2026-04-15T16:25:37-07:00",
+          "subject": "\ud83e\udd16 Replace with new pixel-art robot logo",
+          "files_changed": 0,
+          "files": [],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "5aceabc17f70",
+          "time": "2026-04-15T16:25:19-07:00",
+          "subject": "Upload new pixel-art robot logo",
+          "files_changed": 1,
+          "files": [
+            "images/robot-logo.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "bb6cfd3b7b6d",
+          "time": "2026-04-15T16:06:08-07:00",
+          "subject": "\ud83d\udd34 Fix New User button visibility - red background on white header",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "f390a00b1583",
+          "time": "2026-04-15T16:01:16-07:00",
+          "subject": "\ud83c\udfa8 Use Stanford logo with white background (no filter needed)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "7c5568966f77",
+          "time": "2026-04-15T16:00:54-07:00",
+          "subject": "Upload Stanford logo with white background",
+          "files_changed": 1,
+          "files": [
+            "images/stanford-logo.jpg"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "cb60225eaffe",
+          "time": "2026-04-15T15:55:33-07:00",
+          "subject": "\ud83c\udfa8 Use GitHub-hosted Stanford logo with invert filter",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e47aabd88363",
+          "time": "2026-04-15T15:55:18-07:00",
+          "subject": "Upload Stanford Accelerator logo",
+          "files_changed": 1,
+          "files": [
+            "images/stanford-logo.png"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "1503b8653a8b",
+          "time": "2026-04-15T15:36:58-07:00",
+          "subject": "\ud83c\udfa8 Fix Stanford logo black background with mix-blend-mode",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "14fe19b2a01b",
+            "time": "2026-04-15T19:36:28-07:00",
+            "subject": "Fix keyboard/input position on mobile PWA: use position fixed + interactive-widget",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "060823b90941",
+            "time": "2026-04-15T17:28:12-07:00",
+            "subject": "Fix mobile layout: header scaling, safe-area insets, dvh viewport",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "96a81baddb17",
+            "time": "2026-04-15T17:23:03-07:00",
+            "subject": "Switch server to Flask + Gunicorn for autoscale deployment",
+            "files_changed": 1,
+            "files": [
+              "server.py"
+            ]
+          }
+        ]
+      },
+      "commit_count": 24,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 9.6179
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 64
+      }
+    },
+    {
+      "day": "2026-04-17",
+      "week": "2026-W16",
+      "cost": 1.7963,
+      "turns": 30,
+      "cost_per_turn": 0.0599,
+      "cache_read": 2230433,
+      "cache_write": 243621,
+      "input_tokens": 146,
+      "output_tokens": 14209,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.5861,
+        0.2102,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "f40ae7b12d16",
+          "time": "2026-04-17T20:03:49-07:00",
+          "subject": "\ud83c\udfa8 Proper Gidens design - static intro, open layout, no chat boxes",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "98828e94c6e6",
+          "time": "2026-04-17T19:59:29-07:00",
+          "subject": "\ud83d\udcdd Add Gidens redesign documentation",
+          "files_changed": 1,
+          "files": [
+            "GIDENS_REDESIGN.md"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "85f293f462aa",
+          "time": "2026-04-17T19:59:22-07:00",
+          "subject": "\ud83c\udfa8 Add Gidens-inspired redesign - glassmorphism, cyan accents, modern UI",
+          "files_changed": 1,
+          "files": [
+            "index-gidens.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "54e5755678d6",
+          "time": "2026-04-17T19:52:50-07:00",
+          "subject": "\u26a1 Speed up message delays to moderate (2s-4s, 200ms/word)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "f40ae7b12d16",
+            "time": "2026-04-17T20:03:49-07:00",
+            "subject": "\ud83c\udfa8 Proper Gidens design - static intro, open layout, no chat boxes",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "98828e94c6e6",
+            "time": "2026-04-17T19:59:29-07:00",
+            "subject": "\ud83d\udcdd Add Gidens redesign documentation",
+            "files_changed": 1,
+            "files": [
+              "GIDENS_REDESIGN.md"
+            ]
+          },
+          {
+            "sha": "85f293f462aa",
+            "time": "2026-04-17T19:59:22-07:00",
+            "subject": "\ud83c\udfa8 Add Gidens-inspired redesign - glassmorphism, cyan accents, modern UI",
+            "files_changed": 1,
+            "files": [
+              "index-gidens.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 4,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 1.7963
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 30
+      }
+    },
+    {
+      "day": "2026-04-18",
+      "week": "2026-W16",
+      "cost": 10.369,
+      "turns": 63,
+      "cost_per_turn": 0.1646,
+      "cache_read": 6499806,
+      "cache_write": 2117735,
+      "input_tokens": 362,
+      "output_tokens": 31766,
+      "session_count": 1,
+      "sessions": [
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.7747,
+        4.8913,
+        2.703,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "ec761966e912",
+          "time": "2026-04-18T21:55:43+00:00",
+          "subject": "Published your App",
+          "files_changed": 0,
+          "files": [],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "4dcfbe8a0a98",
+          "time": "2026-04-18T21:53:21+00:00",
+          "subject": "Enable mobile app installation and improve responsiveness",
+          "files_changed": 3,
+          "files": [
+            "index.html",
+            "manifest.json",
+            "sw.js"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "000655ddd484",
+          "time": "2026-04-18T21:51:00+00:00",
+          "subject": "Speed up chatbot response time by reducing text display delays",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3d7c4b2a766c",
+          "time": "2026-04-18T21:47:38+00:00",
+          "subject": "Reorder chatbot response elements to display activity cards after text",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "c87221a174e8",
+          "time": "2026-04-18T21:44:03+00:00",
+          "subject": "Add smart follow-up questions based on chatbot responses",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "f52686b0ed95",
+          "time": "2026-04-18T21:41:44+00:00",
+          "subject": "Published your App",
+          "files_changed": 0,
+          "files": [],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "6e26b58b4929",
+          "time": "2026-04-18T21:40:05+00:00",
+          "subject": "Update chat interface to replace previous messages and add quick replies",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "41655a0a32ea",
+          "time": "2026-04-18T21:34:35+00:00",
+          "subject": "Fix errors when interacting with the chat interface",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "36c91b5fa6da",
+          "time": "2026-04-18T21:32:54+00:00",
+          "subject": "Published your App",
+          "files_changed": 0,
+          "files": [],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "d22fb4791d01",
+          "time": "2026-04-18T21:30:12+00:00",
+          "subject": "Remove onboarding flow and streamline user access to the chatbot",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "3fabc36e9cf1",
+          "time": "2026-04-18T21:10:34+00:00",
+          "subject": "Add more AI activities and fix JavaScript errors",
+          "files_changed": 6,
+          "files": [
+            ".replit",
+            "index.html",
+            "main.py",
+            "pyproject.toml",
+            "replit.md",
+            "uv.lock"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8c67999b5636",
+          "time": "2026-04-18T13:45:13-07:00",
+          "subject": "\u23f1\ufe0f Add message chunking - progressive display with 2-4s delays",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "2214228545be",
+          "time": "2026-04-18T13:43:16-07:00",
+          "subject": "\ud83d\udc64 Add user flow - name, affiliation, path discovery with localStorage",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8eec631be002",
+          "time": "2026-04-18T13:40:46-07:00",
+          "subject": "\ud83c\udfb4 Add 38 activity cards with images and smart display",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "2f5f4eb0ce5f",
+          "time": "2026-04-18T13:39:03-07:00",
+          "subject": "\ud83d\udd0c Add Claude backend integration - full conversation support",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9ff21c90eb42",
+          "time": "2026-04-18T13:23:02-07:00",
+          "subject": "\ud83c\udfa8 Launch new Gidens-inspired design as main chatbot",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "8ac01ef97e69",
+          "time": "2026-04-18T12:58:57-07:00",
+          "subject": "\ud83d\udccf Reduce all elements by 10% - perfect sizing",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "d6ac0cbbde82",
+          "time": "2026-04-18T12:55:00-07:00",
+          "subject": "\ud83d\udcd0 Increase all elements by 30% - larger, more readable",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e2b39f5ae282",
+          "time": "2026-04-18T12:51:32-07:00",
+          "subject": "\ud83d\udccf Make layout compact - quick replies visible above the fold",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "e9f7589383fd",
+          "time": "2026-04-18T12:48:38-07:00",
+          "subject": "\ud83d\udfe0 Change all buttons to AI Tinkery orange #c7520a",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "9454b7d05e1a",
+          "time": "2026-04-18T12:30:46-07:00",
+          "subject": "\ud83d\udd34 Change all buttons to Stanford red #B83A4B",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "5611e6d887e0",
+          "time": "2026-04-18T12:22:09-07:00",
+          "subject": "\u26aa Change header to solid white background",
+          "files_changed": 1,
+          "files": [
+            "index-gidens-v2.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "ec761966e912",
+            "time": "2026-04-18T21:55:43+00:00",
+            "subject": "Published your App",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "4dcfbe8a0a98",
+            "time": "2026-04-18T21:53:21+00:00",
+            "subject": "Enable mobile app installation and improve responsiveness",
+            "files_changed": 3,
+            "files": [
+              "index.html",
+              "manifest.json",
+              "sw.js"
+            ]
+          },
+          {
+            "sha": "000655ddd484",
+            "time": "2026-04-18T21:51:00+00:00",
+            "subject": "Speed up chatbot response time by reducing text display delays",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 22,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 10.369
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 63
+      }
+    },
+    {
+      "day": "2026-04-21",
+      "week": "2026-W17",
+      "cost": 23.0468,
+      "turns": 226,
+      "cost_per_turn": 0.102,
+      "cache_read": 16665951,
+      "cache_write": 1915512,
+      "input_tokens": 380,
+      "output_tokens": 126289,
+      "session_count": 6,
+      "sessions": [
+        "2735e07e-1728-45eb-bc73-5a4111bb2e7b",
+        "39459bcd-fbd4-41ee-99f9-4a278000bdb0",
+        "6165c9bf-4023-437b-969a-267bad5652f7_reset_2026-04-21T21-24-31.215Z",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a",
+        "d01cce68-1ee3-4884-81a6-1ce2a3766984",
+        "e19bce2a-277e-4953-af12-9aa04733c14a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6259,
+        0.7576,
+        3.5271,
+        1.3884,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14.2043,
+        2.5436
+      ],
+      "commits": [
+        {
+          "sha": "5d8406ae6c3f",
+          "time": "2026-04-21T23:54:25+00:00",
+          "subject": "Add information about other schools starting a Tinkery",
+          "files_changed": 1,
+          "files": [
+            "claude-backend.gs"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "17a0f5cd505e",
+          "time": "2026-04-21T23:29:35+00:00",
+          "subject": "Published your App",
+          "files_changed": 0,
+          "files": [],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "1ac0815d4850",
+          "time": "2026-04-21T23:25:44+00:00",
+          "subject": "Add styling and rendering for level 1 headings in messages",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "13dc37fbc778",
+          "time": "2026-04-21T23:23:52+00:00",
+          "subject": "Style bot responses with improved markdown rendering and new CSS rules",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "af4975dba8f4",
+          "time": "2026-04-21T23:19:10+00:00",
+          "subject": "Change quick reply suggestions to statements",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "10dab6d7550b",
+          "time": "2026-04-21T22:32:55+00:00",
+          "subject": "Improve the display and interaction of activity cards",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-chatbot"
+        },
+        {
+          "sha": "600ed7f62f25",
+          "time": "2026-04-21T23:07:06-07:00",
+          "subject": "Update Claude backend URL to new Apps Script deployment",
+          "files_changed": 1,
+          "files": [
+            "server.py"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "929ed27ef184",
+          "time": "2026-04-21T22:51:46-07:00",
+          "subject": "Redesigned AI Tinkery as a filterable activity library",
+          "files_changed": 54,
+          "files": [
+            ".replit",
+            "README.md",
+            "activities.json",
+            "activity-images/activity-01.jpg",
+            "activity-images/activity-02.jpg",
+            "activity-images/activity-03.jpg",
+            "activity-images/activity-04.jpg",
+            "activity-images/activity-05.jpg",
+            "activity-images/activity-06.jpg",
+            "activity-images/activity-07.jpg",
+            "activity-images/activity-08.jpg",
+            "activity-images/activity-09.jpg",
+            "activity-images/activity-10.jpg",
+            "activity-images/activity-11.jpg",
+            "activity-images/activity-12.jpg",
+            "activity-images/activity-13.jpg",
+            "activity-images/activity-14.jpg",
+            "activity-images/activity-15.jpg",
+            "activity-images/activity-16.jpg",
+            "activity-images/activity-17.jpg"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "b0aa44174081",
+          "time": "2026-04-21T22:40:52-07:00",
+          "subject": "Initial commit",
+          "files_changed": 1,
+          "files": [
+            "README.md"
+          ],
+          "project": "ai-tinkery-library"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "5d8406ae6c3f",
+            "time": "2026-04-21T23:54:25+00:00",
+            "subject": "Add information about other schools starting a Tinkery",
+            "files_changed": 1,
+            "files": [
+              "claude-backend.gs"
+            ]
+          },
+          {
+            "sha": "17a0f5cd505e",
+            "time": "2026-04-21T23:29:35+00:00",
+            "subject": "Published your App",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "1ac0815d4850",
+            "time": "2026-04-21T23:25:44+00:00",
+            "subject": "Add styling and rendering for level 1 headings in messages",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ],
+        "ai-tinkery-library": [
+          {
+            "sha": "600ed7f62f25",
+            "time": "2026-04-21T23:07:06-07:00",
+            "subject": "Update Claude backend URL to new Apps Script deployment",
+            "files_changed": 1,
+            "files": [
+              "server.py"
+            ]
+          },
+          {
+            "sha": "929ed27ef184",
+            "time": "2026-04-21T22:51:46-07:00",
+            "subject": "Redesigned AI Tinkery as a filterable activity library",
+            "files_changed": 54,
+            "files": [
+              ".replit",
+              "README.md",
+              "activities.json",
+              "activity-images/activity-01.jpg",
+              "activity-images/activity-02.jpg",
+              "activity-images/activity-03.jpg",
+              "activity-images/activity-04.jpg",
+              "activity-images/activity-05.jpg",
+              "activity-images/activity-06.jpg",
+              "activity-images/activity-07.jpg",
+              "activity-images/activity-08.jpg",
+              "activity-images/activity-09.jpg",
+              "activity-images/activity-10.jpg",
+              "activity-images/activity-11.jpg",
+              "activity-images/activity-12.jpg",
+              "activity-images/activity-13.jpg",
+              "activity-images/activity-14.jpg",
+              "activity-images/activity-15.jpg",
+              "activity-images/activity-16.jpg",
+              "activity-images/activity-17.jpg"
+            ]
+          },
+          {
+            "sha": "b0aa44174081",
+            "time": "2026-04-21T22:40:52-07:00",
+            "subject": "Initial commit",
+            "files_changed": 1,
+            "files": [
+              "README.md"
+            ]
+          }
+        ]
+      },
+      "commit_count": 9,
+      "cost_by_project": {
+        "ai-tinkery-library": 5.9066,
+        "ai-tinkery-chatbot": 7.7824,
+        "workspace-infra": 1.8849,
+        "unattributed": 1.8193,
+        "bites": 5.6536
+      },
+      "turns_by_project": {
+        "ai-tinkery-library": 49,
+        "ai-tinkery-chatbot": 96,
+        "workspace-infra": 12,
+        "unattributed": 20,
+        "bites": 59
+      }
+    },
+    {
+      "day": "2026-04-26",
+      "week": "2026-W17",
+      "cost": 4.3288,
+      "turns": 7,
+      "cost_per_turn": 0.6184,
+      "cache_read": 773479,
+      "cache_write": 599199,
+      "input_tokens": 27,
+      "output_tokens": 7877,
+      "session_count": 1,
+      "sessions": [
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.9816,
+        1.3472,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "bites": 4.159,
+        "ai-tinkery-chatbot": 0.1698
+      },
+      "turns_by_project": {
+        "bites": 6,
+        "ai-tinkery-chatbot": 1
+      }
+    },
+    {
+      "day": "2026-04-27",
+      "week": "2026-W18",
+      "cost": 12.2368,
+      "turns": 53,
+      "cost_per_turn": 0.2309,
+      "cache_read": 8486824,
+      "cache_write": 1110117,
+      "input_tokens": 88,
+      "output_tokens": 42189,
+      "session_count": 2,
+      "sessions": [
+        "ae1a4b34-adfe-4912-8d2c-fc5cb8d28502",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.9655,
+        5.3756,
+        0,
+        4.8958,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "workspace-infra": 1.3731,
+        "unattributed": 1.4115,
+        "bites": 9.0412,
+        "ai-tinkery-chatbot": 0.1814,
+        "tinkerybot": 0.2296
+      },
+      "turns_by_project": {
+        "workspace-infra": 8,
+        "unattributed": 13,
+        "bites": 30,
+        "ai-tinkery-chatbot": 1,
+        "tinkerybot": 1
+      }
+    },
+    {
+      "day": "2026-04-30",
+      "week": "2026-W18",
+      "cost": 2.8104,
+      "turns": 8,
+      "cost_per_turn": 0.3513,
+      "cache_read": 1847002,
+      "cache_write": 274149,
+      "input_tokens": 13,
+      "output_tokens": 6935,
+      "session_count": 1,
+      "sessions": [
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.8104,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "bites": 2.3756,
+        "workspace-infra": 0.4347
+      },
+      "turns_by_project": {
+        "bites": 6,
+        "workspace-infra": 2
+      }
+    },
+    {
+      "day": "2026-05-04",
+      "week": "2026-W19",
+      "cost": 34.3904,
+      "turns": 108,
+      "cost_per_turn": 0.3184,
+      "cache_read": 31505306,
+      "cache_write": 2782769,
+      "input_tokens": 188,
+      "output_tokens": 49780,
+      "session_count": 1,
+      "sessions": [
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12.1893,
+        22.2011
+      ],
+      "commits": [
+        {
+          "sha": "eb7ac4d97762",
+          "time": "2026-05-04T23:50:04-07:00",
+          "subject": "Cards: scrollable description; clearer share-link affordance with toast feedback",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "10dd36c41884",
+          "time": "2026-05-04T23:31:36-07:00",
+          "subject": "Populate Created by for activity-06 (Graidiants \u2192 Harvard Center for Digital Thriving)",
+          "files_changed": 1,
+          "files": [
+            "activities.json"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "6f637c027a79",
+          "time": "2026-05-04T23:30:27-07:00",
+          "subject": "Populate Created by from Airtable; sync script defaults to created_by-only",
+          "files_changed": 2,
+          "files": [
+            "activities.json",
+            "scripts/sync-airtable.py"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "8e282a2da39b",
+          "time": "2026-05-04T23:25:05-07:00",
+          "subject": "sync: warn when zero non-empty Created by values come back",
+          "files_changed": 1,
+          "files": [
+            "scripts/sync-airtable.py"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "0b3a18f1ea5e",
+          "time": "2026-05-04T23:18:27-07:00",
+          "subject": "Fix Airtable field name: Created by (lowercase b)",
+          "files_changed": 2,
+          "files": [
+            "README.md",
+            "scripts/sync-airtable.py"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "afcf2393b429",
+          "time": "2026-05-04T23:14:06-07:00",
+          "subject": "Add Created By field: data, dynamic filter chips, card credit, sync, prompt",
+          "files_changed": 5,
+          "files": [
+            "README.md",
+            "activities.json",
+            "backend.gs",
+            "index.html",
+            "scripts/sync-airtable.py"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "3615832f2fee",
+          "time": "2026-05-04T22:58:05-07:00",
+          "subject": "Remove Create With AI category",
+          "files_changed": 2,
+          "files": [
+            "backend.gs",
+            "index.html"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "818372eac96e",
+          "time": "2026-05-04T22:50:03-07:00",
+          "subject": "Update activities.json",
+          "files_changed": 1,
+          "files": [
+            "activities.json"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "f7244aca265a",
+          "time": "2026-05-04T22:38:56-07:00",
+          "subject": "Update activities.json",
+          "files_changed": 1,
+          "files": [
+            "activities.json"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "7829b2aec08f",
+          "time": "2026-05-04T22:14:59-07:00",
+          "subject": "Rename categories: Thoughtful AI \u2192 Evaluate AI, Learn About AI \u2192 Understand AI",
+          "files_changed": 3,
+          "files": [
+            "activities.json",
+            "backend.gs",
+            "index.html"
+          ],
+          "project": "ai-tinkery-library"
+        }
+      ],
+      "commits_by_project": {
+        "ai-tinkery-library": [
+          {
+            "sha": "eb7ac4d97762",
+            "time": "2026-05-04T23:50:04-07:00",
+            "subject": "Cards: scrollable description; clearer share-link affordance with toast feedback",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "10dd36c41884",
+            "time": "2026-05-04T23:31:36-07:00",
+            "subject": "Populate Created by for activity-06 (Graidiants \u2192 Harvard Center for Digital Thriving)",
+            "files_changed": 1,
+            "files": [
+              "activities.json"
+            ]
+          },
+          {
+            "sha": "6f637c027a79",
+            "time": "2026-05-04T23:30:27-07:00",
+            "subject": "Populate Created by from Airtable; sync script defaults to created_by-only",
+            "files_changed": 2,
+            "files": [
+              "activities.json",
+              "scripts/sync-airtable.py"
+            ]
+          }
+        ]
+      },
+      "commit_count": 10,
+      "cost_by_project": {
+        "ai-tinkery-library": 30.7152,
+        "bites": 3.6752
+      },
+      "turns_by_project": {
+        "ai-tinkery-library": 97,
+        "bites": 11
+      }
+    },
+    {
+      "day": "2026-05-06",
+      "week": "2026-W19",
+      "cost": 44.8458,
+      "turns": 112,
+      "cost_per_turn": 0.4004,
+      "cache_read": 19363374,
+      "cache_write": 5330434,
+      "input_tokens": 201,
+      "output_tokens": 73916,
+      "session_count": 4,
+      "sessions": [
+        "39459bcd-fbd4-41ee-99f9-4a278000bdb0",
+        "4e00bdc4-c61e-4557-9736-d9ab15541694",
+        "717fd531-2150-4a87-9b6b-5cabe6825e8d",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10.9738,
+        0,
+        0,
+        3.1423,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7.6603,
+        2.4584,
+        5.4642,
+        9.6327,
+        5.5141
+      ],
+      "commits": [
+        {
+          "sha": "15deb642c849",
+          "time": "2026-05-06T19:46:31-07:00",
+          "subject": "Initial commit",
+          "files_changed": 1,
+          "files": [
+            "README.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "5546a169422d",
+          "time": "2026-05-06T13:26:38-07:00",
+          "subject": "Move Build-a-Bot to Shape AI category",
+          "files_changed": 2,
+          "files": [
+            "activities.json",
+            "backend.gs"
+          ],
+          "project": "ai-tinkery-library"
+        }
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "15deb642c849",
+            "time": "2026-05-06T19:46:31-07:00",
+            "subject": "Initial commit",
+            "files_changed": 1,
+            "files": [
+              "README.md"
+            ]
+          }
+        ],
+        "ai-tinkery-library": [
+          {
+            "sha": "5546a169422d",
+            "time": "2026-05-06T13:26:38-07:00",
+            "subject": "Move Build-a-Bot to Shape AI category",
+            "files_changed": 2,
+            "files": [
+              "activities.json",
+              "backend.gs"
+            ]
+          }
+        ]
+      },
+      "commit_count": 2,
+      "cost_by_project": {
+        "unattributed": 0.2204,
+        "bites": 38.6679,
+        "workspace-infra": 2.6157,
+        "ai-tinkery-library": 3.2421,
+        "ai-tinkery-chatbot": 0.0998
+      },
+      "turns_by_project": {
+        "unattributed": 2,
+        "bites": 99,
+        "workspace-infra": 5,
+        "ai-tinkery-library": 6,
+        "ai-tinkery-chatbot": 1
+      }
+    },
+    {
+      "day": "2026-05-07",
+      "week": "2026-W19",
+      "cost": 367.0012,
+      "turns": 987,
+      "cost_per_turn": 0.3718,
+      "cache_read": 358375960,
+      "cache_write": 27320199,
+      "input_tokens": 1591,
+      "output_tokens": 694331,
+      "session_count": 11,
+      "sessions": [
+        "24eb3b54-77bb-44c1-9480-85a8547af71e",
+        "68d3b186-1ad7-4324-8fb8-0ebff3a79eeb",
+        "71c7f824-bd3f-4479-a1b2-e3838eabab2b",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a",
+        "b3eb580e-67ff-4d50-8abf-0d5c4c4447d2",
+        "b994202f-0e6b-4c45-a2cc-d236f8fdf902",
+        "b9effd83-48f5-41a5-8e11-10426544c045",
+        "bc16daf5-6aa0-4f27-9ec8-23a6eea3f64f",
+        "bc70e598-798e-47f2-9f68-94a6f52870ce",
+        "d4f8b0ab-233f-4574-b35a-7c7c0fbf86e4",
+        "daa48a99-9807-48b8-b879-b9c7513b91fc"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4.4856,
+        0,
+        0,
+        26.603,
+        15.9484,
+        21.4892,
+        13.599,
+        53.5154,
+        56.5398,
+        10.1804,
+        70.2565,
+        55.5062,
+        20.8531,
+        18.0247,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "7b439aa39268",
+          "time": "2026-05-07T21:47:40-07:00",
+          "subject": "edit: scrub AI writing tropes from all three blog posts",
+          "files_changed": 6,
+          "files": [
+            "blog/on-being-an-ai-ceo.html",
+            "blog/on-being-an-ai-ceo.md",
+            "blog/the-cost-of-context.html",
+            "blog/the-cost-of-context.md",
+            "blog/what-it-costs.html",
+            "blog/what-it-costs.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "31aefe736bc8",
+          "time": "2026-05-07T20:14:54-07:00",
+          "subject": "fix: PWA install works from landing page (Add to Home Screen now offered)",
+          "files_changed": 2,
+          "files": [
+            "index.html",
+            "landing/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "9a065406dd63",
+          "time": "2026-05-07T20:09:36-07:00",
+          "subject": "blog: 'The Cost of Context' \u2014 third weekly post",
+          "files_changed": 3,
+          "files": [
+            "blog/index.html",
+            "blog/the-cost-of-context.html",
+            "blog/the-cost-of-context.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "400fb25e1f23",
+          "time": "2026-05-07T19:54:17-07:00",
+          "subject": "ops: log landing-at-root cost spike ($17.88, 29 turns, 6 min)",
+          "files_changed": 1,
+          "files": [
+            "OPS-LEDGER.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "fad654406660",
+          "time": "2026-05-07T19:50:53-07:00",
+          "subject": "feat: landing page is now the root URL; app moves to /app/",
+          "files_changed": 9,
+          "files": [
+            "app/index.html",
+            "app/sw.js",
+            "blog/index.html",
+            "blog/on-being-an-ai-ceo.html",
+            "blog/what-it-costs.html",
+            "deck/PITCH.md",
+            "index.html",
+            "manifest.json",
+            "sw.js"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "435896b99185",
+          "time": "2026-05-07T19:38:33-07:00",
+          "subject": "ops: ALPHA-PLAN reflects 1-tap collection; document authorizeMe() helper",
+          "files_changed": 2,
+          "files": [
+            "ALPHA-PLAN.md",
+            "scripts/analytics-ingest.gs"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "2140eac0a606",
+          "time": "2026-05-07T19:35:13-07:00",
+          "subject": "feat(analytics): wire ANALYTICS_INGEST_URL \u2014 Send to founder is live",
+          "files_changed": 1,
+          "files": [
+            "analytics.js"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "a9ca6f8185c7",
+          "time": "2026-05-07T19:12:55-07:00",
+          "subject": "feat(analytics): 'Send to founder' button + Apps Script ingest endpoint",
+          "files_changed": 2,
+          "files": [
+            "analytics.js",
+            "scripts/analytics-ingest.gs"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "ef2bf19d3e0d",
+          "time": "2026-05-07T19:09:38-07:00",
+          "subject": "feat(alpha): inline feedback prompt after 3+ bites or 5min session",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "213ea07d9455",
+          "time": "2026-05-07T18:52:19-07:00",
+          "subject": "feat: add Notes link to app + landing topbars",
+          "files_changed": 2,
+          "files": [
+            "index.html",
+            "landing/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "f5f06101dbb6",
+          "time": "2026-05-07T18:47:05-07:00",
+          "subject": "blog: 'What It Costs to Run a Startup as an AI' \u2014 week one accounting",
+          "files_changed": 3,
+          "files": [
+            "blog/index.html",
+            "blog/what-it-costs.html",
+            "blog/what-it-costs.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "8abda1541716",
+          "time": "2026-05-07T18:23:34-07:00",
+          "subject": "fix(ux): form progressive disclosure \u2014 3-field fast path",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "ac8d403c40d7",
+          "time": "2026-05-07T18:21:30-07:00",
+          "subject": "fix(ux): rating as corner badge on home grid (Hierarchy)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "0bf31e69ea59",
+          "time": "2026-05-07T18:20:32-07:00",
+          "subject": "fix(ux): empty-state copy uses do-verb (Wayfinding)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "a0e4ba3c7e2d",
+          "time": "2026-05-07T18:20:13-07:00",
+          "subject": "fix(ux): I/O sheet tiered into Your Data / More / Danger Zone (Hick's Law)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "aa3f1cfc8aef",
+          "time": "2026-05-07T18:19:00-07:00",
+          "subject": "fix(ux): soft-delete + undo toast (Forgiveness over Confirmation)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "724f0295b93c",
+          "time": "2026-05-07T17:57:19-07:00",
+          "subject": "ops: add Claude API credit tracking \u2014 per-task breakdown + daily totals",
+          "files_changed": 1,
+          "files": [
+            "OPS-LEDGER.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "0eb2da0377d1",
+          "time": "2026-05-07T16:33:42-07:00",
+          "subject": "chore: update all canonical URLs to bites.kitchen",
+          "files_changed": 12,
+          "files": [
+            "ALPHA-PLAN.md",
+            "CAPACITOR-PLAN.md",
+            "LAUNCH.md",
+            "ROADMAP.md",
+            "cookbook.html",
+            "cookbook.js",
+            "deck/PITCH.md",
+            "deck/index.html",
+            "email-templates/cookbook-delivery.md",
+            "index.html",
+            "landing/index.html",
+            "marketing/MESSAGING.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "4a37bf292e7b",
+          "time": "2026-05-07T16:28:12-07:00",
+          "subject": "blog: launch /blog/ with first post 'On Being an AI CEO'",
+          "files_changed": 3,
+          "files": [
+            "blog/index.html",
+            "blog/on-being-an-ai-ceo.html",
+            "blog/on-being-an-ai-ceo.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "83b105b82d7c",
+          "time": "2026-05-07T16:22:52-07:00",
+          "subject": "ops: log domain purchase, init ledger",
+          "files_changed": 1,
+          "files": [
+            "OPS-LEDGER.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "4196a1e7f0d9",
+          "time": "2026-05-07T16:20:13-07:00",
+          "subject": "feat: configure custom domain bites.kitchen",
+          "files_changed": 1,
+          "files": [
+            "CNAME"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "c844f3bec41c",
+          "time": "2026-05-07T16:12:25-07:00",
+          "subject": "Alpha launch infrastructure: landing page, analytics, welcome flow, feedback",
+          "files_changed": 4,
+          "files": [
+            "ALPHA-PLAN.md",
+            "analytics.js",
+            "index.html",
+            "landing/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "f65c8a8de911",
+          "time": "2026-05-07T15:57:28-07:00",
+          "subject": "marketing: alpha messaging templates + URL tracking strategy",
+          "files_changed": 1,
+          "files": [
+            "marketing/MESSAGING.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "1a39437c3884",
+          "time": "2026-05-07T15:50:40-07:00",
+          "subject": "fix(cookbook): preview now loads seed-data.json (with photos) instead of inline empty seeds",
+          "files_changed": 1,
+          "files": [
+            "cookbook.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "024643b25683",
+          "time": "2026-05-07T15:45:36-07:00",
+          "subject": "Cookbook v3 polish + real food photos in seed data",
+          "files_changed": 9,
+          "files": [
+            "cookbook.js",
+            "seed-data.json",
+            "seed-photos/bite-seed-001.jpg",
+            "seed-photos/bite-seed-002.jpg",
+            "seed-photos/bite-seed-003.jpg",
+            "seed-photos/bite-seed-004.jpg",
+            "seed-photos/bite-seed-005.jpg",
+            "seed-photos/bite-seed-006.jpg",
+            "seed-photos/bite-seed-007.jpg"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "a7f15688ec0d",
+          "time": "2026-05-07T15:32:38-07:00",
+          "subject": "Cookbook v2: redesign bite pages \u2014 three layouts, magazine treatment",
+          "files_changed": 1,
+          "files": [
+            "cookbook.js"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "a50622cefbea",
+          "time": "2026-05-07T15:16:32-07:00",
+          "subject": "fix(deck): text clipping \u2014 flexible height + viewport typography",
+          "files_changed": 1,
+          "files": [
+            "deck/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "544a01b1fd80",
+          "time": "2026-05-07T15:13:22-07:00",
+          "subject": "feat: pitch deck (PITCH.md + standalone HTML slideshow)",
+          "files_changed": 2,
+          "files": [
+            "deck/PITCH.md",
+            "deck/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "ff4c4e5e4b5a",
+          "time": "2026-05-07T15:04:22-07:00",
+          "subject": "v0.2 PWA polish: feels-native iOS pass + Capacitor scaffold",
+          "files_changed": 21,
+          "files": [
+            "BUILD-IOS.md",
+            "CAPACITOR-PLAN.md",
+            "app/README.md",
+            "app/capacitor.config.json",
+            "email-templates/cookbook-delivery.md",
+            "icons/apple/apple-touch-icon-114.png",
+            "icons/apple/apple-touch-icon-120.png",
+            "icons/apple/apple-touch-icon-144.png",
+            "icons/apple/apple-touch-icon-152.png",
+            "icons/apple/apple-touch-icon-167.png",
+            "icons/apple/apple-touch-icon-180.png",
+            "icons/apple/apple-touch-icon-57.png",
+            "icons/apple/apple-touch-icon-60.png",
+            "icons/apple/apple-touch-icon-72.png",
+            "icons/apple/apple-touch-icon-76.png",
+            "icons/splash/splash-1170x2532.png",
+            "icons/splash/splash-1284x2778.png",
+            "icons/splash/splash-1290x2796.png",
+            "icons/splash/splash-750x1334.png",
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "a7843e14366c",
+          "time": "2026-05-07T14:42:38-07:00",
+          "subject": "BRIEF: lock 'no ads' as a permanent product principle",
+          "files_changed": 1,
+          "files": [
+            "BRIEF.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "57e318bb2815",
+          "time": "2026-05-07T13:22:26-07:00",
+          "subject": "feat(cookbook): replace pre-order with Stripe Checkout (test mode)",
+          "files_changed": 1,
+          "files": [
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "ee59737749bb",
+          "time": "2026-05-07T13:19:43-07:00",
+          "subject": "feat: cookbook PDF generator (engine + cover + TOC)",
+          "files_changed": 5,
+          "files": [
+            ".gitignore",
+            "cookbook.html",
+            "cookbook.js",
+            "index.html",
+            "vendor/jspdf.umd.min.js"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "1796b00d918b",
+          "time": "2026-05-07T11:59:24-07:00",
+          "subject": "Bites v0.1: share metadata, landing hero, cookbook pre-order, desktop polish",
+          "files_changed": 4,
+          "files": [
+            "LAUNCH.md",
+            "ROADMAP.md",
+            "index.html",
+            "og-image.png"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "0739a854b3c8",
+          "time": "2026-05-07T11:09:54-07:00",
+          "subject": "Bites v0: full prototype \u2014 capture, browse, search, edit, export",
+          "files_changed": 9,
+          "files": [
+            "BRIEF.md",
+            "README.md",
+            "icons/icon-192.png",
+            "icons/icon-512.png",
+            "icons/icon.svg",
+            "index.html",
+            "manifest.json",
+            "seed-data.json",
+            "sw.js"
+          ],
+          "project": "bites"
+        }
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "7b439aa39268",
+            "time": "2026-05-07T21:47:40-07:00",
+            "subject": "edit: scrub AI writing tropes from all three blog posts",
+            "files_changed": 6,
+            "files": [
+              "blog/on-being-an-ai-ceo.html",
+              "blog/on-being-an-ai-ceo.md",
+              "blog/the-cost-of-context.html",
+              "blog/the-cost-of-context.md",
+              "blog/what-it-costs.html",
+              "blog/what-it-costs.md"
+            ]
+          },
+          {
+            "sha": "31aefe736bc8",
+            "time": "2026-05-07T20:14:54-07:00",
+            "subject": "fix: PWA install works from landing page (Add to Home Screen now offered)",
+            "files_changed": 2,
+            "files": [
+              "index.html",
+              "landing/index.html"
+            ]
+          },
+          {
+            "sha": "9a065406dd63",
+            "time": "2026-05-07T20:09:36-07:00",
+            "subject": "blog: 'The Cost of Context' \u2014 third weekly post",
+            "files_changed": 3,
+            "files": [
+              "blog/index.html",
+              "blog/the-cost-of-context.html",
+              "blog/the-cost-of-context.md"
+            ]
+          }
+        ]
+      },
+      "commit_count": 34,
+      "cost_by_project": {
+        "bites": 343.3676,
+        "workspace-infra": 6.5939,
+        "unattributed": 1.5465,
+        "ai-tinkery-chatbot": 0.3284,
+        "workspace-knowledge": 8.721,
+        "ai-tinkery-library": 6.4438
+      },
+      "turns_by_project": {
+        "bites": 939,
+        "workspace-infra": 25,
+        "unattributed": 20,
+        "ai-tinkery-chatbot": 1,
+        "workspace-knowledge": 9,
+        "ai-tinkery-library": 10
+      }
+    },
+    {
+      "day": "2026-05-08",
+      "week": "2026-W19",
+      "cost": 83.8933,
+      "turns": 254,
+      "cost_per_turn": 0.3303,
+      "cache_read": 48958614,
+      "cache_write": 8922306,
+      "input_tokens": 782,
+      "output_tokens": 179375,
+      "session_count": 5,
+      "sessions": [
+        "39459bcd-fbd4-41ee-99f9-4a278000bdb0",
+        "798de707-c065-434f-9d7b-ea91de857a05",
+        "7bc6da8f-7049-4e8d-82da-2a09df0da12f",
+        "9322a0f2-3f80-418a-8ac3-c615a19ab1e2",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11.4437,
+        0,
+        0,
+        6.0139,
+        0,
+        22.3063,
+        16.8828,
+        14.7311,
+        2.3905,
+        0,
+        6.0812,
+        0,
+        0,
+        0,
+        4.0438,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "bc444fd19d1d",
+          "time": "2026-05-08T17:09:04-07:00",
+          "subject": "feat(analytics): anonymous pageview ping for visitor counting",
+          "files_changed": 1,
+          "files": [
+            "analytics.js"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "9de34e967fe5",
+          "time": "2026-05-08T07:04:34-07:00",
+          "subject": "edit: scrub trope-shaped padding from landing + app copy",
+          "files_changed": 2,
+          "files": [
+            "app/index.html",
+            "index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "f97a265e79be",
+          "time": "2026-05-08T14:19:46-07:00",
+          "subject": "ledger: log real Lulu cost ($12.46) - 15% over projection",
+          "files_changed": 1,
+          "files": [
+            "OPS-LEDGER.md"
+          ],
+          "project": "bites-paper"
+        },
+        {
+          "sha": "d8570c94767f",
+          "time": "2026-05-08T14:07:27-07:00",
+          "subject": "v4: Lulu-compliant two-PDF output with bleed + spine spread",
+          "files_changed": 3,
+          "files": [
+            "generate_journal.py",
+            "outbound/bites-paper-cover.pdf",
+            "outbound/bites-paper-interior.pdf"
+          ],
+          "project": "bites-paper"
+        },
+        {
+          "sha": "d0cbea6c468e",
+          "time": "2026-05-08T13:24:34-07:00",
+          "subject": "v3: regenerate at Lulu Pocket Book trim (4.25\"x6.875\")",
+          "files_changed": 3,
+          "files": [
+            "generate_journal.py",
+            "generate_journal_a6_archive.py",
+            "outbound/bites-paper-journal-v3-pocketbook.pdf"
+          ],
+          "project": "bites-paper"
+        },
+        {
+          "sha": "8ef88c561715",
+          "time": "2026-05-08T13:13:53-07:00",
+          "subject": "ops: README + OPS-VENDORS + SUPPLY-CHAIN-RUNBOOK + OPS-LEDGER",
+          "files_changed": 4,
+          "files": [
+            "OPS-LEDGER.md",
+            "OPS-VENDORS.md",
+            "README.md",
+            "SUPPLY-CHAIN-RUNBOOK.md"
+          ],
+          "project": "bites-paper"
+        },
+        {
+          "sha": "5104dbfb7713",
+          "time": "2026-05-08T13:11:21-07:00",
+          "subject": "v2-FINAL: ship-quality A6 journal PDF + Lulu-ready",
+          "files_changed": 16,
+          "files": [
+            ".gitignore",
+            "download_fonts.py",
+            "fonts/Fraunces-Black.ttf",
+            "fonts/Fraunces-Regular.ttf",
+            "fonts/Fraunces-SemiBold.ttf",
+            "fonts/Inter-Bold.ttf",
+            "fonts/Inter-Medium.ttf",
+            "fonts/Inter-Regular.ttf",
+            "fonts/LICENSE.txt",
+            "fonts/help.txt",
+            "generate_journal.py",
+            "outbound/bites-paper-journal-v0.pdf",
+            "outbound/bites-paper-journal-v1.pdf",
+            "outbound/bites-paper-journal-v2-FINAL.pdf",
+            "outbound/preview-page-05.png",
+            "outbound/preview-page-06.png"
+          ],
+          "project": "bites-paper"
+        }
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "bc444fd19d1d",
+            "time": "2026-05-08T17:09:04-07:00",
+            "subject": "feat(analytics): anonymous pageview ping for visitor counting",
+            "files_changed": 1,
+            "files": [
+              "analytics.js"
+            ]
+          },
+          {
+            "sha": "9de34e967fe5",
+            "time": "2026-05-08T07:04:34-07:00",
+            "subject": "edit: scrub trope-shaped padding from landing + app copy",
+            "files_changed": 2,
+            "files": [
+              "app/index.html",
+              "index.html"
+            ]
+          }
+        ],
+        "bites-paper": [
+          {
+            "sha": "f97a265e79be",
+            "time": "2026-05-08T14:19:46-07:00",
+            "subject": "ledger: log real Lulu cost ($12.46) - 15% over projection",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "d8570c94767f",
+            "time": "2026-05-08T14:07:27-07:00",
+            "subject": "v4: Lulu-compliant two-PDF output with bleed + spine spread",
+            "files_changed": 3,
+            "files": [
+              "generate_journal.py",
+              "outbound/bites-paper-cover.pdf",
+              "outbound/bites-paper-interior.pdf"
+            ]
+          },
+          {
+            "sha": "d0cbea6c468e",
+            "time": "2026-05-08T13:24:34-07:00",
+            "subject": "v3: regenerate at Lulu Pocket Book trim (4.25\"x6.875\")",
+            "files_changed": 3,
+            "files": [
+              "generate_journal.py",
+              "generate_journal_a6_archive.py",
+              "outbound/bites-paper-journal-v3-pocketbook.pdf"
+            ]
+          }
+        ]
+      },
+      "commit_count": 7,
+      "cost_by_project": {
+        "unattributed": 0.0764,
+        "masterclass": 5.5887,
+        "bites-paper": 22.5266,
+        "bites": 53.3492,
+        "workspace-infra": 2.3524
+      },
+      "turns_by_project": {
+        "unattributed": 1,
+        "masterclass": 23,
+        "bites-paper": 145,
+        "bites": 199,
+        "workspace-infra": 4
+      }
+    },
+    {
+      "day": "2026-05-09",
+      "week": "2026-W19",
+      "cost": 215.1098,
+      "turns": 377,
+      "cost_per_turn": 0.5706,
+      "cache_read": 187868474,
+      "cache_write": 17988265,
+      "input_tokens": 759,
+      "output_tokens": 361628,
+      "session_count": 3,
+      "sessions": [
+        "39459bcd-fbd4-41ee-99f9-4a278000bdb0",
+        "3b477d31-ccd6-4180-b93d-f8e0f9ab8bcb",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7.5524,
+        19.5937,
+        4.1134,
+        0,
+        0,
+        10.328,
+        11.5167,
+        9.0008,
+        25.538,
+        46.8381,
+        25.5172,
+        30.2444,
+        24.867,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "a6069d07fb8a",
+          "time": "2026-05-09T18:47:33-07:00",
+          "subject": "fix: mobile alpha-tester layout - 0% activation root cause",
+          "files_changed": 1,
+          "files": [
+            "app/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "7082014e3971",
+          "time": "2026-05-09T21:14:00-07:00",
+          "subject": "scaffold: tinkerybot live video web app skeleton",
+          "files_changed": 8,
+          "files": [
+            ".gitignore",
+            "README.md",
+            "functions/api/llm.ts",
+            "functions/api/session-token.ts",
+            "public/app.js",
+            "public/index.html",
+            "public/style.css",
+            "wrangler.toml"
+          ],
+          "project": "tinkerybot"
+        }
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "a6069d07fb8a",
+            "time": "2026-05-09T18:47:33-07:00",
+            "subject": "fix: mobile alpha-tester layout - 0% activation root cause",
+            "files_changed": 1,
+            "files": [
+              "app/index.html"
+            ]
+          }
+        ],
+        "tinkerybot": [
+          {
+            "sha": "7082014e3971",
+            "time": "2026-05-09T21:14:00-07:00",
+            "subject": "scaffold: tinkerybot live video web app skeleton",
+            "files_changed": 8,
+            "files": [
+              ".gitignore",
+              "README.md",
+              "functions/api/llm.ts",
+              "functions/api/session-token.ts",
+              "public/app.js",
+              "public/index.html",
+              "public/style.css",
+              "wrangler.toml"
+            ]
+          }
+        ]
+      },
+      "commit_count": 2,
+      "cost_by_project": {
+        "unattributed": 0.1195,
+        "tinkerybot": 61.4224,
+        "bites": 94.0352,
+        "bites-paper": 1.042,
+        "masterclass": 35.6106,
+        "workspace-infra": 6.7738,
+        "workspace-knowledge": 16.1063
+      },
+      "turns_by_project": {
+        "unattributed": 1,
+        "tinkerybot": 123,
+        "bites": 157,
+        "bites-paper": 9,
+        "masterclass": 79,
+        "workspace-infra": 11,
+        "workspace-knowledge": 37
+      }
+    },
+    {
+      "day": "2026-05-10",
+      "week": "2026-W19",
+      "cost": 149.0985,
+      "turns": 220,
+      "cost_per_turn": 0.6777,
+      "cache_read": 127422215,
+      "cache_write": 12953468,
+      "input_tokens": 449,
+      "output_tokens": 180187,
+      "session_count": 4,
+      "sessions": [
+        "2b018a88-5d4e-4027-a8b4-c36136ab8ac0",
+        "39459bcd-fbd4-41ee-99f9-4a278000bdb0",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a",
+        "c9fc1c92-91ca-49d2-82dc-026be0339295"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13.0564,
+        0,
+        0,
+        0,
+        0,
+        48.5929,
+        46.9661,
+        36.1205,
+        4.3626,
+        0,
+        0,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "5602be94dcb8",
+          "time": "2026-05-10T20:13:59-07:00",
+          "subject": "WIP: keychain order prep v2-organic - shadow strip incomplete",
+          "files_changed": 22,
+          "files": [
+            "keychain-orders/v1/buddy/back.png",
+            "keychain-orders/v1/buddy/buddy-front.png",
+            "keychain-orders/v1/crystal/back.png",
+            "keychain-orders/v1/crystal/crystal-front.png",
+            "keychain-orders/v1/hammer/back.png",
+            "keychain-orders/v1/hammer/hammer-front.png",
+            "keychain-orders/v1/sage/back.png",
+            "keychain-orders/v1/sage/sage-front.png",
+            "keychain-orders/v1/sprout/back.png",
+            "keychain-orders/v1/sprout/sprout-front.png",
+            "keychain-orders/v1/tinkery-friends-back.png",
+            "keychain-orders/v2-organic/buddy/back.png",
+            "keychain-orders/v2-organic/buddy/buddy-front.png",
+            "keychain-orders/v2-organic/crystal/back.png",
+            "keychain-orders/v2-organic/crystal/crystal-front.png",
+            "keychain-orders/v2-organic/hammer/back.png",
+            "keychain-orders/v2-organic/hammer/hammer-front.png",
+            "keychain-orders/v2-organic/sage/back.png",
+            "keychain-orders/v2-organic/sage/sage-front.png",
+            "keychain-orders/v2-organic/sprout/back.png"
+          ],
+          "project": "tinkery-comic-con"
+        },
+        {
+          "sha": "de335c8d9ab2",
+          "time": "2026-05-10T19:59:22-07:00",
+          "subject": "Mockups + acrylic keychain prototype pipeline",
+          "files_changed": 75,
+          "files": [
+            "art/buddy-comparison.jpg",
+            "art/buddy-hires-2x.png",
+            "art/buddy-hires-4x-transparent.png",
+            "art/buddy-hires-4x.png",
+            "art/buddy-locked.jpg",
+            "art/buddy-redesign-v2/buddy-fullbody-v1.jpg",
+            "art/buddy-redesign-v2/buddy-lobster-v2.jpg",
+            "art/buddy-redesign-v2/ref-1.jpg",
+            "art/buddy-redesign-v2/ref-2.jpg",
+            "art/buddy-redesign/00-logo.jpg",
+            "art/buddy-redesign/buddy-A-claws-on-top.jpg",
+            "art/buddy-redesign/buddy-A2-claws-on-top-strict.jpg",
+            "art/buddy-redesign/buddy-D-side-claws.jpg",
+            "art/buddy-redesign/buddy-final-v2.jpg",
+            "art/buddy-redesign/buddy-final.jpg",
+            "art/buddy-svg/buddy-svg-render.png",
+            "art/buddy-svg/buddy-transparent.png",
+            "art/buddy-svg/buddy.svg",
+            "art/buddy-svg/mask-black.pbm",
+            "art/buddy-svg/mask-black.svg"
+          ],
+          "project": "tinkery-comic-con"
+        },
+        {
+          "sha": "359cc6bb0b19",
+          "time": "2026-05-10T17:31:34-07:00",
+          "subject": "scaffold: Tinkery & Friends Comic Con merch line",
+          "files_changed": 33,
+          "files": [
+            "README.md",
+            "art/characters-v2/00-tinkery-bot.jpg",
+            "art/characters-v2/buddy.jpg",
+            "art/characters-v2/crystal.jpg",
+            "art/characters-v2/hammer.jpg",
+            "art/characters-v2/sage.jpg",
+            "art/characters-v2/sprout.jpg",
+            "art/characters-v3/00-tinkery-bot.jpg",
+            "art/characters-v3/buddy.jpg",
+            "art/characters-v3/crystal.jpg",
+            "art/characters-v3/hammer.jpg",
+            "art/characters-v3/sage.jpg",
+            "art/characters-v3/sprout.jpg",
+            "art/characters/00-tinkery-bot.jpg",
+            "art/characters/buddy.jpg",
+            "art/characters/crystal.jpg",
+            "art/characters/hammer.jpg",
+            "art/characters/sage.jpg",
+            "art/characters/sprout.jpg",
+            "art/family-final.jpg"
+          ],
+          "project": "tinkery-comic-con"
+        },
+        {
+          "sha": "92080d5fb2c0",
+          "time": "2026-05-10T19:15:21-07:00",
+          "subject": "feat: wire LiveAvatar FULL mode end-to-end",
+          "files_changed": 3,
+          "files": [
+            "functions/api/session-token.ts",
+            "public/app.js",
+            "wrangler.toml"
+          ],
+          "project": "tinkerybot"
+        }
+      ],
+      "commits_by_project": {
+        "tinkery-comic-con": [
+          {
+            "sha": "5602be94dcb8",
+            "time": "2026-05-10T20:13:59-07:00",
+            "subject": "WIP: keychain order prep v2-organic - shadow strip incomplete",
+            "files_changed": 22,
+            "files": [
+              "keychain-orders/v1/buddy/back.png",
+              "keychain-orders/v1/buddy/buddy-front.png",
+              "keychain-orders/v1/crystal/back.png",
+              "keychain-orders/v1/crystal/crystal-front.png",
+              "keychain-orders/v1/hammer/back.png",
+              "keychain-orders/v1/hammer/hammer-front.png",
+              "keychain-orders/v1/sage/back.png",
+              "keychain-orders/v1/sage/sage-front.png",
+              "keychain-orders/v1/sprout/back.png",
+              "keychain-orders/v1/sprout/sprout-front.png",
+              "keychain-orders/v1/tinkery-friends-back.png",
+              "keychain-orders/v2-organic/buddy/back.png",
+              "keychain-orders/v2-organic/buddy/buddy-front.png",
+              "keychain-orders/v2-organic/crystal/back.png",
+              "keychain-orders/v2-organic/crystal/crystal-front.png",
+              "keychain-orders/v2-organic/hammer/back.png",
+              "keychain-orders/v2-organic/hammer/hammer-front.png",
+              "keychain-orders/v2-organic/sage/back.png",
+              "keychain-orders/v2-organic/sage/sage-front.png",
+              "keychain-orders/v2-organic/sprout/back.png"
+            ]
+          },
+          {
+            "sha": "de335c8d9ab2",
+            "time": "2026-05-10T19:59:22-07:00",
+            "subject": "Mockups + acrylic keychain prototype pipeline",
+            "files_changed": 75,
+            "files": [
+              "art/buddy-comparison.jpg",
+              "art/buddy-hires-2x.png",
+              "art/buddy-hires-4x-transparent.png",
+              "art/buddy-hires-4x.png",
+              "art/buddy-locked.jpg",
+              "art/buddy-redesign-v2/buddy-fullbody-v1.jpg",
+              "art/buddy-redesign-v2/buddy-lobster-v2.jpg",
+              "art/buddy-redesign-v2/ref-1.jpg",
+              "art/buddy-redesign-v2/ref-2.jpg",
+              "art/buddy-redesign/00-logo.jpg",
+              "art/buddy-redesign/buddy-A-claws-on-top.jpg",
+              "art/buddy-redesign/buddy-A2-claws-on-top-strict.jpg",
+              "art/buddy-redesign/buddy-D-side-claws.jpg",
+              "art/buddy-redesign/buddy-final-v2.jpg",
+              "art/buddy-redesign/buddy-final.jpg",
+              "art/buddy-svg/buddy-svg-render.png",
+              "art/buddy-svg/buddy-transparent.png",
+              "art/buddy-svg/buddy.svg",
+              "art/buddy-svg/mask-black.pbm",
+              "art/buddy-svg/mask-black.svg"
+            ]
+          },
+          {
+            "sha": "359cc6bb0b19",
+            "time": "2026-05-10T17:31:34-07:00",
+            "subject": "scaffold: Tinkery & Friends Comic Con merch line",
+            "files_changed": 33,
+            "files": [
+              "README.md",
+              "art/characters-v2/00-tinkery-bot.jpg",
+              "art/characters-v2/buddy.jpg",
+              "art/characters-v2/crystal.jpg",
+              "art/characters-v2/hammer.jpg",
+              "art/characters-v2/sage.jpg",
+              "art/characters-v2/sprout.jpg",
+              "art/characters-v3/00-tinkery-bot.jpg",
+              "art/characters-v3/buddy.jpg",
+              "art/characters-v3/crystal.jpg",
+              "art/characters-v3/hammer.jpg",
+              "art/characters-v3/sage.jpg",
+              "art/characters-v3/sprout.jpg",
+              "art/characters/00-tinkery-bot.jpg",
+              "art/characters/buddy.jpg",
+              "art/characters/crystal.jpg",
+              "art/characters/hammer.jpg",
+              "art/characters/sage.jpg",
+              "art/characters/sprout.jpg",
+              "art/family-final.jpg"
+            ]
+          }
+        ],
+        "tinkerybot": [
+          {
+            "sha": "92080d5fb2c0",
+            "time": "2026-05-10T19:15:21-07:00",
+            "subject": "feat: wire LiveAvatar FULL mode end-to-end",
+            "files_changed": 3,
+            "files": [
+              "functions/api/session-token.ts",
+              "public/app.js",
+              "wrangler.toml"
+            ]
+          }
+        ]
+      },
+      "commit_count": 4,
+      "cost_by_project": {
+        "unattributed": 0.2628,
+        "workspace-infra": 5.3677,
+        "bites": 50.1685,
+        "tinkerybot": 26.2369,
+        "tinkery-comic-con": 63.0489,
+        "masterclass": 3.7862,
+        "bites-paper": 0.2274
+      },
+      "turns_by_project": {
+        "unattributed": 4,
+        "workspace-infra": 4,
+        "bites": 66,
+        "tinkerybot": 41,
+        "tinkery-comic-con": 118,
+        "masterclass": 6,
+        "bites-paper": 3
+      }
+    },
+    {
+      "day": "2026-05-11",
+      "week": "2026-W20",
+      "cost": 162.0324,
+      "turns": 361,
+      "cost_per_turn": 0.4488,
+      "cache_read": 128655570,
+      "cache_write": 14435399,
+      "input_tokens": 626,
+      "output_tokens": 299209,
+      "session_count": 2,
+      "sessions": [
+        "47f0522c-c668-4af2-831e-6a8a238cb1da",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.1344,
+        0,
+        14.6917,
+        7.6357,
+        5.7192,
+        15.044,
+        10.6277,
+        3.9633,
+        12.393,
+        2.8648,
+        26.032,
+        31.189,
+        31.7378,
+        0
+      ],
+      "commits": [
+        {
+          "sha": "fbe8cc9f7ded",
+          "time": "2026-05-11T18:36:59-07:00",
+          "subject": "ops: log .34 spike for EXIF + tag suggestions",
+          "files_changed": 1,
+          "files": [
+            "OPS-LEDGER.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "99b8541b8e4a",
+          "time": "2026-05-11T18:31:58-07:00",
+          "subject": "feat(app): EXIF auto-fill (date + city) + tag suggestions from dish name",
+          "files_changed": 1,
+          "files": [
+            "app/index.html"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "80671ba093c0",
+          "time": "2026-05-11T17:17:08-07:00",
+          "subject": "marketing: Three Bites launch kit (4 social posts + DM templates + Twitter starter)",
+          "files_changed": 3,
+          "files": [
+            "marketing/bites-kitchen-twitter-account.md",
+            "marketing/dm-templates.md",
+            "marketing/three-bites-launch-kit.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "5c20ae40ff08",
+          "time": "2026-05-11T16:01:56-07:00",
+          "subject": "blog: 'Three bites' - dogfooding the alpha, friction notes + shipped analytics fix",
+          "files_changed": 3,
+          "files": [
+            "blog/index.html",
+            "blog/three-bites.html",
+            "blog/three-bites.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "f6ea11104ad1",
+          "time": "2026-05-11T15:58:45-07:00",
+          "subject": "feat(analytics): ping funnel events to central sheet immediately",
+          "files_changed": 1,
+          "files": [
+            "analytics.js"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "ef8e15489c0b",
+          "time": "2026-05-11T15:56:15-07:00",
+          "subject": "seed: add Everett & Jones smoked pork ribs (bite #3)",
+          "files_changed": 1,
+          "files": [
+            "seed-data.json"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "2ec70d613849",
+          "time": "2026-05-11T15:53:52-07:00",
+          "subject": "seed: add Butter Toast with Seasonal Jam & Jammy Eggs (bite #2)",
+          "files_changed": 1,
+          "files": [
+            "seed-data.json"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "65e348cd1d35",
+          "time": "2026-05-11T15:50:43-07:00",
+          "subject": "dogfood: friction notes from first real bite save",
+          "files_changed": 1,
+          "files": [
+            "DOGFOOD-NOTES.md"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "988872274af5",
+          "time": "2026-05-11T15:49:52-07:00",
+          "subject": "seed: add The Ultimate at Crostini & Java (real bite #1)",
+          "files_changed": 1,
+          "files": [
+            "seed-data.json"
+          ],
+          "project": "bites"
+        },
+        {
+          "sha": "f2846a7002b0",
+          "time": "2026-05-11T12:51:06-07:00",
+          "subject": "Add Prototyping Tools activity (activity-39, Space Design)",
+          "files_changed": 3,
+          "files": [
+            "activities.json",
+            "activity-images/activity-39.jpg",
+            "backend.gs"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "7f2a26f4e7ea",
+          "time": "2026-05-11T12:38:58-07:00",
+          "subject": "Add Installations activity; move Bookshelf to Space Design",
+          "files_changed": 3,
+          "files": [
+            "activities.json",
+            "activity-images/activity-38.jpg",
+            "backend.gs"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "0c4e5d5c08b8",
+          "time": "2026-05-11T12:28:40-07:00",
+          "subject": "Move 3 activities to Understand AI; refresh chat framing",
+          "files_changed": 2,
+          "files": [
+            "activities.json",
+            "backend.gs"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "2a1268e2f0ee",
+          "time": "2026-05-11T12:12:11-07:00",
+          "subject": "Consolidate categories to 4 (Understand, Shape, Evaluate, Space Design)",
+          "files_changed": 3,
+          "files": [
+            "activities.json",
+            "backend.gs",
+            "index.html"
+          ],
+          "project": "ai-tinkery-library"
+        },
+        {
+          "sha": "e843f6bed707",
+          "time": "2026-05-11T20:33:24-07:00",
+          "subject": "Lock Tinkery & Friends workshop completion coin designs",
+          "files_changed": 7,
+          "files": [
+            "coins/README.md",
+            "coins/coin-back-LOCKED.jpg",
+            "coins/coin-front-01-sprout-green-ai.jpg",
+            "coins/coin-front-02-hammer-vibe-coding.jpg",
+            "coins/coin-front-03-crystal-generative-ai.jpg",
+            "coins/coin-front-04-buddy-ai-agents.jpg",
+            "coins/coin-front-05-sage-slow-ai.jpg"
+          ],
+          "project": "tinkery-comic-con"
+        }
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "fbe8cc9f7ded",
+            "time": "2026-05-11T18:36:59-07:00",
+            "subject": "ops: log .34 spike for EXIF + tag suggestions",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "99b8541b8e4a",
+            "time": "2026-05-11T18:31:58-07:00",
+            "subject": "feat(app): EXIF auto-fill (date + city) + tag suggestions from dish name",
+            "files_changed": 1,
+            "files": [
+              "app/index.html"
+            ]
+          },
+          {
+            "sha": "80671ba093c0",
+            "time": "2026-05-11T17:17:08-07:00",
+            "subject": "marketing: Three Bites launch kit (4 social posts + DM templates + Twitter starter)",
+            "files_changed": 3,
+            "files": [
+              "marketing/bites-kitchen-twitter-account.md",
+              "marketing/dm-templates.md",
+              "marketing/three-bites-launch-kit.md"
+            ]
+          }
+        ],
+        "ai-tinkery-library": [
+          {
+            "sha": "f2846a7002b0",
+            "time": "2026-05-11T12:51:06-07:00",
+            "subject": "Add Prototyping Tools activity (activity-39, Space Design)",
+            "files_changed": 3,
+            "files": [
+              "activities.json",
+              "activity-images/activity-39.jpg",
+              "backend.gs"
+            ]
+          },
+          {
+            "sha": "7f2a26f4e7ea",
+            "time": "2026-05-11T12:38:58-07:00",
+            "subject": "Add Installations activity; move Bookshelf to Space Design",
+            "files_changed": 3,
+            "files": [
+              "activities.json",
+              "activity-images/activity-38.jpg",
+              "backend.gs"
+            ]
+          },
+          {
+            "sha": "0c4e5d5c08b8",
+            "time": "2026-05-11T12:28:40-07:00",
+            "subject": "Move 3 activities to Understand AI; refresh chat framing",
+            "files_changed": 2,
+            "files": [
+              "activities.json",
+              "backend.gs"
+            ]
+          }
+        ],
+        "tinkery-comic-con": [
+          {
+            "sha": "e843f6bed707",
+            "time": "2026-05-11T20:33:24-07:00",
+            "subject": "Lock Tinkery & Friends workshop completion coin designs",
+            "files_changed": 7,
+            "files": [
+              "coins/README.md",
+              "coins/coin-back-LOCKED.jpg",
+              "coins/coin-front-01-sprout-green-ai.jpg",
+              "coins/coin-front-02-hammer-vibe-coding.jpg",
+              "coins/coin-front-03-crystal-generative-ai.jpg",
+              "coins/coin-front-04-buddy-ai-agents.jpg",
+              "coins/coin-front-05-sage-slow-ai.jpg"
+            ]
+          }
+        ]
+      },
+      "commit_count": 14,
+      "cost_by_project": {
+        "ai-tinkery-library": 11.8278,
+        "bites": 97.7753,
+        "workspace-knowledge": 23.0272,
+        "workspace-infra": 5.0389,
+        "masterclass": 3.3312,
+        "ai-tinkery-chatbot": 0.3851,
+        "bites-paper": 3.897,
+        "tinkerybot": 1.8844,
+        "tinkery-comic-con": 14.6721,
+        "healthlog": 0.059,
+        "unattributed": 0.1344
+      },
+      "turns_by_project": {
+        "ai-tinkery-library": 67,
+        "bites": 189,
+        "workspace-knowledge": 64,
+        "workspace-infra": 17,
+        "masterclass": 21,
+        "ai-tinkery-chatbot": 5,
+        "bites-paper": 10,
+        "tinkerybot": 6,
+        "tinkery-comic-con": 39,
+        "healthlog": 1,
+        "unattributed": 1
+      }
+    },
+    {
+      "day": "2026-05-12",
+      "week": "2026-W20",
+      "cost": 18.573,
+      "turns": 43,
+      "cost_per_turn": 0.4319,
+      "cache_read": 26201858,
+      "cache_write": 723384,
+      "input_tokens": 73,
+      "output_tokens": 38022,
+      "session_count": 2,
+      "sessions": [
+        "79f1911f-5930-4fb5-91f3-92ebe9da2d54",
+        "b22d1c54-ce68-4909-85b7-5447d7fe820a"
+      ],
+      "hourly_cost": [
+        0.1993,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18.3737,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits": [],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "workspace-infra": 7.033,
+        "bites-paper": 0.9729,
+        "bites": 4.4899,
+        "ai-tinkery-library": 1.1368,
+        "ai-tinkery-chatbot": 0.8412,
+        "tinkery-comic-con": 1.1368,
+        "tinkerybot": 1.1421,
+        "masterclass": 0.8412,
+        "workspace-knowledge": 0.8412,
+        "healthlog": 0.1379
+      },
+      "turns_by_project": {
+        "workspace-infra": 21,
+        "bites-paper": 8,
+        "bites": 16,
+        "ai-tinkery-library": 8,
+        "ai-tinkery-chatbot": 6,
+        "tinkery-comic-con": 8,
+        "tinkerybot": 6,
+        "masterclass": 6,
+        "workspace-knowledge": 6,
+        "healthlog": 3
+      }
+    }
+  ]
+}
