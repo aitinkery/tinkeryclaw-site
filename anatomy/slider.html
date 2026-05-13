@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/buddy/buddy-favicon-64.png">
+<meta property="og:image" content="https://tinkeryclaw.com/assets/buddy/buddy-og.png">
+<title>Autonomy Stages · Agent Anatomy</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+  .slider-section {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 32px 28px 24px;
+    margin-bottom: 28px;
+  }
+
+  /* Track */
+  .stage-track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 8px;
+  }
+  .track-line {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    right: 24px;
+    height: 4px;
+    background: var(--line);
+    transform: translateY(-50%);
+    border-radius: 2px;
+    z-index: 0;
+  }
+  .track-fill {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    height: 4px;
+    background: var(--accent);
+    transform: translateY(-50%);
+    border-radius: 2px;
+    z-index: 1;
+    transition: width 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  .stage-stops {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .stage-stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    flex: 1;
+  }
+  .stop-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 3px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink-mute);
+    transition: all 0.25s;
+    font-family: Georgia, serif;
+  }
+  .stage-stop.active .stop-dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 0 5px rgba(217,119,87,0.18);
+    transform: scale(1.15);
+  }
+  .stage-stop.visited .stop-dot {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .stop-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-mute);
+    text-align: center;
+    max-width: 90px;
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+  .stage-stop.active .stop-label { color: var(--accent-deep); }
+  .stage-stop.visited .stop-label { color: var(--ink-soft); }
+
+  /* Stage content card */
+  .stage-card {
+    margin-top: 28px;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .stage-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .stage-emoji {
+    font-size: 48px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .stage-title-block .stage-num {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .stage-title-block h2 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    border: none;
+    padding: 0;
+  }
+  .stage-definition {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 580px;
+  }
+
+  .stage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .stage-block {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .stage-block .block-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .stage-block .block-label.looks { color: var(--navy); }
+  .stage-block .block-label.trust { color: var(--green); }
+  .stage-block .block-label.failure { color: var(--red); }
+  .stage-block .block-label.example { color: var(--accent); }
+  .stage-block p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .progress-dots {
+    display: flex;
+    gap: 6px;
+  }
+  .progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--line);
+    transition: background 0.2s;
+  }
+  .progress-dot.active { background: var(--accent); }
+
+  /* Reflection section */
+  .reflection {
+    background: var(--navy);
+    color: rgba(255,255,255,0.88);
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-top: 28px;
+  }
+  .reflection h3 { color: #fff; font-size: 20px; margin: 0 0 12px; }
+  .reflection p { font-size: 15px; line-height: 1.7; margin: 0 0 16px; }
+  .reflection p:last-child { margin: 0; }
+  .reflection .examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .reflection .example-item {
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+  .reflection .stage-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    background: var(--accent);
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+  .share-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    margin-top: 8px;
+  }
+  .share-cta:hover { opacity: 0.88; }
+  #share-feedback { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 8px; display: none; }
+
+  @media (max-width: 700px) {
+    .stage-grid { grid-template-columns: 1fr; }
+    .stop-label { display: none; }
+    .stage-header { flex-direction: column; gap: 10px; }
+    .reflection .examples { grid-template-columns: 1fr; }
+    .slider-section { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./index.html">🦞 Tinkeryclaw · Agent Anatomy</a>
+  <nav>
+    <a href="./turn.html">Anatomy of a Turn</a>
+    <a href="./failure.html">Watch It Fail</a>
+    <a href="./sandbox.html">Try It</a>
+    <a href="./slider.html" class="active">Autonomy Stages</a>
+    <a href="./ledger.html">Live Ledger</a>
+    <a href="./soul.html">The Soul</a>
+  </nav>
+</header>
+
+<div class="page-wrap">
+  <div style="margin-bottom: 28px;">
+    <div style="font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;margin-bottom:8px;">Experience 4</div>
+    <h1>The Safe Autonomous Organization Slider</h1>
+    <p style="font-size:16px;color:var(--ink-soft);max-width:640px;">
+      How much do you trust your AI agent? The answer isn't yes or no — it's a stage. Click through the five-stage framework from Andon Labs and find where you actually are.
+    </p>
+  </div>
+
+  <div class="slider-section">
+    <div style="font-size:12px;color:var(--ink-mute);margin-bottom:20px;">Click any stage to explore it</div>
+
+    <div class="stage-track">
+      <div class="track-line"></div>
+      <div class="track-fill" id="track-fill"></div>
+      <div class="stage-stops" id="stage-stops"></div>
+    </div>
+
+    <div class="stage-card" id="stage-card">
+      <!-- populated by JS -->
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h3>Where are you on this slider?</h3>
+    <p>Most people are at different stages for different tasks. Locate yourself honestly.</p>
+    <div class="examples">
+      <div class="example-item">
+        <div class="stage-tag">Stage 1</div>
+        <div>"I review every ChatGPT response before sharing it"</div>
+      </div>
+      <div class="example-item">
+        <div class="stage-tag">Stage 2</div>
+        <div>"I let Claude write a whole essay then I edit it"</div>
+      </div>
+      <div class="example-item">
+        <div class="stage-tag">Stage 3</div>
+        <div>"I have it auto-respond to emails and check the inbox once a day"</div>
+      </div>
+      <div class="example-item">
+        <div class="stage-tag">Stage 4</div>
+        <div>"It manages my calendar and only alerts me on conflicts"</div>
+      </div>
+    </div>
+    <p style="font-size:14px;color:rgba(255,255,255,0.65);">You might be at stage 3 for writing and stage 1 for anything touching money. That's healthy — it means you're thinking about trust per decision class, not AI use in general.</p>
+    <button class="share-cta" onclick="copyToClipboard()">Copy your answer to clipboard</button>
+    <div id="share-feedback">Copied! Paste it wherever you share ideas.</div>
+  </div>
+
+  <div class="callout" style="margin-top: 24px;">
+    <strong>Source:</strong> This framework is from Andon Labs' <em>Evolution of Bengt</em> post (Feb 2026). The five-stage breakdown is their framing; the real-world examples are from Tinkery Bot's deployments and experience.
+  </div>
+</div>
+
+<footer class="site">
+  <a href="./index.html">Agent Anatomy</a> &nbsp;·&nbsp;
+  <a href="https://aitinkery.org">AI Tinkery at Stanford GSE</a> &nbsp;·&nbsp;
+  Framework: Andon Labs, 2026
+</footer>
+
+<script>
+let stages = [];
+let currentStage = 0;
+
+async function init() {
+  const res = await fetch('./data/stages.json');
+  stages = await res.json();
+  renderTrack();
+  selectStage(0);
+}
+
+function renderTrack() {
+  const container = document.getElementById('stage-stops');
+  container.innerHTML = stages.map((s, i) => `
+    <div class="stage-stop" id="stop-${i}" onclick="selectStage(${i})">
+      <div class="stop-dot">${i + 1}</div>
+      <div class="stop-label">${s.name.split(' ').slice(0, 2).join(' ')}</div>
+    </div>
+  `).join('');
+}
+
+function selectStage(idx) {
+  currentStage = idx;
+
+  // Update stops
+  document.querySelectorAll('.stage-stop').forEach((el, i) => {
+    el.classList.toggle('active', i === idx);
+    el.classList.toggle('visited', i < idx);
+  });
+
+  // Update fill line
+  const pct = idx / (stages.length - 1) * 100;
+  document.getElementById('track-fill').style.width = `calc(${pct}% - ${idx === 0 ? 0 : idx === stages.length - 1 ? 48 : 24}px)`;
+
+  renderStageCard(stages[idx], idx);
+}
+
+function renderStageCard(s, idx) {
+  const card = document.getElementById('stage-card');
+  card.innerHTML = `
+    <div class="stage-header">
+      <div class="stage-emoji">${s.emoji}</div>
+      <div class="stage-title-block">
+        <div class="stage-num">Stage ${s.id} of 5</div>
+        <h2>${s.name}</h2>
+        <div class="stage-definition">${s.definition}</div>
+      </div>
+    </div>
+    <div class="stage-grid">
+      <div class="stage-block">
+        <div class="block-label looks">What it looks like</div>
+        <p>${s.looks_like}</p>
+      </div>
+      <div class="stage-block">
+        <div class="block-label trust">Trust signals</div>
+        <p>${s.trust_signals}</p>
+      </div>
+      <div class="stage-block">
+        <div class="block-label failure">Failure mode</div>
+        <p>${s.failure_mode}</p>
+      </div>
+      <div class="stage-block">
+        <div class="block-label example">Real-world example</div>
+        <p>${s.real_example}</p>
+      </div>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="selectStage(${idx - 1})" ${idx === 0 ? 'disabled' : ''}>&larr; Previous</button>
+      <div class="progress-dots">
+        ${stages.map((_, i) => `<div class="progress-dot ${i === idx ? 'active' : ''}"></div>`).join('')}
+      </div>
+      <button class="btn btn-primary" onclick="selectStage(${idx + 1})" ${idx === stages.length - 1 ? 'disabled' : ''}>Next &rarr;</button>
+    </div>
+  `;
+}
+
+function copyToClipboard() {
+  const s = stages[currentStage];
+  const text = `I'm at Stage ${s.id} (${s.name}) on the Safe Autonomous Organization slider for my AI use.\n\n${s.definition}\n\nLearn more: Agent Anatomy by Tinkery Bot / AI Tinkery at Stanford GSE`;
+  navigator.clipboard.writeText(text).then(() => {
+    const fb = document.getElementById('share-feedback');
+    fb.style.display = 'block';
+    setTimeout(() => fb.style.display = 'none', 3000);
+  });
+}
+
+init().catch(err => {
+  document.querySelector('.slider-section').innerHTML = '<p style="color:var(--red)">Failed to load stage data: ' + err.message + '</p>';
+});
+</script>
+
+</body>
+</html>
