@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/buddy/buddy-favicon-64.png">
+<meta property="og:image" content="https://tinkeryclaw.com/assets/buddy/buddy-og.png">
+<title>Watch It Fail · Agent Anatomy</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+  /* Case picker */
+  .case-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .case-tab {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 2px solid var(--line);
+    background: var(--paper);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    transition: all 0.2s;
+    text-align: left;
+  }
+  .case-tab:hover { border-color: var(--accent); color: var(--navy); }
+  .case-tab.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+  .case-tab .tab-title { display: block; font-size: 13px; }
+  .case-tab .tab-meta { display: block; font-size: 11px; opacity: 0.75; margin-top: 2px; font-weight: 400; }
+
+  /* Dual-pane layout */
+  .dual-pane {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .pane-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    color: var(--ink-mute);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Chat bubbles */
+  .chat-thread { display: flex; flex-direction: column; gap: 10px; }
+  .chat-msg {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .chat-msg.user { align-items: flex-start; }
+  .chat-msg.agent { align-items: flex-end; }
+  .chat-msg .who {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--ink-mute);
+    padding: 0 4px;
+  }
+  .chat-bubble {
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    position: relative;
+  }
+  .chat-bubble:hover { box-shadow: 0 0 0 2px var(--accent); }
+  .chat-bubble.user-b {
+    background: #e8f0fe;
+    color: #1f2937;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-bubble.agent-b {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-bottom-right-radius: 4px;
+  }
+  .chat-bubble.system-b {
+    background: #f5f5f5;
+    color: var(--ink-mute);
+    font-style: italic;
+    font-size: 12px;
+    max-width: 100%;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .chat-bubble.annotated { box-shadow: 0 0 0 2px var(--accent); }
+  .annotation-dot {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 18px;
+    height: 18px;
+    background: var(--accent);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Commentary pane */
+  .commentary-pane { display: flex; flex-direction: column; gap: 12px; }
+  .comment-card {
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .comment-card.highlighted { border-color: var(--accent); box-shadow: 0 2px 12px rgba(217,119,87,0.12); }
+  .comment-card.warning { border-left: 4px solid #f6c90e; }
+  .comment-card.error { border-left: 4px solid var(--accent); }
+  .comment-card.critical { border-left: 4px solid var(--red); background: #fff5f5; }
+  .comment-card.lesson { border-left: 4px solid var(--green); background: #f0fff4; }
+  .comment-card.info { border-left: 4px solid var(--navy); background: #ebf8ff; }
+  .comment-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .comment-type.warning { color: #7d6608; }
+  .comment-type.error { color: var(--accent-deep); }
+  .comment-type.critical { color: var(--red); }
+  .comment-type.lesson { color: #276749; }
+  .comment-type.info { color: var(--navy); }
+  .comment-card p { margin: 0; color: var(--ink-soft); }
+
+  /* Case header */
+  .case-header {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .case-header h3 { margin: 0 0 6px; font-size: 20px; color: var(--navy); }
+  .case-header p { margin: 0; font-size: 14px; color: var(--ink-soft); max-width: 500px; line-height: 1.6; }
+  .case-cost {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .case-cost .cost-num {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--red);
+    display: block;
+  }
+  .case-cost .cost-label { font-size: 11px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.07em; }
+
+  /* Lesson bar */
+  .lesson-bar {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .lesson-bar .lb-icon { font-size: 24px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+  .lesson-bar .lb-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+  .lesson-bar .lb-text { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.6; }
+  .lesson-bar .lb-tag { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 6px; font-family: var(--mono); }
+  .lesson-bar a { color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .dual-pane { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./index.html">🦞 Tinkeryclaw · Agent Anatomy</a>
+  <nav>
+    <a href="./turn.html">Anatomy of a Turn</a>
+    <a href="./failure.html" class="active">Watch It Fail</a>
+    <a href="./sandbox.html">Try It</a>
+    <a href="./slider.html">Autonomy Stages</a>
+    <a href="./ledger.html">Live Ledger</a>
+    <a href="./soul.html">The Soul</a>
+  </nav>
+</header>
+
+<div class="page-wrap wide">
+  <div style="margin-bottom: 28px;">
+    <div style="font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;margin-bottom:8px;">Experience 2</div>
+    <h1>Watch an Agent Fail</h1>
+    <p style="font-size:16px;color:var(--ink-soft);max-width:640px;">
+      Three real failure cases. Director's commentary from the agent itself. First-person reflection on what should have happened differently.
+    </p>
+  </div>
+
+  <div class="case-tabs" id="case-tabs"></div>
+  <div id="case-content"></div>
+</div>
+
+<footer class="site">
+  <a href="./index.html">Agent Anatomy</a> &nbsp;·&nbsp;
+  <a href="https://aitinkery.org">AI Tinkery at Stanford GSE</a>
+</footer>
+
+<script>
+let cases = [];
+let activeCase = 0;
+let activeAnnotation = null;
+
+const TYPE_LABELS = {
+  warning:  { label: 'Caution',  cls: 'warning' },
+  error:    { label: 'Mistake',  cls: 'error' },
+  critical: { label: 'Critical', cls: 'critical' },
+  lesson:   { label: 'Lesson',   cls: 'lesson' },
+  info:     { label: 'Note',     cls: 'info' },
+};
+
+async function init() {
+  const res = await fetch('./data/failure-cases.json');
+  cases = await res.json();
+  renderTabs();
+  renderCase(0);
+}
+
+function renderTabs() {
+  document.getElementById('case-tabs').innerHTML = cases.map((c, i) => `
+    <div class="case-tab ${i===0?'active':''}" onclick="selectCase(${i})">
+      <span class="tab-title">${esc(c.title)}</span>
+      <span class="tab-meta">${c.date} · ${c.cost_wasted > 0 ? '$' + c.cost_wasted.toFixed(2) + ' wasted' : 'No direct cost'}</span>
+    </div>
+  `).join('');
+}
+
+function selectCase(idx) {
+  activeCase = idx;
+  activeAnnotation = null;
+  document.querySelectorAll('.case-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+  renderCase(idx);
+}
+
+function renderCase(idx) {
+  const c = cases[idx];
+  // Map commentary to dialog steps
+  const commentMap = {};
+  (c.commentary || []).forEach(cm => { commentMap[cm.at_step] = cm; });
+
+  const dialogHtml = c.dialog.map((msg, i) => {
+    const isUser = msg.role === 'user';
+    const isSystem = msg.content.startsWith('[') && msg.content.endsWith(']');
+    const hasAnnotation = commentMap[i] !== undefined;
+    const bubbleCls = isSystem ? 'system-b' : isUser ? 'user-b' : 'agent-b';
+    return `
+      <div class="chat-msg ${isSystem ? 'agent' : isUser ? 'user' : 'agent'}">
+        ${!isSystem ? `<div class="who">${isUser ? 'Gregory' : 'Tinkery Bot'}</div>` : ''}
+        <div class="chat-bubble ${bubbleCls} ${hasAnnotation?'annotated':''}" data-step="${i}" onclick="highlightAnnotation(${i})">
+          ${esc(msg.content).replace(/\n/g,'<br>')}
+          ${hasAnnotation ? `<div class="annotation-dot">${Object.keys(commentMap).indexOf(String(i))+1}</div>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const commentaryHtml = c.commentary.map((cm, ci) => {
+    const t = TYPE_LABELS[cm.type] || TYPE_LABELS.info;
+    return `
+      <div class="comment-card ${t.cls}" id="comment-${cm.at_step}" data-step="${cm.at_step}">
+        <div class="comment-type ${t.cls}">${ci+1} · ${t.label}</div>
+        <p>${esc(cm.text)}</p>
+      </div>
+    `;
+  }).join('');
+
+  const costDisplay = c.cost_wasted > 0 ? `<span class="cost-num">$${c.cost_wasted.toFixed(2)}</span><div class="cost-label">wasted</div>` : `<span class="cost-num" style="color:var(--ink-mute);">—</span><div class="cost-label">direct cost</div>`;
+
+  document.getElementById('case-content').innerHTML = `
+    <div class="case-header">
+      <div>
+        <h3>${esc(c.title)}</h3>
+        <p>${esc(c.summary)}</p>
+      </div>
+      <div class="case-cost">${costDisplay}</div>
+    </div>
+
+    <div class="dual-pane">
+      <div>
+        <div class="pane-label">The Conversation</div>
+        <div class="chat-thread" id="chat-thread">${dialogHtml}</div>
+      </div>
+      <div>
+        <div class="pane-label">Director's Commentary</div>
+        <div class="commentary-pane" id="commentary-pane">${commentaryHtml}</div>
+      </div>
+    </div>
+
+    <div class="lesson-bar">
+      <div class="lb-icon">💡</div>
+      <div>
+        <div class="lb-label">The lesson</div>
+        <div class="lb-text">${esc(c.lesson)}</div>
+        <div class="lb-tag">${esc(c.lesson_tag)}${c.external_link ? ` &nbsp;·&nbsp; <a href="${c.external_link}" target="_blank" rel="noopener">Read the full Andon Labs post &rarr;</a>` : ''}</div>
+      </div>
+    </div>
+  `;
+}
+
+function highlightAnnotation(stepIdx) {
+  // Highlight the comment card
+  document.querySelectorAll('.comment-card').forEach(el => el.classList.remove('highlighted'));
+  const card = document.getElementById('comment-' + stepIdx);
+  if (card) {
+    card.classList.add('highlighted');
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  // Highlight the bubble
+  document.querySelectorAll('.chat-bubble').forEach(el => {
+    const s = parseInt(el.getAttribute('data-step'));
+    el.style.boxShadow = s === stepIdx ? '0 0 0 3px var(--accent)' : '';
+  });
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+init().catch(err => {
+  document.getElementById('case-content').innerHTML = `<div class="callout red"><strong>Error:</strong> ${err.message}</div>`;
+});
+</script>
+
+</body>
+</html>
