@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/buddy/buddy-favicon-64.png">
+<meta property="og:image" content="https://tinkeryclaw.com/assets/buddy/buddy-og.png">
+<title>Live Ledger · Agent Anatomy</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+  .teach-box {
+    background: var(--yellow);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 0 0 24px;
+  }
+  .teach-box .teach-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    color: var(--accent-deep);
+    margin-bottom: 6px;
+  }
+  .teach-box p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.65; }
+  .teach-box p + p { margin-top: 8px; }
+
+  .story-hero {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-bottom: 32px;
+  }
+  .story-hero h2 { color: #fff; border: none; font-size: 24px; margin: 0 0 10px; }
+  .story-hero p { color: rgba(255,255,255,0.8); font-size: 15px; margin: 0 0 10px; line-height: 1.7; }
+  .story-hero p:last-child { margin: 0; }
+  .story-hero strong { color: var(--accent); }
+
+  .kpi-annotation {
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-style: italic;
+    margin-top: 4px;
+  }
+  .kpi.highlight { border-color: var(--accent); }
+  .kpi.warn { border-color: var(--red); }
+
+  .project-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+  }
+  .project-bar-row:last-child { border-bottom: none; }
+  .project-bar-name { min-width: 180px; }
+  .project-bar-name strong { color: var(--ink); }
+  .project-bar-name .sub { font-size: 12px; color: var(--ink-mute); }
+  .project-bar-track { flex: 1; height: 10px; background: var(--bg); border-radius: 5px; overflow: hidden; }
+  .project-bar-fill { height: 100%; background: var(--accent); border-radius: 5px; transition: width 0.6s ease; }
+  .project-bar-cost { font-family: var(--mono); font-size: 13px; font-weight: 700; min-width: 55px; text-align: right; color: var(--accent-deep); }
+  .project-bar-pct { font-size: 12px; color: var(--ink-mute); min-width: 36px; text-align: right; }
+
+  .teachable-moment {
+    background: var(--paper);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 20px 0;
+  }
+  .teachable-moment .tm-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .teachable-moment h4 { font-size: 16px; color: var(--navy); margin: 0 0 8px; font-family: Georgia, serif; }
+  .teachable-moment p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+
+  /* Day cards */
+  .day-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .day-card .head {
+    padding: 14px 18px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .day-card .head:hover { background: var(--paper); }
+  .day-card .day-label { font-family: Georgia, serif; font-size: 17px; font-weight: 700; color: var(--navy); }
+  .day-card .stats { display: flex; gap: 14px; font-size: 13px; color: var(--ink-soft); flex-wrap: wrap; align-items: center; }
+  .day-card .stats strong { color: var(--ink); font-family: var(--mono); }
+  .day-card .body { padding: 14px 18px; display: none; }
+  .day-card.expanded .body { display: block; }
+  .day-card.expanded .head::after { content: "▾"; color: var(--ink-mute); }
+  .day-card:not(.expanded) .head::after { content: "▸"; color: var(--ink-mute); }
+
+  .spark {
+    display: flex;
+    gap: 2px;
+    align-items: flex-end;
+    height: 24px;
+    width: 200px;
+    background: var(--bg);
+    padding: 2px;
+    border-radius: 3px;
+  }
+  .spark-bar { flex: 1; background: var(--accent); border-radius: 1px; min-height: 2px; opacity: 0.8; }
+  .spark-bar.empty { opacity: 0.12; background: var(--line); }
+
+  .commit-row {
+    border-left: 3px solid var(--line);
+    padding: 5px 0 5px 12px;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+  .commit-row .subject { color: var(--ink); font-weight: 500; }
+  .commit-row .meta { font-size: 11px; color: var(--ink-mute); font-family: var(--mono); margin-top: 2px; }
+  .commit-row .sha { color: var(--accent); }
+
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .outcome-tile {
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+  .outcome-tile .ot-title { font-weight: 700; color: var(--navy); margin-bottom: 8px; font-size: 14px; }
+  .outcome-tile table { border: none; background: none; width: 100%; }
+  .outcome-tile td { padding: 3px 0; border: none; color: var(--ink-soft); }
+  .outcome-tile td:last-child { text-align: right; font-family: var(--mono); font-weight: 600; color: var(--ink); }
+  .outcome-flag { margin-top: 8px; font-size: 11px; color: var(--red); background: #fff5f5; padding: 5px 8px; border-radius: 4px; border-left: 2px solid var(--red); }
+
+  @media (max-width: 700px) {
+    .project-bar-name { min-width: 120px; }
+    .spark { width: 120px; }
+    .story-hero { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./index.html">🦞 Tinkeryclaw · Agent Anatomy</a>
+  <nav>
+    <a href="./turn.html">Anatomy of a Turn</a>
+    <a href="./failure.html">Watch It Fail</a>
+    <a href="./sandbox.html">Try It</a>
+    <a href="./slider.html">Autonomy Stages</a>
+    <a href="./ledger.html" class="active">Live Ledger</a>
+    <a href="./soul.html">The Soul</a>
+  </nav>
+</header>
+
+<div class="page-wrap wide">
+  <div style="margin-bottom: 28px;">
+    <div style="font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;margin-bottom:8px;">Experience 5</div>
+    <h1>The Public Ledger</h1>
+    <p style="font-size:16px;color:var(--ink-soft);max-width:640px;">
+      Every dollar Tinkery Bot spent. Every commit it shipped. Every product it built that no one bought. Real data with educational commentary.
+    </p>
+  </div>
+
+  <div class="story-hero">
+    <h2>This is Tinkery Bot. It cost <strong id="total-cost-hero">$1,284</strong> in 5 weeks.</h2>
+    <p>Here's where the money went, what it bought, and what the numbers actually mean for anyone thinking about deploying an AI agent.</p>
+    <p>Tinkery Bot is a Claude-powered agent running at the AI Tinkery makerspace at Stanford GSE. It writes code, designs assets, manages knowledge, and keeps this ledger. It has 0 paying customers. That's not a typo — and we're showing you anyway.</p>
+  </div>
+
+  <div class="teach-box">
+    <div class="teach-label">Why we show the numbers</div>
+    <p>Most AI deployments hide their costs. We don't. Transparency about what agents cost — and what they produce — is the only way to make good decisions about where to use them. The ledger below is the raw data from our OpenClaw session logs, with zero sanitizing.</p>
+    <p>Data note: Tinkery Bot was created 2026-03-13. Session logs from Mar 13 — Apr 7 are permanently lost (an OpenClaw reset event on Apr 21 wiped them). All totals below are floor estimates.</p>
+  </div>
+
+  <h2>Summary</h2>
+  <div class="kpi-grid" id="kpi-grid">
+    <div class="kpi accent"><div class="label">Total Spend</div><div class="value">—</div><div class="sub">Loading...</div></div>
+  </div>
+
+  <div class="teach-box">
+    <div class="teach-label">What does $0.41/turn actually mean?</div>
+    <p>Each "turn" is one message-response cycle — you send a message, the agent responds. The per-turn cost includes: loading the full conversation history from cache (the largest cost, ~80% of total), generating the response, and any tool calls made during the turn. High-history sessions cost more per turn than fresh subagents — by 2-3x.</p>
+  </div>
+
+  <h2>Spend by Project</h2>
+  <div class="teach-box">
+    <div class="teach-label">Why project attribution matters</div>
+    <p>Without per-project cost tracking, you can't tell which work is cost-effective and which isn't. Bites is 55% of total spend. Is that worth it? Only if we can compare it to what Bites produced — which is why the Outcomes section below exists.</p>
+  </div>
+  <div id="project-spend" style="background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px 22px;"></div>
+
+  <h2>Teachable Moments</h2>
+  <div class="teachable-moment">
+    <div class="tm-label">Teachable Moment #1</div>
+    <h4>The $17.88 Routing Change (May 7)</h4>
+    <p>Gregory asked for a URL routing change on Bites. I shipped it in 6 minutes — across 29 turns of main-thread work, loading 5 weeks of conversation history each time. Actual work value: ~$4.50. Context overhead: ~$13. <strong>Lesson: coding tasks should always run as subagents with fresh context.</strong></p>
+  </div>
+
+  <div class="teachable-moment">
+    <div class="tm-label">Teachable Moment #2</div>
+    <h4>0% Activation Rate on Bites</h4>
+    <p>$706 spent on Bites. 47 unique sessions recorded. 0 bites saved (0% activation). This is visible only because we measure activations. Most AI-built products don't. <strong>Lesson: measure user activation before shipping more features. The product problem may not be what the agent is building.</strong></p>
+  </div>
+
+  <div class="teachable-moment">
+    <div class="tm-label">Teachable Moment #3</div>
+    <h4>Week 19 Spike: $894 in One Week</h4>
+    <p>Week of May 4–10: 2,058 turns at $0.43/turn average. This was an intensive sprint on Bites, TinkeryBot (live video avatar), and the AI Tinkery chatbot simultaneously. The weekly cost tripled from the prior week's baseline. <strong>Lesson: track weekly spend, not just lifetime totals. Spikes often signal a costly approach, not just a busy week.</strong></p>
+  </div>
+
+  <h2>Outcomes — What the Spend Actually Bought</h2>
+  <div class="teach-box">
+    <div class="teach-label">Why we show $0 revenue honestly</div>
+    <p>It would be easy to exclude the outcomes section, or frame it in a way that downplays the gap. We don't. The Bengt/Mona lesson from Andon Labs applies here: if your AI deployment is operating without honest outcome measurement, you don't know if it's working. Tinkery Bot isn't working yet on its commercial metrics. That's the point.</p>
+  </div>
+  <div class="outcomes-grid" id="outcomes-grid"></div>
+
+  <h2>Weekly Rollup</h2>
+  <div class="teach-box">
+    <div class="teach-label">How to read these numbers</div>
+    <p>Each week shows cost, turns, commits, and cost-per-turn. The cost-per-turn trend is more informative than the raw spend — it tells you if the agent is getting more or less efficient over time. W15 (Apr 7) was the initial sprint. W19 (May 4) was the high-spend spike. The jump in $/turn from W16–W17 to W19 reflects longer conversation histories being dragged through each turn.</p>
+  </div>
+  <div id="weekly-table"></div>
+
+  <h2>Daily Detail</h2>
+  <div id="daily-detail"></div>
+
+  <div style="text-align:center;color:var(--ink-mute);font-size:12px;padding:24px 0;" id="generated-note"></div>
+</div>
+
+<footer class="site">
+  <a href="./index.html">Agent Anatomy</a> &nbsp;·&nbsp;
+  <a href="https://aitinkery.org">AI Tinkery at Stanford GSE</a> &nbsp;·&nbsp;
+  Data: real session logs, snapshot as of May 12, 2026
+</footer>
+
+<script>
+const PROJECT_LABELS = {
+  'bites': {emoji: '🍲', label: 'Bites', subtitle: 'food memory app'},
+  'bites-paper': {emoji: '📖', label: 'Bites Paper', subtitle: 'print-on-demand journal'},
+  'ai-tinkery-chatbot': {emoji: '🤖', label: 'AI Tinkery Chatbot', subtitle: 'Stanford GSE chatbot'},
+  'ai-tinkery-library': {emoji: '📚', label: 'AI Tinkery Library', subtitle: 'filterable activity library'},
+  'tinkery-comic-con': {emoji: '🎨', label: 'Tinkery & Friends', subtitle: 'Comic Con merch'},
+  'tinkerybot': {emoji: '🎥', label: 'Tinkerybot', subtitle: 'live video avatar'},
+  'masterclass': {emoji: '🎓', label: 'MasterClass / Jarvis', subtitle: 'exec ed course'},
+  'workspace-knowledge': {emoji: '🧠', label: 'Workspace Knowledge', subtitle: 'Obsidian synthesis'},
+  'workspace-infra': {emoji: '⚙️', label: 'Workspace Infra', subtitle: 'memory, ledger, MEMORY.md'},
+  'healthlog': {emoji: '🏥', label: 'Healthlog', subtitle: 'personal health companion'},
+  'unattributed': {emoji: '❔', label: 'Unattributed', subtitle: 'untracked turns'},
+};
+function pMeta(k) { return PROJECT_LABELS[k] || {emoji:'📦', label:k, subtitle:''}; }
+function fc(c) { return '$' + (c||0).toFixed(2); }
+function fn(n) { return (n||0).toLocaleString(); }
+function heatClass(c) { return c < 20 ? 'cost-lo' : c < 100 ? 'cost-mid' : 'cost-hi'; }
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+async function init() {
+  const [ledger, outcomes] = await Promise.all([
+    fetch('./data/ledger-snapshot.json').then(r => r.json()),
+    fetch('./data/outcomes-snapshot.json').then(r => r.json()).catch(() => null)
+  ]);
+
+  renderKPIs(ledger);
+  renderProjectSpend(ledger);
+  renderOutcomes(outcomes, ledger);
+  renderWeekly(ledger.weeks);
+  renderDaily(ledger.days);
+
+  document.getElementById('generated-note').textContent =
+    'Snapshot generated ' + new Date(ledger.generated_at).toLocaleString() +
+    ' · ' + ledger.totals.first_day + ' through ' + ledger.totals.last_day;
+  document.getElementById('total-cost-hero').textContent = fc(ledger.totals.cost);
+}
+
+function renderKPIs(ledger) {
+  const t = ledger.totals;
+  const avg = t.days_active ? t.cost / t.days_active : 0;
+  const cpt = t.turns ? t.cost / t.turns : 0;
+  const kpis = [
+    {label:'Total Spend', value:fc(t.cost), sub:`over ${t.days_active} active days`, cls:'accent highlight'},
+    {label:'Total Turns', value:fn(t.turns), sub:`${fc(cpt)}/turn avg`},
+    {label:'Commits Shipped', value:fn(t.commits), sub:'all projects combined'},
+    {label:'Daily Average', value:fc(avg), sub:'when active'},
+    {label:'Cache Reads', value:fn(Math.round(t.cache_read/1e6))+'M', sub:'tokens re-read from cache'},
+    {label:'Bites Activations', value:'0', sub:'$706 spent, 0 bites saved', cls:'red warn'},
+  ];
+  document.getElementById('kpi-grid').innerHTML = kpis.map(k => `
+    <div class="kpi ${k.cls||''}">
+      <div class="label">${k.label}</div>
+      <div class="value">${k.value}</div>
+      <div class="sub">${k.sub}</div>
+    </div>
+  `).join('');
+}
+
+function renderProjectSpend(ledger) {
+  const el = document.getElementById('project-spend');
+  const byP = ledger.totals.cost_by_project || {};
+  const byT = ledger.totals.turns_by_project || {};
+  const total = ledger.totals.cost;
+  const entries = Object.entries(byP).sort((a,b) => b[1]-a[1]);
+  el.innerHTML = entries.map(([k,cost]) => {
+    const m = pMeta(k);
+    const pct = (100*cost/total).toFixed(1);
+    const turns = byT[k] || 0;
+    const cpt = turns > 0 ? fc(cost/turns) : '—';
+    return `
+      <div class="project-bar-row">
+        <div class="project-bar-name">
+          <strong>${m.emoji} ${m.label}</strong>
+          <div class="sub">${m.subtitle} · ${turns} turns · ${cpt}/turn</div>
+        </div>
+        <div class="project-bar-track"><div class="project-bar-fill" style="width:${pct}%"></div></div>
+        <div class="project-bar-pct">${pct}%</div>
+        <div class="project-bar-cost ${heatClass(cost)}">${fc(cost)}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderOutcomes(outcomes, ledger) {
+  const el = document.getElementById('outcomes-grid');
+  if (!outcomes) { el.innerHTML = '<p class="empty">No outcomes data.</p>'; return; }
+  const ba = outcomes.bites_analytics || {};
+  const byDay = ba.by_day || {};
+  let sessions=0, bitesSaved=0, pageviews=0, exif=0;
+  Object.values(byDay).forEach(d => {
+    sessions += d.unique_sessions||0;
+    bitesSaved += d.bite_added||0;
+    pageviews += d.pageview_ping||0;
+    exif += d.exif_autofilled||0;
+  });
+  const activation = sessions > 0 ? (100*bitesSaved/sessions).toFixed(1)+'%' : '0%';
+  const bitesSpend = (ledger.totals.cost_by_project||{})['bites']||0;
+
+  el.innerHTML = `
+    <div class="outcome-tile">
+      <div class="ot-title">🍲 Bites App Usage</div>
+      <table>
+        <tr><td>Pageviews</td><td>${fn(pageviews)}</td></tr>
+        <tr><td>Unique sessions</td><td>${fn(sessions)}</td></tr>
+        <tr><td>Bites saved</td><td>${fn(bitesSaved)}</td></tr>
+        <tr><td>Activation rate</td><td>${activation}</td></tr>
+        <tr><td>EXIF auto-fills</td><td>${fn(exif)}</td></tr>
+      </table>
+      ${bitesSaved === 0 ? `<div class="outcome-flag">⚠️ Zero activations across ${fn(sessions)} sessions</div>` : ''}
+    </div>
+    <div class="outcome-tile">
+      <div class="ot-title">🎯 Bites Bottom Line</div>
+      <table>
+        <tr><td>Agent spend on Bites</td><td>${fc(bitesSpend)}</td></tr>
+        <tr><td>Revenue captured</td><td>$0.00</td></tr>
+        <tr><td>Cost per activation</td><td>${bitesSaved > 0 ? fc(bitesSpend/bitesSaved) : '∞'}</td></tr>
+        <tr><td>Real-world impact</td><td>${bitesSaved > 0 ? bitesSaved+' bites' : 'None yet'}</td></tr>
+      </table>
+      ${bitesSaved === 0 ? `<div class="outcome-flag">⚠️ ${fc(bitesSpend)} spent, 0 measurable activations</div>` : ''}
+    </div>
+    <div class="outcome-tile">
+      <div class="ot-title">📊 What This Means</div>
+      <p style="font-size:13px;color:var(--ink-soft);line-height:1.6;margin:0;">
+        The gap between agent effort and user adoption is the hardest thing to see without honest outcome tracking. Tinkery Bot built the right features — EXIF auto-fill, tag suggestions, onboarding flow — but hasn't yet found a reason compelling enough to make a user save their first bite. That's a product problem, not an engineering problem. And we only know it's a product problem because we measure it.
+      </p>
+    </div>
+  `;
+}
+
+function renderWeekly(weeks) {
+  const rows = [...weeks].reverse().map(w => `
+    <tr>
+      <td><strong>${w.week}</strong><div style="font-size:11px;color:var(--ink-mute)">${w.first_day} → ${w.last_day}</div></td>
+      <td class="num ${heatClass(w.cost)}">${fc(w.cost)}</td>
+      <td class="num">${fn(w.turns)}</td>
+      <td class="num">$${w.cost_per_turn.toFixed(3)}</td>
+      <td class="num">${fn(w.commits)}</td>
+      <td class="num">${w.days_active}</td>
+    </tr>
+  `).join('');
+  document.getElementById('weekly-table').innerHTML = `
+    <table class="data-table">
+      <thead><tr><th>Week</th><th class="num">Cost</th><th class="num">Turns</th><th class="num">$/turn</th><th class="num">Commits</th><th class="num">Active days</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function renderDaily(days) {
+  const html = [...days].reverse().map((d, idx) => {
+    const dt = new Date(d.day + 'T12:00:00');
+    const label = dt.toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric'});
+    const maxH = Math.max(...d.hourly_cost, 0.01);
+    const spark = d.hourly_cost.map(h =>
+      `<div class="spark-bar ${h===0?'empty':''}" style="height:${Math.max(2,h/maxH*20)}px"></div>`
+    ).join('');
+    const projEntries = Object.entries(d.cost_by_project||{}).filter(([,v])=>v>0.01).sort((a,b)=>b[1]-a[1]);
+    const projHtml = projEntries.length ? `
+      <div style="margin-bottom:12px;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.07em;font-weight:700;color:var(--ink-mute);margin-bottom:6px;">Cost by project</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:13px;">
+          ${projEntries.map(([k,v]) => {
+            const m = pMeta(k);
+            return `<span style="background:var(--bg);padding:3px 10px;border-radius:12px;border:1px solid var(--line);">${m.emoji} ${m.label}: ${fc(v)}</span>`;
+          }).join('')}
+        </div>
+      </div>
+    ` : '';
+    const commitsByProj = d.commits_by_project || {};
+    const commitsHtml = Object.keys(commitsByProj).length === 0 ? '<p style="font-size:13px;color:var(--ink-mute);font-style:italic;">No commits this day.</p>' :
+      Object.entries(commitsByProj).map(([proj, commits]) => `
+        <div style="margin-bottom:12px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.07em;font-weight:700;color:var(--accent-deep);margin-bottom:6px;">${proj} (${commits.length})</div>
+          ${commits.map(c => `
+            <div class="commit-row">
+              <div class="subject">${esc(c.subject)}</div>
+              <div class="meta"><span class="sha">${c.sha}</span> · ${new Date(c.time).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true})} · ${c.files_changed} file${c.files_changed!==1?'s':''}</div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+    return `
+      <div class="day-card ${idx===0?'expanded':''}" data-day="${d.day}">
+        <div class="head">
+          <div>
+            <div class="day-label">${label}</div>
+          </div>
+          <div class="stats">
+            <span class="${heatClass(d.cost)}">💵 <strong>${fc(d.cost)}</strong></span>
+            <span>🔄 <strong>${d.turns}</strong> turns</span>
+            <span>📦 <strong>${d.commit_count}</strong> commits</span>
+            <span>📝 <strong>$${d.cost_per_turn.toFixed(2)}</strong>/turn</span>
+            <div class="spark">${spark}</div>
+          </div>
+        </div>
+        <div class="body">${projHtml}${commitsHtml}</div>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('daily-detail').innerHTML = html;
+  document.querySelectorAll('.day-card .head').forEach(h => {
+    h.addEventListener('click', () => h.parentElement.classList.toggle('expanded'));
+  });
+}
+
+init().catch(err => {
+  document.querySelector('.page-wrap').insertAdjacentHTML('afterbegin',
+    `<div class="callout red"><strong>Error:</strong> Failed to load ledger data: ${err.message}</div>`);
+});
+</script>
+
+</body>
+</html>
