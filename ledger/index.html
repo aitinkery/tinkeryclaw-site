@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/buddy/buddy-favicon-64.png">
+<meta property="og:image" content="https://tinkeryclaw.com/assets/buddy/buddy-og.png">
+<title>Live Ledger · Tinkeryclaw</title>
+<style>
+  :root {
+    --bg: #faf6f0;
+    --paper: #ffffff;
+    --ink: #1f2937;
+    --ink-soft: #4b5563;
+    --ink-mute: #9ca3af;
+    --line: #e5e7eb;
+    --accent: #EF4444;
+    --accent-deep: #dc2626;
+    --navy: #1f2937;
+    --green: #16a34a;
+    --red: #c53030;
+    --yellow: #fef5e7;
+    --teal: #e6fffa;
+    --mono: 'SF Mono', Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    margin: 0;
+    padding: 0;
+    line-height: 1.55;
+  }
+  header.site {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 24px 32px;
+  }
+  header.site .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header.site h1 {
+    font-family: 'Georgia', serif;
+    font-weight: 900;
+    font-size: 32px;
+    margin: 0 0 4px 0;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+  }
+  header.site .subtitle {
+    color: var(--ink-mute);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 32px 80px;
+  }
+
+  /* KPI summary */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .kpi {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  .kpi .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .kpi .value {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+  }
+  .kpi .sub {
+    font-size: 12px;
+    color: var(--ink-mute);
+    margin-top: 4px;
+  }
+  .kpi.accent .value { color: var(--accent-deep); }
+
+  /* Section headers */
+  h2 {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  /* Weekly rollup table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  th {
+    text-align: left;
+    background: var(--bg);
+    padding: 10px 14px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { text-align: right; font-family: var(--mono); }
+  .cost-cell { font-weight: 600; color: var(--accent-deep); }
+
+  /* Daily detail cards */
+  .day-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .day-card .head {
+    padding: 16px 20px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .day-card .head:hover { background: var(--paper); }
+  .day-card .head .left { display: flex; gap: 18px; align-items: baseline; }
+  .day-card .day-label {
+    font-family: 'Georgia', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .day-card .day-week {
+    font-size: 11px;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .day-card .stats {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    flex-wrap: wrap;
+  }
+  .day-card .stats span strong {
+    color: var(--ink);
+    font-family: var(--mono);
+  }
+  .day-card .body { padding: 16px 20px; display: none; }
+  .day-card.expanded .body { display: block; }
+  .day-card.expanded .head::after { content: "▾"; }
+  .day-card:not(.expanded) .head::after { content: "▸"; }
+
+  /* Project section in day body */
+  .project-block {
+    margin-bottom: 16px;
+  }
+  .project-block:last-child { margin-bottom: 0; }
+  .project-name {
+    font-weight: 700;
+    color: var(--accent-deep);
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .commit {
+    border-left: 3px solid var(--line);
+    padding: 6px 0 6px 12px;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+  }
+  .commit .subject {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .commit .meta {
+    font-size: 11px;
+    color: var(--ink-mute);
+    font-family: var(--mono);
+    margin-top: 3px;
+  }
+  .commit .sha {
+    color: var(--accent);
+  }
+
+  /* Sparkline (hourly) */
+  .spark {
+    display: flex;
+    gap: 2px;
+    align-items: flex-end;
+    height: 28px;
+    width: 240px;
+    background: var(--bg);
+    padding: 2px;
+    border-radius: 3px;
+  }
+  .spark-bar {
+    flex: 1;
+    background: var(--accent);
+    border-radius: 1px;
+    min-height: 2px;
+    opacity: 0.8;
+  }
+  .spark-bar.empty { opacity: 0.15; }
+
+  /* Empty state */
+  .empty {
+    color: var(--ink-mute);
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  /* Generated note */
+  .generated-note {
+    text-align: center;
+    color: var(--ink-mute);
+    font-size: 12px;
+    padding: 30px 0;
+  }
+
+  /* Heat colors for cost */
+  .heat-low { color: var(--green); }
+  .heat-mid { color: var(--accent); }
+  .heat-high { color: var(--red); }
+
+  @media (max-width: 700px) {
+    main { padding: 20px 16px 60px; }
+    header.site { padding: 18px 16px; }
+    header.site h1 { font-size: 24px; }
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .spark { width: 160px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="inner">
+    <h1>Tinkery Bot · Daily Ledger</h1>
+    <div class="subtitle">What we spent, what we shipped, and what we learned — by day and week</div>
+    <div style="margin-top:12px;font-size:12px;color:var(--ink-mute);background:var(--yellow);padding:8px 12px;border-radius:4px;border-left:3px solid var(--accent);">
+      <strong>Data note:</strong> Tinkery Bot was created 2026-03-13. Session logs older than 2026-04-07 were lost in an OpenClaw reset event on 2026-04-21 (a 4.7 MB <code>.reset</code> file preserves Apr 7–Apr 21; Mar 13 – Apr 7 is genuinely gone). Totals below are floor estimates of lifetime cost.
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- KPI strip -->
+  <div class="kpi-grid" id="kpi-grid"></div>
+
+  <!-- Per-project spend -->
+  <h2>Per-project spend</h2>
+  <div id="project-spend"></div>
+
+  <!-- Outcomes section -->
+  <h2>Outcomes — what the spend actually bought</h2>
+  <div id="outcomes-summary"></div>
+
+  <!-- Weekly rollup -->
+  <h2>Weekly rollup</h2>
+  <div id="weekly-rollup"></div>
+
+  <!-- Daily detail -->
+  <h2>Daily detail</h2>
+  <div id="daily-detail"></div>
+
+  <div class="generated-note" id="generated-note"></div>
+</main>
+
+<script>
+async function load() {
+  const res = await fetch('./ledger.json?ts=' + Date.now());
+  const ledger = await res.json();
+  let outcomes = null;
+  try {
+    const oRes = await fetch('./outcomes.json?ts=' + Date.now());
+    if (oRes.ok) outcomes = await oRes.json();
+  } catch (e) { /* outcomes optional */ }
+  renderKPIs(ledger, outcomes);
+  renderProjectSpend(ledger);
+  renderOutcomes(outcomes, ledger);
+  renderWeekly(ledger.weeks);
+  renderDaily(ledger.days, outcomes);
+  document.getElementById('generated-note').textContent =
+    'Generated ' + new Date(ledger.generated_at).toLocaleString() +
+    ' · ' + ledger.totals.first_day + ' through ' + ledger.totals.last_day;
+}
+
+// Pretty labels + emojis for projects
+const PROJECT_LABELS = {
+  'bites': {emoji: '🍲', label: 'Bites', subtitle: 'food memory app'},
+  'bites-paper': {emoji: '📖', label: 'Bites Paper', subtitle: 'print-on-demand journal'},
+  'ai-tinkery-chatbot': {emoji: '🤖', label: 'AI Tinkery Chatbot', subtitle: 'Stanford GSE chatbot'},
+  'ai-tinkery-library': {emoji: '📚', label: 'AI Tinkery Library', subtitle: 'filterable activity library'},
+  'tinkery-comic-con': {emoji: '🎨', label: 'Tinkery & Friends', subtitle: 'Comic Con merch line'},
+  'tinkerybot': {emoji: '🎥', label: 'Tinkerybot', subtitle: 'live video avatar'},
+  'masterclass': {emoji: '🎓', label: 'MasterClass / Jarvis', subtitle: 'exec ed course'},
+  'workspace-knowledge': {emoji: '🧠', label: 'Workspace Knowledge', subtitle: 'Obsidian, Evernote, Andon Labs synthesis'},
+  'workspace-infra': {emoji: '⚙️', label: 'Workspace Infrastructure', subtitle: 'memory, ledger, MEMORY.md'},
+  'healthlog': {emoji: '🏥', label: 'Healthlog', subtitle: 'personal health companion'},
+  'unattributed': {emoji: '❔', label: 'Unattributed', subtitle: 'turns we couldn\'t pin to a project'},
+};
+
+function projectMeta(key) {
+  return PROJECT_LABELS[key] || {emoji: '📦', label: key, subtitle: ''};
+}
+
+function renderProjectSpend(ledger) {
+  const el = document.getElementById('project-spend');
+  const byProj = ledger.totals.cost_by_project || {};
+  const total = ledger.totals.cost;
+  const turnsByProj = ledger.totals.turns_by_project || {};
+  const entries = Object.entries(byProj).sort((a, b) => b[1] - a[1]);
+  if (!entries.length) { el.innerHTML = '<p class="empty">No data.</p>'; return; }
+
+  const rows = entries.map(([proj, cost]) => {
+    const meta = projectMeta(proj);
+    const pct = (100 * cost / total).toFixed(1);
+    const turns = turnsByProj[proj] || 0;
+    const cpt = turns > 0 ? (cost / turns).toFixed(2) : '—';
+    return `
+      <tr>
+        <td>
+          <div style="font-size:18px;line-height:1;margin-bottom:4px;">${meta.emoji} <strong>${meta.label}</strong></div>
+          <div style="font-size:12px;color:var(--ink-mute);">${meta.subtitle}</div>
+        </td>
+        <td class="num cost-cell ${heatClass(cost)}">${fmtCost(cost)}</td>
+        <td class="num">${pct}%</td>
+        <td class="num">${turns}</td>
+        <td class="num">$${cpt}/turn</td>
+        <td style="width:200px;padding:0 14px;">
+          <div style="background:var(--bg);border-radius:3px;height:8px;overflow:hidden;">
+            <div style="background:var(--accent);height:100%;width:${pct}%;"></div>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join('');
+  el.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th class="num">Cost</th>
+          <th class="num">% of total</th>
+          <th class="num">Turns</th>
+          <th class="num">$/turn</th>
+          <th>Share</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function renderOutcomes(outcomes, ledger) {
+  const el = document.getElementById('outcomes-summary');
+  if (!outcomes) {
+    el.innerHTML = '<p class="empty">No outcomes data yet.</p>';
+    return;
+  }
+  const totalSpend = ledger.totals.cost;
+  const bitesSpend = (ledger.totals.cost_by_project || {})['bites'] || 0;
+  const ba = outcomes.bites_analytics || {};
+  const byDay = ba.by_day || {};
+  // Aggregate Bites outcomes
+  let bitesSessions = 0, bitesAdded = 0, bitesPageviews = 0, bitesCookbookClicks = 0, bitesExifAutofills = 0;
+  Object.values(byDay).forEach(d => {
+    bitesSessions += d.unique_sessions || 0;
+    bitesAdded += d.bite_added || 0;
+    bitesPageviews += d.pageview_ping || 0;
+    bitesCookbookClicks += d.cookbook_clicked || 0;
+    bitesExifAutofills += d.exif_autofilled || 0;
+  });
+  const activationPct = bitesSessions > 0 ? (100 * bitesAdded / bitesSessions) : 0;
+  // Lulu
+  const lulu = outcomes.lulu_orders || [];
+  const luluTotalSpend = lulu.reduce((acc, j) => acc + (j.cost || 0), 0);
+  const luluUnits = lulu.reduce((acc, j) => acc + (j.qty || 0), 0);
+
+  const tiles = [
+    {
+      title: '🍲 Bites',
+      rows: [
+        ['Pageviews', fmtNum(bitesPageviews)],
+        ['Unique sessions', fmtNum(bitesSessions)],
+        ['Bites saved (activations)', fmtNum(bitesAdded)],
+        ['Activation rate', activationPct.toFixed(1) + '%'],
+        ['Cookbook clicks', fmtNum(bitesCookbookClicks)],
+        ['EXIF auto-fills', fmtNum(bitesExifAutofills)],
+      ],
+      flag: bitesAdded === 0 ? '⚠️ Zero activations across ' + bitesSessions + ' sessions' : null,
+    },
+    {
+      title: '📖 Bites Paper',
+      rows: [
+        ['Lulu print jobs', fmtNum(lulu.length)],
+        ['Units printed', fmtNum(luluUnits)],
+        ['Spend at Lulu', fmtCost(luluTotalSpend)],
+        ['Status', lulu.length > 0 ? (lulu[0].status || '—') : 'no jobs'],
+      ],
+      flag: null,
+    },
+    {
+      title: '🎯 Bites bottom-line',
+      rows: [
+        ['Bites agent spend', fmtCost(bitesSpend)],
+        ['Bites Paper agent spend', fmtCost((ledger.totals.cost_by_project||{})['bites-paper']||0)],
+        ['Revenue captured', '$0.00'],
+        ['Cost per activation', bitesAdded > 0 ? '$' + (bitesSpend/bitesAdded).toFixed(2) : '∞ (need first activation)'],
+        ['Real-world impact', bitesAdded > 0 ? `${bitesAdded} bite${bitesAdded !== 1 ? 's' : ''} saved` : 'No paying customers, no activations'],
+      ],
+      flag: bitesAdded === 0 ? '⚠️ ' + fmtCost(bitesSpend) + ' of Bites spend, 0 measurable activations.' : null,
+    },
+  ];
+
+  el.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      ${tiles.map(t => `
+        <div class="kpi" style="padding:16px 20px;">
+          <div style="font-weight:700;font-size:14px;color:var(--navy);margin-bottom:10px;text-transform:none;letter-spacing:0;">${t.title}</div>
+          <table style="border:none;background:none;font-size:13px;">
+            ${t.rows.map(r => `<tr><td style="padding:4px 0;border:none;color:var(--ink-soft);">${r[0]}</td><td style="padding:4px 0;border:none;text-align:right;font-family:var(--mono);font-weight:600;">${r[1]}</td></tr>`).join('')}
+          </table>
+          ${t.flag ? `<div style="margin-top:10px;font-size:11px;color:var(--red);background:#fff5f5;padding:6px 10px;border-radius:4px;border-left:3px solid var(--red);">${t.flag}</div>` : ''}
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function fmtCost(c) { return '$' + (c || 0).toFixed(2); }
+function fmtNum(n) { return (n || 0).toLocaleString(); }
+function heatClass(cost) {
+  if (cost < 20) return 'heat-low';
+  if (cost < 100) return 'heat-mid';
+  return 'heat-high';
+}
+
+function renderKPIs(ledger) {
+  const t = ledger.totals;
+  const last = ledger.days[ledger.days.length - 1] || {};
+  const avg = ledger.days.length ? t.cost / ledger.days.length : 0;
+  const kpis = [
+    { label: 'Total spend', value: fmtCost(t.cost), sub: `over ${t.days_active} active days`, accent: true },
+    { label: 'Total turns', value: fmtNum(t.turns), sub: `~${(t.cost / Math.max(1,t.turns)).toFixed(2)}/turn avg` },
+    { label: 'Commits shipped', value: fmtNum(t.commits), sub: 'across all projects' },
+    { label: 'Daily average', value: fmtCost(avg), sub: 'when active' },
+    { label: 'Last day', value: fmtCost(last.cost || 0), sub: last.day || '—' },
+  ];
+  document.getElementById('kpi-grid').innerHTML = kpis.map(k => `
+    <div class="kpi ${k.accent ? 'accent' : ''}">
+      <div class="label">${k.label}</div>
+      <div class="value">${k.value}</div>
+      <div class="sub">${k.sub}</div>
+    </div>
+  `).join('');
+}
+
+function renderWeekly(weeks) {
+  if (!weeks.length) {
+    document.getElementById('weekly-rollup').innerHTML = '<p class="empty">No data yet.</p>';
+    return;
+  }
+  // Reverse so latest week first
+  const rows = [...weeks].reverse().map(w => `
+    <tr>
+      <td><strong>${w.week}</strong><div class="empty">${w.first_day} → ${w.last_day}</div></td>
+      <td class="num cost-cell ${heatClass(w.cost)}">${fmtCost(w.cost)}</td>
+      <td class="num">${fmtNum(w.turns)}</td>
+      <td class="num">$${w.cost_per_turn.toFixed(3)}</td>
+      <td class="num">${fmtNum(w.commits)}</td>
+      <td class="num">${w.days_active}</td>
+    </tr>
+  `).join('');
+  document.getElementById('weekly-rollup').innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th class="num">Cost</th>
+          <th class="num">Turns</th>
+          <th class="num">$/turn</th>
+          <th class="num">Commits</th>
+          <th class="num">Days active</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function renderDaily(days, outcomes) {
+  if (!days.length) {
+    document.getElementById('daily-detail').innerHTML = '<p class="empty">No data yet.</p>';
+    return;
+  }
+  // Reverse so latest first
+  const reversed = [...days].reverse();
+  const html = reversed.map((d, idx) => {
+    const dayDate = new Date(d.day + 'T12:00:00');
+    const dayLabel = dayDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    // Hourly spark
+    const maxHr = Math.max(...d.hourly_cost, 0.01);
+    const sparkBars = d.hourly_cost.map(h => {
+      const pct = h / maxHr;
+      return `<div class="spark-bar ${h === 0 ? 'empty' : ''}" style="height:${Math.max(2, pct * 24)}px" title="${h.toFixed(2)} at hour"></div>`;
+    }).join('');
+
+    // Commits grouped by project
+    // Per-project cost breakdown for this day
+    let projectHtml = '';
+    const dayByProj = d.cost_by_project || {};
+    const projEntries = Object.entries(dayByProj).filter(([k,v]) => v > 0.01).sort((a, b) => b[1] - a[1]);
+    if (projEntries.length) {
+      projectHtml = `
+        <div class="project-block">
+          <div class="project-name">Cost by project</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;font-size:13px;">
+            ${projEntries.map(([k, v]) => {
+              const meta = projectMeta(k);
+              return `<span style="background:var(--bg);padding:4px 10px;border-radius:14px;"><strong>${meta.emoji} ${meta.label}</strong>: ${fmtCost(v)}</span>`;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    // Outcomes on this day
+    const dayOutcomes = (outcomes && outcomes.bites_analytics && outcomes.bites_analytics.by_day && outcomes.bites_analytics.by_day[d.day]) || null;
+    let outcomesHtml = '';
+    if (dayOutcomes) {
+      const items = [];
+      if (dayOutcomes.unique_sessions) items.push(`${dayOutcomes.unique_sessions} Bites sessions`);
+      if (dayOutcomes.bite_added) items.push(`<strong style="color:var(--green);">${dayOutcomes.bite_added} bites saved</strong>`);
+      if (dayOutcomes.cookbook_clicked) items.push(`${dayOutcomes.cookbook_clicked} cookbook clicks`);
+      if (dayOutcomes.exif_autofilled) items.push(`${dayOutcomes.exif_autofilled} EXIF auto-fills`);
+      if (items.length) {
+        outcomesHtml = `<div class="project-block"><div class="project-name">Outcomes</div><div style="font-size:13px;color:var(--ink-soft);">${items.join(' · ')}</div></div>`;
+      }
+    }
+
+    let commitsHtml = '';
+    if (Object.keys(d.commits_by_project).length === 0) {
+      commitsHtml = '<p class="empty">No commits this day.</p>';
+    } else {
+      commitsHtml = Object.entries(d.commits_by_project).map(([proj, commits]) => `
+        <div class="project-block">
+          <div class="project-name">${proj} <span style="color:var(--ink-mute);font-weight:400;">(${commits.length})</span></div>
+          ${commits.map(c => `
+            <div class="commit">
+              <div class="subject">${escapeHtml(c.subject)}</div>
+              <div class="meta">
+                <span class="sha">${c.sha}</span> ·
+                ${new Date(c.time).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })} ·
+                ${c.files_changed} file${c.files_changed !== 1 ? 's' : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('');
+    }
+
+    return `
+      <div class="day-card ${idx === 0 ? 'expanded' : ''}" data-day="${d.day}">
+        <div class="head">
+          <div class="left">
+            <div class="day-label">${dayLabel}</div>
+            <div class="day-week">${d.week}</div>
+          </div>
+          <div class="stats">
+            <span class="${heatClass(d.cost)}">💵 <strong>${fmtCost(d.cost)}</strong></span>
+            <span>🔄 <strong>${d.turns}</strong> turns</span>
+            <span>📦 <strong>${d.commit_count}</strong> commits</span>
+            <span>📝 <strong>$${d.cost_per_turn.toFixed(2)}</strong>/turn</span>
+            <div class="spark" title="Hourly cost distribution">${sparkBars}</div>
+          </div>
+        </div>
+        <div class="body">
+          ${projectHtml}
+          ${outcomesHtml}
+          ${commitsHtml}
+        </div>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('daily-detail').innerHTML = html;
+
+  // Wire up expand/collapse
+  document.querySelectorAll('.day-card .head').forEach(h => {
+    h.addEventListener('click', () => h.parentElement.classList.toggle('expanded'));
+  });
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+load().catch(err => {
+  document.querySelector('main').innerHTML = '<p style="color:var(--red)">Failed to load ledger: ' + err.message + '</p>';
+});
+</script>
+</body>
+</html>
