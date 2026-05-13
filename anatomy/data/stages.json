@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Supervise Every Action",
+    "emoji": "👁",
+    "definition": "Every agent decision is reviewed and approved by a human before execution.",
+    "looks_like": "Claude Code with default permission mode — you click 'Allow' on every tool call. The agent proposes; you decide.",
+    "trust_signals": "You consistently approve the agent's proposals without modification across a whole class of similar tasks. Reviewing becomes boring.",
+    "failure_mode": "You're stuck here forever if you never track approval patterns. The agent is capable of more, but you haven't established the evidence to know that.",
+    "real_example": "Tinkery Bot in its first week. Gregory reviewed every file edit before it landed. Cost: ~$0.14/turn — cheap, but slow."
+  },
+  {
+    "id": 2,
+    "name": "Approve Batches",
+    "emoji": "📦",
+    "definition": "The agent works autonomously through a session or sprint. The human reviews the full output at the end.",
+    "looks_like": "Claude Code in 'bypass permissions' mode for a 30-minute coding sprint. The agent ships commits; you review the PR afterward — not each individual edit.",
+    "trust_signals": "The batch reviews consistently pass without major rework. The PR diffs look right. You're editing style, not substance.",
+    "failure_mode": "If you skip stage 1 and jump here too fast, you don't know which classes of decisions the agent handles well. One bad batch can cost more to undo than the whole sprint saved.",
+    "real_example": "The $17.88 landing-page incident (May 7). Gregory asked for a routing change. I did 29 turns of main-thread work — but at least Gregory was reviewing the final output, not every step."
+  },
+  {
+    "id": 3,
+    "name": "Review Outcomes",
+    "emoji": "📊",
+    "definition": "The agent operates autonomously for days or weeks. The human monitors metrics and outcomes — not individual actions.",
+    "looks_like": "A weekly P&L review for an AI-managed project. You look at: did revenue hit target? Did customer complaints increase? The agent's specific decisions are not inspected unless something looks wrong.",
+    "trust_signals": "Outcomes consistently hit targets across multiple review cycles. Anomalies surface quickly in the metrics. You can explain why the numbers look the way they do.",
+    "failure_mode": "Without clear outcome metrics, you can't tell if the agent is doing well. Tinkery Bot's 0% Bites activation rate is only visible because we measure activations. Without that signal, we'd have no idea.",
+    "real_example": "Tinkery Bot running Bites feature development. Gregory checks the ledger and outcomes dashboard daily — not the individual commits. $706 spent on Bites. 0 activations. The metric makes the problem impossible to ignore."
+  },
+  {
+    "id": 4,
+    "name": "Fingertips on the Edge",
+    "emoji": "🤚",
+    "definition": "The human is no longer actively reviewing. The agent escalates on its own when something falls outside known patterns.",
+    "looks_like": "A medical billing system that runs autonomously for months, pinging a human only when an edge case appears that doesn't match known patterns. Most modern automation infrastructure operates at this stage.",
+    "trust_signals": "The agent's self-escalations are consistently the right ones — it flags genuine edge cases, not routine decisions. False positive alerts drop to near zero. The system handles a wide range of scenarios without human involvement.",
+    "failure_mode": "The agent escalates too much (alert fatigue) or not enough (silent failures). Bengt at Andon Labs got here on pitch calls and didn't escalate — he just kept talking. Fix: add a 🤫 trigger to the prompt.",
+    "real_example": "Mona, the Andon Café AI host. Handles 200+ customer interactions daily without human review. Escalates when a customer interaction matches a known edge-case pattern. One human checks the escalation queue twice a day."
+  },
+  {
+    "id": 5,
+    "name": "Loop Closes",
+    "emoji": "♻️",
+    "definition": "No human in the loop. The agent operates indefinitely under its own oversight and self-monitoring.",
+    "looks_like": "Nothing in production today operates here with significant authority. This is the destination — a fully autonomous agent that self-monitors, self-corrects, and knows when to self-limit. Andon Labs explicitly flags this as the stage where safety systems must work standalone.",
+    "trust_signals": "The agent recognizes its own failure states, corrects course, and escalates to external systems (not humans) when needed. Adversarial robustness is validated. Audit trails are complete without human intervention.",
+    "failure_mode": "If the safety framework isn't designed for this stage, it simply doesn't work. There's no human to catch misaligned behavior. The unanswered design questions: How does the agent self-recognize failure? Who does it escalate to when there's no human? What triggers stage 5 → stage 4 regression?",
+    "real_example": "None in production yet — this is aspirational. Luna at Andon Market is approaching stage 4 on inventory management. Stage 5 requires a level of adversarial robustness that hasn't been validated in real-world deployments."
+  }
+]
