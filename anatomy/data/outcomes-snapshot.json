@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-05-12T00:05:09.021211-07:00",
+  "bites_analytics": {
+    "by_day": {
+      "2026-05-08": {
+        "pageview_ping": 11,
+        "bite_added": 0,
+        "bite_updated": 0,
+        "hero_dismissed": 0,
+        "cookbook_clicked": 0,
+        "fb_prompt_vote": 0,
+        "fb_prompt_send": 0,
+        "install_clicked": 0,
+        "alpha_banner_dismissed": 0,
+        "exif_autofilled": 0,
+        "tag_suggestion_used": 0,
+        "other": 0,
+        "unique_sessions": 10
+      },
+      "2026-05-09": {
+        "pageview_ping": 9,
+        "bite_added": 0,
+        "bite_updated": 0,
+        "hero_dismissed": 0,
+        "cookbook_clicked": 0,
+        "fb_prompt_vote": 0,
+        "fb_prompt_send": 0,
+        "install_clicked": 0,
+        "alpha_banner_dismissed": 0,
+        "exif_autofilled": 0,
+        "tag_suggestion_used": 0,
+        "other": 0,
+        "unique_sessions": 8
+      },
+      "2026-05-10": {
+        "pageview_ping": 12,
+        "bite_added": 0,
+        "bite_updated": 0,
+        "hero_dismissed": 0,
+        "cookbook_clicked": 0,
+        "fb_prompt_vote": 0,
+        "fb_prompt_send": 0,
+        "install_clicked": 0,
+        "alpha_banner_dismissed": 0,
+        "exif_autofilled": 0,
+        "tag_suggestion_used": 0,
+        "other": 0,
+        "unique_sessions": 12
+      },
+      "2026-05-11": {
+        "pageview_ping": 15,
+        "bite_added": 0,
+        "bite_updated": 0,
+        "hero_dismissed": 0,
+        "cookbook_clicked": 0,
+        "fb_prompt_vote": 0,
+        "fb_prompt_send": 0,
+        "install_clicked": 0,
+        "alpha_banner_dismissed": 0,
+        "exif_autofilled": 0,
+        "tag_suggestion_used": 0,
+        "other": 1,
+        "unique_sessions": 13
+      }
+    },
+    "total_events": 91
+  },
+  "lulu_orders": [
+    {
+      "id": 2863831,
+      "created": "2026-05-08T21:12:51.966352Z",
+      "status": "IN_PRODUCTION",
+      "title": "Bites Paper - The Field Journal (Sample v4)",
+      "qty": 1,
+      "cost": 12.46,
+      "currency": "USD"
+    },
+    {
+      "id": 2863825,
+      "created": "2026-05-08T21:08:15.716051Z",
+      "status": "CANCELED",
+      "title": "Bites Paper - The Field Journal (Sample v4)",
+      "qty": 1,
+      "cost": 12.46,
+      "currency": "USD"
+    }
+  ],
+  "stripe_revenue": null
+}
