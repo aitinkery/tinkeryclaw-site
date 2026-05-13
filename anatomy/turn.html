@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../assets/buddy/buddy-favicon-64.png">
+<meta property="og:image" content="https://tinkeryclaw.com/assets/buddy/buddy-og.png">
+<title>Anatomy of a Turn · Agent Anatomy</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+  .turn-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 28px;
+    align-items: start;
+  }
+
+  /* Comic panel frame */
+  .panel {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+  }
+  .panel.visible { display: block; animation: panelIn 0.3s ease; }
+  @keyframes panelIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .panel-label {
+    background: var(--navy);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 6px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .panel-label .step-num { background: var(--accent); padding: 1px 8px; border-radius: 3px; }
+  .panel-body { padding: 20px; }
+
+  /* Bubble styles */
+  .bubble {
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    max-width: 90%;
+  }
+  .bubble.user {
+    background: #e8f0fe;
+    color: #1a365d;
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+  }
+  .bubble.agent {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-bottom-right-radius: 4px;
+    margin-left: auto;
+  }
+  .bubble.thinking {
+    background: var(--yellow);
+    border: 1px dashed var(--accent);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  .bubble.tool-call {
+    background: var(--navy);
+    color: rgba(255,255,255,0.9);
+    font-family: var(--mono);
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 12px 16px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .bubble.tool-result {
+    background: #1a1a2e;
+    color: #a8d8a8;
+    font-family: var(--mono);
+    font-size: 12px;
+    border-radius: 6px;
+    padding: 12px 16px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .bubble.context {
+    background: var(--teal);
+    border: 1px solid #b2f5ea;
+    font-size: 13px;
+    color: #234e52;
+  }
+
+  .bubble-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 6px;
+    opacity: 0.65;
+  }
+
+  /* Annotation sidebar */
+  .annotation-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    position: sticky;
+    top: 80px;
+  }
+  .annotation-card .ann-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .annotation-card .ann-text {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+  .annotation-card .badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .annotation-card .why-box {
+    background: var(--yellow);
+    border-left: 3px solid var(--accent);
+    padding: 10px 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-radius: 0 5px 5px 0;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+  .annotation-card .why-box strong { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-deep); margin-bottom: 4px; }
+  .teaching-callout {
+    background: var(--navy);
+    color: rgba(255,255,255,0.9);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .teaching-callout strong { color: var(--accent); }
+
+  /* Progress bar */
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--line);
+    border-radius: 3px;
+    margin: 16px 0;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+  }
+
+  /* Navigation */
+  .turn-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 12px;
+  }
+  .step-counter { font-family: var(--mono); font-size: 13px; color: var(--ink-mute); }
+
+  /* Receipt */
+  .receipt {
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 10px;
+    padding: 28px 24px;
+    font-family: var(--mono);
+    margin-top: 8px;
+  }
+  .receipt h3 { font-family: Georgia, serif; color: var(--accent); font-size: 20px; margin: 0 0 18px; }
+  .receipt-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 13px;
+  }
+  .receipt-line:last-child { border: none; }
+  .receipt-line .item { color: rgba(255,255,255,0.7); flex: 1; }
+  .receipt-line .amount { color: var(--accent); font-weight: 700; }
+  .receipt-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 2px solid var(--accent);
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .receipt-total .total-label { color: #fff; }
+  .receipt-total .total-amount { color: var(--accent); }
+  .comparison-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .comparison-item {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .comparison-item .ci-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+  .comparison-item .ci-val { font-size: 20px; font-weight: 700; }
+  .comparison-item .ci-val.hi { color: var(--red); }
+  .comparison-item .ci-val.lo { color: var(--green); }
+  .lesson-list { margin-top: 14px; }
+  .lesson-list li { font-size: 13px; color: rgba(255,255,255,0.75); margin-bottom: 6px; line-height: 1.55; list-style: none; padding-left: 16px; position: relative; }
+  .lesson-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+
+  @media (max-width: 780px) {
+    .turn-layout { grid-template-columns: 1fr; }
+    .annotation-card { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="./index.html">🦞 Tinkeryclaw · Agent Anatomy</a>
+  <nav>
+    <a href="./turn.html" class="active">Anatomy of a Turn</a>
+    <a href="./failure.html">Watch It Fail</a>
+    <a href="./sandbox.html">Try It</a>
+    <a href="./slider.html">Autonomy Stages</a>
+    <a href="./ledger.html">Live Ledger</a>
+    <a href="./soul.html">The Soul</a>
+  </nav>
+</header>
+
+<div class="page-wrap wide">
+  <div style="margin-bottom: 28px;">
+    <div style="font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:700;margin-bottom:8px;">Experience 1</div>
+    <h1>Anatomy of an Agent Turn</h1>
+    <p style="font-size:16px;color:var(--ink-soft);max-width:620px;">
+      Step through one real turn from Tinkery Bot's session on May 8 — the $11.34 that implemented EXIF auto-fill and tag suggestions for the Bites app.
+    </p>
+  </div>
+
+  <div id="app">
+    <div class="callout">Loading turn data...</div>
+  </div>
+</div>
+
+<footer class="site">
+  <a href="./index.html">Agent Anatomy</a> &nbsp;·&nbsp;
+  <a href="https://aitinkery.org">AI Tinkery at Stanford GSE</a>
+</footer>
+
+<script>
+let turn = null;
+let current = 0;
+
+const TYPE_CONFIG = {
+  user:        { label: 'User Message',    bubbleClass: 'user',        icon: '👤' },
+  context:     { label: 'Context Load',    bubbleClass: 'context',     icon: '🧠' },
+  thinking:    { label: 'Agent Reasoning', bubbleClass: 'thinking',    icon: '💭' },
+  tool_call:   { label: 'Tool Call',       bubbleClass: 'tool-call',   icon: '⚙️' },
+  tool_result: { label: 'Tool Result',     bubbleClass: 'tool-result', icon: '📄' },
+  assistant:   { label: 'Final Answer',    bubbleClass: 'agent',       icon: '🤖' },
+};
+
+async function init() {
+  const res = await fetch('./data/turn-example.json');
+  turn = await res.json();
+  render();
+}
+
+function render() {
+  const app = document.getElementById('app');
+  const s = turn.stages[current];
+  const cfg = TYPE_CONFIG[s.type] || TYPE_CONFIG.user;
+  const isLast = current === turn.stages.length - 1;
+  const pct = Math.round((current + 1) / turn.stages.length * 100);
+
+  app.innerHTML = `
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 20px;margin-bottom:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <div style="font-size:14px;font-weight:600;color:var(--navy);flex:1;">"${esc(turn.user_message)}"</div>
+      <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mute);">
+        <span>💵 ${fc(turn.total_cost)} total</span>
+        <span>🔄 ${turn.total_turns_internal} internal cycles</span>
+        <span>⏱ ${turn.duration_seconds}s</span>
+        <span>📦 ${turn.commits} commit</span>
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" style="width:${pct}%"></div>
+    </div>
+    <div style="text-align:center;font-size:12px;color:var(--ink-mute);margin-bottom:20px;">Step ${current+1} of ${turn.stages.length} &nbsp;·&nbsp; ${pct}% through the turn</div>
+
+    <div class="turn-layout">
+      <div>
+        <div class="panel visible">
+          <div class="panel-label">
+            <span>${cfg.icon} ${cfg.label}</span>
+            <span class="step-num">Step ${s.step}</span>
+          </div>
+          <div class="panel-body">
+            <div style="display:flex;flex-direction:column;">
+              <div class="bubble ${cfg.bubbleClass}">
+                <div class="bubble-label">${s.frame_label || cfg.label}</div>
+                ${esc(s.content).replace(/\n/g,'<br>')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        ${current > 0 ? renderPreviousSteps() : ''}
+
+        ${isLast ? renderReceipt() : ''}
+
+        <div class="turn-nav">
+          <button class="btn btn-secondary" onclick="go(-1)" ${current===0?'disabled':''}&gt;&larr; Previous</button>
+          <span class="step-counter">${current+1} / ${turn.stages.length}</span>
+          <button class="btn btn-primary" onclick="go(1)" ${isLast?'disabled':''}>Next &rarr;</button>
+        </div>
+      </div>
+
+      <div class="annotation-card">
+        <div class="ann-type">Annotation</div>
+        <div class="ann-text">${esc(s.annotation)}</div>
+
+        <div class="badges">
+          ${s.cost > 0 ? `<span class="badge cost">💵 ${fc(s.cost)}</span>` : '<span class="badge" style="background:var(--bg);color:var(--ink-mute)">$0.00</span>'}
+          ${s.time_ms > 0 ? `<span class="badge time">⏱ ${(s.time_ms/1000).toFixed(1)}s</span>` : ''}
+          <span class="badge step">${cfg.label}</span>
+        </div>
+
+        <div class="why-box">
+          <strong>Why this matters</strong>
+          ${esc(s.why)}
+        </div>
+
+        ${s.teaching ? `<div class="teaching-callout"><strong>Key insight:</strong> ${esc(s.teaching)}</div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+function renderPreviousSteps() {
+  const prev = turn.stages.slice(0, current).reverse().slice(0, 3);
+  if (!prev.length) return '';
+  return `
+    <div style="margin-top:16px;opacity:0.5;">
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-mute);margin-bottom:10px;">Previous steps</div>
+      ${prev.map(s => {
+        const cfg = TYPE_CONFIG[s.type] || TYPE_CONFIG.user;
+        return `
+          <div style="background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px 14px;margin-bottom:6px;font-size:13px;">
+            <span style="color:var(--ink-mute);">${cfg.icon} ${s.frame_label || cfg.label}</span>
+            <span style="float:right;font-family:var(--mono);font-size:11px;color:var(--ink-mute);">${s.cost > 0 ? fc(s.cost) : ''}</span>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+function renderReceipt() {
+  const r = turn.receipt;
+  return `
+    <div class="receipt" style="margin-top:24px;">
+      <h3>The Receipt</h3>
+      ${r.breakdown.map(b => `
+        <div class="receipt-line">
+          <span class="item">${b.item}</span>
+          <span class="amount">${fc(b.cost)}</span>
+        </div>
+      `).join('')}
+      <div class="receipt-total">
+        <span class="total-label">TOTAL</span>
+        <span class="total-amount">${fc(r.total_cost)}</span>
+      </div>
+      <div class="comparison-row">
+        <div class="comparison-item">
+          <div class="ci-label">This session (main thread)</div>
+          <div class="ci-val hi">${fc(r.comparison.main_session)}</div>
+        </div>
+        <div class="comparison-item">
+          <div class="ci-label">Same task as subagent</div>
+          <div class="ci-val lo">~${fc(r.comparison.as_subagent)}</div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:8px;">${r.comparison.savings_note}</div>
+      <ul class="lesson-list">
+        ${r.lessons.map(l => `<li>${l}</li>`).join('')}
+      </ul>
+    </div>
+  `;
+}
+
+function go(dir) {
+  const next = current + dir;
+  if (next < 0 || next >= turn.stages.length) return;
+  current = next;
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function fc(c) { return '$' + (c||0).toFixed(2); }
+
+init().catch(err => {
+  document.getElementById('app').innerHTML = `<div class="callout red"><strong>Error:</strong> ${err.message}</div>`;
+});
+</script>
+
+</body>
+</html>
