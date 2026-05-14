@@ -320,7 +320,7 @@
 
 <footer class="site">
   <a href="./index.html">Agent Anatomy</a> &nbsp;·&nbsp;
-  <a href="https://aitinkery.org">AI Tinkery at Stanford GSE</a> &nbsp;·&nbsp;
+  <a href="https://ai-tinkery.stanford.edu/">AI Tinkery at Stanford Accelerator for Learning</a> &nbsp;·&nbsp;
   Framework: Andon Labs, 2026
 </footer>
 
@@ -402,7 +402,7 @@ function renderStageCard(s, idx) {
 
 function copyToClipboard() {
   const s = stages[currentStage];
-  const text = `I'm at Stage ${s.id} (${s.name}) on the Safe Autonomous Organization slider for my AI use.\n\n${s.definition}\n\nLearn more: Agent Anatomy by Tinkery Bot / AI Tinkery at Stanford GSE`;
+  const text = `I'm at Stage ${s.id} (${s.name}) on the Safe Autonomous Organization slider for my AI use.\n\n${s.definition}\n\nLearn more: Agent Anatomy by Tinkery Bot / AI Tinkery at Stanford Accelerator for Learning`;
   navigator.clipboard.writeText(text).then(() => {
     const fb = document.getElementById('share-feedback');
     fb.style.display = 'block';
