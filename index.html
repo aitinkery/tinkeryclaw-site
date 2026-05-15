@@ -113,6 +113,16 @@
     box-shadow: 0 6px 28px rgba(239,68,68,0.12);
     transform: translateY(-2px);
   }
+  .tile.tile-static,
+  .tile.tile-static:hover {
+    border-color: var(--line);
+    box-shadow: none;
+    transform: none;
+    cursor: default;
+  }
+  .tile.tile-static .tile-title {
+    padding-right: 0;
+  }
   .tile .tile-icon {
     font-size: 32px;
     line-height: 1;
@@ -221,13 +231,12 @@
     <p class="tile-desc">A private food memory app. Save the dish, not the restaurant.</p>
   </a>
 
-  <a class="tile" href="https://ai-tinkery-library.replit.app" target="_blank" rel="noopener">
-    <span class="tile-arrow">&rarr;</span>
+  <div class="tile tile-static">
     <div class="tile-icon">📚</div>
-    <span class="tile-badge">Resource</span>
+    <span class="tile-badge">In Progress</span>
     <div class="tile-title">AI Tinkery Library</div>
-    <p class="tile-desc">39 hands-on activities for learning about AI. Filterable, searchable, ready for your classroom.</p>
-  </a>
+    <p class="tile-desc">A growing collection of hands-on activities for learning about AI — organized around four ways of engaging with the technology: understanding it, shaping it, evaluating it, and designing the spaces where people meet it. Used by educators and facilitators inside the AI Tinkery.</p>
+  </div>
 
 </div>
 
