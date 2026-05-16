@@ -266,7 +266,9 @@
 
     <p>None of that is in the model weights. It's in six plain-text files that get prepended to every single turn, re-read every session from scratch. This is the character layer — and it's made of Markdown.</p>
 
-    <p>The full effective system prompt Tinkery Bot operates under is the OpenClaw runtime plus <code>AGENTS.md</code>, <code>SOUL.md</code>, <code>MEMORY.md</code>, <code>IDENTITY.md</code>, <code>USER.md</code>, and <code>TOOLS.md</code> — concatenated, every turn. Roughly 25–40K tokens of curated prose that gets re-loaded fresh each session. Because Tinkery Bot has read/write access to <code>MEMORY.md</code> and <code>TOOLS.md</code>, the character compounds: lessons stick, patterns get documented, the agent learns at the level of identity rather than weights. The files grow. The agent grows with them.</p>
+    <p>The discipline of choosing what information the agent sees, in what order, with which constraints is called <strong>context engineering</strong>. Most teams call this "system prompt engineering" — but a prompt is a one-line instruction. Context is the persistent environment the agent lives inside. Kolb and Rosen call this the dominant developer skill of the agentic era, replacing prompt engineering the way prompt engineering replaced regex tuning. The six files below are the surface area of Tinkery Bot's context engineering.</p>
+
+    <p>The full effective context Tinkery Bot operates inside is the OpenClaw runtime plus <code>AGENTS.md</code>, <code>SOUL.md</code>, <code>MEMORY.md</code>, <code>IDENTITY.md</code>, <code>USER.md</code>, and <code>TOOLS.md</code> — concatenated, every turn. Roughly 25–40K tokens of curated prose that gets re-loaded fresh each session. Because Tinkery Bot has read/write access to <code>MEMORY.md</code> and <code>TOOLS.md</code>, the character compounds: lessons stick, patterns get documented, the agent learns at the level of identity rather than weights. The files grow. The agent grows with them.</p>
   </div>
 
   <!-- =================== FILE TOUR =================== -->
