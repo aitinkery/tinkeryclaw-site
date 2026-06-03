@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T00:05:05.017306-07:00",
+  "generated_at": "2026-06-03T00:05:04.191034-07:00",
   "bites_analytics": {
     "by_day": {
       "2026-05-08": {
@@ -301,9 +301,24 @@
         "tag_suggestion_used": 0,
         "other": 0,
         "unique_sessions": 7
+      },
+      "2026-06-02": {
+        "pageview_ping": 2,
+        "bite_added": 0,
+        "bite_updated": 0,
+        "hero_dismissed": 0,
+        "cookbook_clicked": 0,
+        "fb_prompt_vote": 0,
+        "fb_prompt_send": 0,
+        "install_clicked": 0,
+        "alpha_banner_dismissed": 0,
+        "exif_autofilled": 0,
+        "tag_suggestion_used": 0,
+        "other": 0,
+        "unique_sessions": 1
       }
     },
-    "total_events": 327
+    "total_events": 330
   },
   "lulu_orders": [
     {
