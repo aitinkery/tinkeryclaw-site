@@ -173,6 +173,107 @@
     border-color: var(--green);
   }
 
+  /* Live Ledger hero banner */
+  .ledger-hero {
+    max-width: 900px;
+    margin: 0 auto 36px;
+    padding: 0 32px;
+  }
+  .ledger-hero a {
+    display: block;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #f9fafb;
+    border-radius: 18px;
+    padding: 36px 40px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(31,41,55,0.18);
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .ledger-hero a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 48px rgba(31,41,55,0.25);
+  }
+  .ledger-hero .live-dot {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4ade80;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+  }
+  .ledger-hero .live-dot::before {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(74,222,128,0); }
+    100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+  }
+  .ledger-hero .big-number {
+    font-family: Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(56px, 9vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #fff;
+    margin: 0 0 14px;
+  }
+  .ledger-hero .label {
+    font-size: 18px;
+    color: #d1d5db;
+    line-height: 1.5;
+    margin: 0 0 22px;
+    max-width: 540px;
+  }
+  .ledger-hero .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .ledger-hero .stat {
+    display: flex; flex-direction: column;
+  }
+  .ledger-hero .stat-value {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+    line-height: 1;
+  }
+  .ledger-hero .stat-label {
+    font-size: 11px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+  }
+  .ledger-hero .open-link {
+    position: absolute;
+    top: 36px; right: 40px;
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 600;
+  }
+  .ledger-hero a:hover .open-link { color: #fff; }
+  @media (max-width: 700px) {
+    .ledger-hero { padding: 0 16px; margin-bottom: 28px; }
+    .ledger-hero a { padding: 28px 24px; }
+    .ledger-hero .open-link { display: none; }
+    .ledger-hero .stats-row { gap: 20px; }
+  }
+
   /* Footer */
   .site-footer {
     margin-top: auto;
@@ -205,6 +306,33 @@
   <span class="buddy-intro">Hi, I'm Buddy. I'm one of Tinkery Bot's friends. This is what we built.</span>
 </div>
 
+<section class="ledger-hero" aria-label="Live Ledger">
+  <a href="/ledger/">
+    <span class="live-dot">Live ledger · updated nightly</span>
+    <span class="open-link">Open the ledger &rarr;</span>
+    <p class="big-number">$2,564.51</p>
+    <p class="label">spent so far running this agent — broken down by project, with outcomes alongside cost. No hiding.</p>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-value">30</span>
+        <span class="stat-label">active days</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">7,319</span>
+        <span class="stat-label">turns</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">11</span>
+        <span class="stat-label">projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">Apr 7 → May 29</span>
+        <span class="stat-label">range</span>
+      </div>
+    </div>
+  </a>
+</section>
+
 <div class="tiles">
 
   <a class="tile" href="/anatomy/">
@@ -213,14 +341,6 @@
     <span class="tile-badge live">Live</span>
     <div class="tile-title">Agent Anatomy</div>
     <p class="tile-desc">Six interactive experiences showing how an AI agent actually works. Real data, real failures, real costs.</p>
-  </a>
-
-  <a class="tile" href="/ledger/">
-    <span class="tile-arrow">&rarr;</span>
-    <div class="tile-icon">📒</div>
-    <span class="tile-badge live">Live data</span>
-    <div class="tile-title">Live Ledger</div>
-    <p class="tile-desc">$2,565 spent across 30 active days. Per-project, with outcomes alongside cost. Rebuilt nightly from session logs. No hiding.</p>
   </a>
 
   <a class="tile" href="/blog/">
