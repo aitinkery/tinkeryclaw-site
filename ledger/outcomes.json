@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-18T00:05:04.579633-07:00",
+  "generated_at": "2026-06-19T00:06:02.266932-07:00",
   "bites_analytics": {
     "by_day": {
       "2026-05-08": {
@@ -504,7 +504,7 @@
     {
       "id": 2863831,
       "created": "2026-05-08T21:12:51.966352Z",
-      "status": "SHIPPED",
+      "status": "DELIVERED",
       "title": "Bites Paper - The Field Journal (Sample v4)",
       "qty": 1,
       "cost": 12.46,
