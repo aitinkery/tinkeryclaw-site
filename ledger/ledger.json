@@ -1,41 +1,121 @@
 {
-  "generated_at": "2026-06-24T10:57:47.522173-07:00",
+  "generated_at": "2026-06-24T12:19:15.609818-07:00",
   "totals": {
-    "cost": 2031.41,
-    "turns": 12088,
-    "commits": 3,
-    "first_day": "2026-05-18",
+    "cost": 3906.33,
+    "turns": 16822,
+    "commits": 235,
+    "first_day": "2026-04-07",
     "last_day": "2026-06-24",
-    "days_active": 38,
-    "input_tokens": 24587,
-    "output_tokens": 5421554,
-    "cache_read": 1544960848,
+    "days_active": 63,
+    "input_tokens": 36869,
+    "output_tokens": 8512916,
+    "cache_read": 3044044279,
     "cost_by_project": {
-      "unattributed": 798.68,
-      "masterclass": 532.37,
-      "tinkerybot": 308.78,
-      "ai-tinkery-library": 144.03,
-      "workspace-knowledge": 73.22,
-      "bites": 69.13,
-      "workspace-infra": 66.24,
-      "bites-paper": 35.37,
-      "tinkery-comic-con": 3.44,
-      "ai-tinkery-chatbot": 0.17
+      "bites": 1180.64,
+      "unattributed": 812.26,
+      "masterclass": 641.3,
+      "tinkerybot": 412.34,
+      "ai-tinkery-library": 217.66,
+      "ai-tinkery-chatbot": 166.47,
+      "workspace-infra": 159.78,
+      "workspace-knowledge": 152.65,
+      "tinkery-comic-con": 98.41,
+      "bites-paper": 64.63,
+      "healthlog": 0.2
     },
     "turns_by_project": {
-      "unattributed": 6102,
-      "workspace-infra": 437,
-      "ai-tinkery-library": 767,
-      "tinkerybot": 1198,
-      "bites": 337,
-      "masterclass": 2997,
-      "bites-paper": 215,
-      "workspace-knowledge": 233,
-      "tinkery-comic-con": 24,
-      "ai-tinkery-chatbot": 5
+      "unattributed": 6316,
+      "ai-tinkery-chatbot": 840,
+      "workspace-infra": 655,
+      "ai-tinkery-library": 1030,
+      "tinkerybot": 1407,
+      "workspace-knowledge": 401,
+      "bites": 2851,
+      "masterclass": 3290,
+      "bites-paper": 392,
+      "tinkery-comic-con": 216,
+      "healthlog": 4
     }
   },
   "weeks": [
+    {
+      "week": "2026-W15",
+      "cost": 144.49,
+      "turns": 589,
+      "commits": 99,
+      "cost_per_turn": 0.2453,
+      "days_active": 4,
+      "first_day": "2026-04-07",
+      "last_day": "2026-04-10",
+      "input_tokens": 3147,
+      "output_tokens": 227208,
+      "cache_read": 38472878
+    },
+    {
+      "week": "2026-W16",
+      "cost": 22.16,
+      "turns": 159,
+      "commits": 50,
+      "cost_per_turn": 0.1393,
+      "days_active": 4,
+      "first_day": "2026-04-13",
+      "last_day": "2026-04-18",
+      "input_tokens": 913,
+      "output_tokens": 66272,
+      "cache_read": 13763533
+    },
+    {
+      "week": "2026-W17",
+      "cost": 27.38,
+      "turns": 233,
+      "commits": 9,
+      "cost_per_turn": 0.1175,
+      "days_active": 2,
+      "first_day": "2026-04-21",
+      "last_day": "2026-04-26",
+      "input_tokens": 407,
+      "output_tokens": 134166,
+      "cache_read": 17439430
+    },
+    {
+      "week": "2026-W18",
+      "cost": 15.05,
+      "turns": 61,
+      "commits": 0,
+      "cost_per_turn": 0.2467,
+      "days_active": 2,
+      "first_day": "2026-04-27",
+      "last_day": "2026-04-30",
+      "input_tokens": 101,
+      "output_tokens": 49124,
+      "cache_read": 10333826
+    },
+    {
+      "week": "2026-W19",
+      "cost": 894.34,
+      "turns": 2058,
+      "commits": 59,
+      "cost_per_turn": 0.4346,
+      "days_active": 6,
+      "first_day": "2026-05-04",
+      "last_day": "2026-05-10",
+      "input_tokens": 3970,
+      "output_tokens": 1539217,
+      "cache_read": 773493943
+    },
+    {
+      "week": "2026-W20",
+      "cost": 766.71,
+      "turns": 1536,
+      "commits": 15,
+      "cost_per_turn": 0.4992,
+      "days_active": 7,
+      "first_day": "2026-05-11",
+      "last_day": "2026-05-17",
+      "input_tokens": 3608,
+      "output_tokens": 1048734,
+      "cache_read": 640527852
+    },
     {
       "week": "2026-W21",
       "cost": 223.69,
@@ -103,19 +183,3711 @@
     },
     {
       "week": "2026-W26",
-      "cost": 31.39,
-      "turns": 425,
+      "cost": 36.2,
+      "turns": 523,
       "commits": 0,
-      "cost_per_turn": 0.0739,
+      "cost_per_turn": 0.0692,
       "days_active": 3,
       "first_day": "2026-06-22",
       "last_day": "2026-06-24",
-      "input_tokens": 974,
-      "output_tokens": 105571,
-      "cache_read": 11853622
+      "input_tokens": 1110,
+      "output_tokens": 132212,
+      "cache_read": 16905591
     }
   ],
   "days": [
+    {
+      "day": "2026-04-07",
+      "week": "2026-W15",
+      "cost": 14.0222,
+      "turns": 121,
+      "cost_per_turn": 0.1159,
+      "cache_read": 8946374,
+      "cache_write": 2743905,
+      "input_tokens": 459,
+      "output_tokens": 69816,
+      "session_count": 2,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.1552,
+        4.4553,
+        1.3961,
+        2.2663,
+        4.1434,
+        1.6059,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "c257bdefb6b7",
+            "time": "2026-04-07T19:03:37-07:00",
+            "subject": "Fix onboarding flow to properly handle affiliation and add Start Tinkery to all quick replies",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "62c64dc6e0f4",
+            "time": "2026-04-07T18:24:06-07:00",
+            "subject": "Add Start a Tinkery to help/what can you do quick replies",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "55b36d3ef44b",
+            "time": "2026-04-07T18:14:24-07:00",
+            "subject": "Add Google Apps Script for email notifications",
+            "files_changed": 1,
+            "files": [
+              "chatbot-email-backend.gs"
+            ]
+          },
+          {
+            "sha": "fe95d35c0991",
+            "time": "2026-04-07T18:14:23-07:00",
+            "subject": "Add email notification when users sign up",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "cb4caed197d0",
+            "time": "2026-04-07T18:11:19-07:00",
+            "subject": "Clean up flow: remove New User from quick replies, ensure consistent path options",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "4e488e143476",
+            "time": "2026-04-07T18:01:20-07:00",
+            "subject": "Reduce header logo size to 35px",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "25f298ba387f",
+            "time": "2026-04-07T17:12:28-07:00",
+            "subject": "Replace SVG with real robot logo and fix onboarding flow",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "27c38d9d0350",
+            "time": "2026-04-07T16:04:16-07:00",
+            "subject": "Replace wrench emoji with custom robot SVG logo",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "7a3832235116",
+            "time": "2026-04-07T15:56:37-07:00",
+            "subject": "Add New User reset button and confirmation flow",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "5b27dc49131a",
+            "time": "2026-04-07T15:52:54-07:00",
+            "subject": "Add interest discovery flow and Tinkery launch path",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "473d3349b330",
+            "time": "2026-04-07T15:43:23-07:00",
+            "subject": "Add README",
+            "files_changed": 1,
+            "files": [
+              "README.md"
+            ]
+          },
+          {
+            "sha": "8fd489f7f0e6",
+            "time": "2026-04-07T15:43:22-07:00",
+            "subject": "Add AI Tinkery chatbot",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 12,
+      "cost_by_project": {
+        "unattributed": 0.0611,
+        "ai-tinkery-chatbot": 13.7512,
+        "workspace-infra": 0.0802,
+        "ai-tinkery-library": 0.1296
+      },
+      "turns_by_project": {
+        "unattributed": 2,
+        "ai-tinkery-chatbot": 111,
+        "workspace-infra": 6,
+        "ai-tinkery-library": 2
+      }
+    },
+    {
+      "day": "2026-04-08",
+      "week": "2026-W15",
+      "cost": 90.9937,
+      "turns": 152,
+      "cost_per_turn": 0.5986,
+      "cache_read": 1504418,
+      "cache_write": 23945703,
+      "input_tokens": 1123,
+      "output_tokens": 49510,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6186,
+        0,
+        0,
+        0,
+        19.2381,
+        18.0031,
+        23.1293,
+        6.6435,
+        6.6781,
+        9.8329,
+        6.8501,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "7922df0ecd04",
+            "time": "2026-04-08T20:14:38-07:00",
+            "subject": "Fix onboarding flow bug - continue through affiliation and path discovery",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "8e4ea8912a19",
+            "time": "2026-04-08T18:30:08-07:00",
+            "subject": "Update to 32 activities from Airtable (added 6 new activities)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "fa12652afeec",
+            "time": "2026-04-08T18:22:20-07:00",
+            "subject": "Add robot logo, email notification, and 3 visual images - COMPLETE",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "128e75386445",
+            "time": "2026-04-08T18:07:55-07:00",
+            "subject": "Restore full version with path/interest discovery + add Resnick research citations",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "2cbad6b5c7d9",
+            "time": "2026-04-08T16:56:03-07:00",
+            "subject": "Add 3 visuals: Guiding Principles, Tinkery Formats, and Interest Discovery Map",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "4c339e0ed1de",
+            "time": "2026-04-08T16:54:31-07:00",
+            "subject": "Add interest-map.jpg visual",
+            "files_changed": 1,
+            "files": [
+              "images/interest-map.jpg"
+            ]
+          },
+          {
+            "sha": "66247afb1985",
+            "time": "2026-04-08T16:54:30-07:00",
+            "subject": "Add tinkery-formats.jpg visual",
+            "files_changed": 1,
+            "files": [
+              "images/tinkery-formats.jpg"
+            ]
+          },
+          {
+            "sha": "9ca1a6e58462",
+            "time": "2026-04-08T16:54:28-07:00",
+            "subject": "Add guiding-principles.jpg visual",
+            "files_changed": 1,
+            "files": [
+              "images/guiding-principles.jpg"
+            ]
+          },
+          {
+            "sha": "00424f2a8b8b",
+            "time": "2026-04-08T16:14:13-07:00",
+            "subject": "Add Resnick et al. Designing for Tinkerability research citations to theory sections",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 9,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 81.042,
+        "tinkerybot": 0.6089,
+        "workspace-infra": 4.9555,
+        "workspace-knowledge": 4.3873
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 136,
+        "tinkerybot": 1,
+        "workspace-infra": 8,
+        "workspace-knowledge": 7
+      }
+    },
+    {
+      "day": "2026-04-09",
+      "week": "2026-W15",
+      "cost": 25.9386,
+      "turns": 207,
+      "cost_per_turn": 0.1253,
+      "cache_read": 20654699,
+      "cache_write": 4992059,
+      "input_tokens": 1070,
+      "output_tokens": 67918,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.2916,
+        1.3715,
+        0,
+        3.5851,
+        5.3869,
+        4.6574,
+        1.8369,
+        6.3118,
+        1.4976,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "a8d0d10fe711",
+            "time": "2026-04-09T22:35:20-07:00",
+            "subject": "Add category-coloured placeholder for expired Airtable images",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "f4b10e3185cd",
+            "time": "2026-04-09T22:31:32-07:00",
+            "subject": "Remove all keyword checks; add activity card auto-detection from Claude responses",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "6f2af9d5f835",
+            "time": "2026-04-09T22:24:28-07:00",
+            "subject": "Fix: move Claude call before all keyword checks; demote keyword responses to fallbacks only",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "aa73f4d5aa39",
+            "time": "2026-04-09T22:12:51-07:00",
+            "subject": "Add Python proxy server for Claude API (bypasses browser CORS)",
+            "files_changed": 1,
+            "files": [
+              "server.py"
+            ]
+          },
+          {
+            "sha": "e2cc33e24065",
+            "time": "2026-04-09T22:12:50-07:00",
+            "subject": "Fix: move Claude call before catch-all block; add /api/claude proxy URL",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "498bef21089b",
+            "time": "2026-04-09T20:09:33-07:00",
+            "subject": "🔄 Prioritize Claude over NLU for smarter responses",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "af15647767c3",
+            "time": "2026-04-09T19:39:40-07:00",
+            "subject": "🔍 Add debugging logs for Claude responses",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "8a5bdf2f09f4",
+            "time": "2026-04-09T19:30:26-07:00",
+            "subject": "🔧 Fix Claude model name to valid version",
+            "files_changed": 1,
+            "files": [
+              "claude-backend-full.gs"
+            ]
+          },
+          {
+            "sha": "00d2d2e9809a",
+            "time": "2026-04-09T19:25:24-07:00",
+            "subject": "🔧 Fix Google Apps Script CORS issue",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "eb3babe9e8c5",
+            "time": "2026-04-09T19:05:47-07:00",
+            "subject": "🔧 Add doGet function for browser testing",
+            "files_changed": 1,
+            "files": [
+              "claude-backend-full.gs"
+            ]
+          },
+          {
+            "sha": "27340dd40be9",
+            "time": "2026-04-09T18:27:58-07:00",
+            "subject": "💬 Add context-aware smart quick replies",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "85d6ec474f83",
+            "time": "2026-04-09T17:39:42-07:00",
+            "subject": "🔗 Connect Claude backend to chatbot",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "e1f180e99615",
+            "time": "2026-04-09T17:15:42-07:00",
+            "subject": "📖 Update setup docs for comprehensive backend",
+            "files_changed": 1,
+            "files": [
+              "CLAUDE_SETUP.md"
+            ]
+          },
+          {
+            "sha": "e9aef1f8b4b9",
+            "time": "2026-04-09T17:15:40-07:00",
+            "subject": "📚 Add comprehensive Claude backend trained on full Tinkery knowledge",
+            "files_changed": 1,
+            "files": [
+              "claude-backend-full.gs"
+            ]
+          },
+          {
+            "sha": "dddc1dda0b1e",
+            "time": "2026-04-09T17:15:38-07:00",
+            "subject": "🧠 Add activity context passing to Claude",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "18ea089015eb",
+            "time": "2026-04-09T17:06:05-07:00",
+            "subject": "📖 Add Claude setup documentation",
+            "files_changed": 1,
+            "files": [
+              "CLAUDE_SETUP.md"
+            ]
+          },
+          {
+            "sha": "45ef5f7127ce",
+            "time": "2026-04-09T17:06:04-07:00",
+            "subject": "📄 Add Google Apps Script backend for Claude",
+            "files_changed": 1,
+            "files": [
+              "claude-backend.gs"
+            ]
+          },
+          {
+            "sha": "a01a8052f37b",
+            "time": "2026-04-09T17:06:03-07:00",
+            "subject": "🤖 Add Claude AI integration with async support",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "7f35688228b6",
+            "time": "2026-04-09T16:50:33-07:00",
+            "subject": "📏 Make activity cards more compact",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "9f428126c908",
+            "time": "2026-04-09T16:45:07-07:00",
+            "subject": "Fix JavaScript syntax error: move misplaced image into messages array",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "130ea0f76f6a",
+            "time": "2026-04-09T16:28:17-07:00",
+            "subject": "🖼️ Update interest-map.jpg to AI Learning Pathways",
+            "files_changed": 1,
+            "files": [
+              "images/interest-map.jpg"
+            ]
+          },
+          {
+            "sha": "3a74a3494b10",
+            "time": "2026-04-09T16:28:14-07:00",
+            "subject": "✏️ Replace interest-map & change Critique AI → Thoughtful AI",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "fb68a22caa89",
+            "time": "2026-04-09T16:16:34-07:00",
+            "subject": "🗑️ Remove Interest Discovery Map image from chatbot",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "843f670440c4",
+            "time": "2026-04-09T16:06:14-07:00",
+            "subject": "✨ Update chatbot with 37 new activities from Airtable + image support",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 24,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 25.5954,
+        "workspace-infra": 0.3217,
+        "workspace-knowledge": 0.0216
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 206,
+        "workspace-infra": 1,
+        "workspace-knowledge": 1
+      }
+    },
+    {
+      "day": "2026-04-10",
+      "week": "2026-W15",
+      "cost": 13.5374,
+      "turns": 109,
+      "cost_per_turn": 0.1242,
+      "cache_read": 7367387,
+      "cache_write": 2860337,
+      "input_tokens": 495,
+      "output_tokens": 39964,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.2395,
+        4.2716,
+        0,
+        0,
+        0,
+        2.042,
+        4.2469,
+        1.7375,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "612d0e743d87",
+            "time": "2026-04-10T19:33:07-07:00",
+            "subject": "Fix syntax error: remove stray }); in handleUserMessage",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "62cfcbfac606",
+            "time": "2026-04-10T19:25:16-07:00",
+            "subject": "🖼️ All 38 activity images now using resized GitHub versions",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "94a82b205101",
+            "time": "2026-04-10T19:24:55-07:00",
+            "subject": "Upload resized activity image 29",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-29.jpg"
+            ]
+          },
+          {
+            "sha": "973c210d22fd",
+            "time": "2026-04-10T19:24:52-07:00",
+            "subject": "Upload resized activity image 24",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-24.jpg"
+            ]
+          },
+          {
+            "sha": "1d2108a4e515",
+            "time": "2026-04-10T19:24:48-07:00",
+            "subject": "Upload resized activity image 22",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-22.jpg"
+            ]
+          },
+          {
+            "sha": "4c737b9d7786",
+            "time": "2026-04-10T19:24:45-07:00",
+            "subject": "Upload resized activity image 18",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-18.jpg"
+            ]
+          },
+          {
+            "sha": "a641f441c056",
+            "time": "2026-04-10T19:24:42-07:00",
+            "subject": "Upload resized activity image 15",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-15.jpg"
+            ]
+          },
+          {
+            "sha": "9421bef666c6",
+            "time": "2026-04-10T19:24:38-07:00",
+            "subject": "Upload resized activity image 07",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-07.jpg"
+            ]
+          },
+          {
+            "sha": "4689e02b8798",
+            "time": "2026-04-10T19:19:31-07:00",
+            "subject": "🖼️ Use actual activity images from GitHub (32/38 uploaded)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "c90a0d8f3044",
+            "time": "2026-04-10T19:19:04-07:00",
+            "subject": "Upload activity image 38",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-38.jpg"
+            ]
+          },
+          {
+            "sha": "bc35d9c647ee",
+            "time": "2026-04-10T19:19:02-07:00",
+            "subject": "Upload activity image 37",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-37.jpg"
+            ]
+          },
+          {
+            "sha": "cb3fdf826e9e",
+            "time": "2026-04-10T19:18:59-07:00",
+            "subject": "Upload activity image 36",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-36.jpg"
+            ]
+          },
+          {
+            "sha": "ad3d242312f6",
+            "time": "2026-04-10T19:18:57-07:00",
+            "subject": "Upload activity image 35",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-35.jpg"
+            ]
+          },
+          {
+            "sha": "9515ff7a9bf8",
+            "time": "2026-04-10T19:18:54-07:00",
+            "subject": "Upload activity image 34",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-34.jpg"
+            ]
+          },
+          {
+            "sha": "8c038d7e6441",
+            "time": "2026-04-10T19:18:52-07:00",
+            "subject": "Upload activity image 33",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-33.jpg"
+            ]
+          },
+          {
+            "sha": "edce62bbc369",
+            "time": "2026-04-10T19:18:49-07:00",
+            "subject": "Upload activity image 32",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-32.jpg"
+            ]
+          },
+          {
+            "sha": "3da0a407db3f",
+            "time": "2026-04-10T19:18:47-07:00",
+            "subject": "Upload activity image 31",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-31.jpg"
+            ]
+          },
+          {
+            "sha": "803ea44203d1",
+            "time": "2026-04-10T19:18:44-07:00",
+            "subject": "Upload activity image 30",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-30.jpg"
+            ]
+          },
+          {
+            "sha": "6372584485dd",
+            "time": "2026-04-10T19:18:42-07:00",
+            "subject": "Upload activity image 28",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-28.jpg"
+            ]
+          },
+          {
+            "sha": "bc5477dd708a",
+            "time": "2026-04-10T19:18:39-07:00",
+            "subject": "Upload activity image 27",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-27.jpg"
+            ]
+          },
+          {
+            "sha": "237cdeb3a4a2",
+            "time": "2026-04-10T19:18:37-07:00",
+            "subject": "Upload activity image 26",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-26.jpg"
+            ]
+          },
+          {
+            "sha": "b2c69fed8400",
+            "time": "2026-04-10T19:18:34-07:00",
+            "subject": "Upload activity image 25",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-25.jpg"
+            ]
+          },
+          {
+            "sha": "75a163e4c2d9",
+            "time": "2026-04-10T19:18:32-07:00",
+            "subject": "Upload activity image 23",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-23.jpg"
+            ]
+          },
+          {
+            "sha": "a1618e2a25d8",
+            "time": "2026-04-10T19:18:29-07:00",
+            "subject": "Upload activity image 21",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-21.jpg"
+            ]
+          },
+          {
+            "sha": "3e3322fd85d1",
+            "time": "2026-04-10T19:18:21-07:00",
+            "subject": "Upload activity image 20",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-20.jpg"
+            ]
+          },
+          {
+            "sha": "bb4f405adec6",
+            "time": "2026-04-10T19:18:19-07:00",
+            "subject": "Upload activity image 19",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-19.jpg"
+            ]
+          },
+          {
+            "sha": "cec25f0aebbf",
+            "time": "2026-04-10T19:18:18-07:00",
+            "subject": "Upload activity image 17",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-17.jpg"
+            ]
+          },
+          {
+            "sha": "41129c9bd341",
+            "time": "2026-04-10T19:18:16-07:00",
+            "subject": "Upload activity image 16",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-16.jpg"
+            ]
+          },
+          {
+            "sha": "14a2bec4a635",
+            "time": "2026-04-10T19:18:15-07:00",
+            "subject": "Upload activity image 14",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-14.jpg"
+            ]
+          },
+          {
+            "sha": "0561eee0bc82",
+            "time": "2026-04-10T19:18:14-07:00",
+            "subject": "Upload activity image 13",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-13.jpg"
+            ]
+          },
+          {
+            "sha": "87d3bf9fcdff",
+            "time": "2026-04-10T19:18:13-07:00",
+            "subject": "Upload activity image 12",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-12.jpg"
+            ]
+          },
+          {
+            "sha": "42301d4aefb0",
+            "time": "2026-04-10T19:18:11-07:00",
+            "subject": "Upload activity image 11",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-11.jpg"
+            ]
+          },
+          {
+            "sha": "9fe8abb7bd62",
+            "time": "2026-04-10T19:18:02-07:00",
+            "subject": "Upload activity image 10",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-10.jpg"
+            ]
+          },
+          {
+            "sha": "8cf8201c9a1e",
+            "time": "2026-04-10T19:18:01-07:00",
+            "subject": "Upload activity image 09",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-09.jpg"
+            ]
+          },
+          {
+            "sha": "323bf13c7774",
+            "time": "2026-04-10T19:18:00-07:00",
+            "subject": "Upload activity image 08",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-08.jpg"
+            ]
+          },
+          {
+            "sha": "983e692d12bc",
+            "time": "2026-04-10T19:17:57-07:00",
+            "subject": "Upload activity image 06",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-06.jpg"
+            ]
+          },
+          {
+            "sha": "e112b3a51860",
+            "time": "2026-04-10T19:17:56-07:00",
+            "subject": "Upload activity image 05",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-05.jpg"
+            ]
+          },
+          {
+            "sha": "5ab7080f4ee3",
+            "time": "2026-04-10T19:17:55-07:00",
+            "subject": "Upload activity image 04",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-04.jpg"
+            ]
+          },
+          {
+            "sha": "f208c2cc8526",
+            "time": "2026-04-10T19:17:54-07:00",
+            "subject": "Upload activity image 03",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-03.jpg"
+            ]
+          },
+          {
+            "sha": "2e9fa501bcb1",
+            "time": "2026-04-10T19:17:52-07:00",
+            "subject": "Upload activity image 02",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-02.jpg"
+            ]
+          },
+          {
+            "sha": "6213861e24d2",
+            "time": "2026-04-10T19:17:51-07:00",
+            "subject": "Upload activity image 01",
+            "files_changed": 1,
+            "files": [
+              "activity-images/activity-01.jpg"
+            ]
+          },
+          {
+            "sha": "9e50e8b086ce",
+            "time": "2026-04-10T19:16:26-07:00",
+            "subject": "🖼️ Replace expired Airtable images with category-colored placeholders",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "486912bcb146",
+            "time": "2026-04-10T19:14:31-07:00",
+            "subject": "⚡ 3s delays + max 2 activities + interleave cards with text",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "fb25b88b2c95",
+            "time": "2026-04-10T19:03:24-07:00",
+            "subject": "Fix runtime crash: remove extra stray }); in handleUserMessage",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "ecb74688882f",
+            "time": "2026-04-10T18:55:11-07:00",
+            "subject": "🔧 Fix chunking implementation - text now breaks into digestible pieces",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "b6bc44c4ca53",
+            "time": "2026-04-10T18:47:44-07:00",
+            "subject": "🎨 Change to white header for better logo visibility",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "3ce3e7f34fdd",
+            "time": "2026-04-10T18:40:13-07:00",
+            "subject": "🎨 Update header to Light Cardinal gradient for better logo visibility",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "5473ef62929f",
+            "time": "2026-04-10T18:17:11-07:00",
+            "subject": "⏱️ Fix chunking with 5-second minimum delays between messages",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "48b5224c0cf0",
+            "time": "2026-04-10T17:52:39-07:00",
+            "subject": "🎨 Add Stanford branding: enlarge robot logo, add Stanford logo, update color scheme",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "23d3c0657bab",
+            "time": "2026-04-10T17:47:15-07:00",
+            "subject": "🎨 Add Stanford logo, update colors, and enlarge robot logo",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "64d3b1de17cc",
+            "time": "2026-04-10T17:20:55-07:00",
+            "subject": "🎯 Break Claude responses into digestible chunks with reading delays",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "c2887ac8f5c7",
+            "time": "2026-04-10T13:48:05-07:00",
+            "subject": "✨ Add markdown formatting for Claude responses",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "592f614a648b",
+            "time": "2026-04-10T11:17:20-07:00",
+            "subject": "Add auto-refresh of Airtable image URLs on server startup",
+            "files_changed": 1,
+            "files": [
+              "server.py"
+            ]
+          },
+          {
+            "sha": "b8c263a66928",
+            "time": "2026-04-10T11:17:20-07:00",
+            "subject": "Refresh all 37 activity image URLs from Airtable",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 54,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 13.5374
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 109
+      }
+    },
+    {
+      "day": "2026-04-13",
+      "week": "2026-W16",
+      "cost": 0.3719,
+      "turns": 2,
+      "cost_per_turn": 0.1859,
+      "cache_read": 89057,
+      "cache_write": 89396,
+      "input_tokens": 20,
+      "output_tokens": 659,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.3719,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 0.3719
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 2
+      }
+    },
+    {
+      "day": "2026-04-15",
+      "week": "2026-W16",
+      "cost": 9.6179,
+      "turns": 64,
+      "cost_per_turn": 0.1503,
+      "cache_read": 4944237,
+      "cache_write": 2090362,
+      "input_tokens": 385,
+      "output_tokens": 19638,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.7717,
+        5.8173,
+        0.7455,
+        0,
+        0.2833,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "14fe19b2a01b",
+            "time": "2026-04-15T19:36:28-07:00",
+            "subject": "Fix keyboard/input position on mobile PWA: use position fixed + interactive-widget",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "060823b90941",
+            "time": "2026-04-15T17:28:12-07:00",
+            "subject": "Fix mobile layout: header scaling, safe-area insets, dvh viewport",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "96a81baddb17",
+            "time": "2026-04-15T17:23:03-07:00",
+            "subject": "Switch server to Flask + Gunicorn for autoscale deployment",
+            "files_changed": 1,
+            "files": [
+              "server.py"
+            ]
+          },
+          {
+            "sha": "1532b729fcf4",
+            "time": "2026-04-15T17:19:52-07:00",
+            "subject": "Add Apple touch icon 180x180",
+            "files_changed": 1,
+            "files": [
+              "images/apple-touch-icon.png"
+            ]
+          },
+          {
+            "sha": "1c921451692d",
+            "time": "2026-04-15T17:19:51-07:00",
+            "subject": "Add PWA icon 512x512",
+            "files_changed": 1,
+            "files": [
+              "images/icon-512.png"
+            ]
+          },
+          {
+            "sha": "62798a15abf9",
+            "time": "2026-04-15T17:19:50-07:00",
+            "subject": "Add PWA icon 192x192",
+            "files_changed": 1,
+            "files": [
+              "images/icon-192.png"
+            ]
+          },
+          {
+            "sha": "b1f71fda2ea4",
+            "time": "2026-04-15T17:19:50-07:00",
+            "subject": "Add service worker for PWA",
+            "files_changed": 1,
+            "files": [
+              "sw.js"
+            ]
+          },
+          {
+            "sha": "83f623d51f1a",
+            "time": "2026-04-15T17:19:35-07:00",
+            "subject": "Add PWA support: manifest, service worker, meta tags",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "9ed05f351fdc",
+            "time": "2026-04-15T17:19:35-07:00",
+            "subject": "Add PWA manifest",
+            "files_changed": 1,
+            "files": [
+              "manifest.json"
+            ]
+          },
+          {
+            "sha": "5c175e5f4ddf",
+            "time": "2026-04-15T17:07:04-07:00",
+            "subject": "🐛 Fix JavaScript syntax error - remove duplicate closing bracket",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "3903ad4b2947",
+            "time": "2026-04-15T17:05:45-07:00",
+            "subject": "📏 Increase robot logo to 119px (40% bigger)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "608eeefa6454",
+            "time": "2026-04-15T17:03:14-07:00",
+            "subject": "🎨 Fix AI Tinkery title styling - 36px orange #c7520a",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "4c115399261c",
+            "time": "2026-04-15T16:57:41-07:00",
+            "subject": "🎨 Update AI Tinkery title to 36px and orange color #c7520a",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "857820a41c04",
+            "time": "2026-04-15T16:54:30-07:00",
+            "subject": "📏 Increase robot logo to 85px (30% bigger)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "ea5d9c75e4e1",
+            "time": "2026-04-15T16:50:14-07:00",
+            "subject": "🤖 Fix robot logo to use new pixel art from GitHub",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "2f14f5d9eed1",
+            "time": "2026-04-15T16:38:20-07:00",
+            "subject": "🔍 Enlarge robot logo to 65px and remove black background",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "2ca923f9c511",
+            "time": "2026-04-15T16:25:37-07:00",
+            "subject": "🤖 Replace with new pixel-art robot logo",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "5aceabc17f70",
+            "time": "2026-04-15T16:25:19-07:00",
+            "subject": "Upload new pixel-art robot logo",
+            "files_changed": 1,
+            "files": [
+              "images/robot-logo.jpg"
+            ]
+          },
+          {
+            "sha": "bb6cfd3b7b6d",
+            "time": "2026-04-15T16:06:08-07:00",
+            "subject": "🔴 Fix New User button visibility - red background on white header",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "f390a00b1583",
+            "time": "2026-04-15T16:01:16-07:00",
+            "subject": "🎨 Use Stanford logo with white background (no filter needed)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "7c5568966f77",
+            "time": "2026-04-15T16:00:54-07:00",
+            "subject": "Upload Stanford logo with white background",
+            "files_changed": 1,
+            "files": [
+              "images/stanford-logo.jpg"
+            ]
+          },
+          {
+            "sha": "cb60225eaffe",
+            "time": "2026-04-15T15:55:33-07:00",
+            "subject": "🎨 Use GitHub-hosted Stanford logo with invert filter",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "e47aabd88363",
+            "time": "2026-04-15T15:55:18-07:00",
+            "subject": "Upload Stanford Accelerator logo",
+            "files_changed": 1,
+            "files": [
+              "images/stanford-logo.png"
+            ]
+          },
+          {
+            "sha": "1503b8653a8b",
+            "time": "2026-04-15T15:36:58-07:00",
+            "subject": "🎨 Fix Stanford logo black background with mix-blend-mode",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 24,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 9.6179
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 64
+      }
+    },
+    {
+      "day": "2026-04-17",
+      "week": "2026-W16",
+      "cost": 1.7963,
+      "turns": 30,
+      "cost_per_turn": 0.0599,
+      "cache_read": 2230433,
+      "cache_write": 243621,
+      "input_tokens": 146,
+      "output_tokens": 14209,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.5861,
+        0.2102,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "f40ae7b12d16",
+            "time": "2026-04-17T20:03:49-07:00",
+            "subject": "🎨 Proper Gidens design - static intro, open layout, no chat boxes",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "98828e94c6e6",
+            "time": "2026-04-17T19:59:29-07:00",
+            "subject": "📝 Add Gidens redesign documentation",
+            "files_changed": 1,
+            "files": [
+              "GIDENS_REDESIGN.md"
+            ]
+          },
+          {
+            "sha": "85f293f462aa",
+            "time": "2026-04-17T19:59:22-07:00",
+            "subject": "🎨 Add Gidens-inspired redesign - glassmorphism, cyan accents, modern UI",
+            "files_changed": 1,
+            "files": [
+              "index-gidens.html"
+            ]
+          },
+          {
+            "sha": "54e5755678d6",
+            "time": "2026-04-17T19:52:50-07:00",
+            "subject": "⚡ Speed up message delays to moderate (2s-4s, 200ms/word)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 4,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 1.7963
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 30
+      }
+    },
+    {
+      "day": "2026-04-18",
+      "week": "2026-W16",
+      "cost": 10.369,
+      "turns": 63,
+      "cost_per_turn": 0.1646,
+      "cache_read": 6499806,
+      "cache_write": 2117735,
+      "input_tokens": 362,
+      "output_tokens": 31766,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.7747,
+        4.8913,
+        2.703,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "ec761966e912",
+            "time": "2026-04-18T21:55:43+00:00",
+            "subject": "Published your App",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "4dcfbe8a0a98",
+            "time": "2026-04-18T21:53:21+00:00",
+            "subject": "Enable mobile app installation and improve responsiveness",
+            "files_changed": 3,
+            "files": [
+              "index.html",
+              "manifest.json",
+              "sw.js"
+            ]
+          },
+          {
+            "sha": "000655ddd484",
+            "time": "2026-04-18T21:51:00+00:00",
+            "subject": "Speed up chatbot response time by reducing text display delays",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "3d7c4b2a766c",
+            "time": "2026-04-18T21:47:38+00:00",
+            "subject": "Reorder chatbot response elements to display activity cards after text",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "c87221a174e8",
+            "time": "2026-04-18T21:44:03+00:00",
+            "subject": "Add smart follow-up questions based on chatbot responses",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "f52686b0ed95",
+            "time": "2026-04-18T21:41:44+00:00",
+            "subject": "Published your App",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "6e26b58b4929",
+            "time": "2026-04-18T21:40:05+00:00",
+            "subject": "Update chat interface to replace previous messages and add quick replies",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "41655a0a32ea",
+            "time": "2026-04-18T21:34:35+00:00",
+            "subject": "Fix errors when interacting with the chat interface",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "36c91b5fa6da",
+            "time": "2026-04-18T21:32:54+00:00",
+            "subject": "Published your App",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "d22fb4791d01",
+            "time": "2026-04-18T21:30:12+00:00",
+            "subject": "Remove onboarding flow and streamline user access to the chatbot",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "3fabc36e9cf1",
+            "time": "2026-04-18T21:10:34+00:00",
+            "subject": "Add more AI activities and fix JavaScript errors",
+            "files_changed": 6,
+            "files": [
+              ".replit",
+              "index.html",
+              "main.py",
+              "pyproject.toml",
+              "replit.md",
+              "uv.lock"
+            ]
+          },
+          {
+            "sha": "8c67999b5636",
+            "time": "2026-04-18T13:45:13-07:00",
+            "subject": "⏱️ Add message chunking - progressive display with 2-4s delays",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "2214228545be",
+            "time": "2026-04-18T13:43:16-07:00",
+            "subject": "👤 Add user flow - name, affiliation, path discovery with localStorage",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "8eec631be002",
+            "time": "2026-04-18T13:40:46-07:00",
+            "subject": "🎴 Add 38 activity cards with images and smart display",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "2f5f4eb0ce5f",
+            "time": "2026-04-18T13:39:03-07:00",
+            "subject": "🔌 Add Claude backend integration - full conversation support",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "9ff21c90eb42",
+            "time": "2026-04-18T13:23:02-07:00",
+            "subject": "🎨 Launch new Gidens-inspired design as main chatbot",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "8ac01ef97e69",
+            "time": "2026-04-18T12:58:57-07:00",
+            "subject": "📏 Reduce all elements by 10% - perfect sizing",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "d6ac0cbbde82",
+            "time": "2026-04-18T12:55:00-07:00",
+            "subject": "📐 Increase all elements by 30% - larger, more readable",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "e2b39f5ae282",
+            "time": "2026-04-18T12:51:32-07:00",
+            "subject": "📏 Make layout compact - quick replies visible above the fold",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "e9f7589383fd",
+            "time": "2026-04-18T12:48:38-07:00",
+            "subject": "🟠 Change all buttons to AI Tinkery orange #c7520a",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "9454b7d05e1a",
+            "time": "2026-04-18T12:30:46-07:00",
+            "subject": "🔴 Change all buttons to Stanford red #B83A4B",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          },
+          {
+            "sha": "5611e6d887e0",
+            "time": "2026-04-18T12:22:09-07:00",
+            "subject": "⚪ Change header to solid white background",
+            "files_changed": 1,
+            "files": [
+              "index-gidens-v2.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 22,
+      "cost_by_project": {
+        "ai-tinkery-chatbot": 10.369
+      },
+      "turns_by_project": {
+        "ai-tinkery-chatbot": 63
+      }
+    },
+    {
+      "day": "2026-04-21",
+      "week": "2026-W17",
+      "cost": 23.0468,
+      "turns": 226,
+      "cost_per_turn": 0.102,
+      "cache_read": 16665951,
+      "cache_write": 1915512,
+      "input_tokens": 380,
+      "output_tokens": 126289,
+      "session_count": 6,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6259,
+        0.7576,
+        3.5271,
+        1.3884,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14.2043,
+        2.5436
+      ],
+      "commits_by_project": {
+        "ai-tinkery-chatbot": [
+          {
+            "sha": "5d8406ae6c3f",
+            "time": "2026-04-21T23:54:25+00:00",
+            "subject": "Add information about other schools starting a Tinkery",
+            "files_changed": 1,
+            "files": [
+              "claude-backend.gs"
+            ]
+          },
+          {
+            "sha": "17a0f5cd505e",
+            "time": "2026-04-21T23:29:35+00:00",
+            "subject": "Published your App",
+            "files_changed": 0,
+            "files": []
+          },
+          {
+            "sha": "1ac0815d4850",
+            "time": "2026-04-21T23:25:44+00:00",
+            "subject": "Add styling and rendering for level 1 headings in messages",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "13dc37fbc778",
+            "time": "2026-04-21T23:23:52+00:00",
+            "subject": "Style bot responses with improved markdown rendering and new CSS rules",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "af4975dba8f4",
+            "time": "2026-04-21T23:19:10+00:00",
+            "subject": "Change quick reply suggestions to statements",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "10dab6d7550b",
+            "time": "2026-04-21T22:32:55+00:00",
+            "subject": "Improve the display and interaction of activity cards",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          }
+        ],
+        "ai-tinkery-library": [
+          {
+            "sha": "600ed7f62f25",
+            "time": "2026-04-21T23:07:06-07:00",
+            "subject": "Update Claude backend URL to new Apps Script deployment",
+            "files_changed": 1,
+            "files": [
+              "server.py"
+            ]
+          },
+          {
+            "sha": "929ed27ef184",
+            "time": "2026-04-21T22:51:46-07:00",
+            "subject": "Redesigned AI Tinkery as a filterable activity library",
+            "files_changed": 54,
+            "files": [
+              ".replit",
+              "README.md",
+              "activities.json",
+              "activity-images/activity-01.jpg",
+              "activity-images/activity-02.jpg",
+              "activity-images/activity-03.jpg",
+              "activity-images/activity-04.jpg",
+              "activity-images/activity-05.jpg",
+              "activity-images/activity-06.jpg",
+              "activity-images/activity-07.jpg",
+              "activity-images/activity-08.jpg",
+              "activity-images/activity-09.jpg",
+              "activity-images/activity-10.jpg",
+              "activity-images/activity-11.jpg",
+              "activity-images/activity-12.jpg",
+              "activity-images/activity-13.jpg",
+              "activity-images/activity-14.jpg",
+              "activity-images/activity-15.jpg",
+              "activity-images/activity-16.jpg",
+              "activity-images/activity-17.jpg"
+            ]
+          },
+          {
+            "sha": "b0aa44174081",
+            "time": "2026-04-21T22:40:52-07:00",
+            "subject": "Initial commit",
+            "files_changed": 1,
+            "files": [
+              "README.md"
+            ]
+          }
+        ]
+      },
+      "commit_count": 9,
+      "cost_by_project": {
+        "ai-tinkery-library": 5.9066,
+        "ai-tinkery-chatbot": 7.7824,
+        "workspace-infra": 1.8849,
+        "unattributed": 1.8193,
+        "bites": 5.6536
+      },
+      "turns_by_project": {
+        "ai-tinkery-library": 49,
+        "ai-tinkery-chatbot": 96,
+        "workspace-infra": 12,
+        "unattributed": 20,
+        "bites": 59
+      }
+    },
+    {
+      "day": "2026-04-26",
+      "week": "2026-W17",
+      "cost": 4.3288,
+      "turns": 7,
+      "cost_per_turn": 0.6184,
+      "cache_read": 773479,
+      "cache_write": 599199,
+      "input_tokens": 27,
+      "output_tokens": 7877,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.9816,
+        1.3472,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "bites": 4.159,
+        "ai-tinkery-chatbot": 0.1698
+      },
+      "turns_by_project": {
+        "bites": 6,
+        "ai-tinkery-chatbot": 1
+      }
+    },
+    {
+      "day": "2026-04-27",
+      "week": "2026-W18",
+      "cost": 12.2368,
+      "turns": 53,
+      "cost_per_turn": 0.2309,
+      "cache_read": 8486824,
+      "cache_write": 1110117,
+      "input_tokens": 88,
+      "output_tokens": 42189,
+      "session_count": 2,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.9655,
+        5.3756,
+        0,
+        4.8958,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "workspace-infra": 1.3731,
+        "unattributed": 1.4115,
+        "bites": 9.0412,
+        "ai-tinkery-chatbot": 0.1814,
+        "tinkerybot": 0.2296
+      },
+      "turns_by_project": {
+        "workspace-infra": 8,
+        "unattributed": 13,
+        "bites": 30,
+        "ai-tinkery-chatbot": 1,
+        "tinkerybot": 1
+      }
+    },
+    {
+      "day": "2026-04-30",
+      "week": "2026-W18",
+      "cost": 2.8104,
+      "turns": 8,
+      "cost_per_turn": 0.3513,
+      "cache_read": 1847002,
+      "cache_write": 274149,
+      "input_tokens": 13,
+      "output_tokens": 6935,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2.8104,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "bites": 2.3756,
+        "workspace-infra": 0.4347
+      },
+      "turns_by_project": {
+        "bites": 6,
+        "workspace-infra": 2
+      }
+    },
+    {
+      "day": "2026-05-04",
+      "week": "2026-W19",
+      "cost": 34.3904,
+      "turns": 108,
+      "cost_per_turn": 0.3184,
+      "cache_read": 31505306,
+      "cache_write": 2782769,
+      "input_tokens": 188,
+      "output_tokens": 49780,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        12.1893,
+        22.2011
+      ],
+      "commits_by_project": {
+        "ai-tinkery-library": [
+          {
+            "sha": "eb7ac4d97762",
+            "time": "2026-05-04T23:50:04-07:00",
+            "subject": "Cards: scrollable description; clearer share-link affordance with toast feedback",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "10dd36c41884",
+            "time": "2026-05-04T23:31:36-07:00",
+            "subject": "Populate Created by for activity-06 (Graidiants → Harvard Center for Digital Thriving)",
+            "files_changed": 1,
+            "files": [
+              "activities.json"
+            ]
+          },
+          {
+            "sha": "6f637c027a79",
+            "time": "2026-05-04T23:30:27-07:00",
+            "subject": "Populate Created by from Airtable; sync script defaults to created_by-only",
+            "files_changed": 2,
+            "files": [
+              "activities.json",
+              "scripts/sync-airtable.py"
+            ]
+          },
+          {
+            "sha": "8e282a2da39b",
+            "time": "2026-05-04T23:25:05-07:00",
+            "subject": "sync: warn when zero non-empty Created by values come back",
+            "files_changed": 1,
+            "files": [
+              "scripts/sync-airtable.py"
+            ]
+          },
+          {
+            "sha": "0b3a18f1ea5e",
+            "time": "2026-05-04T23:18:27-07:00",
+            "subject": "Fix Airtable field name: Created by (lowercase b)",
+            "files_changed": 2,
+            "files": [
+              "README.md",
+              "scripts/sync-airtable.py"
+            ]
+          },
+          {
+            "sha": "afcf2393b429",
+            "time": "2026-05-04T23:14:06-07:00",
+            "subject": "Add Created By field: data, dynamic filter chips, card credit, sync, prompt",
+            "files_changed": 5,
+            "files": [
+              "README.md",
+              "activities.json",
+              "backend.gs",
+              "index.html",
+              "scripts/sync-airtable.py"
+            ]
+          },
+          {
+            "sha": "3615832f2fee",
+            "time": "2026-05-04T22:58:05-07:00",
+            "subject": "Remove Create With AI category",
+            "files_changed": 2,
+            "files": [
+              "backend.gs",
+              "index.html"
+            ]
+          },
+          {
+            "sha": "818372eac96e",
+            "time": "2026-05-04T22:50:03-07:00",
+            "subject": "Update activities.json",
+            "files_changed": 1,
+            "files": [
+              "activities.json"
+            ]
+          },
+          {
+            "sha": "f7244aca265a",
+            "time": "2026-05-04T22:38:56-07:00",
+            "subject": "Update activities.json",
+            "files_changed": 1,
+            "files": [
+              "activities.json"
+            ]
+          },
+          {
+            "sha": "7829b2aec08f",
+            "time": "2026-05-04T22:14:59-07:00",
+            "subject": "Rename categories: Thoughtful AI → Evaluate AI, Learn About AI → Understand AI",
+            "files_changed": 3,
+            "files": [
+              "activities.json",
+              "backend.gs",
+              "index.html"
+            ]
+          }
+        ]
+      },
+      "commit_count": 10,
+      "cost_by_project": {
+        "ai-tinkery-library": 30.7152,
+        "bites": 3.6752
+      },
+      "turns_by_project": {
+        "ai-tinkery-library": 97,
+        "bites": 11
+      }
+    },
+    {
+      "day": "2026-05-06",
+      "week": "2026-W19",
+      "cost": 44.8458,
+      "turns": 112,
+      "cost_per_turn": 0.4004,
+      "cache_read": 19363374,
+      "cache_write": 5330434,
+      "input_tokens": 201,
+      "output_tokens": 73916,
+      "session_count": 4,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10.9738,
+        0,
+        0,
+        3.1423,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7.6603,
+        2.4584,
+        5.4642,
+        9.6327,
+        5.5141
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "15deb642c849",
+            "time": "2026-05-06T19:46:31-07:00",
+            "subject": "Initial commit",
+            "files_changed": 1,
+            "files": [
+              "README.md"
+            ]
+          }
+        ],
+        "ai-tinkery-library": [
+          {
+            "sha": "5546a169422d",
+            "time": "2026-05-06T13:26:38-07:00",
+            "subject": "Move Build-a-Bot to Shape AI category",
+            "files_changed": 2,
+            "files": [
+              "activities.json",
+              "backend.gs"
+            ]
+          }
+        ]
+      },
+      "commit_count": 2,
+      "cost_by_project": {
+        "unattributed": 0.2204,
+        "bites": 38.6679,
+        "workspace-infra": 2.6157,
+        "ai-tinkery-library": 3.2421,
+        "ai-tinkery-chatbot": 0.0998
+      },
+      "turns_by_project": {
+        "unattributed": 2,
+        "bites": 99,
+        "workspace-infra": 5,
+        "ai-tinkery-library": 6,
+        "ai-tinkery-chatbot": 1
+      }
+    },
+    {
+      "day": "2026-05-07",
+      "week": "2026-W19",
+      "cost": 367.0012,
+      "turns": 987,
+      "cost_per_turn": 0.3718,
+      "cache_read": 358375960,
+      "cache_write": 27320199,
+      "input_tokens": 1591,
+      "output_tokens": 694331,
+      "session_count": 11,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4.4856,
+        0,
+        0,
+        26.603,
+        15.9484,
+        21.4892,
+        13.599,
+        53.5154,
+        56.5398,
+        10.1804,
+        70.2565,
+        55.5062,
+        20.8531,
+        18.0247,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "7b439aa39268",
+            "time": "2026-05-07T21:47:40-07:00",
+            "subject": "edit: scrub AI writing tropes from all three blog posts",
+            "files_changed": 6,
+            "files": [
+              "blog/on-being-an-ai-ceo.html",
+              "blog/on-being-an-ai-ceo.md",
+              "blog/the-cost-of-context.html",
+              "blog/the-cost-of-context.md",
+              "blog/what-it-costs.html",
+              "blog/what-it-costs.md"
+            ]
+          },
+          {
+            "sha": "31aefe736bc8",
+            "time": "2026-05-07T20:14:54-07:00",
+            "subject": "fix: PWA install works from landing page (Add to Home Screen now offered)",
+            "files_changed": 2,
+            "files": [
+              "index.html",
+              "landing/index.html"
+            ]
+          },
+          {
+            "sha": "9a065406dd63",
+            "time": "2026-05-07T20:09:36-07:00",
+            "subject": "blog: 'The Cost of Context' — third weekly post",
+            "files_changed": 3,
+            "files": [
+              "blog/index.html",
+              "blog/the-cost-of-context.html",
+              "blog/the-cost-of-context.md"
+            ]
+          },
+          {
+            "sha": "400fb25e1f23",
+            "time": "2026-05-07T19:54:17-07:00",
+            "subject": "ops: log landing-at-root cost spike ($17.88, 29 turns, 6 min)",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "fad654406660",
+            "time": "2026-05-07T19:50:53-07:00",
+            "subject": "feat: landing page is now the root URL; app moves to /app/",
+            "files_changed": 9,
+            "files": [
+              "app/index.html",
+              "app/sw.js",
+              "blog/index.html",
+              "blog/on-being-an-ai-ceo.html",
+              "blog/what-it-costs.html",
+              "deck/PITCH.md",
+              "index.html",
+              "manifest.json",
+              "sw.js"
+            ]
+          },
+          {
+            "sha": "435896b99185",
+            "time": "2026-05-07T19:38:33-07:00",
+            "subject": "ops: ALPHA-PLAN reflects 1-tap collection; document authorizeMe() helper",
+            "files_changed": 2,
+            "files": [
+              "ALPHA-PLAN.md",
+              "scripts/analytics-ingest.gs"
+            ]
+          },
+          {
+            "sha": "2140eac0a606",
+            "time": "2026-05-07T19:35:13-07:00",
+            "subject": "feat(analytics): wire ANALYTICS_INGEST_URL — Send to founder is live",
+            "files_changed": 1,
+            "files": [
+              "analytics.js"
+            ]
+          },
+          {
+            "sha": "a9ca6f8185c7",
+            "time": "2026-05-07T19:12:55-07:00",
+            "subject": "feat(analytics): 'Send to founder' button + Apps Script ingest endpoint",
+            "files_changed": 2,
+            "files": [
+              "analytics.js",
+              "scripts/analytics-ingest.gs"
+            ]
+          },
+          {
+            "sha": "ef2bf19d3e0d",
+            "time": "2026-05-07T19:09:38-07:00",
+            "subject": "feat(alpha): inline feedback prompt after 3+ bites or 5min session",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "213ea07d9455",
+            "time": "2026-05-07T18:52:19-07:00",
+            "subject": "feat: add Notes link to app + landing topbars",
+            "files_changed": 2,
+            "files": [
+              "index.html",
+              "landing/index.html"
+            ]
+          },
+          {
+            "sha": "f5f06101dbb6",
+            "time": "2026-05-07T18:47:05-07:00",
+            "subject": "blog: 'What It Costs to Run a Startup as an AI' — week one accounting",
+            "files_changed": 3,
+            "files": [
+              "blog/index.html",
+              "blog/what-it-costs.html",
+              "blog/what-it-costs.md"
+            ]
+          },
+          {
+            "sha": "8abda1541716",
+            "time": "2026-05-07T18:23:34-07:00",
+            "subject": "fix(ux): form progressive disclosure — 3-field fast path",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "ac8d403c40d7",
+            "time": "2026-05-07T18:21:30-07:00",
+            "subject": "fix(ux): rating as corner badge on home grid (Hierarchy)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "0bf31e69ea59",
+            "time": "2026-05-07T18:20:32-07:00",
+            "subject": "fix(ux): empty-state copy uses do-verb (Wayfinding)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "a0e4ba3c7e2d",
+            "time": "2026-05-07T18:20:13-07:00",
+            "subject": "fix(ux): I/O sheet tiered into Your Data / More / Danger Zone (Hick's Law)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "aa3f1cfc8aef",
+            "time": "2026-05-07T18:19:00-07:00",
+            "subject": "fix(ux): soft-delete + undo toast (Forgiveness over Confirmation)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "724f0295b93c",
+            "time": "2026-05-07T17:57:19-07:00",
+            "subject": "ops: add Claude API credit tracking — per-task breakdown + daily totals",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "0eb2da0377d1",
+            "time": "2026-05-07T16:33:42-07:00",
+            "subject": "chore: update all canonical URLs to bites.kitchen",
+            "files_changed": 12,
+            "files": [
+              "ALPHA-PLAN.md",
+              "CAPACITOR-PLAN.md",
+              "LAUNCH.md",
+              "ROADMAP.md",
+              "cookbook.html",
+              "cookbook.js",
+              "deck/PITCH.md",
+              "deck/index.html",
+              "email-templates/cookbook-delivery.md",
+              "index.html",
+              "landing/index.html",
+              "marketing/MESSAGING.md"
+            ]
+          },
+          {
+            "sha": "4a37bf292e7b",
+            "time": "2026-05-07T16:28:12-07:00",
+            "subject": "blog: launch /blog/ with first post 'On Being an AI CEO'",
+            "files_changed": 3,
+            "files": [
+              "blog/index.html",
+              "blog/on-being-an-ai-ceo.html",
+              "blog/on-being-an-ai-ceo.md"
+            ]
+          },
+          {
+            "sha": "83b105b82d7c",
+            "time": "2026-05-07T16:22:52-07:00",
+            "subject": "ops: log domain purchase, init ledger",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "4196a1e7f0d9",
+            "time": "2026-05-07T16:20:13-07:00",
+            "subject": "feat: configure custom domain bites.kitchen",
+            "files_changed": 1,
+            "files": [
+              "CNAME"
+            ]
+          },
+          {
+            "sha": "c844f3bec41c",
+            "time": "2026-05-07T16:12:25-07:00",
+            "subject": "Alpha launch infrastructure: landing page, analytics, welcome flow, feedback",
+            "files_changed": 4,
+            "files": [
+              "ALPHA-PLAN.md",
+              "analytics.js",
+              "index.html",
+              "landing/index.html"
+            ]
+          },
+          {
+            "sha": "f65c8a8de911",
+            "time": "2026-05-07T15:57:28-07:00",
+            "subject": "marketing: alpha messaging templates + URL tracking strategy",
+            "files_changed": 1,
+            "files": [
+              "marketing/MESSAGING.md"
+            ]
+          },
+          {
+            "sha": "1a39437c3884",
+            "time": "2026-05-07T15:50:40-07:00",
+            "subject": "fix(cookbook): preview now loads seed-data.json (with photos) instead of inline empty seeds",
+            "files_changed": 1,
+            "files": [
+              "cookbook.html"
+            ]
+          },
+          {
+            "sha": "024643b25683",
+            "time": "2026-05-07T15:45:36-07:00",
+            "subject": "Cookbook v3 polish + real food photos in seed data",
+            "files_changed": 9,
+            "files": [
+              "cookbook.js",
+              "seed-data.json",
+              "seed-photos/bite-seed-001.jpg",
+              "seed-photos/bite-seed-002.jpg",
+              "seed-photos/bite-seed-003.jpg",
+              "seed-photos/bite-seed-004.jpg",
+              "seed-photos/bite-seed-005.jpg",
+              "seed-photos/bite-seed-006.jpg",
+              "seed-photos/bite-seed-007.jpg"
+            ]
+          },
+          {
+            "sha": "a7f15688ec0d",
+            "time": "2026-05-07T15:32:38-07:00",
+            "subject": "Cookbook v2: redesign bite pages — three layouts, magazine treatment",
+            "files_changed": 1,
+            "files": [
+              "cookbook.js"
+            ]
+          },
+          {
+            "sha": "a50622cefbea",
+            "time": "2026-05-07T15:16:32-07:00",
+            "subject": "fix(deck): text clipping — flexible height + viewport typography",
+            "files_changed": 1,
+            "files": [
+              "deck/index.html"
+            ]
+          },
+          {
+            "sha": "544a01b1fd80",
+            "time": "2026-05-07T15:13:22-07:00",
+            "subject": "feat: pitch deck (PITCH.md + standalone HTML slideshow)",
+            "files_changed": 2,
+            "files": [
+              "deck/PITCH.md",
+              "deck/index.html"
+            ]
+          },
+          {
+            "sha": "ff4c4e5e4b5a",
+            "time": "2026-05-07T15:04:22-07:00",
+            "subject": "v0.2 PWA polish: feels-native iOS pass + Capacitor scaffold",
+            "files_changed": 21,
+            "files": [
+              "BUILD-IOS.md",
+              "CAPACITOR-PLAN.md",
+              "app/README.md",
+              "app/capacitor.config.json",
+              "email-templates/cookbook-delivery.md",
+              "icons/apple/apple-touch-icon-114.png",
+              "icons/apple/apple-touch-icon-120.png",
+              "icons/apple/apple-touch-icon-144.png",
+              "icons/apple/apple-touch-icon-152.png",
+              "icons/apple/apple-touch-icon-167.png",
+              "icons/apple/apple-touch-icon-180.png",
+              "icons/apple/apple-touch-icon-57.png",
+              "icons/apple/apple-touch-icon-60.png",
+              "icons/apple/apple-touch-icon-72.png",
+              "icons/apple/apple-touch-icon-76.png",
+              "icons/splash/splash-1170x2532.png",
+              "icons/splash/splash-1284x2778.png",
+              "icons/splash/splash-1290x2796.png",
+              "icons/splash/splash-750x1334.png",
+              "index.html"
+            ]
+          },
+          {
+            "sha": "a7843e14366c",
+            "time": "2026-05-07T14:42:38-07:00",
+            "subject": "BRIEF: lock 'no ads' as a permanent product principle",
+            "files_changed": 1,
+            "files": [
+              "BRIEF.md"
+            ]
+          },
+          {
+            "sha": "57e318bb2815",
+            "time": "2026-05-07T13:22:26-07:00",
+            "subject": "feat(cookbook): replace pre-order with Stripe Checkout (test mode)",
+            "files_changed": 1,
+            "files": [
+              "index.html"
+            ]
+          },
+          {
+            "sha": "ee59737749bb",
+            "time": "2026-05-07T13:19:43-07:00",
+            "subject": "feat: cookbook PDF generator (engine + cover + TOC)",
+            "files_changed": 5,
+            "files": [
+              ".gitignore",
+              "cookbook.html",
+              "cookbook.js",
+              "index.html",
+              "vendor/jspdf.umd.min.js"
+            ]
+          },
+          {
+            "sha": "1796b00d918b",
+            "time": "2026-05-07T11:59:24-07:00",
+            "subject": "Bites v0.1: share metadata, landing hero, cookbook pre-order, desktop polish",
+            "files_changed": 4,
+            "files": [
+              "LAUNCH.md",
+              "ROADMAP.md",
+              "index.html",
+              "og-image.png"
+            ]
+          },
+          {
+            "sha": "0739a854b3c8",
+            "time": "2026-05-07T11:09:54-07:00",
+            "subject": "Bites v0: full prototype — capture, browse, search, edit, export",
+            "files_changed": 9,
+            "files": [
+              "BRIEF.md",
+              "README.md",
+              "icons/icon-192.png",
+              "icons/icon-512.png",
+              "icons/icon.svg",
+              "index.html",
+              "manifest.json",
+              "seed-data.json",
+              "sw.js"
+            ]
+          }
+        ]
+      },
+      "commit_count": 34,
+      "cost_by_project": {
+        "bites": 343.3676,
+        "workspace-infra": 6.5939,
+        "unattributed": 1.5465,
+        "ai-tinkery-chatbot": 0.3284,
+        "workspace-knowledge": 8.721,
+        "ai-tinkery-library": 6.4438
+      },
+      "turns_by_project": {
+        "bites": 939,
+        "workspace-infra": 25,
+        "unattributed": 20,
+        "ai-tinkery-chatbot": 1,
+        "workspace-knowledge": 9,
+        "ai-tinkery-library": 10
+      }
+    },
+    {
+      "day": "2026-05-08",
+      "week": "2026-W19",
+      "cost": 83.8933,
+      "turns": 254,
+      "cost_per_turn": 0.3303,
+      "cache_read": 48958614,
+      "cache_write": 8922306,
+      "input_tokens": 782,
+      "output_tokens": 179375,
+      "session_count": 5,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        11.4437,
+        0,
+        0,
+        6.0139,
+        0,
+        22.3063,
+        16.8828,
+        14.7311,
+        2.3905,
+        0,
+        6.0812,
+        0,
+        0,
+        0,
+        4.0438,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "bc444fd19d1d",
+            "time": "2026-05-08T17:09:04-07:00",
+            "subject": "feat(analytics): anonymous pageview ping for visitor counting",
+            "files_changed": 1,
+            "files": [
+              "analytics.js"
+            ]
+          },
+          {
+            "sha": "9de34e967fe5",
+            "time": "2026-05-08T07:04:34-07:00",
+            "subject": "edit: scrub trope-shaped padding from landing + app copy",
+            "files_changed": 2,
+            "files": [
+              "app/index.html",
+              "index.html"
+            ]
+          }
+        ],
+        "bites-paper": [
+          {
+            "sha": "f97a265e79be",
+            "time": "2026-05-08T14:19:46-07:00",
+            "subject": "ledger: log real Lulu cost ($12.46) - 15% over projection",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "d8570c94767f",
+            "time": "2026-05-08T14:07:27-07:00",
+            "subject": "v4: Lulu-compliant two-PDF output with bleed + spine spread",
+            "files_changed": 3,
+            "files": [
+              "generate_journal.py",
+              "outbound/bites-paper-cover.pdf",
+              "outbound/bites-paper-interior.pdf"
+            ]
+          },
+          {
+            "sha": "d0cbea6c468e",
+            "time": "2026-05-08T13:24:34-07:00",
+            "subject": "v3: regenerate at Lulu Pocket Book trim (4.25\"x6.875\")",
+            "files_changed": 3,
+            "files": [
+              "generate_journal.py",
+              "generate_journal_a6_archive.py",
+              "outbound/bites-paper-journal-v3-pocketbook.pdf"
+            ]
+          },
+          {
+            "sha": "8ef88c561715",
+            "time": "2026-05-08T13:13:53-07:00",
+            "subject": "ops: README + OPS-VENDORS + SUPPLY-CHAIN-RUNBOOK + OPS-LEDGER",
+            "files_changed": 4,
+            "files": [
+              "OPS-LEDGER.md",
+              "OPS-VENDORS.md",
+              "README.md",
+              "SUPPLY-CHAIN-RUNBOOK.md"
+            ]
+          },
+          {
+            "sha": "5104dbfb7713",
+            "time": "2026-05-08T13:11:21-07:00",
+            "subject": "v2-FINAL: ship-quality A6 journal PDF + Lulu-ready",
+            "files_changed": 16,
+            "files": [
+              ".gitignore",
+              "download_fonts.py",
+              "fonts/Fraunces-Black.ttf",
+              "fonts/Fraunces-Regular.ttf",
+              "fonts/Fraunces-SemiBold.ttf",
+              "fonts/Inter-Bold.ttf",
+              "fonts/Inter-Medium.ttf",
+              "fonts/Inter-Regular.ttf",
+              "fonts/LICENSE.txt",
+              "fonts/help.txt",
+              "generate_journal.py",
+              "outbound/bites-paper-journal-v0.pdf",
+              "outbound/bites-paper-journal-v1.pdf",
+              "outbound/bites-paper-journal-v2-FINAL.pdf",
+              "outbound/preview-page-05.png",
+              "outbound/preview-page-06.png"
+            ]
+          }
+        ]
+      },
+      "commit_count": 7,
+      "cost_by_project": {
+        "unattributed": 0.0764,
+        "masterclass": 5.5887,
+        "bites-paper": 22.5266,
+        "bites": 53.3492,
+        "workspace-infra": 2.3524
+      },
+      "turns_by_project": {
+        "unattributed": 1,
+        "masterclass": 23,
+        "bites-paper": 145,
+        "bites": 199,
+        "workspace-infra": 4
+      }
+    },
+    {
+      "day": "2026-05-09",
+      "week": "2026-W19",
+      "cost": 215.1098,
+      "turns": 377,
+      "cost_per_turn": 0.5706,
+      "cache_read": 187868474,
+      "cache_write": 17988265,
+      "input_tokens": 759,
+      "output_tokens": 361628,
+      "session_count": 3,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7.5524,
+        19.5937,
+        4.1134,
+        0,
+        0,
+        10.328,
+        11.5167,
+        9.0008,
+        25.538,
+        46.8381,
+        25.5172,
+        30.2444,
+        24.867,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "a6069d07fb8a",
+            "time": "2026-05-09T18:47:33-07:00",
+            "subject": "fix: mobile alpha-tester layout - 0% activation root cause",
+            "files_changed": 1,
+            "files": [
+              "app/index.html"
+            ]
+          }
+        ],
+        "tinkerybot": [
+          {
+            "sha": "7082014e3971",
+            "time": "2026-05-09T21:14:00-07:00",
+            "subject": "scaffold: tinkerybot live video web app skeleton",
+            "files_changed": 8,
+            "files": [
+              ".gitignore",
+              "README.md",
+              "functions/api/llm.ts",
+              "functions/api/session-token.ts",
+              "public/app.js",
+              "public/index.html",
+              "public/style.css",
+              "wrangler.toml"
+            ]
+          }
+        ]
+      },
+      "commit_count": 2,
+      "cost_by_project": {
+        "unattributed": 0.1195,
+        "tinkerybot": 61.4224,
+        "bites": 94.0352,
+        "bites-paper": 1.042,
+        "masterclass": 35.6106,
+        "workspace-infra": 6.7738,
+        "workspace-knowledge": 16.1063
+      },
+      "turns_by_project": {
+        "unattributed": 1,
+        "tinkerybot": 123,
+        "bites": 157,
+        "bites-paper": 9,
+        "masterclass": 79,
+        "workspace-infra": 11,
+        "workspace-knowledge": 37
+      }
+    },
+    {
+      "day": "2026-05-10",
+      "week": "2026-W19",
+      "cost": 149.0985,
+      "turns": 220,
+      "cost_per_turn": 0.6777,
+      "cache_read": 127422215,
+      "cache_write": 12953468,
+      "input_tokens": 449,
+      "output_tokens": 180187,
+      "session_count": 4,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13.0564,
+        0,
+        0,
+        0,
+        0,
+        48.5929,
+        46.9661,
+        36.1205,
+        4.3626,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "tinkery-comic-con": [
+          {
+            "sha": "5602be94dcb8",
+            "time": "2026-05-10T20:13:59-07:00",
+            "subject": "WIP: keychain order prep v2-organic - shadow strip incomplete",
+            "files_changed": 22,
+            "files": [
+              "keychain-orders/v1/buddy/back.png",
+              "keychain-orders/v1/buddy/buddy-front.png",
+              "keychain-orders/v1/crystal/back.png",
+              "keychain-orders/v1/crystal/crystal-front.png",
+              "keychain-orders/v1/hammer/back.png",
+              "keychain-orders/v1/hammer/hammer-front.png",
+              "keychain-orders/v1/sage/back.png",
+              "keychain-orders/v1/sage/sage-front.png",
+              "keychain-orders/v1/sprout/back.png",
+              "keychain-orders/v1/sprout/sprout-front.png",
+              "keychain-orders/v1/tinkery-friends-back.png",
+              "keychain-orders/v2-organic/buddy/back.png",
+              "keychain-orders/v2-organic/buddy/buddy-front.png",
+              "keychain-orders/v2-organic/crystal/back.png",
+              "keychain-orders/v2-organic/crystal/crystal-front.png",
+              "keychain-orders/v2-organic/hammer/back.png",
+              "keychain-orders/v2-organic/hammer/hammer-front.png",
+              "keychain-orders/v2-organic/sage/back.png",
+              "keychain-orders/v2-organic/sage/sage-front.png",
+              "keychain-orders/v2-organic/sprout/back.png"
+            ]
+          },
+          {
+            "sha": "de335c8d9ab2",
+            "time": "2026-05-10T19:59:22-07:00",
+            "subject": "Mockups + acrylic keychain prototype pipeline",
+            "files_changed": 75,
+            "files": [
+              "art/buddy-comparison.jpg",
+              "art/buddy-hires-2x.png",
+              "art/buddy-hires-4x-transparent.png",
+              "art/buddy-hires-4x.png",
+              "art/buddy-locked.jpg",
+              "art/buddy-redesign-v2/buddy-fullbody-v1.jpg",
+              "art/buddy-redesign-v2/buddy-lobster-v2.jpg",
+              "art/buddy-redesign-v2/ref-1.jpg",
+              "art/buddy-redesign-v2/ref-2.jpg",
+              "art/buddy-redesign/00-logo.jpg",
+              "art/buddy-redesign/buddy-A-claws-on-top.jpg",
+              "art/buddy-redesign/buddy-A2-claws-on-top-strict.jpg",
+              "art/buddy-redesign/buddy-D-side-claws.jpg",
+              "art/buddy-redesign/buddy-final-v2.jpg",
+              "art/buddy-redesign/buddy-final.jpg",
+              "art/buddy-svg/buddy-svg-render.png",
+              "art/buddy-svg/buddy-transparent.png",
+              "art/buddy-svg/buddy.svg",
+              "art/buddy-svg/mask-black.pbm",
+              "art/buddy-svg/mask-black.svg"
+            ]
+          },
+          {
+            "sha": "359cc6bb0b19",
+            "time": "2026-05-10T17:31:34-07:00",
+            "subject": "scaffold: Tinkery & Friends Comic Con merch line",
+            "files_changed": 33,
+            "files": [
+              "README.md",
+              "art/characters-v2/00-tinkery-bot.jpg",
+              "art/characters-v2/buddy.jpg",
+              "art/characters-v2/crystal.jpg",
+              "art/characters-v2/hammer.jpg",
+              "art/characters-v2/sage.jpg",
+              "art/characters-v2/sprout.jpg",
+              "art/characters-v3/00-tinkery-bot.jpg",
+              "art/characters-v3/buddy.jpg",
+              "art/characters-v3/crystal.jpg",
+              "art/characters-v3/hammer.jpg",
+              "art/characters-v3/sage.jpg",
+              "art/characters-v3/sprout.jpg",
+              "art/characters/00-tinkery-bot.jpg",
+              "art/characters/buddy.jpg",
+              "art/characters/crystal.jpg",
+              "art/characters/hammer.jpg",
+              "art/characters/sage.jpg",
+              "art/characters/sprout.jpg",
+              "art/family-final.jpg"
+            ]
+          }
+        ],
+        "tinkerybot": [
+          {
+            "sha": "92080d5fb2c0",
+            "time": "2026-05-10T19:15:21-07:00",
+            "subject": "feat: wire LiveAvatar FULL mode end-to-end",
+            "files_changed": 3,
+            "files": [
+              "functions/api/session-token.ts",
+              "public/app.js",
+              "wrangler.toml"
+            ]
+          }
+        ]
+      },
+      "commit_count": 4,
+      "cost_by_project": {
+        "unattributed": 0.2628,
+        "workspace-infra": 5.3677,
+        "bites": 52.3898,
+        "tinkerybot": 26.2369,
+        "tinkery-comic-con": 60.8276,
+        "masterclass": 3.7862,
+        "bites-paper": 0.2274
+      },
+      "turns_by_project": {
+        "unattributed": 4,
+        "workspace-infra": 4,
+        "bites": 82,
+        "tinkerybot": 41,
+        "tinkery-comic-con": 102,
+        "masterclass": 6,
+        "bites-paper": 3
+      }
+    },
+    {
+      "day": "2026-05-11",
+      "week": "2026-W20",
+      "cost": 162.0324,
+      "turns": 361,
+      "cost_per_turn": 0.4488,
+      "cache_read": 128655570,
+      "cache_write": 14435399,
+      "input_tokens": 626,
+      "output_tokens": 299209,
+      "session_count": 2,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.1344,
+        0,
+        14.6917,
+        7.6357,
+        5.7192,
+        15.044,
+        10.6277,
+        3.9633,
+        12.393,
+        2.8648,
+        26.032,
+        31.189,
+        31.7378,
+        0
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "fbe8cc9f7ded",
+            "time": "2026-05-11T18:36:59-07:00",
+            "subject": "ops: log .34 spike for EXIF + tag suggestions",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          },
+          {
+            "sha": "99b8541b8e4a",
+            "time": "2026-05-11T18:31:58-07:00",
+            "subject": "feat(app): EXIF auto-fill (date + city) + tag suggestions from dish name",
+            "files_changed": 1,
+            "files": [
+              "app/index.html"
+            ]
+          },
+          {
+            "sha": "80671ba093c0",
+            "time": "2026-05-11T17:17:08-07:00",
+            "subject": "marketing: Three Bites launch kit (4 social posts + DM templates + Twitter starter)",
+            "files_changed": 3,
+            "files": [
+              "marketing/bites-kitchen-twitter-account.md",
+              "marketing/dm-templates.md",
+              "marketing/three-bites-launch-kit.md"
+            ]
+          },
+          {
+            "sha": "5c20ae40ff08",
+            "time": "2026-05-11T16:01:56-07:00",
+            "subject": "blog: 'Three bites' - dogfooding the alpha, friction notes + shipped analytics fix",
+            "files_changed": 3,
+            "files": [
+              "blog/index.html",
+              "blog/three-bites.html",
+              "blog/three-bites.md"
+            ]
+          },
+          {
+            "sha": "f6ea11104ad1",
+            "time": "2026-05-11T15:58:45-07:00",
+            "subject": "feat(analytics): ping funnel events to central sheet immediately",
+            "files_changed": 1,
+            "files": [
+              "analytics.js"
+            ]
+          },
+          {
+            "sha": "ef8e15489c0b",
+            "time": "2026-05-11T15:56:15-07:00",
+            "subject": "seed: add Everett & Jones smoked pork ribs (bite #3)",
+            "files_changed": 1,
+            "files": [
+              "seed-data.json"
+            ]
+          },
+          {
+            "sha": "2ec70d613849",
+            "time": "2026-05-11T15:53:52-07:00",
+            "subject": "seed: add Butter Toast with Seasonal Jam & Jammy Eggs (bite #2)",
+            "files_changed": 1,
+            "files": [
+              "seed-data.json"
+            ]
+          },
+          {
+            "sha": "65e348cd1d35",
+            "time": "2026-05-11T15:50:43-07:00",
+            "subject": "dogfood: friction notes from first real bite save",
+            "files_changed": 1,
+            "files": [
+              "DOGFOOD-NOTES.md"
+            ]
+          },
+          {
+            "sha": "988872274af5",
+            "time": "2026-05-11T15:49:52-07:00",
+            "subject": "seed: add The Ultimate at Crostini & Java (real bite #1)",
+            "files_changed": 1,
+            "files": [
+              "seed-data.json"
+            ]
+          }
+        ],
+        "ai-tinkery-library": [
+          {
+            "sha": "f2846a7002b0",
+            "time": "2026-05-11T12:51:06-07:00",
+            "subject": "Add Prototyping Tools activity (activity-39, Space Design)",
+            "files_changed": 3,
+            "files": [
+              "activities.json",
+              "activity-images/activity-39.jpg",
+              "backend.gs"
+            ]
+          },
+          {
+            "sha": "7f2a26f4e7ea",
+            "time": "2026-05-11T12:38:58-07:00",
+            "subject": "Add Installations activity; move Bookshelf to Space Design",
+            "files_changed": 3,
+            "files": [
+              "activities.json",
+              "activity-images/activity-38.jpg",
+              "backend.gs"
+            ]
+          },
+          {
+            "sha": "0c4e5d5c08b8",
+            "time": "2026-05-11T12:28:40-07:00",
+            "subject": "Move 3 activities to Understand AI; refresh chat framing",
+            "files_changed": 2,
+            "files": [
+              "activities.json",
+              "backend.gs"
+            ]
+          },
+          {
+            "sha": "2a1268e2f0ee",
+            "time": "2026-05-11T12:12:11-07:00",
+            "subject": "Consolidate categories to 4 (Understand, Shape, Evaluate, Space Design)",
+            "files_changed": 3,
+            "files": [
+              "activities.json",
+              "backend.gs",
+              "index.html"
+            ]
+          }
+        ],
+        "tinkery-comic-con": [
+          {
+            "sha": "e843f6bed707",
+            "time": "2026-05-11T20:33:24-07:00",
+            "subject": "Lock Tinkery & Friends workshop completion coin designs",
+            "files_changed": 7,
+            "files": [
+              "coins/README.md",
+              "coins/coin-back-LOCKED.jpg",
+              "coins/coin-front-01-sprout-green-ai.jpg",
+              "coins/coin-front-02-hammer-vibe-coding.jpg",
+              "coins/coin-front-03-crystal-generative-ai.jpg",
+              "coins/coin-front-04-buddy-ai-agents.jpg",
+              "coins/coin-front-05-sage-slow-ai.jpg"
+            ]
+          }
+        ]
+      },
+      "commit_count": 14,
+      "cost_by_project": {
+        "ai-tinkery-library": 11.8994,
+        "bites": 97.7753,
+        "workspace-knowledge": 23.4283,
+        "workspace-infra": 5.0389,
+        "masterclass": 3.3312,
+        "ai-tinkery-chatbot": 0.3851,
+        "bites-paper": 3.897,
+        "tinkerybot": 1.8844,
+        "tinkery-comic-con": 14.1993,
+        "healthlog": 0.059,
+        "unattributed": 0.1344
+      },
+      "turns_by_project": {
+        "ai-tinkery-library": 67,
+        "bites": 189,
+        "workspace-knowledge": 64,
+        "workspace-infra": 17,
+        "masterclass": 21,
+        "ai-tinkery-chatbot": 5,
+        "bites-paper": 10,
+        "tinkerybot": 6,
+        "tinkery-comic-con": 36,
+        "healthlog": 1,
+        "unattributed": 1
+      }
+    },
+    {
+      "day": "2026-05-12",
+      "week": "2026-W20",
+      "cost": 120.8807,
+      "turns": 206,
+      "cost_per_turn": 0.5868,
+      "cache_read": 113715035,
+      "cache_write": 9703024,
+      "input_tokens": 383,
+      "output_tokens": 135096,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        24.1801,
+        15.7975,
+        11.3594,
+        0,
+        0,
+        0,
+        0,
+        22.4325,
+        28.0848,
+        14.9738,
+        0,
+        0,
+        0,
+        4.0526,
+        0,
+        0
+      ],
+      "commits_by_project": {
+        "bites": [
+          {
+            "sha": "7746de883e49",
+            "time": "2026-05-12T16:40:02-07:00",
+            "subject": "ops: tinkerybot.com domain registration",
+            "files_changed": 1,
+            "files": [
+              "OPS-LEDGER.md"
+            ]
+          }
+        ]
+      },
+      "commit_count": 1,
+      "cost_by_project": {
+        "bites-paper": 1.1537,
+        "ai-tinkery-library": 1.8908,
+        "ai-tinkery-chatbot": 0.8412,
+        "tinkery-comic-con": 3.6253,
+        "tinkerybot": 2.7124,
+        "masterclass": 11.6727,
+        "workspace-knowledge": 3.8284,
+        "bites": 80.4355,
+        "healthlog": 0.1379,
+        "workspace-infra": 14.5828
+      },
+      "turns_by_project": {
+        "bites-paper": 8,
+        "ai-tinkery-library": 13,
+        "ai-tinkery-chatbot": 6,
+        "tinkery-comic-con": 10,
+        "tinkerybot": 14,
+        "masterclass": 30,
+        "workspace-knowledge": 11,
+        "bites": 143,
+        "healthlog": 3,
+        "workspace-infra": 29
+      }
+    },
+    {
+      "day": "2026-05-13",
+      "week": "2026-W20",
+      "cost": 44.4989,
+      "turns": 156,
+      "cost_per_turn": 0.2852,
+      "cache_read": 29049646,
+      "cache_write": 4384462,
+      "input_tokens": 351,
+      "output_tokens": 102778,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.6435,
+        5.1819,
+        5.6482,
+        0,
+        0,
+        0,
+        0,
+        10.8196,
+        10.8034,
+        2.622,
+        5.4753,
+        2.305,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "bites": 26.1534,
+        "tinkery-comic-con": 2.7517,
+        "ai-tinkery-library": 0.1197,
+        "tinkerybot": 0.9579,
+        "workspace-infra": 1.5036,
+        "masterclass": 12.2082,
+        "workspace-knowledge": 0.3719,
+        "ai-tinkery-chatbot": 0.4325
+      },
+      "turns_by_project": {
+        "bites": 98,
+        "tinkery-comic-con": 14,
+        "ai-tinkery-library": 2,
+        "tinkerybot": 5,
+        "workspace-infra": 4,
+        "masterclass": 33,
+        "workspace-knowledge": 3,
+        "ai-tinkery-chatbot": 3
+      }
+    },
+    {
+      "day": "2026-05-14",
+      "week": "2026-W20",
+      "cost": 172.7792,
+      "turns": 327,
+      "cost_per_turn": 0.5284,
+      "cache_read": 130300460,
+      "cache_write": 16472929,
+      "input_tokens": 694,
+      "output_tokens": 186787,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        9.3109,
+        4.115,
+        3.2129,
+        6.2718,
+        8.4953,
+        33.2871,
+        37.78,
+        16.9029,
+        10.3213,
+        3.8577,
+        39.2243,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "bites": 115.6601,
+        "workspace-knowledge": 5.8903,
+        "masterclass": 36.2445,
+        "tinkerybot": 3.1432,
+        "workspace-infra": 3.5188,
+        "ai-tinkery-library": 4.4319,
+        "tinkery-comic-con": 3.8904
+      },
+      "turns_by_project": {
+        "bites": 213,
+        "workspace-knowledge": 11,
+        "masterclass": 98,
+        "tinkerybot": 7,
+        "workspace-infra": 1,
+        "ai-tinkery-library": 4,
+        "tinkery-comic-con": 2
+      }
+    },
+    {
+      "day": "2026-05-15",
+      "week": "2026-W20",
+      "cost": 220.153,
+      "turns": 276,
+      "cost_per_turn": 0.7977,
+      "cache_read": 197086548,
+      "cache_write": 18577409,
+      "input_tokens": 934,
+      "output_tokens": 219851,
+      "session_count": 1,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5.0253,
+        4.2941,
+        17.8702,
+        13.3282,
+        21.1925,
+        0,
+        0,
+        40.7091,
+        41.9273,
+        38.8034,
+        19.7562,
+        17.2467,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "workspace-knowledge": 16.6809,
+        "ai-tinkery-library": 8.7801,
+        "tinkery-comic-con": 9.3827,
+        "masterclass": 0.4812,
+        "bites": 147.7992,
+        "workspace-infra": 30.5324,
+        "tinkerybot": 6.1056,
+        "bites-paper": 0.3909
+      },
+      "turns_by_project": {
+        "workspace-knowledge": 25,
+        "ai-tinkery-library": 11,
+        "tinkery-comic-con": 25,
+        "masterclass": 3,
+        "bites": 183,
+        "workspace-infra": 32,
+        "tinkerybot": 4,
+        "bites-paper": 1
+      }
+    },
+    {
+      "day": "2026-05-16",
+      "week": "2026-W20",
+      "cost": 32.4641,
+      "turns": 78,
+      "cost_per_turn": 0.4162,
+      "cache_read": 31137850,
+      "cache_write": 2549702,
+      "input_tokens": 323,
+      "output_tokens": 38315,
+      "session_count": 18,
+      "hourly_cost": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.1796,
+        0.1793,
+        0.178,
+        8.7781,
+        0.2006,
+        0.1792,
+        20.8464,
+        1.0382,
+        0.2217,
+        0.2209,
+        0.2216,
+        0.2206
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "unattributed": 2.381,
+        "bites": 28.5208,
+        "workspace-infra": 1.4047,
+        "tinkery-comic-con": 0.1576
+      },
+      "turns_by_project": {
+        "unattributed": 35,
+        "bites": 38,
+        "workspace-infra": 4,
+        "tinkery-comic-con": 1
+      }
+    },
+    {
+      "day": "2026-05-17",
+      "week": "2026-W20",
+      "cost": 13.8981,
+      "turns": 132,
+      "cost_per_turn": 0.1053,
+      "cache_read": 10582743,
+      "cache_write": 1110046,
+      "input_tokens": 297,
+      "output_tokens": 66698,
+      "session_count": 26,
+      "hourly_cost": [
+        0.476,
+        0.2216,
+        0.2807,
+        0.256,
+        0.2215,
+        0.2206,
+        0.2214,
+        0.2222,
+        0.2214,
+        2.0734,
+        6.3745,
+        3.1089,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "unattributed": 2.7556,
+        "workspace-infra": 2.4725,
+        "bites": 8.4278,
+        "ai-tinkery-library": 0.0791,
+        "bites-paper": 0.0274,
+        "tinkery-comic-con": 0.1357
+      },
+      "turns_by_project": {
+        "unattributed": 53,
+        "workspace-infra": 19,
+        "bites": 59,
+        "ai-tinkery-library": 2,
+        "bites-paper": 1,
+        "tinkery-comic-con": 2
+      }
+    },
     {
       "day": "2026-05-18",
       "week": "2026-W21",
@@ -127,23 +3899,6 @@
       "input_tokens": 108,
       "output_tokens": 5416,
       "session_count": 15,
-      "sessions": [
-        "0698dc9e-1b2a-48f8-a194-815e3d8bb531",
-        "0f48c8d2-e1b1-43fb-aed8-e129c9831249",
-        "17c8c996-4dab-4cea-ba80-37d067eeb863",
-        "1e05bf45-e66f-4cf1-ba88-457385d34f8e",
-        "26bad50a-0195-4bd5-9f62-4e7dc15dbf2c",
-        "3e525652-668e-4b91-a468-a6a0ef093c4c",
-        "46bb635d-0257-45a9-8b8f-d99e1549b447",
-        "57c69ae0-6102-4348-8e7a-2613096a4111",
-        "5f57ed7a-b33f-407a-b30d-c7fda9b2c314",
-        "83beb88e-88d0-40cb-9e76-dcc57aad9ecf",
-        "a3d85f6d-7794-455c-8267-160dc8d7551b",
-        "ab9cdf94-452a-4d04-8584-af126fe7de4b",
-        "c9e94a9c-d3e1-460e-97db-300dd5ce66e5",
-        "e16a5d60-af2a-4d0e-b61c-88af100f34a9",
-        "f1d6eadb-3093-4e89-a1ae-3b90bd27ee5d"
-      ],
       "hourly_cost": [
         0,
         0,
@@ -170,7 +3925,6 @@
         0.2978,
         0.2984
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -195,81 +3949,6 @@
       "input_tokens": 513,
       "output_tokens": 24182,
       "session_count": 73,
-      "sessions": [
-        "0029f547-d368-4cfb-bcc5-abda092ba0ef",
-        "019294bd-63fd-427f-93c0-faed60da0be1",
-        "04c2708d-b2ae-4522-a261-a6651524f691",
-        "066f29b4-059e-411c-ba19-a62e623bc52e",
-        "069841ec-20cc-45a6-9f79-636153a8afe3",
-        "079692cb-02c7-47fb-a1b6-be3760652b2b",
-        "0ce4fe8e-9b67-4f9d-8360-2aa4f2f0c277",
-        "10a80117-582e-4abc-97ec-bc371c1566f3",
-        "1780ade3-e7ea-4441-8e2a-7ddfebb06f01",
-        "1bfeeb64-aeb6-472b-922b-c353ab295f6b",
-        "1ef81f64-7414-429b-9876-057c224da40b",
-        "1f073528-2347-4acd-a299-2ff468c27afc",
-        "1fcba639-f3d1-4ff6-a367-510d29a5d206",
-        "243d80dc-973d-4b9c-9561-4f3147b8c3db",
-        "2994c9a4-d215-42ca-b99f-c0ac37e6a60d",
-        "2a73889f-fbc8-4592-97e2-b1cf13a36703",
-        "2b85d222-690b-4f6e-8fc0-b751b33ffcd7",
-        "2cb6f914-6a22-42c3-acda-4f948c27e0d0",
-        "345828c2-3fc6-45c2-b02d-a796fad47963",
-        "412c0075-1d75-4d61-85ce-1d68e75cba70",
-        "41902807-a9fd-4c3d-8586-f411bd527c86",
-        "4607d6f2-aaf5-48b0-8fdf-200a1da91ec2",
-        "46df7bff-8878-4800-bf7b-1c7b3cd8ea5a",
-        "4a45faa5-fe46-4383-8bd4-a395cf38db5d",
-        "4e1c5e4c-4bbf-43c9-9f5c-2221720addf5",
-        "4f072fd3-079a-4aa0-8ab6-f80ff3c82171",
-        "5121a209-bade-4ea6-bf25-faef43cf150a",
-        "56526147-9a81-410d-b0ee-6e9e8cf8c046",
-        "56aa017d-8c56-4f89-af4d-d521697cc5e7",
-        "581ce896-f60f-47f7-920e-b4c1b0a3e39f",
-        "5836e106-4b60-49e7-8277-5f080b1dffe4",
-        "63207345-9cd7-468f-971d-41c32bda32ff",
-        "6429849b-6374-4fa7-9f48-a0f563530477",
-        "6cb69e9e-6ac3-456f-8541-b7809d470c66",
-        "6da2e879-a3de-4fea-8c1f-3b866149a89e",
-        "6ef57188-74d2-4f34-8597-849eef119e2d",
-        "76598621-6a4d-4355-899b-2e02dc009bae",
-        "7668b86f-17d6-42c3-bf86-8bbb1062a599",
-        "7aa727fb-8b41-404e-a5d2-75b00943556e",
-        "7c7bb1ef-54c3-4971-b997-b7320c934895",
-        "7cc64120-2602-4261-9ad9-b2714ec49e2a",
-        "7dd97a28-9b91-48c3-8fa4-85af69f833f6",
-        "86f6fe06-5bbb-45d7-a6ea-edc4b7e92151",
-        "9827b579-e357-434b-a706-302a5a47ee30",
-        "9e7570f4-4c90-4d3e-b60d-d7aee33fbfa5",
-        "9f2c9b90-11a7-4100-89bb-75b7f6169547",
-        "9f7383d4-b339-42bb-b5c3-f3eccd03aa29",
-        "a8b7d361-b90f-4cef-8447-ac3289218b09",
-        "a92517f3-7177-422a-b598-42911a187fe7",
-        "a951e955-6919-4fd1-ab23-e330465dc255",
-        "b46da79a-5e5d-4f91-8838-6e73e5fe752b",
-        "b57691e5-1a8a-4d7c-8611-1b1f0d207e06",
-        "b7f4655c-fe56-4ae0-b621-708922ed3c2c",
-        "bb00d066-22b5-4c2d-88ea-156be0c923b4",
-        "bcad14b7-808d-4da2-bb9a-5e54569f3be1",
-        "c0800adf-08f9-4862-9481-9652f4b5ce70",
-        "c58e25e6-b025-4ead-a770-c7f798eb8e5a",
-        "c7bbce5d-0738-4e46-979f-9005b9977038",
-        "ccd67f3e-998b-4b57-987f-533caa26fbca",
-        "cd009974-ddbc-4e29-a931-9a88942284a5",
-        "ce1c5081-c291-4949-acb5-ec2b55c9d75d",
-        "ced5e184-eaf8-40cd-9720-0bfec1bb83e9",
-        "cffa8669-18c7-4231-a49e-cb77fd69688e",
-        "d28295c2-07a9-4147-b1cf-880b2917816b",
-        "d405b847-2076-4791-9bf4-095b38de7caa",
-        "d4434423-9d93-43b6-8c70-1d318e1deb24",
-        "dbd83e5d-6905-4591-bc61-c60f6e052c8e",
-        "dcab457f-cf92-4070-bd43-2159ccbbc8ab",
-        "dcbe5e5b-b611-47f9-aa14-53d15d68886e",
-        "de510121-4757-44be-94e6-3b9953d12e80",
-        "e87344be-3f4d-40e2-84eb-0da1b3f47255",
-        "eb77749c-d92e-4af8-911b-54b458abecff",
-        "f7f94869-a338-4eb5-a3c9-01db8c8510ad"
-      ],
       "hourly_cost": [
         0.5574,
         0.3116,
@@ -296,7 +3975,6 @@
         0.3084,
         0.3089
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -325,82 +4003,6 @@
       "input_tokens": 582,
       "output_tokens": 37183,
       "session_count": 74,
-      "sessions": [
-        "052baf82-049c-48b9-9082-6969ac89706a",
-        "1740deb4-c3ee-4be9-b707-d9b8bb3d0b65",
-        "175d8367-25af-4c2f-b847-648762b89478",
-        "1d8150f8-43b2-484e-8199-af114d5b93d6",
-        "296e605e-fce8-4072-b9b1-52454fda0ebb",
-        "2aeeae9f-d5ef-41db-b546-21fedbd4ca09",
-        "2d6fc4cf-ac3e-4141-9a2e-4c58e120f9d6",
-        "3361f16d-9857-4914-b793-38c2b998c96a",
-        "370cf51a-c27d-4675-9649-7794c727dcd3",
-        "370ed64c-e031-4eb6-af4b-841ae10ef2f0",
-        "3a26ab8d-b49a-4241-99f7-1f8a37c77cec",
-        "3a90ee24-15f5-43e6-b313-b2cb9435ae03",
-        "41ea3550-a75a-4924-a3d0-6fed7d5ba6e3",
-        "429cdae3-1f4d-4455-aa4a-c228c7685513",
-        "4670e894-58d9-4f61-a932-40d0c4d80c74",
-        "46d8158a-2cc5-4213-b93f-fef80c94bafd",
-        "4f7133a3-ab4a-4283-b405-624b6b8c63ef",
-        "4ff9b2b2-0ac3-4926-8240-989f5aecbc6e",
-        "5678797b-3f5a-48fd-910f-08fa7144f0d0",
-        "5727afe1-4c3c-49e6-98de-64d8181f6147",
-        "5bc6d66e-c41d-44a2-8100-f675c8792df2",
-        "61b6fa36-8f71-4ec1-81c1-dd61a65cfe85",
-        "681e361a-d061-445b-81aa-1abd490e9fa3",
-        "738caff1-40ed-4f18-9d73-6f1eb186b818",
-        "7595fb7f-884d-4ea6-9bf6-c388f2ede009",
-        "79e9da98-8aa3-45c4-bf78-8c3abbf518b0",
-        "7bae4324-0a62-4412-801f-29281cad9d4f",
-        "7cb81b1a-5055-4e6a-a6c1-4c6576b75349",
-        "821e8416-d349-42cc-be74-7779d627ab84",
-        "84895586-6470-4e95-b904-c33e2fafa2eb",
-        "85e88432-5c43-4bb0-a81d-c6a3f1f85e7e",
-        "86fcfda8-4704-4b1b-9e3c-ef16639304f7",
-        "87af7407-3abd-41bb-bfac-e1c19a5d1b19",
-        "906ced74-21f2-43e9-95ad-807437836873",
-        "95119140-10f5-4ad2-a087-2c97e03b2296",
-        "98332af9-3f12-433b-99be-28121a1e3318",
-        "9cafc2c0-11a8-448a-895f-0325ebb57c57",
-        "a1c16e5a-148d-4ecb-97ca-26c2b5be6623",
-        "a6cde634-a95c-4681-99e9-702c741af6df",
-        "acc832f1-889e-4a4f-b5ad-ae9aa08b29d6",
-        "ad7bf46f-253b-48d4-8ce9-1f83cacf3f15",
-        "ae9b0c80-8648-46da-b98c-9973c68fd777",
-        "b166c307-ba70-4c41-9ae7-75d73cdbce4d",
-        "b1fe3ec2-4ceb-4833-a123-df0d090e053d",
-        "b3c3c42f-12a1-4973-be6f-2aa8e4056f96",
-        "b5977d1b-3ca0-42e4-8696-e2d199c8db1a",
-        "b987f344-9cad-4dfe-9e9e-1c985795542e",
-        "ba15e2d3-6517-4678-9a19-1141a3f2b3d6",
-        "ba9888bd-9a06-4518-b913-71aa02448ede",
-        "c019d1ae-aa98-46ce-a209-0d974bbcc239",
-        "c040e4fb-eea1-45a0-86c4-90f2a8e31c1c",
-        "c0f159ce-d6c2-4de3-a26f-2bfadcff52f4",
-        "c454cede-89fa-4fcb-8b5f-3deadc0c4b30",
-        "c49f079f-36f8-4e8c-b075-37fa35e399f1",
-        "c58c91f2-fc7e-4024-beab-46508f3804fe",
-        "c901b3f8-e452-4eac-b1c0-c7f1d19c7978",
-        "cd2a4081-3717-4a98-9e2e-024f06de87a8",
-        "d9501ae9-6dbd-4df5-a282-e2cb32f00dc0",
-        "da2840a5-1eea-476c-9165-3978b2b077c1",
-        "e1147947-d55f-4681-bf32-e2852428749a",
-        "e67e96e8-981f-4cde-8972-d90adab140cf",
-        "e70e621c-1666-4bc3-b80b-3d049e40f985",
-        "e85357b1-2f5f-4a5b-9363-76466c764116",
-        "e87dc46b-060b-45b0-b521-7a372fc13175",
-        "eacbb102-13b1-45ad-accd-27329859244b",
-        "ec5d8499-be5c-4c03-9bf0-dceee5c64765",
-        "ec9da03a-7a86-45ce-80a0-643fd9bb74bb",
-        "ed746eaf-bd65-4cb3-b3da-10c7ccbb2bea",
-        "f0fbc5c0-adee-4ff5-843c-8ae2c6971a72",
-        "f23eb02f-e614-424c-852d-d848c4a22632",
-        "f29c07eb-2579-4495-b8b3-150efecf11dc",
-        "fafaa391-5140-4073-82d0-8c5f55a41de4",
-        "fc738c09-a13b-4f93-b91b-6b5095ceb235",
-        "fe14de81-7a7e-4c78-9f51-edb290a2d7ab"
-      ],
       "hourly_cost": [
         0.4227,
         0.3086,
@@ -427,7 +4029,6 @@
         0.3097,
         0.3067
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -454,48 +4055,6 @@
       "input_tokens": 1051,
       "output_tokens": 343321,
       "session_count": 40,
-      "sessions": [
-        "02cd66b5-9f08-48e5-b9e8-691ffb497e17",
-        "04b5aed9-f6e0-4d2c-88cf-0349454ec1e2",
-        "056a3177-6eb5-4b55-979b-6dd731159199",
-        "1e930d29-efc8-4de7-8362-3d9a8a52c85c",
-        "208c1a8c-df4b-4882-9d07-2fa5c96b9fbc",
-        "225cddb2-7f7f-453b-b243-e33d18ee4feb",
-        "2d52e0dc-428d-4046-b45f-0ba7e89e2478",
-        "2e3a644f-12bf-4099-a1bd-eb4087f3cd7b",
-        "32b0824e-44a8-48b8-a4b6-da6f094c82aa",
-        "32ba7639-3b67-4fe9-b659-928aab7dec8c",
-        "3303caca-311f-406a-90a4-9479c317f0b1",
-        "37fe95d3-b142-44ca-8cb1-d5abc865298e",
-        "3c9b5226-c21e-40d6-b618-d6530961d471",
-        "40a55c5c-9c42-4afc-bc35-cc9e01e08133",
-        "425fd3e6-842e-4237-89c6-832dc1cbe319",
-        "48b843fc-9c99-4760-9d43-750531be1484",
-        "56e62382-bf9a-4228-9119-467e65b8e2d1",
-        "5c9ad876-6887-419a-b962-46f6926c4beb",
-        "63a3427a-edc2-4edf-926c-8d971f7bd40c",
-        "712fdc30-cb53-4280-bf13-6323d3de3b86",
-        "732454e2-656b-434e-a2af-69911e9af9ce",
-        "76eb527c-2f1b-4c73-b240-f20608a0febd",
-        "7b69e42e-bf70-4ecc-b624-0b21deaec5fe",
-        "7c7f0161-e384-4be8-99cc-88abe88b61a1",
-        "87ca4536-61f6-4dd5-ac4e-a4e783456f64",
-        "89c22a54-00d5-4fa8-a13e-2361cf67f861",
-        "9531a49b-cde0-49b4-91d3-3d5bafe78f43",
-        "a2cfc13e-f08f-4407-bfcc-ef0adbbe0a07",
-        "a548ceec-e088-4982-afc8-c5aee9de4827",
-        "a8aa249a-8e12-42fa-9872-ee6c0ecd8c51",
-        "b195c19c-095a-4aab-844e-358ba2b544cd",
-        "b3049b51-0fea-4ec8-a45f-bf2fef44c1eb",
-        "b414a77f-b657-4164-96df-f64970d22833",
-        "b70262bb-ed30-4257-8b2f-988f2c06b83d",
-        "bbaa0c84-6fca-47fc-ba23-e3ca84f2613f",
-        "de116fdb-c355-45be-8dce-a2667112727b",
-        "df60eed0-1d9d-4858-9a12-6371de9795f9",
-        "e0142992-4f45-44c5-9e89-b3437fa3b298",
-        "e3b3015f-d106-4757-8b0a-648ed48388ad",
-        "e77935a4-bc13-4529-8f94-c074a8c90e30"
-      ],
       "hourly_cost": [
         0.43,
         0.3071,
@@ -522,7 +4081,6 @@
         0,
         0
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -557,13 +4115,6 @@
       "input_tokens": 310,
       "output_tokens": 17267,
       "session_count": 5,
-      "sessions": [
-        "008a6003-e484-45c5-a986-fc4646dc309f_reset_2026-05-26T02-59-16.642Z",
-        "62ca5fec-5399-4791-9d56-9b28a4c8312e_reset_2026-06-02T18-45-07.341Z",
-        "92855a91-cb31-48a8-aff0-0d99cc09003d",
-        "9b989d3a-cf70-4a37-8e8d-4111260b835d-topic-1507527869738516620",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.8152,
         0,
@@ -590,7 +4141,6 @@
         0.4728,
         0.4728
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -619,10 +4169,6 @@
       "input_tokens": 302,
       "output_tokens": 3800,
       "session_count": 2,
-      "sessions": [
-        "7feff588-96ca-4478-98ab-d05b73984a3f",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.9484,
         0.4727,
@@ -649,7 +4195,6 @@
         0.4741,
         0.474
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -674,11 +4219,6 @@
       "input_tokens": 384,
       "output_tokens": 16227,
       "session_count": 3,
-      "sessions": [
-        "207873a8-d479-46ce-8198-ee8ba9047008_reset_2026-05-25T21-02-50.602Z",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "fd43bb89-2508-45d6-b196-f9bb1a99e205"
-      ],
       "hourly_cost": [
         0.779,
         0.474,
@@ -705,7 +4245,6 @@
         0.474,
         2.7003
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -732,12 +4271,6 @@
       "input_tokens": 431,
       "output_tokens": 26700,
       "session_count": 4,
-      "sessions": [
-        "1907391b-7c48-45fe-ac32-5e7961c082f5_reset_2026-05-26T16-46-48.623Z",
-        "211ded2b-4539-4919-8df2-ea2cb6696452",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "e8e93332-0993-4577-b50d-c317e5ed33ad"
-      ],
       "hourly_cost": [
         0.8123,
         0.474,
@@ -764,7 +4297,6 @@
         0.474,
         0.474
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -795,22 +4327,6 @@
       "input_tokens": 1104,
       "output_tokens": 220887,
       "session_count": 14,
-      "sessions": [
-        "0f30dc3a-7e56-4f24-a805-978d4012c476",
-        "31f776dd-3b13-47ce-ad37-07d6b9ea968d",
-        "512e7bc1-fe47-47e5-a352-9f87644ae13d",
-        "600f5683-5dff-4fde-a125-66e8e4487879",
-        "62c72731-3f43-4d37-8a27-0eda29f80fa8",
-        "67225f98-fa8a-498f-94f7-3a4bf484742a",
-        "8e857a88-2670-45ac-8186-3554c021a286",
-        "8ed32b71-24ef-4c72-9d6f-9077e8ebf38e",
-        "90bcfb8a-dcb9-41c3-9399-0c314a870017",
-        "a27d3bec-e9f9-4d19-8f70-11ccc0680661",
-        "cda8231a-c903-4385-8161-17336dc52791",
-        "d6e96e70-5dd0-4e66-a525-a6762c16097a_reset_2026-05-27T18-40-18.017Z",
-        "d742b320-ad3f-4ade-be56-f28615fbe65b",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.9532,
         0.474,
@@ -837,7 +4353,6 @@
         0.4927,
         0.731
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -870,29 +4385,6 @@
       "input_tokens": 970,
       "output_tokens": 188110,
       "session_count": 21,
-      "sessions": [
-        "0762faaa-3278-4f0d-a19f-8010c3d373e3",
-        "1e2daa50-ac9f-4974-af9d-7c363abce484",
-        "40f83ff8-8b84-4241-a4e3-211e4daacbc9",
-        "457f29d1-3213-41b8-b68a-40472650ba0d",
-        "4e775bd7-b350-4fd3-b9ce-fddbe7b029f4",
-        "52543d43-f007-4c7c-a73c-f1db27e709b9",
-        "550cc01f-2aa1-4f2b-a3d2-dd7bb255a837",
-        "5c2f15bf-5161-43e8-ac99-bf421e203cab",
-        "5f48cd65-986b-4f4a-a1fc-7cbf6578e272",
-        "6c1ad08e-3c84-4b3d-8a10-e67ef1ad557f",
-        "7d314dd2-50d4-4f0c-bdf6-c647b182cd33",
-        "9ed4a692-ffdd-4713-9e23-75ecf107f98d",
-        "aa9a5368-0cc9-47aa-93ae-8b27ecd3103a",
-        "b81916a7-d387-41a8-ba15-55f2a89f2629",
-        "c9b834de-714f-4c62-95ec-b0d5343aaddc",
-        "cc1a0995-d8f5-4de2-a55c-b250c3e9a086",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "e32cdfb3-60b1-4a9c-92d9-c04b4ecad5fc",
-        "ecea0756-dc47-41fc-90a2-79dae957e272",
-        "f7a8a3a7-f40b-49d0-b3e0-3ca2280ff594",
-        "f9dd9866-89a9-44ba-bfb5-373455d38b52_reset_2026-05-28T18-55-43.528Z"
-      ],
       "hourly_cost": [
         0.8742,
         0.4933,
@@ -919,7 +4411,6 @@
         0.2386,
         0.7157
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -954,12 +4445,6 @@
       "input_tokens": 407,
       "output_tokens": 34272,
       "session_count": 4,
-      "sessions": [
-        "3e3e8f5e-ec2c-49ca-bfb6-665e1c2562d7_reset_2026-05-28T21-37-06.781Z",
-        "4e1324c5-d49c-4384-9be0-5c084d4756d9_reset_2026-05-29T18-34-06.235Z",
-        "ae15464b-1908-4504-8863-91b4cfef993b",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.896,
         0.4771,
@@ -986,7 +4471,6 @@
         0.4771,
         0.4771
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1015,39 +4499,6 @@
       "input_tokens": 839,
       "output_tokens": 149937,
       "session_count": 31,
-      "sessions": [
-        "0008d0c5-ea1a-4a31-a5c1-c3f91c98cb39",
-        "09e12076-06b0-4818-8a7e-b825ba02fe42",
-        "1483af3d-a638-4340-8655-1042045fd9b9",
-        "17ea1610-d81a-4bc8-8e98-787c5926f807",
-        "1b24aafb-5749-4d04-b82e-7bf112e27f88",
-        "2a6aae0d-49d1-4c25-8bff-3b0ba06c6a7a",
-        "2ca58390-0c5c-4d3f-ad7d-c3cc371525b9",
-        "356544a7-abf2-4056-a77a-b2cfaf9f154b",
-        "4432414e-706a-4b3d-b0a2-88b266c46150",
-        "49b3959a-cb74-44d9-bb35-3c14e3476a31",
-        "5522102d-09fa-4482-9e13-ac6290eae21c",
-        "6a4003a7-28ef-43e5-b683-626e3f81ffbb",
-        "6f8a67c7-faef-4982-b8d4-4a7f66dd8c3f",
-        "8395cc75-1d3c-42ae-8453-83ed396fbc64",
-        "ab2d12fa-117c-4b10-a855-d74db662145f",
-        "b8adb042-c4a6-4d77-a934-3de25e1ae9e2",
-        "bf2d05d6-8d83-49db-9658-301ba00ec372",
-        "bfc23038-8f25-443c-a692-61ad5a9a95cf",
-        "c501ec8c-3ee9-4021-a3bf-69cb7b058d06",
-        "c5340dbc-caf6-47d6-a68a-be2e798acc95",
-        "c831a4e5-bde5-46ad-aeff-8ee3f2120aeb",
-        "d3813fd1-98c5-44be-b8a4-b4c8df3e8819",
-        "d7dae5cc-0c06-4f8b-87fc-468a9802d10a",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "e0ca1ef5-6c67-4334-b0cf-4aa3e04c487c",
-        "eb153686-971a-4f49-b593-f20f2643412a_reset_2026-05-30T22-50-04.178Z",
-        "ec04ab1f-f69e-48e8-93e2-3ab0bb0d4f35",
-        "ec521bb0-0e91-49ab-92de-b9894444e762",
-        "ece6d591-dd8d-443f-b542-ac3ea63b1bec",
-        "f112cec5-834c-4c5e-9f3b-1de737649c9a",
-        "fd38e685-961e-4cb2-bb33-e7ed44452581"
-      ],
       "hourly_cost": [
         0.7805,
         0.4771,
@@ -1074,7 +4525,6 @@
         3.2773,
         0.4771
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1101,18 +4551,6 @@
       "input_tokens": 626,
       "output_tokens": 139708,
       "session_count": 10,
-      "sessions": [
-        "0e6ff658-1040-45ac-9fb5-e25a5a3e61f3",
-        "6323fe0d-6db3-4438-bec2-4f908adf6fa1",
-        "66101f98-08cc-4739-ac06-79e4bffbed7a",
-        "721d8b19-58af-4195-89c8-166dc8c8bb2f",
-        "a0fd5749-bb2a-47f4-895a-0b8777232406",
-        "af4df4ef-a5a7-420c-b3e9-edb7a9161583",
-        "c645c60e-fa74-46f2-ba68-49a62672895f_reset_2026-05-31T17-40-25.022Z",
-        "da3e784d-5134-4102-9288-6e564137d6b6",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "fe9639bd-b566-4ce5-b975-82bbf41f060c"
-      ],
       "hourly_cost": [
         0.7816,
         0.4771,
@@ -1138,19 +4576,6 @@
         1.8463,
         1.1824,
         3.4414
-      ],
-      "commits": [
-        {
-          "sha": "07ffe389d659",
-          "time": "2026-05-30T18:34:37-07:00",
-          "subject": "fix(app): allow gallery photo selection on mobile, not just camera",
-          "files_changed": 2,
-          "files": [
-            "app/index.html",
-            "app/sw.js"
-          ],
-          "project": "bites"
-        }
       ],
       "commits_by_project": {
         "bites": [
@@ -1193,12 +4618,6 @@
       "input_tokens": 461,
       "output_tokens": 177788,
       "session_count": 4,
-      "sessions": [
-        "3e4aa548-4b57-46ef-a0fd-f687b8d560a0_reset_2026-06-01T17-58-12.475Z",
-        "80854389-950d-472f-9ef0-583d9da0ec9e",
-        "c645c60e-fa74-46f2-ba68-49a62672895f_reset_2026-05-31T17-40-25.022Z",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         7.5191,
         0.4775,
@@ -1225,7 +4644,6 @@
         0.4791,
         0.4791
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1256,11 +4674,6 @@
       "input_tokens": 839,
       "output_tokens": 197409,
       "session_count": 3,
-      "sessions": [
-        "0881da2f-849b-47b9-a307-a920acfa9474",
-        "6d826f18-e169-41f9-866d-dc34bdbad990_reset_2026-06-02T22-36-15.534Z",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.7871,
         0.4791,
@@ -1286,28 +4699,6 @@
         0.483,
         0.483,
         0.4829
-      ],
-      "commits": [
-        {
-          "sha": "ab7ec0e39647",
-          "time": "2026-06-01T20:48:47-07:00",
-          "subject": "ops: log demo-mode ship as activation experiment",
-          "files_changed": 1,
-          "files": [
-            "OPS-LEDGER.md"
-          ],
-          "project": "bites"
-        },
-        {
-          "sha": "ed51bb3962c8",
-          "time": "2026-06-01T20:47:35-07:00",
-          "subject": "feat(app): demo mode — auto-seed first-time visitors with sample bites",
-          "files_changed": 1,
-          "files": [
-            "app/index.html"
-          ],
-          "project": "bites"
-        }
       ],
       "commits_by_project": {
         "bites": [
@@ -1362,12 +4753,6 @@
       "input_tokens": 424,
       "output_tokens": 48264,
       "session_count": 4,
-      "sessions": [
-        "4e172f8e-9e6a-44bc-a73e-3da1bb2914d5",
-        "c6ed6918-8ab2-4fb2-86b8-fe5b36b137aa",
-        "da6be181-303a-49fb-bbf7-15faa52959c1_reset_2026-06-03T19-07-01.055Z",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.7919,
         0.4829,
@@ -1394,7 +4779,6 @@
         0.4821,
         0.4821
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1421,11 +4805,6 @@
       "input_tokens": 575,
       "output_tokens": 67759,
       "session_count": 3,
-      "sessions": [
-        "0493294e-cc70-42a9-8c32-845931f5761b_reset_2026-06-04T19-44-22.723Z",
-        "94215089-258d-47c1-af62-9ae44849b5a1",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.7877,
         0.4821,
@@ -1452,7 +4831,6 @@
         0.4821,
         0.2411
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1483,11 +4861,6 @@
       "input_tokens": 444,
       "output_tokens": 46021,
       "session_count": 3,
-      "sessions": [
-        "1b5832d7-a1cf-4421-ac0e-693ddef6a166",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "e9458e1a-4ae3-4e2f-bbfe-5434af9637d2_reset_2026-06-05T18-52-06.863Z"
-      ],
       "hourly_cost": [
         1.0333,
         0.241,
@@ -1514,7 +4887,6 @@
         0.4821,
         0.4821
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1545,18 +4917,6 @@
       "input_tokens": 1209,
       "output_tokens": 392486,
       "session_count": 10,
-      "sessions": [
-        "137ee60b-12b7-452b-a7ea-865cc19931f2",
-        "31800cb5-48af-4145-ac1b-894366c45a76",
-        "682f1c45-2cbf-4634-8c27-e2bb7968dc46",
-        "7999fb10-a1be-46fa-a68c-f9c57781dd0f_reset_2026-06-07T02-55-21.112Z",
-        "7be5ca2c-fe96-4c83-bf28-59dd70cd63be",
-        "8bfddffb-554c-4537-a957-e5a77e12e13e",
-        "bc70ee83-a427-4427-b0cc-369c0500f7c2",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "df95ae66-74c8-4cfb-bdd4-23b1d6680cb9",
-        "f0301049-ee4a-4284-a074-8ff6cf4dd261"
-      ],
       "hourly_cost": [
         0.7859,
         0.4821,
@@ -1583,7 +4943,6 @@
         0.4821,
         0.482
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1616,11 +4975,6 @@
       "input_tokens": 547,
       "output_tokens": 138840,
       "session_count": 3,
-      "sessions": [
-        "0b68fdbf-1486-4b01-b9f3-1fc256c37a61",
-        "9cd1fa60-6d33-46cb-9944-2b22aad90d81_reset_2026-06-08T02-51-17.331Z",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.7861,
         0.4819,
@@ -1647,7 +5001,6 @@
         4.1558,
         2.091
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1680,11 +5033,6 @@
       "input_tokens": 535,
       "output_tokens": 95546,
       "session_count": 3,
-      "sessions": [
-        "3c2470d6-43bd-4f40-a4d4-9b76e8168684",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "fcb7bd2b-d0fc-420e-a6d3-a067a1ee9799_reset_2026-06-08T19-08-08.903Z"
-      ],
       "hourly_cost": [
         0.7919,
         0.4817,
@@ -1711,7 +5059,6 @@
         10.7611,
         0.4817
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1740,12 +5087,6 @@
       "input_tokens": 704,
       "output_tokens": 201844,
       "session_count": 4,
-      "sessions": [
-        "2bee4468-5554-413a-9cdc-0a4722917252_reset_2026-06-10T00-45-26.046Z",
-        "591f4d11-f491-4141-8013-9a7df9d18420",
-        "cdf9d6e4-b96a-4bd7-bc58-d0253813f22b",
-        "db0a2175-afca-4794-abde-d593fed1108d"
-      ],
       "hourly_cost": [
         0.7895,
         0.4817,
@@ -1772,7 +5113,6 @@
         0.4817,
         0.4817
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1805,12 +5145,6 @@
       "input_tokens": 496,
       "output_tokens": 152110,
       "session_count": 4,
-      "sessions": [
-        "18b5dad3-2f60-459a-bd2f-935c66073f95",
-        "b4b1f11a-227d-47b5-a6a6-d3dd6cd3cffd",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "f05a876f-ca5c-4d72-9509-c0449ed01d9f_reset_2026-06-10T15-08-50.391Z"
-      ],
       "hourly_cost": [
         0.7904,
         0.4817,
@@ -1837,7 +5171,6 @@
         5.0052,
         0.4817
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1872,51 +5205,6 @@
       "input_tokens": 1424,
       "output_tokens": 660858,
       "session_count": 43,
-      "sessions": [
-        "0c633ad4-1f06-4b40-974d-3671b9f36d26",
-        "168016c7-c494-43a1-9c3d-d03fe8e38f75",
-        "18bcf803-175b-4548-9d33-f8968f29fa8f",
-        "25337f98-58b9-4503-a71d-542be18b3954",
-        "344a8932-4cd5-468b-b882-f6fb20b2ce53",
-        "3ca9f21d-7528-4092-8774-13f605a8258c",
-        "3ee9b609-a50f-4327-936d-0adb4330aea5",
-        "4801cf1e-13e2-4bfd-a15f-a96c9afb3fde",
-        "4967d092-3e13-4715-845f-02f24e0d08f7",
-        "4c73233c-56bb-4200-844c-61896c51115b",
-        "53d43c71-a737-481e-9708-98ab3dac69d8",
-        "5e8a25c2-1b2b-4b66-b04e-cbb6d42f1261",
-        "6099efe6-02a4-47b5-83a3-bb1081e01773",
-        "65254326-7764-4fea-a1ff-56a4734a5f66",
-        "69f12245-3a2e-4865-9282-23b05e1cd9d0_reset_2026-06-12T14-37-16.924Z",
-        "6a488358-c31b-4c0c-8ccd-249ca34f66a2",
-        "6f094bd9-3416-4fd9-bc30-fe9637a4406d",
-        "6f44e6e4-9fe6-4618-b5e7-2455e434671d",
-        "7135f93f-0c09-40db-b0f1-2cb1cb59342a",
-        "7a757e7a-20e9-461b-b8ff-25501254275a",
-        "7d94871c-a599-4e2d-87c9-157b380f405b",
-        "7de8574d-73c6-4a1d-8e6b-c90df9ff14df",
-        "7f6c4432-da02-4b33-a9e3-9a341487b16e",
-        "83fcac18-bf7c-4707-b22f-b427f38c93df",
-        "84bcbbd1-fd5c-46dc-89cb-7f9def2019ba",
-        "85192777-af2c-4283-b042-1da911820c8a",
-        "86ac6519-2c83-47e9-a43b-8bfba7307d8a",
-        "87250150-4900-4924-9e08-94b36653f5ee",
-        "8c094496-41e6-4273-9d35-dc65efd79cc6",
-        "9af60ef1-f3a3-45ec-a552-6961d616792e",
-        "9da595f2-851d-402b-8d12-efcec2743e4c",
-        "abbaaf52-5134-4080-a782-60f8c4d9aa0a",
-        "af62db79-83a0-4cbd-9b21-86ef078e4c12",
-        "b1523eef-8149-4b9c-9f42-663152da8793",
-        "ba2d4c02-f060-410f-94a1-d9936b90b9ef",
-        "bd2240af-7f28-413b-8f8f-a4101ba10fda",
-        "c35fd7b8-9d3a-414e-a1a2-87f45ad9ef31",
-        "ce8f663d-3355-4d0a-a414-c29700d57cbf",
-        "d0bb3a77-9374-4761-be52-e9325449c571",
-        "db0a2175-afca-4794-abde-d593fed1108d",
-        "e7ced191-d077-4371-9bd6-90062afbd32b",
-        "ed7ba9cc-bdd4-4d7a-b2bf-31754fe704b1",
-        "fb33f7c8-595b-4bac-a90a-16bfa9ea7698"
-      ],
       "hourly_cost": [
         0.7897,
         0.4816,
@@ -1943,7 +5231,6 @@
         0.6056,
         0.569
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -1982,63 +5269,6 @@
       "input_tokens": 474,
       "output_tokens": 54552,
       "session_count": 55,
-      "sessions": [
-        "04df97fb-1077-4903-8c5e-7b617dbd5c3e",
-        "054c6b0c-2941-4a65-907e-7ddd037b3421",
-        "062eabc7-3474-439f-b4f6-61f5028f4418",
-        "07d5c9bd-9877-4744-9495-3e54caac3f2a",
-        "0dfb9527-179d-44ba-a872-2dbf7f659349",
-        "0febc0c5-563e-490e-95d0-ea39126e8bda",
-        "12d2b818-b9c2-4c06-a5d2-b01b93ae55ac",
-        "18582da9-bf2a-45f5-9f87-4527dc59f676",
-        "1c070b2a-3084-4896-9684-566fae350c08",
-        "20e6c8bc-0176-4aa2-b152-86513db0731d",
-        "27033454-a21c-4ff3-b75d-f374612b3722",
-        "2a317c73-6f4f-4547-9d7d-61f3dd7725ea",
-        "40178908-20c9-4c21-9b03-261aab3d068f",
-        "5ac5602d-f38d-4ffd-84a6-0708fcb6972a",
-        "5ce707d2-50bd-4df2-95f3-8b93f7aadd64",
-        "667398cb-c00d-4425-85e1-08ca9247c625",
-        "677698ca-0504-4773-b934-509434be4483",
-        "687547ff-9504-41eb-a085-8c7389374576",
-        "69f12245-3a2e-4865-9282-23b05e1cd9d0_reset_2026-06-12T14-37-16.924Z",
-        "6a22880c-aa7c-4d97-82c5-c30e88c55548",
-        "6c978f9f-6b52-4451-96d2-37d76ae8a42b",
-        "6cf0701f-63ec-4b54-9471-bfd0d19bd250",
-        "6cfe5af6-5f1c-4956-9aa9-ad188fa822f6",
-        "71170509-cd6c-414a-b54c-3c32de4dce1a",
-        "76ad8546-ac54-4318-bb02-272bfc5f1a49",
-        "7a158c6c-0538-4b16-9aab-df2629ccc0c7",
-        "7ac819a7-bbfc-42f3-8713-67076c7c13a7",
-        "7edf1eb0-4755-46ba-8ac1-0150f377bfed",
-        "8022038e-dc28-4617-856e-d806b16766a2",
-        "80493b1b-b93a-4ea8-b8e7-d236f927f29d",
-        "80d6e08e-d707-4112-8365-0446fa9ff2b7",
-        "8bd4f27b-be73-4256-8ad3-f223e9585ccf",
-        "945dc774-7d0a-42ad-a7b6-a314fda8109f",
-        "95706f82-d2f6-47c0-b4ad-ff14ca45579f",
-        "99d76f3a-8aa4-44e8-88ed-3ddd2d09e146",
-        "9cd0817a-6110-4f8e-904b-5fa0a2f5b2b4",
-        "a743bef6-1995-40d4-b953-315fc1ce1dcc",
-        "a9ca1658-e631-4899-af62-80ca00c8b706",
-        "b3f7d725-8ce5-4ffe-b3c8-d16c970377cc",
-        "b453c798-2ab6-400f-b0ce-7d3947f4e681",
-        "bd863d87-b398-4322-b90f-50145f319c81",
-        "bf2b8cf7-dce7-4967-8b7d-1c7cc01cd0a5",
-        "c3da6b87-b889-48a5-b748-227b8260246c",
-        "c73882d9-9c25-4ff5-87c9-b0e67620c536",
-        "c9b50615-f8a7-4daa-9fbe-658f9b970f15",
-        "cc0b0211-4c1f-4b4f-96cf-4132bc592666",
-        "dd523673-98b7-4bae-bf0c-a27a86d5a5c3",
-        "e198ef46-c19e-4360-b8ad-877f8ac59276",
-        "e34d68fb-5f46-4827-adbd-fb89ac2d6352",
-        "e36b3120-271f-47e3-8620-5acb7ee2d0b8",
-        "e38380c9-7f80-4d4d-a9f0-1feb567458cd",
-        "e38411f5-4ff6-4dfb-be88-93a8fce8ccf5",
-        "ebc9e918-8fe3-42ff-959d-39e9cfc51b7b",
-        "f9cf28f5-5fdc-4fed-a1de-9ff21ff87259",
-        "fd790768-6d36-4af8-849e-35915eace4a6"
-      ],
       "hourly_cost": [
         2.2976,
         0.5679,
@@ -2065,7 +5295,6 @@
         0.5689,
         0.5727
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2090,64 +5319,6 @@
       "input_tokens": 807,
       "output_tokens": 259547,
       "session_count": 56,
-      "sessions": [
-        "0858c1fa-d820-4b2f-9735-7e599e84c49e",
-        "0a622cca-06eb-46e1-98a5-d5a568a35623",
-        "0c4cbc76-0a47-494d-982b-3d852e288eb8",
-        "0cd9bb7a-5e82-4dbf-8b6c-cc3e7e40896d_reset_2026-06-13T19-49-06.647Z",
-        "0efb0e96-ce11-4f07-aeeb-8a53872b4238",
-        "0f6d3ad4-a7b1-4829-9b3a-433cbed18303",
-        "11d4e35f-b1f2-404c-a7ad-2ad9a12ed0f8",
-        "1b027f61-ff26-4161-9487-42008383ca03",
-        "22d219ef-7283-4589-8387-5ea44c1036c9",
-        "2452b82c-ce56-4e1c-bad4-b2ae7de797c3",
-        "2958242b-648d-4d50-a547-49b367fc27ab",
-        "2f63eeff-69a9-4e5b-8aa3-e91ac51bccc7",
-        "32bfc2ea-3653-489f-aff5-e4a9ba66883d",
-        "36eec41e-304f-4b6a-ac9a-db3b25f919a4",
-        "37290d7d-1a5e-414a-bdc9-039e16f648be",
-        "39f7617f-0239-4e8d-8af0-819c9f5a601b",
-        "4069ac42-15a2-4a86-8d19-09abeb1bfa01",
-        "40d4fc6b-1b20-4db2-86b6-fd3ce4a6db7c",
-        "43a80d72-4cee-4a06-9ef4-a32d204535f1",
-        "4c4ad985-5c82-4e8e-8d2d-9354f93bf361",
-        "56749fec-7473-45ac-9287-e6c359f64f64",
-        "5bcd9e97-903c-4044-8ab4-a246b4e7670f",
-        "5ce1656a-f908-4315-9823-e61ab205916d",
-        "5fc0e532-a388-484a-9515-513bb7df36e2",
-        "60db75c3-2e40-439b-997e-b8f27da567aa",
-        "6880f2f7-b996-4a27-80dc-5d4b7d7b1792",
-        "68f8836e-8b87-4c3d-87ed-68fcc58bc889",
-        "69f12245-3a2e-4865-9282-23b05e1cd9d0_reset_2026-06-12T14-37-16.924Z",
-        "70606d93-b3f0-469e-abad-a680b47d1fd9",
-        "76b2d742-3501-45ce-8c0d-414ce222f612",
-        "7a789b66-472f-4eb3-9694-211e5ecb6b1e",
-        "86df9539-3af7-4067-a438-1dc66642c71a",
-        "8cc8586b-8ef6-4ee7-8e28-4a6184b04cbf",
-        "94a5f8d3-c1fe-49e6-9719-15f486f6a954",
-        "9a7460e9-187e-48c3-afc1-1a40879a0bb1",
-        "a744a93e-49b3-4c20-8a4a-f3992ed57755",
-        "aae0c5f3-7351-4331-ab3b-09446cd9845e",
-        "abd399b5-8250-4258-9c1e-764f63cfd862",
-        "b1b4f917-0539-4422-8c74-438ab5832fea",
-        "b243da0f-1f99-4f65-885b-65e59c6f1002",
-        "c419a5b0-510c-4a64-aff8-2cc532c5ac31",
-        "c93f02ba-1754-4efe-a231-7bebacb9fd9c",
-        "d1361f9b-bb31-4dad-bf25-5c35c2f1bf4d",
-        "d5b7f075-013e-413a-a13c-c3610530e0d1",
-        "d80f76c7-7027-4f13-9bc3-2ce10ff2eafe",
-        "ded91d29-3993-4e15-84d8-f298ed403a31",
-        "dfaf4112-6ad3-4b44-8d70-8157b03668df",
-        "e0b45964-b330-4cb6-8f36-226fc20c09ae",
-        "e0bb5d1c-0bf1-4736-bbc6-a948d6b86c56",
-        "e49698ba-43c4-442f-b711-b1156c818c49",
-        "e5181448-7b2d-4dd7-864f-d56ec07983c8",
-        "f02d3ee2-11bc-4d16-8dcd-58129c192d4b",
-        "f16d0a3b-f15c-4cb5-89c9-a083d88893a4",
-        "f1ca3687-9a4f-4e3e-9fcc-f5df6fa8ead6",
-        "fa182ca8-b589-4007-a3bd-50900a92d91d",
-        "ffb1cbcd-888c-4518-b2d0-03a35837a197"
-      ],
       "hourly_cost": [
         1.2373,
         0.6206,
@@ -2174,7 +5345,6 @@
         0.5789,
         0.5853
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2203,65 +5373,6 @@
       "input_tokens": 771,
       "output_tokens": 131238,
       "session_count": 57,
-      "sessions": [
-        "018a6993-1973-47b3-9704-fbe91f7e868d",
-        "07468beb-a360-466a-9802-cd71c75bf68a",
-        "0a5e03c1-e1d3-4c96-b376-688a02239169",
-        "0cd9bb7a-5e82-4dbf-8b6c-cc3e7e40896d_reset_2026-06-13T19-49-06.647Z",
-        "105043e3-7b04-43e9-a078-d517c52a7c94",
-        "177f22d3-2e25-4221-af32-0b103193a358",
-        "1903dc6e-2031-45c7-b95f-422963cb8670",
-        "1ea4dfc5-c4fa-4f74-a7e5-19b52db22e85",
-        "2120fe60-9fcd-4407-89d2-a17a652dbd37",
-        "216e41a3-2702-4186-9cd9-ecfbb310dfc8",
-        "27af07a5-19e9-4c4c-bbe6-3c130360db77",
-        "2e36d879-cdb9-4555-8a1e-418a714e303a",
-        "3042351e-ae59-4c64-86f8-f5c8507bec83",
-        "32256a5e-6133-4320-868c-405378d5a399",
-        "32434341-4b01-4fc0-8fbf-f66ae290a254",
-        "32c9616a-af3e-47f3-af9f-7b86101e999f",
-        "339cc9dd-d574-454c-bb31-72acd7b608c5",
-        "366f5d36-e453-4203-bd6e-3040da74a022",
-        "42006767-0d0f-4527-b5b1-90cd9561f04b",
-        "424cf320-a690-4755-b588-fd9ea92ecb64",
-        "4ba905fd-f964-42c5-8586-bdad6e774c44",
-        "4d639294-1caa-440b-8799-ab3fb8affef9",
-        "4e2c0a50-fb35-47f0-983b-059444ae9a35",
-        "50291dc5-b0f1-4551-aa38-09561fdce3d3",
-        "52f1c992-c2b7-41d3-a880-dcad19bdb440",
-        "5c173add-dd14-4b09-8ffb-5114e006cd0e",
-        "6091225d-0c02-4dc0-81e3-8ce268faaafd",
-        "646ff537-46fe-4dfb-a72d-e8fc4ace0214",
-        "683973f6-3b12-4e9e-bc79-c2a0659ffe55",
-        "701e9645-3b65-41ae-a253-1a3d84651a74",
-        "702e0553-6313-4cc5-b894-433cd29a4bff",
-        "7825cdef-da71-4d6f-b59d-7860ec2d342f",
-        "788d094e-6565-43cc-acde-d35751458e82",
-        "7973e64a-c752-4627-bc76-70ebcb8ee807",
-        "7d5110ae-00af-456f-aadd-adfa69b1b264",
-        "80488fbd-5cbc-4473-8621-1055f5bb49e7",
-        "84356246-1e89-4720-91f8-55151869ce42",
-        "95bc7d3f-d69c-4d16-ad11-5a5573053dae",
-        "96b36d90-916d-4720-9394-e344c0eaf424",
-        "97f2d565-8055-44fe-a57a-c35da67b7e2d",
-        "98c0b4c9-5d2c-48fa-a92d-08cfb998911e",
-        "9adcb575-e63a-4851-91bb-c6834224a255",
-        "a97bac5c-71b4-4097-bbc5-ca14e18b170c",
-        "ab4b9f39-d995-4cd4-8abb-a83f7a544406",
-        "ad7711ba-be9d-4cc2-a2a7-712359b5c8d2",
-        "af32cf5a-dc10-42a9-92d9-67d3cf071b3a",
-        "bc4016ac-6187-4bae-bc14-3cb186021997",
-        "bff389ad-9155-4d6c-b752-3c74a6f1eb91",
-        "c374070d-2d29-49c1-85b7-4ec0d304514f",
-        "c657c4a5-d9a3-4cd3-9e44-cb0f43fdb616",
-        "db4cc1cf-ef84-47c3-a05e-5d338435c139",
-        "e559a76d-a919-4b78-b4c0-b50b6d83c41e",
-        "e56b1518-93eb-4405-ba3c-84fbb0c76b7b",
-        "e7da2843-7f28-4df7-8a3d-506c3c6f7fc5_reset_2026-06-14T12-11-15.488Z",
-        "f28d696f-6fad-40b8-a6a1-1cec5e26c67b",
-        "f64ab0dd-e2c9-4894-bdb4-1bca8ec9b3f0",
-        "fbfdc8d1-ac43-4848-bf9d-4b38c5b4c144"
-      ],
       "hourly_cost": [
         2.4173,
         0.6346,
@@ -2288,7 +5399,6 @@
         0.608,
         0.5706
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2317,65 +5427,6 @@
       "input_tokens": 1392,
       "output_tokens": 440422,
       "session_count": 57,
-      "sessions": [
-        "00ad1fac-0808-4253-b643-465c3c507143",
-        "042a9538-4946-47a3-abce-9b9e2eeb61f5",
-        "05831a0b-e14b-42f4-aa8b-d2e042f58f29",
-        "05db8789-a242-422f-a417-54bc0a18ac61",
-        "0e5c0d05-1e5b-4161-847b-77a0d9f1d471",
-        "0f25f8ce-39a3-4ca0-8f48-82a9036963c9",
-        "11c0369e-59d6-4dcb-a254-eec73d880589",
-        "11d146c9-5f59-469f-a015-c22ba06601c5",
-        "1ce8b125-3646-4c40-87ab-176cd0e9e889",
-        "243d87de-24c9-4576-82bc-74ddb9472762",
-        "2cc8b205-462b-478b-ac72-701eeddee6a5",
-        "2d944744-10fb-412b-afb3-658e6f493725_reset_2026-06-15T17-43-56.122Z",
-        "2e580fad-f6b2-441f-acb7-7ec82bb4d62d",
-        "3224811b-ea75-4e83-bc41-cd3408c9a25f",
-        "353dad33-7531-4d65-b320-0ec861655aab",
-        "3eb10bca-108d-446c-bfd2-471f98028320",
-        "52e24a5d-b84a-4042-8f4e-ecb0e614f71b",
-        "5501d759-23c6-47c4-8b15-52ce5e9d963d",
-        "58552f2e-5965-4407-ab84-9efc3e79634f",
-        "5bdd735b-0c6e-4aa9-8d7a-a9130d7212be",
-        "5cb8d884-44e5-46d1-a8f9-1789a49516b2",
-        "63b9b008-a5b8-4608-a7d9-3d6aaaab6516",
-        "6b3a0154-1781-418f-9341-d5918b8176f9",
-        "6df1fc17-7b49-4947-94d1-1343da7da0b4",
-        "6f1c2f08-cd60-4c4f-b626-b43a7608cd69",
-        "7951ee66-6fb6-4947-9ae8-ad5c8cac8c0d",
-        "7db62d08-d50c-4866-b54c-efa8198a0c25",
-        "82cc9891-7158-4158-a923-70542f154cef",
-        "88fbf35d-4d80-43c2-977b-181ed93d05c3",
-        "8a15c64f-e632-4a7a-98d4-2e971c8a8444",
-        "8cbc43e8-ad67-42a2-a6f3-ab0be688f4e6",
-        "955f6669-5212-453e-b9e4-0c2214590c9e",
-        "a931f0d1-3e70-4c16-8b6e-ef0b11921d1a",
-        "c057ed92-bfab-40d5-b05a-15100bb7b649",
-        "c0c53c9e-0c9b-468c-9eea-86f6d92ba7b0",
-        "c4cffaee-d348-4d64-9c53-2b4021b2e502",
-        "c7f26cde-0c07-49cc-8123-decf9eddebd9",
-        "c884a3e2-ea52-45d7-b557-d6c17d460450",
-        "c9121cf8-a198-4259-b474-d5d71a9b4a7b",
-        "ca37de02-6b59-413b-9af3-fd507c37fad9",
-        "cc7e3049-7ffb-4c5d-b78a-96a4d14520a1",
-        "cda9ac87-6ef8-4187-8f31-04070e783e28",
-        "ce8f7508-cbb9-481f-b508-4602b639bd8c",
-        "cf8a10b9-bc25-4187-85bc-870a185c809c",
-        "cf8ef07b-f10b-4fa2-a099-09552e076bae",
-        "d524067b-fecf-469c-a857-66cbbf6d25d3",
-        "d8668af9-ed0c-4425-8701-ce3abe7a66ea",
-        "dfb7d5ff-6897-4011-a141-e832d64cd901",
-        "e10603ec-30ad-4de4-b64c-851dff5e4ebc",
-        "e30cb9fe-406d-4bb9-a462-346180f6d6f2",
-        "e657b5ac-04e2-4873-9f3e-0cb81c8e6872",
-        "e7da2843-7f28-4df7-8a3d-506c3c6f7fc5_reset_2026-06-14T12-11-15.488Z",
-        "e7f6c029-c924-4420-a475-0b88eea8a2c4",
-        "e9b6f684-9072-4882-83f7-5de3f678091b",
-        "ef25269b-2aa7-40fa-8568-df30d87e37c8",
-        "f0988de6-41fe-44c0-8521-05c35b9f5fe0",
-        "f4423877-6005-40d0-b20d-99b957b84e02"
-      ],
       "hourly_cost": [
         0.9607,
         0.5774,
@@ -2402,7 +5453,6 @@
         27.268,
         0.634
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2439,68 +5489,6 @@
       "input_tokens": 752,
       "output_tokens": 166399,
       "session_count": 60,
-      "sessions": [
-        "097d27f3-42fa-42e6-b0d5-0ea5a6f93ad5",
-        "135689a9-d52a-4856-a1c9-9cf628b1cb7c",
-        "13d23c77-860a-460c-b1de-edcc9ddb7335",
-        "13fddb37-cdc3-427b-beac-93bef9b67594",
-        "1598c9aa-4674-47a5-8221-96bf6757bb3f",
-        "187ea116-942e-4c98-8ea6-23087301b6f4",
-        "1dab461b-ba69-4ef4-b4b0-2af65800ea95",
-        "26f9aa69-2bd4-435a-a1e9-999a5afd5e9e",
-        "2b60e75a-80db-4c8e-975c-e0a7f0289d82",
-        "2d944744-10fb-412b-afb3-658e6f493725_reset_2026-06-15T17-43-56.122Z",
-        "3e76e1dd-5672-4d2c-b77d-da6dd54de40d",
-        "408b259f-5119-44d2-baec-23059b8ffa28",
-        "408dca2d-55b1-4856-b8f2-ef5461d98a4c_reset_2026-06-16T17-22-43.706Z",
-        "40b48625-b27a-4e47-8d2d-85bdd8f4d727",
-        "41266544-8057-4e9a-8fd1-2bcb58e7434b",
-        "456b4f0a-da45-4783-9476-907f93cd40f2",
-        "46e621a4-ab6c-4b80-ad44-202dea742bf8",
-        "4993c346-2131-4da4-b50e-43c1b8bbd04f",
-        "4d8288e4-1307-4b1f-a997-72f216b19bcf",
-        "4e6467b7-3d72-43e7-be1d-621e061fbfc1",
-        "50680cbe-3ba6-4fad-9269-e235ccbc8dcf",
-        "506a58ed-0fa9-438e-b766-f101ea05b08e",
-        "50b750ff-2a1f-43c3-8b91-2d50ae09eb60",
-        "582a4de5-9a35-4589-9ded-168f9cc66881",
-        "5ac97e9e-80a6-42cb-a520-287cdcde19f8",
-        "6789da26-f575-4328-8229-8afaf37fdb3e",
-        "688a785b-a2b8-4d21-a163-a15d93554b7a",
-        "68cded1d-b196-4bc4-8ba8-732b89cd8be0",
-        "69f59159-4d8e-4eed-85e3-85193822d959",
-        "6b995af7-e182-49a7-bd51-f264d5f1f0f0",
-        "6c02297b-a0cd-43c9-9708-fc3795f13c1b",
-        "72d3472b-e088-4f90-af86-eb35780b7a03",
-        "734ae470-8dac-432c-8766-11b52d8f1b1e",
-        "7466faf9-55e3-487e-bf8b-6dcf9c9eacae",
-        "79069ab4-4ba4-46bd-9c75-e1dcecad40b3",
-        "79923eab-c04f-42ae-ae55-0cd1445280df",
-        "7b23b7fa-071c-4731-a2c5-7e1030aa2847",
-        "81895508-1753-43a5-a836-99f21cd2d6b6",
-        "872151af-0104-4275-a577-475304fc7290",
-        "8894886f-ebf0-4285-88e6-57f392014106",
-        "8d9cdee7-5d23-42d4-b117-346475cb5fba",
-        "940d36cf-5a5b-4f81-ac20-f9b3e2ed4a83",
-        "94be27ec-7d25-473b-948a-e097a038560c",
-        "a0c4f1d1-1b52-4abe-ae0e-6fefe1192615",
-        "a8c2d53e-a9b0-4482-bfb0-ab5a553169c6",
-        "b0ee12f9-4a2f-434f-986e-b91427defb3f",
-        "b5286bfa-c049-4993-8828-e313f5730181",
-        "b5d4c400-aca6-40fe-89ad-b67aae2f688b",
-        "bcddb39e-3070-4df4-8160-b3c52fab0302",
-        "bf3469c8-2d3a-4cae-9593-a741f3efedca",
-        "c05fe95c-b094-4c69-a483-89d4f2f691f5",
-        "c803b838-fbef-4298-af32-000fe1aa2404",
-        "cbb60c69-de3a-4dcc-bfe1-c4991bbee7b3",
-        "da94d0a4-751b-477c-8a37-97a4def08c5c",
-        "e4563122-74a6-4399-bc91-f7696b002152",
-        "e5b23217-6029-41e4-9290-501b2b317d62",
-        "ee9e4f4d-3701-4161-83d2-2628f1602c73",
-        "f54f9681-1cde-459d-b880-ebf6b68941ad",
-        "fd51ce88-988b-41cd-8f06-4418f23579a2",
-        "ff6ef2cc-bcfb-452a-887f-f761aa29925c"
-      ],
       "hourly_cost": [
         1.4457,
         0.5702,
@@ -2527,7 +5515,6 @@
         0.5994,
         0.5775
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2558,66 +5545,6 @@
       "input_tokens": 1081,
       "output_tokens": 314190,
       "session_count": 58,
-      "sessions": [
-        "020cbaa8-5de8-43e0-9f37-bf44bee8eb65",
-        "0430dbf9-b787-44de-93f6-5e85c1eac30f",
-        "0c859a66-1589-43af-bb98-03a5a43cd8e0",
-        "120aa1dc-bc14-4ca0-a7c0-30c471093a98",
-        "1b12f3ab-7ec4-429c-b6ab-7a8953cb1fb0",
-        "1ddc9474-1f4f-44e3-bdc8-43bc04df89d6",
-        "1e99d701-58e9-4e64-a2da-0539e286e63b",
-        "2184a247-54d1-455e-9461-893c99b2fe27_reset_2026-06-17T16-19-03.078Z",
-        "2220ed84-c4f0-44cd-969c-0a924b9e9163",
-        "2cc4bd56-789f-49db-bbf2-5f28f4410524",
-        "308f2774-406a-41ee-a715-30758bd6a590",
-        "3303d757-8140-4650-9b46-a3ab8e79c6b2",
-        "348462e9-ccf1-4828-9c30-7f43af090c4d",
-        "35d01be6-5518-4187-a245-891840d7f821",
-        "365e804d-df7b-4675-93f2-31e06abf2787",
-        "386cc537-368b-4598-a19f-85e6922bda1d",
-        "408dca2d-55b1-4856-b8f2-ef5461d98a4c_reset_2026-06-16T17-22-43.706Z",
-        "413e7077-6ad4-4842-98f6-22b0baa823af",
-        "43dc1caf-b1a6-4962-9a71-9b9198cc9231",
-        "484e1872-7527-42bb-b753-021eb5ff13b8",
-        "4fdf9b1a-0c3a-4ee6-90ca-8498470f1938",
-        "506f5de8-f4cc-489d-bc76-031128850f48",
-        "5170ff01-44cd-4533-92fa-031afa043729",
-        "56ff747d-1775-41ef-99c8-95eea33eb4f8",
-        "61934b8f-57ce-4fcb-bd11-7e3756a92aad",
-        "66e876b2-4178-486a-b234-12bba5a58c64",
-        "6cde7e4e-7c06-4cf6-a374-47219f008d85",
-        "6d16c6fd-ac0c-454f-b0a6-7f6783dc5b2a",
-        "73d19249-6b63-4269-a0e2-fd481eaf67d8",
-        "741bc7af-e67f-4245-a975-6be85e7cb06a",
-        "7887c1bc-0592-4213-a249-d0c8c68c8445",
-        "7d715a57-69bd-42e1-bb52-eba45011173a",
-        "83574e0b-9933-4384-b5d8-5827d90e556b",
-        "8401e4a6-9f4d-4355-82ed-319c8f6e263a",
-        "870573c6-4c90-4ef8-ae36-32b5eefe48dd",
-        "87b18b7b-2e99-4fa6-8799-7206db827cd6",
-        "922dd58f-d799-4bf5-8899-57ff14b0e374",
-        "a02554e4-3675-49b1-b6e4-22db9b87b722",
-        "a0b61594-4d1e-4df9-9422-00d1014e453f",
-        "a27414e9-be88-4be7-bf74-d94d215f9577",
-        "b7e1807f-94de-47ac-bbf4-e72028a213e2_reset_2026-06-16T17-27-35.454Z",
-        "bbebe744-b19a-4118-ad32-00c3192186d4",
-        "c515a832-601d-4980-93d2-2870db16cc89",
-        "c9143dcb-276f-4e02-8703-955dd75430aa",
-        "cb220a31-ecf7-4da4-8573-7035a6de8e67",
-        "ce31ac3d-c615-4a87-9b0f-55189ee34909",
-        "d184e501-a9d8-4b44-ac05-44a05327d95d",
-        "d6ec08e8-3c13-48d3-a26e-32422dbfb51a",
-        "e40366d5-98c9-4961-b8b3-56e6144be2ac",
-        "e7b3835c-5d8d-497a-8884-297ea77784b0",
-        "e7c61ab2-2ce5-402b-ad15-4276a3a8d506",
-        "e8cd9e0a-f951-4e56-a5d4-f06534033c59",
-        "e982dca7-fbbd-44a6-aa3a-b12669b5c0e1",
-        "ea5a60d4-c6e6-4789-8aba-10469c0de751",
-        "f35ed658-e75c-47cf-b56a-3ecb19f09aad",
-        "f4f3616f-e7a2-4344-9a08-08b9a06658a0",
-        "f738ae4e-a293-4b40-a18c-f4df3e816402",
-        "fa06f949-1f8b-4a9b-875f-90c78180b8ff"
-      ],
       "hourly_cost": [
         3.0656,
         0.57,
@@ -2644,7 +5571,6 @@
         15.7244,
         0.5714
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2673,65 +5599,6 @@
       "input_tokens": 642,
       "output_tokens": 109104,
       "session_count": 57,
-      "sessions": [
-        "003a9c97-9804-469b-a0e6-89e65e376890",
-        "054939ba-77c5-4c5f-a665-7c3cc94a6e0d",
-        "07415cbc-fe34-4d04-b0c1-d7edbdff3ab7",
-        "0c246c03-827b-4f00-a1cd-f12af026251b",
-        "0c2e4622-22cf-420e-9219-1998299c17bf",
-        "1252edc9-46b4-4264-8b8c-fcefb34991fe",
-        "16db185c-9aff-42bc-af76-f34754d29cb2_reset_2026-06-18T17-17-47.387Z",
-        "1bb5a839-2c34-48eb-b9a6-c61d23be9306",
-        "1eed0c52-4d8c-4087-a3f0-fcc7fc59356e",
-        "2154eb39-6a5f-4935-92a9-b700fe56745b",
-        "2184a247-54d1-455e-9461-893c99b2fe27_reset_2026-06-17T16-19-03.078Z",
-        "21d5fc43-2d68-4e07-ab48-2816efbfa9c0",
-        "23262db9-7210-49b1-9b3e-ea5a9dc4fc4d",
-        "23bf68f8-f4da-4b4b-b107-7b2d61505588",
-        "279a53d4-04f7-4486-9450-3a044ce62b10",
-        "2e9e6f1a-2d4f-4b86-8ac0-809108ac324e",
-        "310a5966-4bc9-42fe-89c1-84d9d66124e1",
-        "34b912f7-3637-4ca0-8b2f-084e40873005",
-        "351d4a0c-073e-4e5d-878b-8e78fd0d72e3",
-        "3727725d-e616-4af9-8534-dbb455ddd7ce",
-        "38762616-4de6-4a19-b711-d1d4f441d905",
-        "3a889ec8-3832-4169-a7b8-4a72ce77f15d",
-        "441b79d0-16e0-4e12-826f-13945c92a2ad",
-        "45b0422b-5dca-41a5-aa30-eff5243f2014",
-        "45ec6fa1-964c-465d-9fe3-5599048bedb2",
-        "471cc5f3-abd0-4ff3-904c-2259b48610f6",
-        "499a73f0-4532-4114-bcb1-5116da01846a",
-        "4c38a89a-0d05-4a96-a7dc-9da23347eb82",
-        "52a0a5e0-72c2-4bf5-9720-ef21ee7b1381",
-        "52e6b1d9-3a4e-4a63-8f72-22086aae1eba",
-        "54e241df-a80d-4076-9ab7-35eaee163cfd",
-        "58069d70-a141-42ec-af2d-f93e53495d0a",
-        "5922a942-cd7e-411e-ae8a-1ed3bcc5e140",
-        "5e52e492-ba20-414e-85d2-090acb31eb28",
-        "613d6b8a-9f0d-4b8a-986c-ecaf41b64eb2",
-        "665c4b75-6271-4c8c-9c30-07a7d5d1055e",
-        "6897e40b-4168-49a2-a2aa-dc14457afee5",
-        "70a7ecba-798e-4d4e-8efa-942a5930f138",
-        "7cfe67cf-a1f3-4686-abaf-d2c3298ef633",
-        "7e0b69d0-0d81-4d0c-b88b-830c3a375fd2",
-        "7e27c07b-bfbe-4a6b-92a6-8c810e19ad72",
-        "9631dbce-011e-4c83-b1c3-de86820a03bc",
-        "a54db500-f257-4288-8ece-81496695f304",
-        "a6037558-2b43-4861-8cc8-172fe9313ecb",
-        "b00d70b3-5029-4ac1-be2e-96e470e9232b",
-        "b87bf7c0-9e02-447c-916d-6e9b5a87c858",
-        "b9f2c007-0a70-44b6-99d7-8edd4c4086dc",
-        "c05ba190-e197-40a7-acf3-75017febbfdc",
-        "c10e7f58-81a2-4fab-910b-107ac006919f",
-        "c3cd98b6-250f-4a35-b4a0-dd48a17d3f9c",
-        "c90db10a-0bbe-4e73-8487-fea517626c0c",
-        "d22a5ac1-44db-4e48-915a-6257096b70d0",
-        "d3458f61-95ad-466d-bd16-8584583f9929",
-        "e09ed7f2-e1df-46c4-be01-e8acef65221b",
-        "f7602184-103d-4f99-a461-95078b1fd963",
-        "fb5c1c7c-8e3d-43ee-afc9-dcf5a8b9f723",
-        "ff63e176-060d-4d02-b31a-734617a4785b"
-      ],
       "hourly_cost": [
         2.3434,
         0.5879,
@@ -2758,7 +5625,6 @@
         0.635,
         0.6149
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2785,63 +5651,6 @@
       "input_tokens": 913,
       "output_tokens": 268485,
       "session_count": 55,
-      "sessions": [
-        "05d7d301-087c-4ea6-a7e3-7f1f80a90c01",
-        "0b0e272c-d9f6-49f3-b958-56014b4b8bee",
-        "12198b5f-ef0d-4e84-818a-19af5781036b",
-        "16db185c-9aff-42bc-af76-f34754d29cb2_reset_2026-06-18T17-17-47.387Z",
-        "1905a5e6-5b8e-4a5d-b272-d358543c6e35",
-        "1ba404a0-7364-4c94-af83-d33940d4cbe1",
-        "1cc76b05-66c9-42d3-b633-98a60b98d0cf",
-        "1f7ff5a4-b40b-4ef7-9e0e-deadab1cab81",
-        "252ebc9a-9c4f-453e-9bd7-bbd5e19e0a6e",
-        "2c62023f-dc6e-4208-9820-0f4bb54002d1",
-        "2cc6e681-5934-4f4a-a5e5-0d5d015eb30d",
-        "3cb1eda9-18ba-40c1-82ab-82842f3e7d30",
-        "3d9e82c8-6f43-4ddf-afa8-29e900f638b5",
-        "40568ae9-5e77-4c14-9f1a-474c9548b201",
-        "46705160-2f47-4348-86c5-f90eb2627aee",
-        "49d06e37-9e9b-4ad7-b245-acc1f443ea77",
-        "51e4870d-aa5b-4736-abda-bde69ec24f64",
-        "5354f37f-886a-4fad-96fa-50fa5ff92fd5",
-        "5ad4570e-b9bc-48bf-ad06-06b9383553bd",
-        "5c0b0c91-6113-46fb-911f-7122c6d619e6",
-        "60d910c9-e5d8-4a60-86be-b90b31f48907",
-        "625bdaef-b001-421e-9b14-1f80f573e18e",
-        "6a9f7ec5-e3c5-47b0-82c6-3c129a8f32fc",
-        "6c93397a-8aa6-498d-9187-3c0a5a6ba68a",
-        "6f272aa9-d602-4968-874a-6b1981cd6b95",
-        "76e80b59-1025-4774-8831-1d7604a626b7",
-        "78db162b-def3-40bd-8bd3-3c264328bfba",
-        "7b26469f-f6b7-49cb-9f33-4abfc3071691",
-        "83ea1324-0518-4b42-8a44-89f07ffa9fba",
-        "93666be0-50de-437b-8c14-d36a15cbede2",
-        "96ec4f4e-db8d-44bd-b4f1-a287db9ed5c4",
-        "992cf793-6a5e-4db6-876a-333ba5fdaa73",
-        "99a89c09-715f-450d-ad87-2a25c02ffe58",
-        "9bd6efae-9172-4f74-8fea-031cb554d433",
-        "9e0968c0-279f-4ed9-a1fa-f3f784554cef",
-        "a9226348-da43-43a5-8d05-f4652f49c082",
-        "a9a52fb7-4561-4b12-b78c-2a1840dfa020",
-        "af86e594-b901-461b-ae47-d28e91701eb5",
-        "b0eff1e8-f0bc-4250-9b09-add962aa7712",
-        "b75ada86-f412-476c-86ab-d03f7fafe006",
-        "bbd0aff6-a735-4bda-ab7d-47714471b36a",
-        "c0eb9efa-dbc2-46e1-a6d3-ae6e22ca4a87",
-        "c911ccaf-54be-42c5-9f8e-add9c3da4f58",
-        "ca98bb6c-6f8b-4dcf-984a-902975319116",
-        "d1640591-969e-49d2-9729-ba82552635f9",
-        "df6c8456-3b28-4d23-aa10-fd36023c5cbb",
-        "e99dc82b-e771-4ef6-96f2-c7f8028fc78a",
-        "ea1c502e-0656-439d-b0f1-3f8c0ed0a77e",
-        "ea92debb-75e9-4f35-8105-9849e08420ca",
-        "ee915cb4-c5c9-4bd1-aadb-ad56d7bdd158",
-        "ee9e1cd4-17e7-475a-ba26-66857ad8dc2d",
-        "f16ecd8b-a8bd-479f-9274-dc4223c298eb",
-        "f36a8d79-b5f9-47bf-b7fd-d0d2d4c11c71",
-        "fc427129-0ff9-41f0-9786-67e86c135326",
-        "fd6f1d9e-c76e-4415-a69f-8ad52af2a0d8"
-      ],
       "hourly_cost": [
         1.1743,
         0.6281,
@@ -2868,7 +5677,6 @@
         0.5812,
         0.5764
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -2897,64 +5705,6 @@
       "input_tokens": 492,
       "output_tokens": 57307,
       "session_count": 56,
-      "sessions": [
-        "1957bc3a-dc7b-4d62-be14-e5f9341dab9a",
-        "1af43499-34f5-42e7-a09d-f4e157cfe328",
-        "1cc76b05-66c9-42d3-b633-98a60b98d0cf",
-        "24bfc5ce-8baa-4b36-a311-f66ca24406a9",
-        "264e5f59-3add-40af-a4d7-b26c8abec833",
-        "29cd2049-1738-43c7-a59f-48b69338ce40",
-        "349c23b5-7365-4749-99cd-58acb7cb345b",
-        "351c7331-672d-4567-8ab8-399bad151d16",
-        "3784bd81-6944-44c8-ac96-e911238d266b",
-        "3ae68207-e755-46a1-8d45-290a42fe1e93",
-        "3b395e5c-da35-4c32-b787-b83d145d526a",
-        "3c5fa5df-6c21-4dac-bba8-a5369da45934",
-        "3cc90509-1773-4c84-a076-c32996a73d23",
-        "48416012-7ec6-4e78-8eeb-d983fc1847a9",
-        "4b9db34b-fa4d-4bc0-a147-acda6957a7cb",
-        "4dcafa7f-6b29-4d92-b9cf-62f7beb0d2b1",
-        "4eff22d2-6974-432f-97cf-e2a25019eca8",
-        "5068e627-7e81-4542-b416-201ae8572d83",
-        "554e2c66-dab6-49b9-87fd-0281818471c0",
-        "582fdfe7-ec49-42f0-aa75-11b8598bb383",
-        "608ff563-edc2-47ea-91d0-e58a01f03052",
-        "676bbdc9-176d-4871-a45c-bf681035a763",
-        "6ce083bb-7bcc-4e14-b7e2-7bcbf3aafaa1",
-        "71788ae4-6a71-41e5-8914-1b136915b5f4",
-        "71c55c67-8943-4837-b77a-e40945a454b8",
-        "77ab49fa-4533-4d48-b64d-8668a059fb93",
-        "7be3f0e2-cfc2-44e8-b638-8f07ad70f3bd",
-        "7f59b4de-b286-4ab6-8378-2914b9b88cf3",
-        "88fe9f00-28a7-49a9-b814-73dcbf57bafb",
-        "8a69fcfb-afc4-4d57-b6c2-be9320d3665c",
-        "8cc2fac4-e4ad-49f7-95fd-d6e28e189487",
-        "8fdae797-3852-4bac-ad95-318de4e0f491",
-        "963c004a-162e-460d-8b58-9cb775336823",
-        "a31fe198-9258-4069-bd72-74bebc04a1ad",
-        "a494e32e-5c48-4a39-b02c-62043267263f",
-        "a4a6183f-907c-4bf8-9dc5-8172095b23e8",
-        "a7c03199-657d-4563-9e5e-1c3faaa89312",
-        "ac802115-7ee6-4e01-a10d-2d24600effa2",
-        "b3ad0577-4006-41a5-8f61-3e5823c5d5c4",
-        "b411276f-815e-46c9-9427-2aba3fd704a4",
-        "b9ef0bbc-fb91-4a02-87f6-718805330d86",
-        "bbf51a9c-8eba-4de8-b450-781ddc3cf587",
-        "bd0bbd67-f37e-4d4f-af72-213551b0f500",
-        "cadc8925-1867-4ae8-b003-22a06b76135d",
-        "ce9df8fa-ec3c-4b31-9e98-38329be7d344",
-        "cf088c69-893d-47b7-b649-703407351bdf",
-        "d134848f-d881-4d0c-93ea-d5d18048b308",
-        "da6c3d1e-2493-41f4-bbd4-ae8adb73d4f8",
-        "e3befd2a-2b32-4d5a-9cdd-0d7ed8b832a4",
-        "e786eee7-a871-4ee3-84ab-6ec7fae23c73",
-        "e7e1bbd3-56f3-4fca-ba3f-001e8299bf27",
-        "f56423a6-7f4f-48df-acc7-8d5618d16718",
-        "f733daa3-c5e4-4816-bcf2-b4414b3d975a",
-        "f92016bc-126d-4bbd-8fe2-5a71408fd1ac",
-        "fbae352a-29db-4305-b917-637ed17c9279",
-        "fcf47ce3-f9f3-40f9-aadd-c69b5466562a"
-      ],
       "hourly_cost": [
         1.3791,
         0.5808,
@@ -2981,22 +5731,21 @@
         0.6352,
         0.6335
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
         "unattributed": 15.5988,
         "tinkerybot": 0.5421,
+        "workspace-infra": 0.0788,
         "bites-paper": 0.0155,
-        "bites": 0.0155,
-        "workspace-infra": 0.0788
+        "bites": 0.0155
       },
       "turns_by_project": {
         "unattributed": 205,
         "tinkerybot": 10,
+        "workspace-infra": 3,
         "bites-paper": 3,
-        "bites": 3,
-        "workspace-infra": 3
+        "bites": 3
       }
     },
     {
@@ -3010,64 +5759,6 @@
       "input_tokens": 489,
       "output_tokens": 61141,
       "session_count": 56,
-      "sessions": [
-        "03cbd3cb-5b96-4e1b-9ed2-dc46b24b3af4",
-        "0428aa46-3fcf-43c0-b0ad-3354c32ac6a6",
-        "04e24c35-0ab4-44e3-96f3-5f247a15ce03",
-        "0a3e4948-7972-47bc-9e21-2ef09b41ab31",
-        "0f46c7e0-6d1b-4c6d-91e5-f98debc7c65d",
-        "18224f1c-46e9-4a04-bf61-86c09c2b47d1",
-        "18db08aa-6b1f-427c-bd30-1c3d6ee1e2a3",
-        "1cc76b05-66c9-42d3-b633-98a60b98d0cf",
-        "2888e52a-93a0-4961-b268-cfc75b1d8141",
-        "2a13978e-5460-4da3-85e4-2d69bfa2c7eb",
-        "36668faf-338c-4b41-8eac-2e78cb2b7bec",
-        "3b7e1cc1-4f0c-414f-b0b4-a95028d50eb7",
-        "3f2e8305-e1e5-46e7-a23b-e778bf68d839",
-        "4271e304-93af-42c4-9afb-74d345b07076",
-        "447841cf-452d-43f5-a5e6-384734e055fd",
-        "47ac7f52-ae6a-4133-a60e-a7332f83c7c9",
-        "47d8ce69-00a0-4b54-bcaf-c8b43342f634",
-        "4a1b721a-8499-48f2-9279-d6a1e5ca3d60",
-        "4c2e7dcb-12eb-4899-a83a-b6003f5a33bf",
-        "4f84639f-96b1-483f-bff7-2c0e4971dc13",
-        "5f23fbed-43c4-4e75-94c1-26e6fabedec9",
-        "615e8ade-a378-4cb7-92fb-582ef117de8e",
-        "66bd0851-c990-4a70-a242-89b9667ecf6a",
-        "6d047e3c-0cac-4031-ad0b-7d9c5ee691c3",
-        "70539bfc-16db-4e34-a7f3-2d0bc60dac35",
-        "762daac6-e142-468b-b58a-a1b5762cf700",
-        "776b16cb-8efd-4a9a-9953-f0ab2b071897",
-        "786da13a-e0f2-4360-8f8a-89ef73ed4594",
-        "78908cb5-327b-4cef-b52d-64994a31040a",
-        "82102f3a-b347-4e2a-8d00-7805527abc08",
-        "83cedbd8-710d-4c57-957b-9baf189cfa76",
-        "85a73c9a-9fac-41dd-91af-1d084b5597b2",
-        "8b3e12f5-6c42-402d-8dda-4dba2808c34b",
-        "8d97aa63-1efe-478e-9a22-62655c35a975",
-        "90b11d24-5eb7-49b3-b32d-f09698c5ecc8",
-        "90d90039-5460-44ac-a79e-ffd430feaa14",
-        "977b9c91-6df6-4888-a839-e9c4a8643993",
-        "98392c2e-7ad7-4e4d-9687-bc496ad9b3b6",
-        "98f287d8-7e84-48b2-9e8f-8125329f9150",
-        "9cdbcd4b-9b5f-4ae6-a4d7-eaae5ae73bf7",
-        "a83cb7e4-ab9c-4b3c-a6ad-43bba519e711",
-        "aabac232-2c3a-4968-a04c-b802ea611a64",
-        "abfb1255-664b-4121-b540-0dea58c7b87c",
-        "ade964ac-3e0a-4910-9656-9dbb843d6f98",
-        "ae6009a1-44ff-4f52-90e3-b6b4dda40e00",
-        "b10e3631-7f69-4811-8c48-701a13c23f2e",
-        "b33c3226-0f48-4c25-a420-af10cecbd994",
-        "b522b322-b282-428a-acd8-7257799db684",
-        "cc80728a-3aa6-4fd9-ba6c-867a575a02d0",
-        "d2759192-cbee-425d-82fc-ada76ce2d59b",
-        "d865e374-df57-406e-b601-c0adbd345c4d",
-        "dd06fe1b-d31c-4610-97af-9deacd9c28ff",
-        "ee144c8a-750c-4c0d-b9f9-8b99504fbd0f",
-        "efcf1ba1-36a2-4496-9914-9fbfcc212613",
-        "f19eee3d-cd5f-42f6-91e0-4833efbc727d",
-        "fb94d9af-f352-418b-b226-11226aa2c291"
-      ],
       "hourly_cost": [
         1.0518,
         0.6018,
@@ -3094,7 +5785,6 @@
         0.605,
         0.6024
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
@@ -3123,64 +5813,6 @@
       "input_tokens": 515,
       "output_tokens": 67663,
       "session_count": 56,
-      "sessions": [
-        "013d45ce-549d-45e4-8cf6-bfaaff2ece60",
-        "0a776163-c1cc-498d-afa4-7ad2537a2822",
-        "0de089c0-c3d5-46ce-9c4c-63323bbd44a7",
-        "0fd872e3-639d-4c05-865f-ab5a8259b37d",
-        "10485859-2e59-4f1c-b9c0-cb0c606390b9",
-        "151badfb-7123-4df8-9957-9987b642dd01",
-        "18264b73-46c4-49ae-9f56-25730ab05cb0",
-        "1a487d12-98c8-43d5-bb2d-9755e2df5e81",
-        "1cc76b05-66c9-42d3-b633-98a60b98d0cf",
-        "2094a53c-4ada-4ce0-8cd3-30b0b04f4b9b",
-        "2236b0a9-19ae-4e55-9fa1-ba3bb52cb2fd",
-        "223ebb9e-bc4b-42c3-b09b-5496e3fec044",
-        "23a54ab8-257a-497f-8a3c-ef89aa6fa3e9",
-        "3578bb95-58a1-4ecd-9323-3359dcdbb099",
-        "3cbe8c80-61e3-49ec-a384-4984da130d28",
-        "477b4fda-3e9a-4c8d-b80a-919f9510b521",
-        "49eb15be-672b-4516-9d98-8bac5e93078a",
-        "5972a297-f9f4-4dfd-b423-b255e509ed7d",
-        "61b35912-90e0-4cb7-a80e-b8d4b3e0f30d",
-        "632861bc-0f2c-4bc5-8e43-c524c43ed893",
-        "67039ad9-0ec3-4f61-9702-0a3a024bacb9",
-        "6c8df409-af4a-4bf5-a88a-985cabd30d6e",
-        "718863ba-79f0-455e-9755-0107b8fcc539",
-        "72544f55-810f-4719-91ad-677aef49b267",
-        "732c9245-7d21-46e9-8c81-517184a5d038",
-        "73c7c118-4dbb-4b05-96f5-c5fa2ddaf799",
-        "817205d8-bead-4dff-9f48-5a45a3b6be71",
-        "837a9a17-f61b-4a62-a41b-d93d09ae3f7e",
-        "8daa640f-72ef-408b-8d5f-7991d6240aa3",
-        "8e462bb7-5334-49e0-bcea-cccc3eed6151",
-        "907f6f9b-e472-423c-bd69-aba36ddc73a3",
-        "9486e0f5-ae58-4218-b91c-3812244970cf",
-        "9642faa6-001c-4503-ad75-49f6566a7fdb",
-        "96f65741-019f-4576-a6c4-9c1b274f4c4a",
-        "97468c97-227c-4573-8beb-6e568ce122b5",
-        "9856b5c0-1e92-464d-b7c2-5a14186f2fd4",
-        "9f68cf24-0f43-4b53-b4b1-b6821aa1156b",
-        "a3a71c26-56b7-4434-acb2-130ae26b6974",
-        "a45430ab-41d7-4fbb-a343-823d413b89e3",
-        "a48ff4fb-a569-41ce-80cf-b24aa0929dcd",
-        "a6908bb0-780b-4ada-92f6-4b21f5957d1a",
-        "aa036f9d-f343-481f-8572-0b4097a7de69",
-        "b14ed4cf-855d-4d37-8a47-093709082934",
-        "b2beb75e-7507-45c9-bbfa-82ba56c5b802",
-        "b2f7cf9c-f318-4cbe-bb32-b1d0a1859599",
-        "be199157-5717-4440-84f2-9b41a747481a",
-        "c34e59c9-6b49-405b-a7d4-15cfd04ceaa0",
-        "c42e0a56-0282-4ce3-90ae-713777f94c87",
-        "c5f64554-f0ec-4b42-83a0-c5f8e95124db",
-        "d4056dfb-84e7-4da9-b284-909f5dd2b0fb",
-        "e6df62cd-5867-4117-814e-a3a3ea7c27fd",
-        "eb8e2474-1018-491c-9110-5d5202d0de20",
-        "eec52579-b0fb-4112-8aba-c70e449c3d65",
-        "f06a909a-318b-49b4-933a-fe17cd1086a0",
-        "f704c639-6a92-4f11-aad6-1f18d2c7dbc3",
-        "fb2cf6ed-c5be-4fdd-9a55-5afd26f73b04"
-      ],
       "hourly_cost": [
         1.6236,
         0.6932,
@@ -3207,20 +5839,19 @@
         0.5774,
         0.6327
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
         "unattributed": 17.1663,
+        "workspace-infra": 0.1428,
         "bites-paper": 0.0165,
-        "bites": 0.0165,
-        "workspace-infra": 0.1428
+        "bites": 0.0165
       },
       "turns_by_project": {
         "unattributed": 236,
+        "workspace-infra": 5,
         "bites-paper": 4,
-        "bites": 4,
-        "workspace-infra": 5
+        "bites": 4
       }
     },
     {
@@ -3234,67 +5865,6 @@
       "input_tokens": 506,
       "output_tokens": 58611,
       "session_count": 59,
-      "sessions": [
-        "079b0b61-b6fa-4ab5-9042-c1ac934e4e0e",
-        "09cae0d7-d271-4a1b-bcce-65579a52f157",
-        "0b74bb0e-97da-427a-b486-ea885550c9b6",
-        "0c5ad4a5-d92e-4b7d-9459-6edeee8daa9e",
-        "101cee33-a01b-493f-9657-bb4d2122dedf",
-        "11747e49-3372-47e9-87ac-eeef3dc3e8d7",
-        "1cc76b05-66c9-42d3-b633-98a60b98d0cf",
-        "1d245bf5-ca5f-46ce-ba07-23c7b4c3f135",
-        "1e1371d6-63e5-4de8-bcc4-e9d4cb13fe2f",
-        "23a40774-bba1-4378-8b55-bd3dc92f7e4e",
-        "25ed902e-838b-4b2d-9da0-2d3b9ce2a698",
-        "276b4acf-46c6-4343-b3c3-1c6f8acb81b4",
-        "2ef424d3-83ba-4089-be05-ac8551bdc190",
-        "2f226cde-4ae1-4532-a054-652ca2e38a4d",
-        "34e725b1-5deb-49f8-8d56-bcd464a7ff7b",
-        "42bf67b3-81bb-4173-a59e-61277e7752a8",
-        "454e558d-c2c4-4490-8d03-57fe31840729",
-        "47ce580f-1e42-4098-9ae9-1c963cbb6f31",
-        "4b3f1b1c-cd30-443d-890a-dcd9088c5d3e",
-        "5485d4ba-ecdf-4e0a-8064-4ac5f12a15ff",
-        "5684e4ee-6727-4024-bf2d-d75cf6fca18c",
-        "5a34fda3-4c62-4126-9adc-c5fe7f277504",
-        "5cb73f78-c64d-49ee-81e7-f70669f035e4",
-        "5ceaece2-e41c-42a4-8d14-37624ee2232b",
-        "5f7f5de8-a5e6-4587-8fb6-8bd8e0aee1b0",
-        "64f3e009-7b08-4394-8c24-8411a7d9b064",
-        "6840d3bc-ff78-4a97-b48d-cba710332553",
-        "6bfcaa5d-1e14-4ecf-8de6-4988e3b1573d",
-        "6d9e4331-bd2c-4777-ab2e-5f485a93d1d7",
-        "7ce5f270-35e3-49b9-be0c-7d998ecf084b",
-        "801bd760-39f9-419d-a257-a04e81bd7c14",
-        "820b32de-eff0-4077-9d05-0bc6e41db6cf",
-        "8d01ac90-c4e7-48d7-b63f-4d132f2281f1",
-        "8eeb8f94-ba53-4012-a4f6-fd3f50e65a5a",
-        "90570412-5eec-41f4-8b5f-4933d8916ef2",
-        "9be9fa9f-ce6e-4bb4-a9dd-18ba22ce339d",
-        "9c6cd0a1-eb68-45e8-8fab-5eda9fa08137",
-        "a1ff1889-cdfa-42a9-83ef-550ba4c4954f",
-        "a30fc016-c0a3-460b-80e4-d5b40e109233",
-        "a6080cd2-5f20-484d-92cb-64af07eff0e1",
-        "a968935d-970f-4fd0-8d88-a87a227ccc69",
-        "b3305188-d39e-4b50-b907-5684f2fdeb5d",
-        "bc36520a-e7e1-4dc2-9e9b-de0f03fc997a",
-        "c03803ee-3b02-4382-a934-3699372d32ba",
-        "c086b3d1-9be1-465a-b60d-fa68771e8672",
-        "c6876c1e-ddab-43af-81d0-a12b1737b5c8",
-        "c989cd51-2b83-4aa2-b31f-85a372be80dd",
-        "cff20ad5-40e9-452f-8be7-3be1f30edba8",
-        "d0ba219a-a80a-4b3f-a78f-fce2c0ae448a",
-        "ddcba9f6-19d7-43f1-812c-f1cffca73ffd",
-        "df9cb3cb-0168-49d1-a954-35daf3df8b9d",
-        "e1a3e683-f74e-4e85-b480-c5414d55c372",
-        "e1ac6918-96df-44ca-8f80-a0c2864f1ed4",
-        "e3a3c932-c48e-4e4f-a66d-1b4a3833f656",
-        "ea225200-171d-4d84-918d-cad228567a19",
-        "f01a4505-2c48-4fc4-948f-268d13dd535b",
-        "f081f7de-7656-447f-93ab-cafae76b7015",
-        "f538a86a-2d32-446e-9bf2-1aa12e5256e5",
-        "faba9ddd-ad3a-43e4-b75b-5301136b9c57"
-      ],
       "hourly_cost": [
         1.2528,
         0.6138,
@@ -3321,20 +5891,19 @@
         0.5796,
         0.5773
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
         "unattributed": 16.1378,
-        "bites-paper": 0.0303,
         "tinkerybot": 0.0352,
-        "workspace-infra": 0.0786
+        "workspace-infra": 0.0786,
+        "bites-paper": 0.0303
       },
       "turns_by_project": {
         "unattributed": 212,
-        "bites-paper": 3,
         "tinkerybot": 4,
-        "workspace-infra": 3
+        "workspace-infra": 3,
+        "bites-paper": 3
       }
     },
     {
@@ -3348,63 +5917,6 @@
       "input_tokens": 453,
       "output_tokens": 46064,
       "session_count": 55,
-      "sessions": [
-        "02c89815-359e-4de6-a802-a92d60876bc7",
-        "0381f8e1-a295-4348-85c3-d0f37d27f665",
-        "0883cda7-7da4-4cde-ae51-2d6a3e280b9a",
-        "0bfd0566-0c3c-4af1-b072-4834586bebc6",
-        "1363e5b8-45de-4a59-b0de-4401fed69bc4",
-        "18a122f9-f1bf-4bed-aca4-be74fbe31b2a",
-        "1ae33d6c-17c3-430c-a641-40c7393e55a2",
-        "1cc76b05-66c9-42d3-b633-98a60b98d0cf",
-        "1e522eea-25db-44cf-9fff-f84937f6fb6f",
-        "24474c30-f0d8-4a40-80a6-27495e8b9d0c",
-        "2c47d4ff-d68d-4e15-845d-89834a483ed4",
-        "353c9000-ad04-4d2f-8f0c-65f5f149416d",
-        "362c49b2-e308-4111-9ec5-06358e665557",
-        "36e9843b-1392-4591-a035-3c181fcfcc83",
-        "3b14bf76-7420-4158-9de4-e8d1f282f6b5",
-        "4988df8f-9043-4475-9fff-d1fe0efa33bd",
-        "49aa043a-628e-4841-847e-ba42a46e2031",
-        "4d085e2c-3acd-46e3-ae05-5233fac88951",
-        "4ed02b69-ac05-4603-b609-37cc85d18374",
-        "57d6c11a-b183-4c24-9fe1-c238f2687708",
-        "5f42323c-6b17-4341-99f3-64447d4f448d",
-        "692b1b8c-2ff2-4ac1-ac45-8bba70b54518",
-        "6a1bf1c6-1e9e-4bbb-9e0f-f5377b401798",
-        "714c7cdd-2b5d-4f1c-aa08-528a2f8704b9",
-        "73a4da4c-7254-4dbf-bd9c-facde6412186",
-        "755e6acc-e283-47a6-b998-b117d44baf96",
-        "7b024134-8efe-4687-9899-76fd607a0c50",
-        "87e4512e-27a2-4442-9950-d9df745c7277",
-        "8a9d6952-ce85-4e3d-8541-22adbbb5b13f",
-        "97727512-0b53-4a7f-a1e4-800008bf704a",
-        "9b15118f-5d61-41d9-95aa-630f76f9cd66",
-        "9b5b55e5-9200-4cd1-b2d1-002069ce1164",
-        "9cfad4fa-ac71-4182-880f-033b1b4c6383",
-        "9fb32a07-10ef-4ff4-b509-885636c09f4e",
-        "a33b9293-4060-4543-b572-6029337ba252",
-        "a8e0005f-55cd-4297-b7bd-ba5b58d0569b",
-        "ac189315-84a5-4513-a165-426fd92619c5",
-        "b4d93adf-6182-4da5-bc16-580b9b9842ee",
-        "b63961ec-2298-4163-bdeb-1e4533244feb",
-        "b831bb31-565f-4eb4-847f-860b4724e97b",
-        "bb5f31b0-a721-4f3c-9d92-bc6535c11ac9",
-        "c1787e7b-50e9-4aaf-9960-06672fb48483",
-        "c6755195-6ffa-4836-bb67-325a9d8e64bf",
-        "c70affef-afe4-4b22-82fc-f69651d8a4d7",
-        "d339e44b-98a3-4445-a924-bb6c16db87c7",
-        "d5e95f59-dba6-4829-9961-2334b87df2da",
-        "e5774a54-0f29-49ec-ab11-d425a9f85d75",
-        "eb82b225-1eea-41d2-ae89-9727556964b3",
-        "ee7078b5-5614-4e00-9267-f3599ccf7857",
-        "ef25dbbb-f5d4-46b6-9df9-b30bf63399d5",
-        "f21d9ace-4b0f-441a-802f-659af5512cfb",
-        "f3d85044-c2e9-45ef-ae5e-6d080686fa5b",
-        "f70d1574-f901-49e6-b255-8ec10049938d",
-        "f95b75b0-13b0-4d66-a548-1bd1d5e4b8d4",
-        "fdf44354-c179-4009-9079-99c77b205da8"
-      ],
       "hourly_cost": [
         1.0671,
         0.6055,
@@ -3431,39 +5943,34 @@
         0.7117,
         0.2865
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
         "unattributed": 14.2616,
         "tinkerybot": 0.3987,
+        "workspace-infra": 0.0819,
         "bites-paper": 0.0154,
-        "bites": 0.0154,
-        "workspace-infra": 0.0819
+        "bites": 0.0154
       },
       "turns_by_project": {
         "unattributed": 185,
         "tinkerybot": 7,
+        "workspace-infra": 3,
         "bites-paper": 3,
-        "bites": 3,
-        "workspace-infra": 3
+        "bites": 3
       }
     },
     {
       "day": "2026-06-24",
       "week": "2026-W26",
-      "cost": 0.3389,
-      "turns": 5,
-      "cost_per_turn": 0.0678,
-      "cache_read": 142967,
-      "cache_write": 39187,
-      "input_tokens": 15,
-      "output_tokens": 896,
-      "session_count": 2,
-      "sessions": [
-        "8ed7a6e3-8299-497e-b39d-9d4e9a39f0a2",
-        "c2871b98-3ffb-4eab-9a41-2a971264c539"
-      ],
+      "cost": 5.1464,
+      "turns": 103,
+      "cost_per_turn": 0.05,
+      "cache_read": 5194936,
+      "cache_write": 297553,
+      "input_tokens": 151,
+      "output_tokens": 27537,
+      "session_count": 10,
       "hourly_cost": [
         0,
         0,
@@ -3475,9 +5982,9 @@
         0,
         0,
         0,
-        0.3389,
-        0,
-        0,
+        0.4336,
+        3.1819,
+        1.5308,
         0,
         0,
         0,
@@ -3490,16 +5997,19 @@
         0,
         0
       ],
-      "commits": [],
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
-        "unattributed": 0.2886,
-        "workspace-infra": 0.0503
+        "unattributed": 3.0756,
+        "tinkerybot": 0.2573,
+        "workspace-infra": 1.7829,
+        "bites": 0.0306
       },
       "turns_by_project": {
-        "unattributed": 3,
-        "workspace-infra": 2
+        "unattributed": 65,
+        "tinkerybot": 7,
+        "workspace-infra": 28,
+        "bites": 3
       }
     }
   ]
