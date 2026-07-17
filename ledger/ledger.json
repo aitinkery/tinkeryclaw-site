@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-07-16T00:05:29.790479-07:00",
+  "generated_at": "2026-07-17T00:05:28.672551-07:00",
   "totals": {
-    "cost": 3386.39,
-    "turns": 18642,
+    "cost": 3395.73,
+    "turns": 18816,
     "commits": 235,
     "first_day": "2026-04-07",
-    "last_day": "2026-07-16",
-    "days_active": 85,
-    "input_tokens": 45264,
-    "output_tokens": 7962349,
-    "cache_read": 2501583671,
+    "last_day": "2026-07-17",
+    "days_active": 86,
+    "input_tokens": 45684,
+    "output_tokens": 7985139,
+    "cache_read": 2503590455,
     "cost_by_project": {
-      "bites": 1113.79,
-      "unattributed": 884.66,
-      "masterclass": 674.1,
+      "bites": 1113.8,
+      "unattributed": 895.73,
+      "masterclass": 673.28,
       "ai-tinkery-chatbot": 166.3,
-      "tinkerybot": 128.43,
-      "workspace-infra": 118.48,
+      "tinkerybot": 128.82,
+      "workspace-infra": 118.19,
       "tinkery-comic-con": 95.01,
-      "ai-tinkery-library": 94.84,
+      "ai-tinkery-library": 93.79,
       "workspace-knowledge": 80.43,
-      "bites-paper": 30.15,
+      "bites-paper": 30.17,
       "healthlog": 0.2
     },
     "turns_by_project": {
-      "unattributed": 9923,
+      "unattributed": 10132,
       "ai-tinkery-chatbot": 835,
-      "workspace-infra": 626,
-      "ai-tinkery-library": 415,
-      "tinkerybot": 511,
+      "workspace-infra": 621,
+      "ai-tinkery-library": 396,
+      "tinkerybot": 518,
       "workspace-knowledge": 187,
-      "bites": 2662,
-      "masterclass": 3499,
-      "bites-paper": 257,
+      "bites": 2661,
+      "masterclass": 3482,
+      "bites-paper": 259,
       "tinkery-comic-con": 193,
       "healthlog": 4
     }
@@ -170,16 +170,16 @@
     },
     {
       "week": "2026-W25",
-      "cost": 309.86,
-      "turns": 2795,
+      "cost": 291.57,
+      "turns": 2618,
       "commits": 0,
-      "cost_per_turn": 0.1109,
+      "cost_per_turn": 0.1114,
       "days_active": 7,
       "first_day": "2026-06-15",
       "last_day": "2026-06-21",
-      "input_tokens": 4866,
-      "output_tokens": 1041662,
-      "cache_read": 312770669
+      "input_tokens": 4645,
+      "output_tokens": 947309,
+      "cache_read": 293892107
     },
     {
       "week": "2026-W26",
@@ -222,16 +222,16 @@
     },
     {
       "week": "2026-W29",
-      "cost": 47.55,
-      "turns": 613,
+      "cost": 75.17,
+      "turns": 964,
       "commits": 0,
-      "cost_per_turn": 0.0776,
-      "days_active": 4,
+      "cost_per_turn": 0.078,
+      "days_active": 5,
       "first_day": "2026-07-13",
-      "last_day": "2026-07-16",
-      "input_tokens": 1442,
-      "output_tokens": 153676,
-      "cache_read": 16983076
+      "last_day": "2026-07-17",
+      "input_tokens": 2083,
+      "output_tokens": 270819,
+      "cache_read": 37868422
     }
   ],
   "days": [
@@ -5424,14 +5424,14 @@
     {
       "day": "2026-06-15",
       "week": "2026-W25",
-      "cost": 35.1387,
-      "turns": 403,
-      "cost_per_turn": 0.0872,
-      "cache_read": 25835259,
-      "cache_write": 2899699,
-      "input_tokens": 734,
-      "output_tokens": 163772,
-      "session_count": 58,
+      "cost": 17.6703,
+      "turns": 247,
+      "cost_per_turn": 0.0715,
+      "cache_read": 7591300,
+      "cache_write": 1920673,
+      "input_tokens": 532,
+      "output_tokens": 74712,
+      "session_count": 57,
       "hourly_cost": [
         1.4457,
         0.5702,
@@ -5443,10 +5443,10 @@
         0.6482,
         0.5745,
         1.1719,
-        2.1353,
+        0.6947,
         0.6259,
-        9.8492,
-        7.8293,
+        0.9188,
+        0.7319,
         0.9782,
         0.6509,
         0.6264,
@@ -5461,33 +5461,31 @@
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
-        "unattributed": 32.2837,
+        "unattributed": 16.5569,
         "tinkerybot": 0.7492,
-        "workspace-infra": 1.0268,
+        "workspace-infra": 0.3341,
         "bites-paper": 0.0151,
-        "bites": 0.0151,
-        "ai-tinkery-library": 1.0489
+        "bites": 0.0151
       },
       "turns_by_project": {
-        "unattributed": 349,
+        "unattributed": 226,
         "tinkerybot": 9,
-        "workspace-infra": 25,
+        "workspace-infra": 11,
         "bites-paper": 1,
-        "bites": 1,
-        "ai-tinkery-library": 19
+        "bites": 1
       }
     },
     {
       "day": "2026-06-16",
       "week": "2026-W25",
-      "cost": 105.1902,
-      "turns": 775,
-      "cost_per_turn": 0.1357,
-      "cache_read": 145022641,
-      "cache_write": 3971000,
-      "input_tokens": 1081,
-      "output_tokens": 314190,
-      "session_count": 58,
+      "cost": 104.3717,
+      "turns": 754,
+      "cost_per_turn": 0.1384,
+      "cache_read": 144388038,
+      "cache_write": 3911991,
+      "input_tokens": 1062,
+      "output_tokens": 308897,
+      "session_count": 56,
       "hourly_cost": [
         3.0656,
         0.57,
@@ -5499,7 +5497,7 @@
         0.9598,
         0.6256,
         0.5674,
-        1.1021,
+        0.2836,
         3.9411,
         1.9001,
         0.6352,
@@ -5520,14 +5518,14 @@
         "unattributed": 15.7979,
         "workspace-infra": 1.2369,
         "bites": 0.551,
-        "masterclass": 87.3907,
+        "masterclass": 86.5722,
         "tinkerybot": 0.2137
       },
       "turns_by_project": {
-        "unattributed": 210,
+        "unattributed": 209,
         "workspace-infra": 28,
-        "bites": 17,
-        "masterclass": 518,
+        "bites": 14,
+        "masterclass": 501,
         "tinkerybot": 2
       }
     },
@@ -6949,16 +6947,16 @@
       "cost_by_project": {
         "unattributed": 15.3718,
         "workspace-infra": 0.1923,
+        "tinkerybot": 0.438,
         "bites-paper": 0.0154,
-        "bites": 0.0154,
-        "tinkerybot": 0.438
+        "bites": 0.0154
       },
       "turns_by_project": {
         "unattributed": 196,
         "workspace-infra": 6,
+        "tinkerybot": 6,
         "bites-paper": 3,
-        "bites": 3,
-        "tinkerybot": 6
+        "bites": 3
       }
     },
     {
@@ -7003,14 +7001,14 @@
       "cost_by_project": {
         "unattributed": 14.2342,
         "tinkerybot": 1.3898,
-        "bites": 0.0315,
-        "workspace-infra": 0.0858
+        "workspace-infra": 0.0858,
+        "bites": 0.0315
       },
       "turns_by_project": {
         "unattributed": 171,
         "tinkerybot": 25,
-        "bites": 2,
-        "workspace-infra": 3
+        "workspace-infra": 3,
+        "bites": 2
       }
     },
     {
@@ -7054,28 +7052,82 @@
       "commit_count": 0,
       "cost_by_project": {
         "unattributed": 15.1873,
-        "bites-paper": 0.0288,
-        "workspace-infra": 0.0849
+        "workspace-infra": 0.0849,
+        "bites-paper": 0.0288
       },
       "turns_by_project": {
         "unattributed": 187,
-        "bites-paper": 2,
-        "workspace-infra": 3
+        "workspace-infra": 3,
+        "bites-paper": 2
       }
     },
     {
       "day": "2026-07-16",
       "week": "2026-W29",
-      "cost": 0.4722,
+      "cost": 27.6344,
+      "turns": 351,
+      "cost_per_turn": 0.0787,
+      "cache_read": 20885376,
+      "cache_write": 2280054,
+      "input_tokens": 641,
+      "output_tokens": 117526,
+      "session_count": 57,
+      "hourly_cost": [
+        0.8278,
+        0.587,
+        0.6873,
+        0.592,
+        0.5825,
+        0.6241,
+        0.7181,
+        0.7216,
+        0.6618,
+        0.6312,
+        0.5952,
+        0.6831,
+        0.7917,
+        0.6673,
+        0.5889,
+        0.6213,
+        0.5847,
+        0.6507,
+        0.7508,
+        0.5765,
+        12.658,
+        0.6092,
+        0.6502,
+        0.5736
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "tinkerybot": 0.3948,
+        "unattributed": 26.8094,
+        "workspace-infra": 0.3996,
+        "bites-paper": 0.0153,
+        "bites": 0.0153
+      },
+      "turns_by_project": {
+        "tinkerybot": 7,
+        "unattributed": 333,
+        "workspace-infra": 9,
+        "bites-paper": 2,
+        "bites": 2
+      }
+    },
+    {
+      "day": "2026-07-17",
+      "week": "2026-W29",
+      "cost": 0.4605,
       "turns": 9,
-      "cost_per_turn": 0.0525,
-      "cache_read": 286413,
-      "cache_write": 43127,
+      "cost_per_turn": 0.0512,
+      "cache_read": 286383,
+      "cache_write": 42785,
       "input_tokens": 24,
-      "output_tokens": 2375,
+      "output_tokens": 1992,
       "session_count": 3,
       "hourly_cost": [
-        0.4722,
+        0.4605,
         0,
         0,
         0,
@@ -7103,8 +7155,8 @@
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
-        "unattributed": 0.4221,
-        "workspace-infra": 0.0502
+        "unattributed": 0.4089,
+        "workspace-infra": 0.0516
       },
       "turns_by_project": {
         "unattributed": 7,
