@@ -274,9 +274,9 @@
 <header class="site">
   <div class="inner">
     <h1>Tinkery Bot · Daily Ledger</h1>
-    <div class="subtitle">What we spent, what we shipped, and what we learned — by day and week</div>
+    <div class="subtitle">What we spent, what we shipped, and what we learned — rolling last 30 days</div>
     <div style="margin-top:12px;font-size:12px;color:var(--ink-mute);background:var(--yellow);padding:8px 12px;border-radius:4px;border-left:3px solid var(--accent);">
-      <strong>Data note:</strong> Tinkery Bot was created 2026-03-13. Session logs older than 2026-04-07 were lost in an OpenClaw reset event on 2026-04-21 (a 4.7 MB <code>.reset</code> file preserves Apr 7–Apr 21; Mar 13 – Apr 7 is genuinely gone). Totals below are floor estimates of lifetime cost.
+      <strong>Rolling 30-day window:</strong> Totals, project breakdowns, weekly rollups, and daily logs below cover the most recent 30 days of agent operation.
     </div>
   </div>
 </header>
@@ -305,14 +305,96 @@
 </main>
 
 <script>
+function filterLedgerLast30Days(rawLedger, rawOutcomes) {
+  const allDays = rawLedger.days || [];
+  if (!allDays.length) return { ledger: rawLedger, outcomes: rawOutcomes };
+  const latestStr = allDays[allDays.length - 1].day;
+  const latestDate = new Date(latestStr + 'T00:00:00Z');
+  const cutoffDate = new Date(latestDate.getTime() - 29 * 86400000);
+  const cutoffStr = cutoffDate.toISOString().slice(0, 10);
+
+  const days = allDays.filter(d => d.day >= cutoffStr);
+  const costByProj = {};
+  const turnsByProj = {};
+  let totalCost = 0, totalTurns = 0, totalCommits = 0;
+
+  days.forEach(d => {
+    totalCost += d.cost || 0;
+    totalTurns += d.turns || 0;
+    totalCommits += d.commit_count || 0;
+    Object.entries(d.cost_by_project || {}).forEach(([k, v]) => {
+      costByProj[k] = (costByProj[k] || 0) + v;
+    });
+    Object.entries(d.turns_by_project || {}).forEach(([k, v]) => {
+      turnsByProj[k] = (turnsByProj[k] || 0) + v;
+    });
+  });
+
+  // Recompute weekly rollup from the filtered 30 days
+  const weekMap = new Map();
+  days.forEach(d => {
+    const wk = d.week;
+    if (!weekMap.has(wk)) {
+      weekMap.set(wk, {
+        week: wk, cost: 0, turns: 0, commits: 0,
+        days_active: 0, first_day: d.day, last_day: d.day
+      });
+    }
+    const w = weekMap.get(wk);
+    w.cost += d.cost || 0;
+    w.turns += d.turns || 0;
+    w.commits += d.commit_count || 0;
+    w.days_active += 1;
+    if (d.day < w.first_day) w.first_day = d.day;
+    if (d.day > w.last_day) w.last_day = d.day;
+  });
+  const weeks = Array.from(weekMap.values()).map(w => ({
+    ...w,
+    cost_per_turn: w.turns > 0 ? w.cost / w.turns : 0
+  }));
+
+  let filteredOutcomes = rawOutcomes;
+  if (rawOutcomes && rawOutcomes.bites_analytics && rawOutcomes.bites_analytics.by_day) {
+    const filteredByDay = {};
+    Object.entries(rawOutcomes.bites_analytics.by_day).forEach(([dayKey, val]) => {
+      if (dayKey >= cutoffStr && dayKey <= latestStr) filteredByDay[dayKey] = val;
+    });
+    filteredOutcomes = {
+      ...rawOutcomes,
+      bites_analytics: { ...rawOutcomes.bites_analytics, by_day: filteredByDay }
+    };
+  }
+
+  return {
+    ledger: {
+      ...rawLedger,
+      totals: {
+        ...rawLedger.totals,
+        cost: totalCost,
+        turns: totalTurns,
+        commits: totalCommits,
+        first_day: days[0].day,
+        last_day: days[days.length - 1].day,
+        days_active: days.length,
+        cost_by_project: costByProj,
+        turns_by_project: turnsByProj
+      },
+      weeks,
+      days
+    },
+    outcomes: filteredOutcomes
+  };
+}
+
 async function load() {
   const res = await fetch('./ledger.json?ts=' + Date.now());
-  const ledger = await res.json();
-  let outcomes = null;
+  const rawLedger = await res.json();
+  let rawOutcomes = null;
   try {
     const oRes = await fetch('./outcomes.json?ts=' + Date.now());
-    if (oRes.ok) outcomes = await oRes.json();
+    if (oRes.ok) rawOutcomes = await oRes.json();
   } catch (e) { /* outcomes optional */ }
+  const { ledger, outcomes } = filterLedgerLast30Days(rawLedger, rawOutcomes);
   renderKPIs(ledger, outcomes);
   renderProjectSpend(ledger);
   renderOutcomes(outcomes, ledger);
@@ -320,7 +402,7 @@ async function load() {
   renderDaily(ledger.days, outcomes);
   document.getElementById('generated-note').textContent =
     'Generated ' + new Date(ledger.generated_at).toLocaleString() +
-    ' · ' + ledger.totals.first_day + ' through ' + ledger.totals.last_day;
+    ' · Rolling 30 days (' + ledger.totals.first_day + ' through ' + ledger.totals.last_day + ')';
 }
 
 // Pretty labels + emojis for projects
@@ -479,7 +561,7 @@ function renderKPIs(ledger) {
   const last = ledger.days[ledger.days.length - 1] || {};
   const avg = ledger.days.length ? t.cost / ledger.days.length : 0;
   const kpis = [
-    { label: 'Total spend', value: fmtCost(t.cost), sub: `over ${t.days_active} active days`, accent: true },
+    { label: '30-day spend', value: fmtCost(t.cost), sub: `over ${t.days_active} active days (${t.first_day} → ${t.last_day})`, accent: true },
     { label: 'Total turns', value: fmtNum(t.turns), sub: `~${(t.cost / Math.max(1,t.turns)).toFixed(2)}/turn avg` },
     { label: 'Commits shipped', value: fmtNum(t.commits), sub: 'across all projects' },
     { label: 'Daily average', value: fmtCost(avg), sub: 'when active' },
