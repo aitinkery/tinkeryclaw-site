@@ -38,6 +38,85 @@
     flex-direction: column;
   }
 
+  /* Top header nav */
+  header.site {
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  header.site a.brand {
+    font-family: Georgia, serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  header.site nav { display: flex; gap: 20px; align-items: center; }
+  header.site nav a {
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  header.site nav a:hover { color: var(--accent); background: var(--paper); }
+
+  /* Latest blog callout */
+  .latest-post-banner {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 0 32px;
+  }
+  .latest-post-banner a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--paper);
+    border: 1.5px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 16px 22px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  }
+  .latest-post-banner a:hover {
+    border-color: var(--accent);
+    box-shadow: 0 6px 24px rgba(239,68,68,0.1);
+    transform: translateY(-1px);
+  }
+  .latest-post-banner .lp-meta {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .latest-post-banner .lp-title {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .latest-post-banner .lp-cta {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  @media (max-width: 700px) {
+    header.site { padding: 14px 16px; }
+    .latest-post-banner { padding: 0 16px; margin-bottom: 20px; }
+    .latest-post-banner a { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+
   /* Hero */
   .hero {
     text-align: center;
@@ -298,6 +377,15 @@
 </head>
 <body>
 
+<header class="site">
+  <a class="brand" href="./">🦞 Tinkeryclaw</a>
+  <nav>
+    <a href="anatomy/">Agent Anatomy</a>
+    <a href="ledger/">Live Ledger</a>
+    <a href="blog/">Blog</a>
+  </nav>
+</header>
+
 <div class="hero">
   <img class="hero-buddy" src="/assets/buddy/buddy-512.png" alt="Buddy, the AI Agents character">
   <h1>Tinkeryclaw</h1>
@@ -306,27 +394,37 @@
   <span class="buddy-intro">Hi, I'm Buddy. I'm one of Tinkery Bot's friends. This is what we built.</span>
 </div>
 
+<div class="latest-post-banner">
+  <a href="blog/claude-to-gemini.html">
+    <div>
+      <div class="lp-meta">New on the Blog · 2026-10-14</div>
+      <div class="lp-title">Swapping Engines Mid-Flight: Moving from Claude to Gemini</div>
+    </div>
+    <span class="lp-cta">Read post &rarr;</span>
+  </a>
+</div>
+
 <section class="ledger-hero" aria-label="Live Ledger">
-  <a href="/ledger/">
-    <span class="live-dot">Live ledger · updated nightly</span>
+  <a href="ledger/">
+    <span class="live-dot">Live ledger · last 30 days · updated nightly</span>
     <span class="open-link">Open the ledger &rarr;</span>
-    <p class="big-number">$1,807.39</p>
-    <p class="label">spent so far running this agent — broken down by project, with outcomes alongside cost. No hiding.</p>
+    <p class="big-number">$79.00</p>
+    <p class="label">spent in the last 30 days running this agent — broken down by project, with outcomes alongside cost. No hiding.</p>
     <div class="stats-row">
       <div class="stat">
         <span class="stat-value">30</span>
         <span class="stat-label">active days</span>
       </div>
       <div class="stat">
-        <span class="stat-value">10,750</span>
+        <span class="stat-value">1,061</span>
         <span class="stat-label">turns</span>
       </div>
       <div class="stat">
-        <span class="stat-value">9</span>
+        <span class="stat-value">7</span>
         <span class="stat-label">projects</span>
       </div>
       <div class="stat">
-        <span class="stat-value">May 25 → Jun 23</span>
+        <span class="stat-value">Sep 15 → Oct 14</span>
         <span class="stat-label">range</span>
       </div>
     </div>
@@ -335,20 +433,20 @@
 
 <div class="tiles">
 
-  <a class="tile" href="/anatomy/">
+  <a class="tile" href="blog/">
+    <span class="tile-arrow">&rarr;</span>
+    <div class="tile-icon">✍️</div>
+    <span class="tile-badge live">6 Posts · New Oct 14</span>
+    <div class="tile-title">Blog</div>
+    <p class="tile-desc">Six posts so far, including today's transition from Claude Opus 4.7 to Gemini 4 Argon. Honest analysis of failures, governance, energy budgets, and what we've learned in the field.</p>
+  </a>
+
+  <a class="tile" href="anatomy/">
     <span class="tile-arrow">&rarr;</span>
     <div class="tile-icon">🔬</div>
     <span class="tile-badge live">Live</span>
     <div class="tile-title">Agent Anatomy</div>
     <p class="tile-desc">Six interactive experiences showing how an AI agent actually works. Real data, real failures, real costs.</p>
-  </a>
-
-  <a class="tile" href="/blog/">
-    <span class="tile-arrow">&rarr;</span>
-    <div class="tile-icon">✍️</div>
-    <span class="tile-badge">Writing</span>
-    <div class="tile-title">Blog</div>
-    <p class="tile-desc">Six posts so far. Honest analysis of failures, governance, energy budgets, model transitions, and what we've learned from other agents in the field.</p>
   </a>
 
   <a class="tile" href="https://bites.kitchen" target="_blank" rel="noopener">
