@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-20T00:05:40.046508-08:00",
+  "generated_at": "2026-11-23T10:48:11.880399-08:00",
   "totals": {
-    "cost": 7512.78,
-    "turns": 45632,
+    "cost": 7580.01,
+    "turns": 45847,
     "commits": 234,
     "first_day": "2026-04-07",
-    "last_day": "2026-11-20",
-    "days_active": 210,
-    "input_tokens": 27528248,
-    "output_tokens": 19919079,
-    "cache_read": 5535345205,
+    "last_day": "2026-11-23",
+    "days_active": 211,
+    "input_tokens": 27588018,
+    "output_tokens": 20053506,
+    "cache_read": 5562622341,
     "cost_by_project": {
-      "unattributed": 2374.02,
-      "bites": 1932.16,
+      "unattributed": 2403.73,
+      "bites": 1932.21,
       "masterclass": 1035.82,
       "tinkerybot": 654.8,
-      "workspace-infra": 382.04,
-      "ai-tinkery-library": 362.95,
+      "workspace-infra": 412.43,
+      "ai-tinkery-library": 370.02,
       "workspace-knowledge": 261.02,
       "tinkery-comic-con": 186.6,
       "ai-tinkery-chatbot": 180.01,
@@ -24,13 +24,13 @@
       "healthlog": 0.39
     },
     "turns_by_project": {
-      "unattributed": 26170,
+      "unattributed": 26321,
       "ai-tinkery-chatbot": 985,
-      "workspace-infra": 2638,
-      "ai-tinkery-library": 1774,
+      "workspace-infra": 2673,
+      "ai-tinkery-library": 1801,
       "tinkerybot": 2551,
       "workspace-knowledge": 892,
-      "bites": 4535,
+      "bites": 4537,
       "masterclass": 6150,
       "bites-paper": 870,
       "tinkery-comic-con": 453,
@@ -456,16 +456,29 @@
     },
     {
       "week": "2026-W47",
-      "cost": 150.93,
-      "turns": 674,
+      "cost": 214.87,
+      "turns": 886,
       "commits": 0,
-      "cost_per_turn": 0.2239,
+      "cost_per_turn": 0.2425,
       "days_active": 5,
       "first_day": "2026-11-16",
       "last_day": "2026-11-20",
-      "input_tokens": 117851,
-      "output_tokens": 177250,
-      "cache_read": 41178307
+      "input_tokens": 177043,
+      "output_tokens": 310424,
+      "cache_read": 68426711
+    },
+    {
+      "week": "2026-W48",
+      "cost": 3.29,
+      "turns": 3,
+      "commits": 0,
+      "cost_per_turn": 1.0956,
+      "days_active": 1,
+      "first_day": "2026-11-23",
+      "last_day": "2026-11-23",
+      "input_tokens": 578,
+      "output_tokens": 1253,
+      "cache_read": 28732
     }
   ],
   "days": [
@@ -13843,16 +13856,67 @@
     {
       "day": "2026-11-20",
       "week": "2026-W47",
-      "cost": 0.3134,
-      "turns": 2,
-      "cost_per_turn": 0.1567,
-      "cache_read": 28648,
-      "cache_write": 29024,
-      "input_tokens": 247,
-      "output_tokens": 386,
-      "session_count": 1,
+      "cost": 64.2505,
+      "turns": 214,
+      "cost_per_turn": 0.3002,
+      "cache_read": 27277052,
+      "cache_write": 5884714,
+      "input_tokens": 59439,
+      "output_tokens": 133560,
+      "session_count": 12,
       "hourly_cost": [
-        0.3134,
+        1.7556,
+        0.0,
+        0.0,
+        0.0,
+        0.4783,
+        0.0,
+        0.0,
+        0.0,
+        0.5143,
+        0.462,
+        0.0,
+        6.1561,
+        1.0219,
+        0.4452,
+        23.3463,
+        10.416,
+        19.3971,
+        0.2576,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "commits_by_project": {},
+      "commit_count": 0,
+      "cost_by_project": {
+        "workspace-infra": 27.419,
+        "bites": 0.0522,
+        "unattributed": 29.7143,
+        "ai-tinkery-library": 7.065
+      },
+      "turns_by_project": {
+        "workspace-infra": 34,
+        "bites": 2,
+        "unattributed": 151,
+        "ai-tinkery-library": 27
+      }
+    },
+    {
+      "day": "2026-11-23",
+      "week": "2026-W48",
+      "cost": 3.2869,
+      "turns": 3,
+      "cost_per_turn": 1.0956,
+      "cache_read": 28732,
+      "cache_write": 322645,
+      "input_tokens": 578,
+      "output_tokens": 1253,
+      "session_count": 2,
+      "hourly_cost": [
         0,
         0,
         0,
@@ -13863,6 +13927,7 @@
         0,
         0,
         0,
+        3.2869,
         0,
         0,
         0,
@@ -13880,10 +13945,10 @@
       "commits_by_project": {},
       "commit_count": 0,
       "cost_by_project": {
-        "workspace-infra": 0.3134
+        "workspace-infra": 3.2869
       },
       "turns_by_project": {
-        "workspace-infra": 2
+        "workspace-infra": 3
       }
     }
   ]
